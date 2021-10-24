@@ -16,7 +16,6 @@ There are 2939 cryptocurrency-themed browser extensions in 6 official web stores
 ```shell
 ./all_extensions/[store name]
 ```
-### Number of extensions in each store
 
 Besides, we maintain a set of extensions which are all removed by official audit and check, located in the directory:
 
