@@ -1,0 +1,26 @@
+{
+   "background": {
+      "page": "bg.html"
+   },
+   "browser_action": {
+      "default_icon": "images/icon-48.png",
+      "default_popup": "popup.html",
+      "default_title": "Click to update price now"
+   },
+   "content_security_policy": "script-src 'self' 'unsafe-eval' https://d33t3vvu2t2yu5.cloudfront.net/tv.js; object-src 'self';",
+   "default_locale": "en",
+   "description": "__MSG_desc__",
+   "icons": {
+      "128": "images/icon-128.png",
+      "16": "images/icon-16.png",
+      "48": "images/icon-48.png"
+   },
+   "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA1ofqD5UFPNhx7xMY3Oa8gWNZDpAbm95pVTi8AP2NPFXYjWL1GHVKrXKvpCZa/jTKdRTFu5CPYqk0KpwvJ8q9incehJ959Nu94vV5FtrmWhdt5qNRKO/fEW00OktCP/IxuBh5zvJq3ajxmAfblDgKlm4I9e44o29v5gU7OuLMpgEB5qX+Uec8GYKu/7ZFiSzHkSHR4AkBDr4/KAJhikJs5h9bWhnfr2fadRwLYgpsu+k10xI0AUbxDfg15+76TJ1nKzb7gnt/4DHPDHYvvptsPurheQnnDwuVo+LuuZtnCTJzx8empjnCAT2E+SkYs8D+ehz0f6Dx9XCrs6r0a6D4WwIDAQAB",
+   "manifest_version": 2,
+   "name": "__MSG_name__",
+   "options_page": "options.html",
+   "permissions": [ "notifications", "http://allcrypto.info/*" ],
+   "short_name": "BTC Ticker",
+   "update_url": "https://edge.microsoft.com/extensionwebstorebase/v1/crx",
+   "version": "1.3.0.0"
+}

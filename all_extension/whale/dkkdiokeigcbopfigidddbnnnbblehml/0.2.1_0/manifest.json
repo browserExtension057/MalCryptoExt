@@ -1,0 +1,15 @@
+{
+   "background": {
+      "scripts": [ "event.js" ]
+   },
+   "description": "Allow Whale browser to play HLS video urls (m3u8)",
+   "incognito": "split",
+   "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAs0Tfovp5fT7V/LmBtEBKfVd+7EcuhMIaGQf73qdLE8nCVxW7SaMUA4jAqSBcyDvenMlqJSQID9d7RoAacE2dQ2SFRStBlcXnd+uMORfi1W1PWKbcGXx84wuLUf65lc3LlPkIoURgkpnCJKId5RLmiR25Old/XdgbK8mj5h85M6EzQm1wu7Rqio85MQL8HGsHzIj4ZpoLc+uGvp0hMT50lDJq5Ol5oXiBh67H8gmsRY7qS8djt1gYNo6Y5PEqwYMOygUYNzRlFJ7O2TH1ecuqpFih2zDXaHQM+sFlswr6U0e3PYKHEdKok+yNQcTTieIUnHbKxMRTJIKFioI6G+fu7wIDAQAB",
+   "manifest_version": 2,
+   "name": "Whale HLS Player",
+   "permissions": [ "*://*/*.m3u8*", "webRequest", "webRequestBlocking" ],
+   "update_url": "https://store.whale.naver.com/update/whx",
+   "version": "0.2.1",
+   "web_accessible_resources": [ "*.js", "*.html" ],
+   "whale_extension": true
+}

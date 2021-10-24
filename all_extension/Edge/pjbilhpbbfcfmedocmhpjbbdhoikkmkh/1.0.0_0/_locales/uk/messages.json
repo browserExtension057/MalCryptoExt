@@ -1,0 +1,20 @@
+{
+   "Amount": {
+      "message": "сума"
+   },
+   "AppDesc": {
+      "message": "Перевірте ціну в режимі реального часу на Bitcoin."
+   },
+   "AppName": {
+      "message": "Ціни на біткойни"
+   },
+   "NotYet": {
+      "message": "Ще ні"
+   },
+   "RateUpdateTime": {
+      "message": "Останнє оновлення ціни:"
+   },
+   "Unit": {
+      "message": "BTC"
+   }
+}

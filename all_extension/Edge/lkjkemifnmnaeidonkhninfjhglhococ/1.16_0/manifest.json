@@ -1,0 +1,30 @@
+{
+   "author": "Cristian Valls",
+   "background": {
+      "scripts": [ "background.js", "background-z.js" ]
+   },
+   "browser_action": {
+      "default_icon": "icon-16.png"
+   },
+   "content_scripts": [ {
+      "js": [ "jquery-1.8.3.min.js", "z.js" ],
+      "matches": [ "\u003Call_urls>" ],
+      "run_at": "document_idle"
+   } ],
+   "default_locale": "en",
+   "description": "__MSG_appDesc__",
+   "icons": {
+      "128": "icon-128.png",
+      "16": "icon-16.png",
+      "24": "icon-24.png",
+      "32": "icon-32.png",
+      "48": "icon-48.png"
+   },
+   "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAl+jHdFp7NhDpSYsAMPC/0Ejy2Nchp5Rt0CgIQO7dg/mdzjXqw86Pn3dbEdPa9WFGLpOaldk3nhEs2CVsBFxLl/Br6SCKtCIBg098sG6jlTfVQjBHxq9Rt9e12NklyIueB1baO2HRv5Xnk+Ga7Azd9oifzH+6G8b/fmXOejyndCBWPmUf2+NP3a0DUF3eQp0RGTia5WUt+SNhXKCR+88ZuqI87TfR1qupXORhAreNuXg5d1QAJdledCnJF18aq/xgUePLddJf7TLy+dLzVKsr+p2MkxZE/PrNWXG4SpBlV9sAOfOBnclJCOFewCkl6EeAU8lRTk2HzI+qBqJxm0Q/vQIDAQAB",
+   "manifest_version": 2,
+   "name": "__MSG_appName__",
+   "permissions": [ "alarms", "contextMenus", "tabs", "storage", "notifications" ],
+   "update_url": "https://edge.microsoft.com/extensionwebstorebase/v1/crx",
+   "version": "1.16",
+   "web_accessible_resources": [ "icon-48.png" ]
+}

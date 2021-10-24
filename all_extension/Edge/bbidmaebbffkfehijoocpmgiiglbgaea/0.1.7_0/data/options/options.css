@@ -1,0 +1,80 @@
+body {
+  border: 0;
+  width: 100%;
+  max-width: 700px;
+  margin: 5px auto;
+  padding: 5px 10px;
+  align-items: center;
+  font-family: arial, sans-serif;
+}
+
+.content {
+  width: 100%;
+  padding: 5px 20px 0 20px;
+  border: solid 1px rgba(0,0,0,0.05);
+}
+
+.content table {
+  margin: 0;
+  color: #555;
+  width: 100%;
+  font-size: 12px;
+  border-spacing: 0 10px;
+  font-family: arial, sans-serif;
+}
+
+.content table tr td {
+  padding: 5px 0;
+  text-align: justify;
+  vertical-align: middle;
+}
+
+.content span {
+  vertical-align: middle;
+}
+
+.content input[type='checkbox'] {
+  margin: 0;
+  vertical-align: middle;
+}
+
+.content textarea {
+  color: #555;
+  width: 100%;
+  height: 400px;
+  margin: 0 auto;
+  font-size: 12px;
+  padding: 5px 10px;
+  font-family: monospace;
+  border: solid 1px rgba(0,0,0,0.1);
+}
+
+.content .comment {
+  color: #777;
+  font-size: 97%;
+  padding: 0 10px;
+  user-select: none;
+}
+
+.content .option {
+  text-align: right;
+}
+
+.content .textarea {
+  text-align: center;
+}
+
+.content .note {
+  margin: 0;
+  color: #666;
+  font-size: 93%;
+  padding: 5px 10px;
+  background-color: rgba(0,0,0,0.1);
+}
+
+.logo {
+  width: 100%;
+  height: 128px;
+  background: url('../icons/128.png') no-repeat center center;
+  background-size: 64px;
+}

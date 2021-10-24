@@ -1,0 +1,22 @@
+{
+   "app": {
+      "display_mode": "browser",
+      "launch": {
+         "web_url": "https://powerpoint.office.com/"
+      },
+      "linked_icons": [  ]
+   },
+   "description": "",
+   "icons": {
+      "128": "icons/128.png",
+      "16": "icons/16.png",
+      "256": "icons/256.png",
+      "32": "icons/32.png",
+      "48": "icons/48.png",
+      "64": "icons/64.png",
+      "96": "icons/96.png"
+   },
+   "key": "grSDDkbXg8j1cTnCvyczVE8ZVmZXVpG9UfyQzg3rPU0=",
+   "name": "PowerPoint",
+   "version": "2021.2.21.24651"
+}

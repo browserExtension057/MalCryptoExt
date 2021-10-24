@@ -1,0 +1,8 @@
+{
+   "desc": {
+      "message": "Bitcoin and Token exchange price ticker. Displays the current price on the badge icon, Chart and Alert notifications."
+   },
+   "name": {
+      "message": "BTC Ticker | Bitcoin Ticker"
+   }
+}

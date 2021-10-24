@@ -1,0 +1,29 @@
+.tools {
+    min-width: 770px;
+}
+.tools>div,
+.tools>a {
+    margin: 5px;
+}
+.tools .btn {
+    margin-left: 5px;
+}
+.rateblock {
+    margin-left:5px;
+    padding: 2px 10px 2px 10px;
+    text-shadow: 0 1px 0 rgba(255,255,255,0.5);
+    background-color: #fcf8e3;
+    border: 1px solid #fbeed5;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+    float: left;
+}
+.rateblock {
+    color: #c09853;
+}
+.rateblock.rateblock-green {
+    color: #468847;
+    background-color: #dff0d8;
+    border-color: #d6e9c6;
+}

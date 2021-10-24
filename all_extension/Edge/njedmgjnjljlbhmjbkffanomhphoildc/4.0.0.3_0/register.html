@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8"/>
+    <meta content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=0" name="viewport">
+        <meta name="mobile-web-app-capable" content="yes">
+    <link
+        rel="stylesheet"
+        type="text/css"
+        href="assets/css/grid.css"
+    ></link>
+
+    <!-- Custom styles for Top menu Only -->
+
+    <link
+        rel="stylesheet"
+        type="text/css"
+        href="assets/css/theme.css"
+    ></link>
+
+    <link
+        rel="stylesheet"
+        type="text/css"
+        href="assets/css/flags.css"
+    ></link>
+
+    <link
+        rel="stylesheet"
+        href="/external/fontawesome/css/font-awesome.min.css"
+    ></link>
+
+            <!-- Load Firebase SDK  -->
+    <script src="/external/firebase/firebase-app.js"></script>
+    <script src="/external/firebase/firebase-auth.js"></script>
+    <script src="/external/firebase/firebase-config.js"></script>
+    <script src="/external/firebase/firebase-database.js"></script>
+    <script src="/external/firebase/firebase-providers.js"></script>
+
+    <!-- Load Mobiscroll  -->
+    <script src="/external/mobiscroll/mobiscroll.javascript.min.js"></script>
+    <link href="/external/mobiscroll/mobiscroll.javascript.min.css" rel="stylesheet" type="text/css">
+    <!-- <link href="assets/css/bittube-fonts.css" rel="stylesheet" type="text/css"> -->
+    <!-- load main.js, nav.js and header.js-->
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/nav.js"></script>
+    <script src="assets/js/header.js"></script>
+    <!-- load register.js -->
+    <script src="assets/js/register.js"></script>
+    <script src="assets/js/mobile-utilities.js"></script>
+    
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="medium-4">
+                <div class="panel panel-green effect5">
+                    <div class="panel-heading panel-heading-login" align="center">
+                        <!-- <div class="divLogo">
+                            <img src="assets/images/logo-header.svg" class="logoHeader">
+                        </div> -->
+
+                        <div class="divImageWelcome">
+                                <img src="assets/images/logo-header.svg" class="logoHeader">
+                            </div>
+                            
+                    </div>
+                    <div class="panel-body panel-login">
+                        <div align="center">
+                            <!-- START DIV DIVISION -->
+                            
+                            <!-- END DIV DIVISION -->
+                            <h1 class="loginWelcome">
+                                    <h1 class="translate loginWelcome displayInline" data-i18n="welcomeOn"></h1>
+                                    <span class="atAirtime">AirTime℠</span>
+                                </h1>
+                            <!-- START DIV LOGIN -->
+                            <form id="registerForm" class="md-login-form" mbsc-enhance mbsc-form autocomplete="off">
+                                <h4 class="loginInfo translate" data-i18n="signUpEmail"></h4>
+                                <div class="mbsc-form-group no-margin">
+                                        <label for="username" class="labelFormDonate translate">
+                                                <span class="dynamicLabel translateInput" data-i18n="username"></span>
+                                                <input id="username" name="username" type="text" minlength="3" maxlength="20" class="mainInput loginInput" data-input-style="outline" required="required">
+                                        </label>
+                                </div>
+
+
+                                <div class="mbsc-form-group no-margin">
+                                        <label for="email" class="labelFormDonate translate">
+                                                <span class="dynamicLabel translateInput" data-i18n="email" ></span>
+                                                <input id="email" name="email" type="email" class="mainInput loginInput" data-input-style="outline" required="required">
+                                        </label>
+                                </div>
+
+                                <div class="mbsc-form-group no-margin" id="divPassword">
+                                        <label for="password" class="labelFormDonate translate">
+                                                <span class="dynamicLabel translateInput" data-i18n="password" ></span>
+                                                <input id="password" name="password" type="password" minlength="6"  class="mainInput loginInput" data-input-style="outline" data-password-toggle="true" required="required">
+                                        </label>
+                                </div>
+
+                                <div class="mbsc-form-group no-margin" id="divConfirmPassword">
+                                        <label for="confirm_password" class="labelFormDonate translate">
+                                                <span class="dynamicLabel translateInput" data-i18n="confirmPassword" ></span>
+                                                <input equalTo="#password" id="confirm_password" name="confirm password" type="password" minlength="6"  class="mainInput loginInput" data-input-style="outline" data-password-toggle="true" required="required">
+
+                                        </label>
+                                </div>
+
+                               
+                                <div class="mbsc-form-group-inset mbsc-padding no-margin marginBottom10">
+                                    <button id="registerButton" type="submit" class="width100 translate">
+                                            <div class="loadingButton displayNone">
+                                                    <i class="mbsc-ic mbsc-ic-fa-spinner"></i>
+                                            </div>
+                                                <span class="textButton" data-i18n="singup"></span>
+
+                                    </button>
+                                </div>
+
+                                <div class="mbsc-form-group-inset mbsc-padding mbsc-align-center translate">
+                                        <span  data-i18n="alreadyAccount"></span>
+                                         <a href="/login.html" class="md-signup" data-i18n="signin"></a>
+     
+                                     </div>
+                             </form>
+
+                             <div class="footerLogin" align="center">
+                                    <p class="no-margin" id="pFooterLogin">
+                                        bittube.app
+                                    </p>
+                                </div>
+
+                          
+
+                            
+
+                            <!-- POPUP CONFIRM EMAIL -->
+                            <div id="errorLogin" style="display: none;">
+                                    <div class="md-dialog popUpResendEmail translate" align="center">
+                                            <h3 class="md-text-center" align="center" data-i18n="loginError"></h3>
+                                            <p class="md-text-center"> <span data-i18n="thisEmail"></span> <span id="userLoginEmail"></span> <span data-i18n="alreadyRegister"></span></p>
+                                    </div>
+                            </div>
+                            <!-- END POPUP CONFIRM EMAIL -->
+
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- LOAD uBLOCK JS SCRIPTS-->
+    <script src="plugins/uBlock/lib/punycode.js"></script>
+    <script src="plugins/uBlock/js/vapi.js"></script>
+    <script src="plugins/uBlock/js/vapi-common.js"></script>
+    <script src="plugins/uBlock/js/vapi-client.js"></script>
+    <script src="plugins/uBlock/js/udom.js"></script>
+    <script src="plugins/uBlock/js/i18n.js"></script>
+        <!-- Load i18  -->
+        <script src="/external/i18/i18next.min.js" ></script>
+        <script src="/external/i18/loc-i18next.min.js" ></script>
+        <script src="/external/i18/i18nextBrowserLanguageDetector.min.js" ></script>
+        <script src="/external/i18/i18nextXHRBackend.min.js" ></script>
+        <script src="/external/i18/i18-translate.js" ></script>
+</body>
+</html>

@@ -1,0 +1,20 @@
+{
+   "Amount": {
+      "message": "Cantitate"
+   },
+   "AppDesc": {
+      "message": "Verificați Prețul Bitcoin în timp real."
+   },
+   "AppName": {
+      "message": "Prețurile Bitcoin"
+   },
+   "NotYet": {
+      "message": "Nu inca"
+   },
+   "RateUpdateTime": {
+      "message": "Ultima actualizare a prețului la:"
+   },
+   "Unit": {
+      "message": "BTC"
+   }
+}

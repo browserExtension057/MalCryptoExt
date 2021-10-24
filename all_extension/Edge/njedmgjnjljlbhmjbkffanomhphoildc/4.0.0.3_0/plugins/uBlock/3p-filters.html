@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=0" name="viewport">
+        <meta name="mobile-web-app-capable" content="yes">
+<title>uBlock — Filter lists</title>
+<link rel="stylesheet" type="text/css" href="css/common.css">
+<link rel="stylesheet" type="text/css" href="css/dashboard-common.css">
+<link rel="stylesheet" type="text/css" href="css/cloud-ui.css">
+<link rel="stylesheet" type="text/css" href="css/3p-filters.css">
+<link rel="stylesheet" type="text/css" href="css/styleUblock.css">
+ <!-- Load Mobiscroll  -->
+ <script src="/external/mobiscroll/mobiscroll.javascript.min.js"></script>
+ <link href="/external/mobiscroll/mobiscroll.javascript.min.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+
+<div class="body">
+
+<div id="cloudWidget" class="hide" data-cloud-entry="tpFiltersPane"></div>
+
+<div class="divButtons">
+    <button id="buttonUpdate" class="custom important  buttonsBittube" data-i18n="3pUpdateNow"></button>
+    <button id="buttonPurgeAll" class="custom disabled buttonsBittube" data-i18n="3pPurgeAll"></button>
+    <button id="buttonApply" class="custom important disabled buttonsBittube" data-i18n="3pApplyChanges"></button>
+</div>
+<form autocomplete="off" id="settingsForm" class="md-login-form" mbsc-form>
+        <div class="mbsc-form-group-inset mbsc-padding leftNoMarginNoPadding">
+                <label data-i18n="3pAutoUpdatePrompt1" for="autoUpdate" class="labelFormDonate checkBoxConditions">
+                        <input type="checkbox" id="autoUpdate">
+                </label>
+         </div>
+
+         <div class="mbsc-form-group-inset mbsc-padding leftNoMarginNoPadding">
+                
+                <label data-i18n="3pParseAllABPHideFiltersPrompt1" for="parseCosmeticFilters" class="labelFormDonate checkBoxConditions">
+                        <input type="checkbox" id="parseCosmeticFilters">
+                        <span class="mbsc-ic mbsc-ic-material-info-outline whatisthis"></span>
+                </label>
+                <div class="whatisthis-expandable para" data-i18n="3pParseAllABPHideFiltersInfo"></div>
+         </div>
+
+         <div class="mbsc-form-group-inset mbsc-padding leftNoMarginNoPadding">
+                
+                <label data-i18n="3pIgnoreGenericCosmeticFilters" for="ignoreGenericCosmeticFilters" class="labelFormDonate checkBoxConditions">
+                        <input type="checkbox" id="ignoreGenericCosmeticFilters">
+                        <span class="mbsc-ic mbsc-ic-material-info-outline whatisthis"></span>
+                </label>
+                <div class="whatisthis-expandable para" data-i18n="3pIgnoreGenericCosmeticFiltersInfo"></div>
+         </div>
+
+         <span id="listsOfBlockedHostsPrompt"></span>
+
+         <ul id="lists"></ul>
+
+    
+</form>
+
+</div>
+
+<div id="templates" style="display: none;">
+    <ul>
+        <li class="groupEntry"><span class="geDetails"><span class="geName"></span> <span class="geCount dim"></span></span>
+            <ul class="listEntries"></ul>
+            </li>
+        <li class="listEntry">
+
+                <form autocomplete="off" class="md-login-form liForm" mbsc-form>
+                        <div class="mbsc-form-group-inset mbsc-padding leftNoMarginNoPadding">
+                            
+                                <label class="labelFormDonate checkBoxConditions checkBoxFilters content">
+                                        <input type="checkbox">
+                                        <a class="content" type="text/plain" target="_blank" href=""></a><!--
+                                        --><a class="mbsc-ic mbsc-ic-fa-home support iconFilter" href="" target="_blank"></a><!--
+                                        --><a class="mbsc-ic mbsc-ic-fa-trash remove iconFilter" href=""></a><!--
+                                        --><a class="mbsc-ic mbsc-ic-material-info-outline iconFilter mustread" href="" target="_blank"></a><!--
+                                        --><span class="mbsc-ic mbsc-ic-fa-unlock-alt status unsecure iconFilter" title="http"></span><!--
+                                        --><span class="counts dim"></span><!--
+                                        --><span class="mbsc-ic mbsc-ic-fa-warning status obsolete iconFilter" data-i18n-title="3pExternalListObsolete"></span><!--
+                                        --><span class="mbsc-ic mbsc-ic-fa-clock-o status cache iconFilter"></span><!--
+                                        --><span class="fa status updating iconFilter" data-i18n-title="3pUpdating">&#xf110;</span><!--
+                                        --><span class="fa status failed iconFilter" data-i18n-title="3pNetworkError">&#xf127;</span>
+                
+                                </label>
+                         </div>
+                    </form>
+
+         
+            </li>
+        <li class="listEntry toImport">
+            <form autocomplete="off" class="md-login-form liForm" mbsc-form>
+                <div class="mbsc-form-group-inset mbsc-padding leftNoMarginNoPadding">
+                        
+                        
+                        <label for="importLists" data-i18n="3pImport" class="labelFormDonate checkBoxConditions checkboxImport">
+                                <input type="checkbox" id="importLists">
+                                <a class="mbsc-ic mbsc-ic-material-info-outline info iconInfo towiki" href="https://github.com/gorhill/uBlock/wiki/Filter-lists-from-around-the-web" target="_blank"></a>
+                                <textarea id="externalLists" dir="ltr" spellcheck="false" placeholder="3pExternalListsHint"></textarea>
+                        </label>
+                 </div>
+            </form>
+                 <!-- <input type="checkbox" id="importLists"><label for="importLists" data-i18n="3pImport"></label>
+                 <a class="fa info towiki" href="https://github.com/gorhill/uBlock/wiki/Filter-lists-from-around-the-web" target="_blank">&#xf05a;</a>
+                <textarea id="externalLists" dir="ltr" spellcheck="false" placeholder="3pExternalListsHint"></textarea> -->
+        </ul>
+    </div>
+
+<script src="js/vapi.js"></script>
+<script src="js/vapi-common.js"></script>
+<script src="js/vapi-client.js"></script>
+<script src="js/udom.js"></script>
+<script src="js/i18n.js"></script>
+<script src="js/dashboard-common.js"></script>
+<script src="js/cloud-ui.js"></script>
+<script src="js/3p-filters.js"></script>
+
+</body>
+</html>
+

@@ -1,0 +1,40 @@
+<div class="review-account-details" modal-name="review-account-details">
+    <div class="w-container review-details-container">
+        <div class="w-clearfix review-details-div">
+            <a class="w-inline-block close-modal" data-ix="close-review-details" hide-modal>
+                <div class="close-overlay pointer" data-ix="close-overlay">+</div>
+            </a>
+            <h1 class="head-modal">{{'reviewAccountDetails' | i18next}}</h1>
+            <div class="subhead-text modal review">{{'reviewAccountDetailsText' | i18next}}</div>
+            <div class="w-form form-wrapper">
+                <form id="email-form" name="email-form" data-name="Email Form">
+                    <!-- <label class="field-label review">{{'mnemonicSeed' | i18next}}</label>
+                    <div class="move-text-div">
+                        <div class="review-text address" ng-show="mnemonic">{{mnemonic}}</div>
+                        <div class="review-text" ng-show="!mnemonic">N/A</div>
+                    </div> -->
+                    <label class="field-label review" >{{'accountAddress' | i18next}}</label>
+                    <div class="move-text-div">
+                        <div class="review-text address">{{address}} </div>
+                    </div>
+                    <label class="field-label review">{{'viewKey' | i18next}}</label>
+                    <div class="move-text-div">
+                        <!-- <div class="review-text">{{view_key}} </div> -->
+                        <i id="showViewKey" class="mbsc-ic mbsc-ic-fa-eye iconEye"></i>
+                        <input readonly="readonly" id="inputViewKey" type="password" class="inputModals" value="{{view_key}}">
+                    </div>
+                    <label class="field-label review">{{'spendKey' | i18next}}</label>
+                    <div class="move-text-div">
+                        <i id="showSpendKey" class="mbsc-ic mbsc-ic-fa-eye iconEye"></i>
+                        <!-- <div class="review-text" ng-show="!view_only">{{spend_key}} </div> -->
+                        <input readonly="readonly" id="inputKey" type="password" class="inputModals" value="{{spend_key}}">
+                        <div class="review-text" ng-show="view_only"></div>
+                    </div>
+                    <div class="submit-div">
+                        <a class="login-btn modals pointer" data-ix="close-review-details" hide-modal>{{'okThanks' | i18next}}</a>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

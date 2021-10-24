@@ -1,0 +1,20 @@
+{
+   "Amount": {
+      "message": "כמות"
+   },
+   "AppDesc": {
+      "message": "בדוק מחיר ביטקוין בזמן אמת."
+   },
+   "AppName": {
+      "message": "מחירי ביטקוין"
+   },
+   "NotYet": {
+      "message": "עדיין לא"
+   },
+   "RateUpdateTime": {
+      "message": "המחיר עודכן לאחרונה ב:"
+   },
+   "Unit": {
+      "message": "BTC"
+   }
+}

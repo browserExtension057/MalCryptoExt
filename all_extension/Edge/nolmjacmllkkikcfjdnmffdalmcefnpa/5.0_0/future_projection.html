@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+    <style type="text/css">
+        ::-webkit-scrollbar-track-piece{
+            background-color:#fff;
+            -webkit-border-radius:0;
+        }
+        ::-webkit-scrollbar{
+            width:8px;
+            height:8px;
+        }
+        ::-webkit-scrollbar-thumb{
+            height:50px;
+            background-color:#999;
+            -webkit-border-radius:4px;
+            outline:2px solid #fff;
+            outline-offset:-2px;
+            border: 2px solid #fff;
+        }
+        ::-webkit-scrollbar-thumb:hover{
+            height:50px;
+            background-color:#9f9f9f;
+            -webkit-border-radius:4px;
+        }
+    </style>
+    <head>
+        <title>Long term projection of Bitcoin Price</title>
+        <script src="/js/jquery/jquery.min.js"></script>
+        <script src="/js/other/materialize.min.js"></script>
+        <script src="/js/chart/Chart.min.js"></script>
+        <script src="/js/chart/Chart.bundle.min.js"></script>
+        <script src="/js/other/moment.js"></script>
+        <script src="/js/other/regression.js"></script>
+        <script src="future_projection.js"></script>
+    </head>
+    <body>
+        <div>
+            <br>
+            <center style="display: none; font-size: 25px;" class="projection_explanation">
+                Long term projection of Bitcoin Price (Y Axis is in logarithmic scale)
+                <br><span style="font-size: 12px;">
+                    Historically whenever the price of Bitcoin had been close to/had crossed the max projection(red) line, it has always ended up having a crash soon after that.
+                </span>
+            </center>
+            <br>
+            <br>
+            <canvas id="btcTrendFuture" width="400" height="300"></canvas>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,26 @@
+Firebase 7.24.0 https://raw.githubusercontent.com/firebase/firebase-bower/v7.24.0/firebase-app.js https://raw.githubusercontent.com/firebase/firebase-bower/v7.24.0/firebase-auth.js https://raw.githubusercontent.com/firebase/firebase-bower/v7.24.0/firebase-database.js https://raw.githubusercontent.com/firebase/firebase-bower/v7.24.0/firebase-storage.js
+AngularJS 1.8.2 https://raw.githubusercontent.com/angular/bower-angular/v1.8.2/angular.min.js https://raw.githubusercontent.com/angular/bower-angular-route/v1.8.2/angular-route.min.js
+angular-sanitize 1.8.2 https://raw.githubusercontent.com/angular/bower-angular-sanitize/v1.8.2/angular-sanitize.min.js
+FontAwesome 4.7 https://fontawesome.com/v4.7.0/assets/font-awesome-4.7.0.zip
+MomentJS 2.24.0 https://raw.githubusercontent.com/moment/moment/2.24.0/min/moment-with-locales.min.js
+jQuery 3.3.1 https://raw.githubusercontent.com/jquery/jquery/3.3.1/dist/jquery.min.js
+i18next 13.1.5 https://raw.githubusercontent.com/i18next/i18next/v13.1.5/i18next.min.js
+- xhr backend 2.0.1 https://raw.githubusercontent.com/i18next/i18next-xhr-backend/v2.0.1/i18nextXHRBackend.min.js
+- browser language detector 3.0.1 https://raw.githubusercontent.com/i18next/i18next-browser-languageDetector/v3.0.1/i18nextBrowserLanguageDetector.min.js
+- smart selector 0.1.4 https://raw.githubusercontent.com/mthh/loc-i18next/v0.1.4/loc-i18next.min.js
+CryptoJS AES 3.1.2 https://raw.githubusercontent.com/sytelus/CryptoJS/v3.1.2/rollups/aes.js
+Chart.js 2.7.3 https://raw.githubusercontent.com/chartjs/Chart.js/v2.7.3/dist/Chart.bundle.min.js
+croppie 2.6.3 https://raw.githubusercontent.com/Foliotek/Croppie/v2.6.3/croppie.min.js
+ng-idle 1.3.2 https://raw.githubusercontent.com/HackedByChinese/ng-idle/1.3.2/angular-idle.min.js
+ng-i18next 1.0.4 https://raw.githubusercontent.com/i18next/ng-i18next/v1.0.4/dist/ng-i18next.min.js
+Mobiscroll 4.5.2 https://mobiscroll.com/ (not available for download without a license)
+js-sha3 0.8.0 https://raw.githubusercontent.com/emn178/js-sha3/v0.8.0/build/sha3.min.js
+BigInteger.js 0.9.1 https://raw.githubusercontent.com/silentmatt/javascript-biginteger/v0.9.1/biginteger.js
+detect-browser 1.0.0 https://raw.githubusercontent.com/Ahmdrza/detect-browser/v1.0.0/detect-browser.js
+nacl-fast 1.0.2 https://raw.githubusercontent.com/ipbc-dev/tweetnacl-cn-js/v1.0.2/nacl-fast.min.js
+parse-domain 2.1.7 https://github.com/peerigon/parse-domain/tree/v2.1.7 (no public browserified version exists, browserified with `browserify -r parse-domain -s parseDomain`)
+
+Adblocking based on uBlock Origin 1.17.2 https://github.com/gorhill/uBlock/releases/tag/1.17.2
+
+Wallet html/js files based on https://github.com/BitTubeCash/lightwallet_backend/tree/v1.0.0.0/html which is an fork of https://github.com/moneroexamples/openmonero
+mymonero-core.js compiled from https://github.com/tubedev2000/mymonero-core-js/tree/v1.0.0.1 (build instructions available in the repository)

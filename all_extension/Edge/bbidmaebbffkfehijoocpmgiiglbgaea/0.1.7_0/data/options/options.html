@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Options - Block Coin Miners</title>
+    <link type="text/css" rel="stylesheet" href="options.css">
+  </head>
+  <body>
+    <div class="logo"></div>
+    <div class="content">
+      <table>
+        <tr>
+          <td>Log blocked URLs in the browser console (Ctrl+Shift+J)</td>
+          <td class="option"><input data-pref="addon.log" type="checkbox"></td>
+        </tr>
+      </table>
+      <table>
+        <tr><td class="title">Coin miners filter list. Add or remove any domain from the list below</td></tr>
+        <tr><td class="comment">Please add items in the format specified. i.e. "example.com": true</td></tr>
+        <tr><td class="comment">Note: true means to block and false means do not block this domain.</td></tr>
+        <tr>
+          <td class="textarea">
+            <textarea data-pref="addon.filter.list"></textarea>
+          </td>
+        </tr>
+      </table>
+    </div>
+    <script type="text/javascript" src="options.js"></script>
+  </body>
+</html>

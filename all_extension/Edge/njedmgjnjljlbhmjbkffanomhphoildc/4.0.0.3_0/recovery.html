@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8"/>
+    <meta content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=0" name="viewport">
+        <meta name="mobile-web-app-capable" content="yes">
+    <link
+        rel="stylesheet"
+        type="text/css"
+        href="assets/css/grid.css"
+    ></link>
+
+    <!-- Custom styles for Top menu Only -->
+
+    <link
+        rel="stylesheet"
+        type="text/css"
+        href="assets/css/theme.css"
+    ></link>
+
+    <link
+        rel="stylesheet"
+        href="/external/fontawesome/css/font-awesome.min.css"
+    ></link>
+    
+    <script src="/external/firebase/firebase-app.js"></script>
+    <script src="/external/firebase/firebase-auth.js"></script>
+    <script src="/external/firebase/firebase-config.js"></script>
+    <script src="/external/firebase/firebase-database.js"></script>
+    <script src="/external/firebase/firebase-providers.js"></script>
+
+    <!-- Load Mobiscroll  -->
+    <script src="/external/mobiscroll/mobiscroll.javascript.min.js"></script>
+    <link href="/external/mobiscroll/mobiscroll.javascript.min.css" rel="stylesheet" type="text/css">
+    <!-- <link href="assets/css/bittube-fonts.css" rel="stylesheet" type="text/css"> -->
+
+    <!-- load main.js, nav.js and header.js-->
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/nav.js"></script>
+    <script src="assets/js/header.js"></script>
+    <script src="assets/js/mobile-utilities.js"></script>
+
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="medium-4">
+                <div id="mainContentAirtime" class="panel  panel-green effect5">
+                        <div class="panel-heading panel-heading-login" align="center">
+                                <!-- <div class="divLogo">
+                                    <img src="assets/images/logo-header.svg" class="logoHeader">
+                                </div> -->
+        
+                                <div class="divImageWelcome">
+                                        <img src="assets/images/logo-header.svg" class="logoHeader">
+                                    </div>
+                                    
+                                
+                            </div>
+                            <div class="panel-body panel-login">
+                                <div align="center">
+                                    <!-- START DIV DIVISION -->
+                                    
+                                    <!-- END DIV DIVISION -->
+                                    <h1 class="loginWelcome">
+                                            <h1 class="translate loginWelcome displayInline" data-i18n="welcomeOn"></h1>
+                                            <span class="atAirtime">AirTime℠</span>
+                                        </h1>
+                            
+                        <form id="recoveryForm" class="loginBack md-login-form" mbsc-enhance mbsc-form>
+                            <h4 class="loginInfo translate" data-i18n="recoverPasswordTet"></h4>
+                            <div class="mbsc-form-group no-margin">
+                                    <label for="name" class="labelFormDonate translate">
+                                            <span class="translateInput dynamicLabel" id="labelRecoveryPassword" data-i18n="email" ></span>
+                                           
+                                            <input class="loginInput" id="email" type="email" name="Email"  data-input-style="outline" required/>
+                                    </label>
+                            </div>
+
+                            
+
+                            <div id="recoveryPassSent" class="displayNone translate">
+                                <p> <span data-i18n="sendYouResetPassword"></span> <span id="spanUserEmail"></span></p>
+                            </div>
+                            <div class="mbsc-form-group-inset mbsc-padding no-margin no-padding translate">
+                                <button id="recoveryButton" class="mbsc-btn-block md-signup-btn translate">
+                                        <div class="loadingButton displayNone">
+                                                <i class="mbsc-ic mbsc-ic-fa-spinner"></i>
+                                            </div>
+                                            <span class="textButton" data-i18n="recoveryPassword"></span>
+                                </button>
+                            </div>
+
+                            <div class="mbsc-form-group-inset mbsc-padding mbsc-align-center translate">
+                                    <a href="/login.html" class="md-signup" data-i18n="goBackLogin"></a>
+                                </div>
+
+                            
+                        </form>
+
+                        <div class="footerLogin" align="center">
+                                <p class="no-margin" id="pFooterLogin">
+                                    bittube.app
+                                </p>
+                            </div>
+
+                        <!-- START DIV FOOTER -->
+                        
+                        <!-- END DIV FOOTER -->
+                      </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- LOAD uBLOCK JS SCRIPTS-->
+    <script src="plugins/uBlock/lib/punycode.js"></script>
+    <script src="plugins/uBlock/js/vapi.js"></script>
+    <script src="plugins/uBlock/js/vapi-common.js"></script>
+    <script src="plugins/uBlock/js/vapi-client.js"></script>
+    <script src="plugins/uBlock/js/udom.js"></script>
+    <script src="plugins/uBlock/js/i18n.js"></script>
+       <!-- Load i18  -->
+       <script src="/external/i18/i18next.min.js" ></script>
+       <script src="/external/i18/loc-i18next.min.js" ></script>
+       <script src="/external/i18/i18nextBrowserLanguageDetector.min.js" ></script>
+       <script src="/external/i18/i18nextXHRBackend.min.js" ></script>
+       <script src="/external/i18/i18-translate.js" ></script>
+    <!-- Load Firebase SDK  -->
+</body>
+</html>

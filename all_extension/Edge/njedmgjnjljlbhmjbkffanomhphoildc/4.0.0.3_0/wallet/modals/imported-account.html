@@ -1,0 +1,48 @@
+<div class="modal-background" modal-name="imported-account" ng-controller="ImportAccountCtrl">
+  <div class="w-container">
+    <div class="w-clearfix">
+      <a class="w-inline-block close-modal" hide-modal="">
+        <div class="close-overlay pointer">+</div>
+      </a>
+      <h1 class="head-modal translate" >{{'importingtransactions' | i18next}}</h1>
+      <div class="w-form form-wrapper">
+        <!-- <label class="field-label">Import all transactions</label>
+        <div class="review-text">This will scan all blocks in the blockchain.
+          This is very resource intensive task.
+          Thus a small fee might be required (depends on the backend settings).</div>
+        <div class="submit-div small-top-margin">
+          <a class="login-btn modals pointer" ng-click="importAll()">Import all transactions</a>
+        </div> -->
+
+        <div class="w-form form-wrapper translate">
+          <label class="field-label" for="field4" data-i18n="importTransactionsLastBlocks"></label>
+          <select class="w-select" id="field4" name="Select-a-number" data-name="Select a number"
+                  required="required" ng-model="no_blocks_to_import" selected="1000">
+            <option value="1000" >{{'sinceRoughly1' | i18next}}  </option>
+            <option value="5500" >{{'sinceRoughly7' | i18next}}  </option>
+            <option value="22000" >{{'sinceRoughly30' | i18next}}  </option>
+            <option value="66000" >{{'sinceRoughly90' | i18next}}  </option>
+            <option value="132000" >{{'sinceRoughly180' | i18next}}  </option>
+          </select>
+        </div>
+
+        <div class="submit-div small-top-margin translate">
+          <a class="login-btn modals pointer" ng-click="importLast()"> {{'ImportRecentTransactions' | i18next}}</a>
+        </div>
+
+
+        <label class="field-label translate" >{{'dontImportTransactions' | i18next}}</label>
+        <div class="review-text translate" >{{'youCanSendReceive' | i18next}}</div>
+        <div class="submit-div small-top-margin">
+          <a class="login-btn modals pointer translate" hide-modal=""> {{'dontImportTransactions' | i18next}}</a>
+        </div>
+        <div class="w-form-fail error-backing" style="display: block;" ng-show="!!error">
+            <p>{{error}}</p>
+        </div>
+        <div class="w-form-done success-backing" style="display: block;" ng-show="!!success">
+          <p>{{success}}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

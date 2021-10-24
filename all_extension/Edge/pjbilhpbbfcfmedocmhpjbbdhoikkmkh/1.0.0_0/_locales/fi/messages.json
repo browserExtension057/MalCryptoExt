@@ -1,0 +1,20 @@
+{
+   "Amount": {
+      "message": "Määrä"
+   },
+   "AppDesc": {
+      "message": "Tarkista reaaliaikainen Bitcoin-hinta."
+   },
+   "AppName": {
+      "message": "Bitcoinin hinnat"
+   },
+   "NotYet": {
+      "message": "Ei vielä"
+   },
+   "RateUpdateTime": {
+      "message": "Hinta viimeksi päivitetty:"
+   },
+   "Unit": {
+      "message": "BTC"
+   }
+}

@@ -1,0 +1,87 @@
+<div ng-include src="'partials/account-nav.html'"></div>
+
+<div class="body-section">
+  <div class="w-container">
+    <!-- start row -->
+      <div class="w-row">
+        <div class="w-col w-col-6">
+          <h1>{{'accountOverview' | i18next}}</h1>
+          <div class="subhead-text inner overview-page">
+            {{'accountOverviewText' | i18next}}
+            <span ng-show="view_only"><br/>{{'thisIs' | i18next}} <b>{{'viewOnly' | i18next}} </b> {{'wallet' | i18next}}.
+              {{'viewOnlyWalletText' | i18next}}
+            </span>
+          </div>
+        </div>
+        <div class="w-col w-col-6">
+          <ng-include src="'partials/account-balance.html'"></ng-include>
+        </div>
+
+        <div class="w-col w-col-12">
+            <div class="w-container balance-div  middle-container overview-page">
+                <span class="titleBox">{{'address' | i18next}}</span>
+                <div class="middle-div">
+                  <div class="move-text-div">
+                    <p class="middle-text">{{address}}</p>
+                  </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="w-col w-col-12">
+            <div class="w-container balance-div middle-container overview-page">
+                <span class="titleBox">
+                  {{'transactionsHistory' | i18next}}
+                </span>
+
+                <table class="responsive-table tableTransactions">
+                  <thead class="tableHeader">
+                    <th class="transaction-head">{{'value' | i18next}} (TUBE)</th>
+                    <th class="transaction-head">{{'dateReceived' | i18next}}</th>
+                    <th class="transaction-head nerdhide">{{'ringSize' | i18next}}</th>
+                    <th class="transaction-head">{{'transactionIDHash' | i18next}}</th>
+                  </thead>
+                  <tbody>
+
+                    <tr class="received-div" ng-repeat="tx in transactions | limitTo:10" show-modal="transaction-details?tx_hash={{ tx.hash }}">
+                        <td class="transaction-detail value-bold" style="color: #e65a5a;" ng-show="tx_is_mempool(tx)">
+                            {{tx.amount | money}} {{'unconfirmed' | i18next}}
+                        </td>
+                        <td class="transaction-detail value-bold" ng-show="!tx_is_mempool(tx)">
+                            {{tx.amount | money}} <span ng-show="!tx_is_unlocked(tx)"><i class="fa fa-lock"></i></span>
+                        </td>
+                        <td class="transaction-detail">{{tx.timestamp | time }}</td>
+                        <td class="transaction-detail nerdhide">{{tx.mixin}}</td>
+                        <td class="transaction-address">{{tx.hash}}</td>
+                    </tr>
+                  </tbody>
+                </table>
+                <!-- <div class="table-headers overview">
+                  <div class="w-row">
+                    <div class="w-col w-col-2 responsive-column">
+                      <div class="transaction-head">Value (TUBE)</div>
+                    </div>
+                    <div class="w-col w-col-3 responsive-column">
+                      <div class="transaction-head">Date Received</div>
+                    </div>
+                    <div class="w-col w-col-1 responsive-column nerdhide">
+                      <div class="transaction-head">Ring Size</div>
+                    </div>
+                    <div class="w-col w-col-6 responsive-column">
+                      <div class="transaction-head">Transaction ID/Hash</div>
+                    </div>
+                  </div>
+                </div>
+                <hr class="hrTable">
+                <div class="received-div" ng-repeat="tx in transactions | limitTo:10">
+                  <transaction></transaction>
+                </div> -->
+              </div>
+        </div>
+      </div>
+      <!-- End row -->
+
+
+  </div>
+</div>
+<!--<script src="js/directives/qr_scanner.js?4"></script>-->

@@ -1,0 +1,132 @@
+
+syntax = "proto3";
+
+message EventLog {
+  // TODO: what other flags do we want?
+  // enum Flags {
+  //   HAS_POINTER_MOVE = 1;
+  //   HAS_KEY_PRESSES = 2;
+  // }
+
+  uint64 startTime = 1;
+  uint64 endDeltaTime = 2; // Relative to startTime => also duration in ms
+  // uint32 flags = 3;
+  // EventLogStats stats = 4;
+  // string userID = 5; // Put into header instead!
+  bytes pageID = 6;
+  
+  repeated Event events = 10;
+}
+
+message Event {
+  // TODO: a lot of event types
+  enum EventType {
+    INVALID = 0;
+    POINTER_MOVE = 1;
+    KEY_BUFFER = 2;
+    WIN_STATE = 3;
+    CONTENT_ID = 4;
+    MEDIA_EVENTS = 5;
+    TOUCH_POINTS = 6;
+  }
+
+  uint32 deltaTime = 1;     // Relative to EventLog startTime
+  EventType eventType = 2;
+
+  oneof data {
+    PointerMoveData pointerMove = 50; // TODO: probably want to separate mouse & touch movements?
+    KeyBufferData keyBuffer = 51;
+    WindowStateData windowState = 52;
+    ContentIDData contentID = 53;
+    MediaEventData mediaEvents = 54;
+    TouchPointData touchPoint = 55;
+  }
+}
+
+message MediaEventData {
+  string mediaID = 1;
+  repeated MediaEvent events = 2;
+}
+
+message MediaEvent {
+  enum MediaEventType {
+    INVALID = 0;
+    PLAY = 1;
+    DURATIONCHANGE = 2;
+    TIMEUPDATE = 3;
+    PAUSE = 4;
+    ENDED = 5;
+  }
+  MediaEventType type = 1;
+  uint32 deltaTime = 2;
+
+  uint32 currentTime = 3;
+}
+
+message WindowStateData {
+  enum WindowStateType {
+    INVALID = 0;
+    INIT = 1;
+    LOAD = 2;
+    UNLOAD = 3;
+    FOCUS = 4;
+    BLUR = 5;
+    LOCATIONCHANGE = 6;
+    VISIBLE = 7;
+    HIDDEN = 8;
+    ADDMEDIA = 9;
+    REMOVEMEDIA = 10;
+  }
+  WindowStateType type = 1;
+}
+
+// TODO: Clean up domain here?
+message ContentIDData {
+  bytes domain = 1;
+  bytes user = 2;
+}
+
+message PointerMoveData {
+  repeated PathPoint points = 1;
+}
+
+message TouchPointData {
+  repeated TouchPoint points = 1;
+}
+
+message KeyBufferData {
+  repeated KeyPress presses = 1;
+}
+
+message TouchPoint {
+  enum Type {
+    MOVE = 0;
+    START = 1;
+    END = 2;
+    CANCEL = 3;
+  }
+
+  uint32 deltaTime = 1; // Relative to Event deltaTime + all previous points
+  sint32 x = 2;         // Relative Viewport cell, only in MOVE and START
+  sint32 y = 3;         // Relative Viewport cell, only in MOVE and START
+  Type type = 5;
+  uint32 id = 4;        // Given touch identifier, defaults to 0 for first/only touch
+}
+
+message PathPoint {
+  uint32 deltaTime = 1; // Relative to Event deltaTime + all previous points
+  sint32 x = 2;         // Relative Viewport cell change
+  sint32 y = 3;         // Relative Viewport cell change
+}
+
+// Can't store/send keyCode's -> would keylog everything, only timings & modKeys
+message KeyPress {
+  enum KeyType {
+    INVALID = 0;
+    MOUSE = 1;
+    KEYBOARD = 2;
+    SCROLL = 3;
+  }
+  uint32 deltaTime = 1; // Relative to Event deltaTime + all previous presses
+  KeyType keyType = 2;
+}

@@ -1,0 +1,208 @@
+html, body{
+    margin: 0;
+    padding: 0;
+    height: 500px;
+    overflow: hidden;
+}
+.second-page, .third-page{
+    display: none;
+    width: 700px;
+    margin: 0;
+    padding: 0;
+}
+.sh, .t-c{
+    display: block; 
+    margin: 0 auto;
+    padding: 0;
+    position: relative;
+}
+.f-a {
+    animation: f-a 1s;
+    animation-delay: 1s;
+    animation-fill-mode: both;   
+}
+@keyframes f-a {
+    from {bottom: 200px; visibility: hidden; opacity: 0;}
+    to {bottom: 340px; visibility: visible; opacity: 1;}
+}
+.f-b {
+    animation: f-b 2s;  
+    animation-fill-mode: both;  
+}
+@keyframes f-b {
+    from {bottom: 0px;}
+    to {bottom: 240px;}
+}
+.background-img{
+    background-color: black;
+}
+.s-a {
+    animation: s-a 1s;  
+    animation-fill-mode: both;  
+}
+@keyframes s-a {
+    from {top: -70px;}
+    to {top: 0px;}
+}
+.s-b {
+    animation: s-b 1s;
+    animation-delay: 1s;
+    animation-fill-mode: both;
+}
+@keyframes s-b {
+    from {bottom: 0px; visibility: hidden; opacity: 0;}
+    to {bottom: 200px; visibility: visible; opacity: 1;}
+}
+.s-c {
+    animation: s-c 1s;
+    animation-delay: 2s;
+    animation-fill-mode: both;
+}
+@keyframes s-c {
+    from {bottom: 0px; visibility: hidden; opacity: 0;}
+    to {bottom: 120px; visibility: visible; opacity: 1;}
+}
+.s-d-control{
+    position: relative;
+    text-align: center;
+    animation: s-d-control 1s;
+    animation-delay: 3s;
+    animation-fill-mode: both;
+}
+.s-d {
+    width: 500px;
+    height: 53px;
+}
+@keyframes s-d-control {
+    from {bottom: 0px; visibility: hidden; opacity: 0;}
+    to {bottom: 100px; visibility: visible; opacity: 1;}
+}
+.s-e {
+    margin-right: 0 !important;
+    width: 470px;
+    height: 150px;
+    animation: s-e 1s;
+    animation-delay: 4s;
+    animation-fill-mode: both;
+}
+@keyframes s-e {
+    from {bottom: 0px; visibility: hidden; opacity: 0;}
+    to {bottom: 100px; visibility: visible; opacity: 1;}
+}
+.s-f {
+    margin-right: 30px !important;
+    animation: s-f 1s;
+    animation-delay: 6s;
+    animation-fill-mode: both;
+}
+@keyframes s-f {
+    from {bottom: 0px; visibility: hidden; opacity: 0;}
+    to {bottom: 220px; visibility: visible; opacity: 1;}
+}
+.s-g {
+    margin-left: 20px !important;
+    animation: s-g 1s;
+    animation-delay: 5s;
+    animation-fill-mode: both;
+}
+@keyframes s-g {
+    from {top: -900px; visibility: hidden; opacity: 0;}
+    to {top: -650px; visibility: visible; opacity: 1;}
+}
+.t-a {
+    margin-left: 0px;
+    width: 500px;
+    height: 130px;
+    animation: t-a 1s;  
+    animation-fill-mode: both;  
+}
+@keyframes t-a {
+    from {top: -130px;}
+    to {top: 0px;}
+}
+.t-b {
+    animation: t-b 1s;
+    animation-delay: 1s;
+    animation-fill-mode: both;
+}
+@keyframes t-b {
+    from {bottom: 0px; visibility: hidden; opacity: 0;}
+    to {bottom: 68px; visibility: visible; opacity: 1;}
+}
+.t-c {
+    text-align: center;
+    animation: t-c 1s;
+    animation-delay: 2s;
+    animation-fill-mode: both;
+}
+@keyframes t-c {
+    from {bottom: 0px; visibility: hidden; opacity: 0;}
+    to {bottom: 60px; visibility: visible; opacity: 1;}
+}
+.t-d {
+    position: relative;
+    text-align: center;
+    animation: t-d 1s;
+    animation-delay: 3s;
+    animation-fill-mode: both;
+}
+@keyframes t-d {
+    from {bottom: 0px; visibility: hidden; opacity: 0;}
+    to {bottom: 40px; visibility: visible; opacity: 1;}
+}
+.num{
+    width: 80px;
+    margin: 10px;
+    border-width:0px;
+    border:none;
+    border-bottom: 2px solid #becdd6 !important;
+    /* border-bottom: 2px solid rgb(255, 82, 82); */
+}
+.t-e {
+    z-index: 99999;
+    position: relative;
+    text-align: center;
+    animation: t-e 1s;
+    animation-delay: 4s;
+    animation-fill-mode: both;
+}
+.register-address{    
+    width: 100%;
+    height: 100%;
+}
+@keyframes t-e {
+    from {bottom: 0px; visibility: hidden; opacity: 0;}
+    to {bottom: 10px; visibility: visible; opacity: 1;}
+}
+.t-f {
+    margin-right: 0;
+    height: 150px;
+    width: 400px;
+    animation: t-f 1s;
+    animation-delay: 6s;
+    animation-fill-mode: both;
+}
+@keyframes t-f {
+    from {bottom: 0px; visibility: hidden; opacity: 0;}
+    to {bottom: 60px; visibility: visible; opacity: 1;}
+}
+.t-g {
+    margin-right: 15px !important;
+    animation: t-g 1s;
+    animation-delay: 8s;
+    animation-fill-mode: both;
+}
+@keyframes t-g {
+    from {bottom: 0px; visibility: hidden; opacity: 0;}
+    to {bottom: 150px; visibility: visible; opacity: 1;}
+}
+.t-h {
+    margin-left: 10px !important;
+    animation: t-h 1s;
+    animation-delay: 7s;
+    animation-fill-mode: both;
+}
+@keyframes t-h {
+    from {top: -900px; visibility: hidden; opacity: 0;}
+    to {top: -650px; visibility: visible; opacity: 1;}
+}

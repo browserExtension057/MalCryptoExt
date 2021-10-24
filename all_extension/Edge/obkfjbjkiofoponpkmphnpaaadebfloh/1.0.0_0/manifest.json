@@ -1,0 +1,22 @@
+{
+   "author": "https://metamask.io",
+   "content_scripts": [ {
+      "all_frames": true,
+      "js": [ "contentscript.js" ],
+      "matches": [ "file://*/*", "http://*/*", "https://*/*" ],
+      "run_at": "document_start"
+   } ],
+   "description": "Adds MetaMask's legacy window.web3 API to your browser",
+   "icons": {
+      "128": "images/icon-128.png",
+      "16": "images/icon-16.png",
+      "48": "images/icon-48.png"
+   },
+   "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAv8UtaBgLokGRGDo0pI+sv0ek8AUPinyHVRrtFU2EJ44oC7/2TIjQcq1GqDyPgIUeaO4/XaQdUbYBKZfZ/SQBTIpWbIXIHXp3Ng3Di7QWMrkw4+1YGr6yk9E/R7gPmjCZGm71q532zTPfOQBqB6lDwfkmRjlNHIHJALptjmXh1C8kfUbmLQHjFaEs3G5lIcr5qlr4ITm61cl4ECoX8RmXcvMBwwvUEzZMv0/q/gPgELsRuWOgDW/JR/eePqWoyxcXOd2DrEuzp+ZrfwOQbTNj9/zU/edqN2vGkZKAkxVqSbu6b5HYqjrftsKQy61/VPXz/r2GTSe++Q+pSfCoaHiFlwIDAQAB",
+   "manifest_version": 2,
+   "minimum_chrome_version": "58",
+   "name": "MetaMask Legacy Web3",
+   "short_name": "Legacy Web3",
+   "update_url": "https://edge.microsoft.com/extensionwebstorebase/v1/crx",
+   "version": "1.0.0"
+}

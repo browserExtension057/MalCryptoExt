@@ -1,0 +1,20 @@
+{
+   "Amount": {
+      "message": "Montant"
+   },
+   "AppDesc": {
+      "message": "Vérifiez le prix Bitcoin en temps réel."
+   },
+   "AppName": {
+      "message": "Prix Bitcoin"
+   },
+   "NotYet": {
+      "message": "Pas encore"
+   },
+   "RateUpdateTime": {
+      "message": "Dernière mise à jour du prix à:"
+   },
+   "Unit": {
+      "message": "BTC"
+   }
+}

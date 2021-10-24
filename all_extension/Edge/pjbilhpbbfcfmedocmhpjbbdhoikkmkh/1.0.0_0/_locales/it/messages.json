@@ -1,0 +1,20 @@
+{
+   "Amount": {
+      "message": "Quantità"
+   },
+   "AppDesc": {
+      "message": "Controlla il prezzo Bitcoin in tempo reale."
+   },
+   "AppName": {
+      "message": "Prezzi dei bitcoin"
+   },
+   "NotYet": {
+      "message": "Non ancora"
+   },
+   "RateUpdateTime": {
+      "message": "Ultimo aggiornamento del prezzo a:"
+   },
+   "Unit": {
+      "message": "BTC"
+   }
+}

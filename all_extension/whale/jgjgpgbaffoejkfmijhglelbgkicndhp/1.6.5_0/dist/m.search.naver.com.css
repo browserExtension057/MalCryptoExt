@@ -1,0 +1,15 @@
+[data-useragent*="sidebar"] #nx_input_clear {
+    right: 9px;
+}
+
+[data-useragent*="sidebar"] #_rs_show_btn {
+    display: none;
+}
+
+[data-useragent*="sidebar"] .sch_btn:not(.sch_del) {
+    display: none;
+}
+
+[data-useragent*="sidebar"] .sch_w .sch_inpw_in .sch_inp_inner {
+    margin-right: 34px;
+}

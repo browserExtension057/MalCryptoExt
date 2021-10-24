@@ -1,0 +1,38 @@
+{
+   "amount": {
+      "message": "Amount"
+   },
+   "appDesc": {
+      "message": "Currency converter for Edge fast and easy to use."
+   },
+   "appName": {
+      "message": "Currency Converter"
+   },
+   "back": {
+      "message": "Back"
+   },
+   "btconvert": {
+      "message": "convert"
+   },
+   "configuration": {
+      "message": "Configuration"
+   },
+   "dark": {
+      "message": "Dark"
+   },
+   "helpnote": {
+      "message": "Press + to add currencies"
+   },
+   "light": {
+      "message": "Light"
+   },
+   "openextension": {
+      "message": "Open extension"
+   },
+   "selectcurrencies": {
+      "message": "Select currencies"
+   },
+   "theme": {
+      "message": "Theme"
+   }
+}

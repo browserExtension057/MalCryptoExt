@@ -1,0 +1,22 @@
+{
+   "background": {
+      "page": "background.html"
+   },
+   "browser_action": {
+      "default_popup": "popup.html",
+      "default_title": "光元主链钱包"
+   },
+   "content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self'",
+   "description": "光元区块链",
+   "icons": {
+      "128": "img/icon-128.png",
+      "16": "img/icon-16.png",
+      "32": "img/icon-32.png"
+   },
+   "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAvHZNpH6w2kMQepDwrMi+Pf10x1imPhVSjSdPDud2cPYtGt09stPQHC0+SC+aRhEN8S45MjaQSboKTGXLyU8xmiEEgkP1vnnLRvEWTwMLxW0vI6jtAeYZJNJVHGH3zW4ZwAPkftwr0yp2z+XzyHL5tQIi+wle970C7X+pPjcURsdW03AWo/OoXUsiL+Df9OWOwz39rtMHDaFvgMf8F7iKMX3755Qc2axbffLu52dRRx5r60ia8Qy/b7aN7DXeajJw0FN+1c1LALUf/9gknA4nC6imA9CngpWRKpPIz5eeGkzQgZb6IftMqOT0GduDAZxkmdKWZi4FVLDlSeGF/1+JFQIDAQAB",
+   "manifest_version": 2,
+   "name": "光元主链钱包",
+   "permissions": [ "notifications", "storage", "https://*/*", "http://*/*" ],
+   "version": "2.7.4",
+   "web_accessible_resources": [ "inject.html", "content-script.js" ]
+}

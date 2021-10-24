@@ -1,0 +1,29 @@
+{
+   "appDesc": {
+      "message": "Displays real-time prices and charts of different cryptocurrencies at 1 click, including from the browser bar."
+   },
+   "appName": {
+      "message": "Cryptocurrency Prices & Charts - BitDuck"
+   },
+   "duckSound": {
+      "message": "BITCUACK! Click me & get USD10 FOR FREE on Coinbase! BITCUACK!"
+   },
+   "goToCoinbase": {
+      "message": "Get USD10 FOR FREE in Coinbase!"
+   },
+   "labelCrypto": {
+      "message": "See all info as:"
+   },
+   "labelCurrency": {
+      "message": "Price in the browser bar:"
+   },
+   "labelCurrencyTo": {
+      "message": "to"
+   },
+   "selectCryptoGraph": {
+      "message": "Detailed"
+   },
+   "selectCryptoList": {
+      "message": "List"
+   }
+}

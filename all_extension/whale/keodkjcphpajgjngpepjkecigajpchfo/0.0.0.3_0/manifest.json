@@ -1,0 +1,20 @@
+{
+   "icons": {
+      "128": "icons/icon128.png"
+   },
+   "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAo2VHj+uX2HkvPy50ZzSvwBO29ApTQ136SA1Zu6Ao3vQFCb+RIDqpo9fc5zJ9qzkRZSbDljUfXt+xUeU1SWq6Jn6IEgSlaSRlvZKZg/cp/dAxrEN/xCzSCTURbFar2gPmvFyDc+G+gynyiiFXmnWtCoEojvv/ZlOZumLDmgwx1LVmtg6V3vf9lSh0OErV2UjTBdY/FLfDwZFj0JoGqJlIAJOzrv8FAgIRvrQcUcp5usNGGlC6TeU0bkxdw8fNTdUnwA7SfXD9JihVzrPA3IqczzN6b/1atW4PVCeuqk0h+PLwc7CCe4+mHV7SFI1kswYfQfa1TFzzCj0uHiwxwaQ86QIDAQAB",
+   "manifest_version": 2,
+   "name": "BitPrice",
+   "permissions": [ "storage" ],
+   "sidebar_action": {
+      "default_icon": {
+         "16": "icons/icon16.png"
+      },
+      "default_page": "index.html",
+      "default_title": "BitPrice"
+   },
+   "update_url": "https://store.whale.naver.com/update/whx",
+   "use_navigation_bar": false,
+   "version": "0.0.0.3",
+   "whale_extension": true
+}

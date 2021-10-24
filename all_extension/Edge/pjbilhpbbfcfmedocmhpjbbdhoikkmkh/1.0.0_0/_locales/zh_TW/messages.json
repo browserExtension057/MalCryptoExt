@@ -1,0 +1,20 @@
+{
+   "Amount": {
+      "message": "量"
+   },
+   "AppDesc": {
+      "message": "檢查實時比特幣價格。"
+   },
+   "AppName": {
+      "message": "比特幣價格"
+   },
+   "NotYet": {
+      "message": "還沒"
+   },
+   "RateUpdateTime": {
+      "message": "最後更新價格："
+   },
+   "Unit": {
+      "message": "比特幣"
+   }
+}

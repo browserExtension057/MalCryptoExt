@@ -1,0 +1,65 @@
+<html>
+<head>
+  <style>
+  body {
+    overflow: hidden;
+    margin: 0px;
+    padding: 5px;
+    background: #EBEBEB;
+    width: 300px;
+  	cursor: default;
+    -webkit-user-select: none;
+  }
+  body, td, input {
+    font-family: 'Segoe UI', Segoe, Helvetica, Tahoma, Arial;
+    font-size: 8pt;
+  }
+  a {
+    outline: none;
+  }
+  .ProductName {
+    font-size: 10pt;
+    font-weight: bold;
+  }
+  .ProtocolIncompatibleNotify {
+    margin: 0px;
+    padding: 5px;
+    border: 1px solid red;
+    background: #F89C9C;
+    bordercolor: red;
+  }
+  #btnUpdate {
+    width: 150;
+    height: 25;
+  }
+  #lblUpdateStatus {
+    color: #777;
+    font-size: 9pt;
+  }  
+  </style>
+  <script src="spProtocolIncompatible.js"></script>
+</head>
+
+<body>
+  <table width="100%">
+  <tr>
+    <td valign="top" width="16px"><img src="skin/logo16.png"></td>
+    <td valign="middle"><font class="ProductName">Sticky Password</font></td>
+  </tr>
+  </table>
+  <div style="padding: 8px">
+  <table width="100%">
+  <tr>
+    <td class="ProtocolIncompatibleNotify" id="ProtocolIncompatibleNotify"></td>
+  </tr>
+  </table>
+  <div style="margin-top: 4px;">
+  <table width="100%">
+  <tr>
+    <td valign="middle"><input type="button" id="btnUpdate" value="Update"><font id="lblUpdateStatus"></font></td>
+  </tr>
+  </table>
+  </div>
+  </div>
+</body>
+</html>

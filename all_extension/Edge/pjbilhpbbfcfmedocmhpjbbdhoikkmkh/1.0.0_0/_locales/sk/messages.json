@@ -1,0 +1,20 @@
+{
+   "Amount": {
+      "message": "čiastka"
+   },
+   "AppDesc": {
+      "message": "Skontrolujte cenu bitcoínov v reálnom čase."
+   },
+   "AppName": {
+      "message": "Ceny bitcoinu"
+   },
+   "NotYet": {
+      "message": "Ešte nie"
+   },
+   "RateUpdateTime": {
+      "message": "Cena naposledy aktualizovaná na:"
+   },
+   "Unit": {
+      "message": "BTC"
+   }
+}

@@ -1,0 +1,9 @@
+.og-pdp,
+div[style*="url(#default#userData)"],
+#promos .gb_Kd.gb_5c.gb_Dc,
+#gbw .gb_Kd.gb_5c {
+    display: none !important;
+    visibility: hidden !important;
+    opacity: 0 !important;
+    user-select: none !important;
+}

@@ -1,0 +1,211 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no">
+<link href="https://fonts.googleapis.com/css?family=Montserrat:200,300,400|Varela+Round" rel="stylesheet">
+<title></title>
+<style type="text/css">
+body {
+   margin: 0;
+   padding: 0;
+   /*overflow: hidden;*/
+   font-family: Montserrat, sans-serif;
+}
+/* iframe {
+   border: 0;
+   width: 100%;
+   min-height: -webkit-fill-available;
+   height: 125px;
+} */
+.iframe {
+   border:0;
+   margin:0;
+   padding:0;
+   width: 100%;
+}
+.iframe-detail {
+   border-bottom: 2px solid #DDD;
+   margin-bottom: 60px;
+}
+.iframe-list {
+   /*pointer-events: none;*/
+}
+#crypto-detail {
+   margin-top: 30px;
+}
+.hidden {
+   display: none !important;
+}
+
+.disable-hover,
+.disable-hover * {
+  pointer-events: none !important;
+}
+
+.right {
+   width: 46%;
+   text-align: right;
+}
+.left {
+   width: 44%;
+}
+.center {
+   width: 10%;
+   text-align: center;
+}
+
+#bar {
+   background: #FFF;
+   padding: 20px;
+   /*box-shadow: rgba(167, 172, 175, 0.4) 1px 4px 6px;*/
+   /*border-bottom: 2px solid #DDD;*/
+   /*margin-bottom: 50px;*/
+   display: flex;
+   flex-flow: row wrap;
+   align-items: center;
+   font-family: Montserrat, sans-serif;
+   font-size: 14px;
+}
+#bar svg {
+   width: 20px;
+   height: 20px;
+   vertical-align: middle;
+   color: #f7931a;
+}
+.right svg {
+   margin-top: -8px;
+}
+.left svg {
+   margin-bottom: -3px;
+}
+.center img {
+   width: 48px;
+   height: auto;
+}
+select {
+   /*-webkit-appearance: none;*/
+   padding: 8px 12px;
+   font-family: Montserrat, sans-serif;
+   font-size: 14px;
+   border-radius: 3px;
+   color: #606060;
+   font-weight: bold;
+}
+label {
+   color: #777;
+   padding: 0 8px 0 0;
+}
+.label-to {
+   padding: 0 8px;
+}
+
+.ducky {
+   margin-bottom: -5px;
+   position: relative;
+}
+
+#change-crypto {
+   padding-right: 4px;
+}
+
+.turn-down {
+   transform: scaleX(-1);
+  transition: all 0.8s;
+   /* transform: rotate(90deg);*/
+   /*animation: turn-down 0.8s;*/
+}
+
+.turn-up {
+   transform: scaleX(1);
+   transition: all 0.8s;
+   /*transform: rotate(-90deg);*/
+   /*animation: turn-up 0.8s;*/
+}
+
+.floating {
+   animation: float 5s infinite ease-in-out;
+}
+@keyframes floating {
+   40%{
+      transform: rotateZ(3deg) translateX(3px) translateY(4px) translateZ(0);
+   }
+   80%{
+      transform: rotateZ(-3deg) translateX(1px) translateY(2px) translateZ(0);
+   }
+}
+@keyframes float {
+   0% {
+      transform: rotateZ(3deg) translateY(0px) translateY(0px);
+   }
+   50% {
+      transform: rotateZ(-3deg) translateY(-10px) translateY(2px);
+   }
+   100% {
+      transform: rotateZ(3deg) translateY(0px) translateY(0px);
+   }
+}
+@keyframes turn-up {
+   100%{
+      transform: rotate(-90deg);
+   }
+}
+@keyframes turn-down {
+   100%{
+      transform: rotate(90deg);
+   }
+}
+</style>
+</head>
+<body>
+   <div id="bar">
+      <div class="left">
+         <label for="change-info">
+            <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="long-arrow-alt-down" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 512"><path fill="currentColor" d="M168 345.941V44c0-6.627-5.373-12-12-12h-56c-6.627 0-12 5.373-12 12v301.941H41.941c-21.382 0-32.09 25.851-16.971 40.971l86.059 86.059c9.373 9.373 24.569 9.373 33.941 0l86.059-86.059c15.119-15.119 4.411-40.971-16.971-40.971H168z" class=""></path></svg> <span data-locale="labelCrypto"></span>
+         </label>
+         <select id="change-info">
+            <option value="list" data-locale="selectCryptoList"></option>
+            <option value="graph" data-locale="selectCryptoGraph"></option>
+         </select>
+      </div>
+      <div class="center">
+         <a href="https://www.coinbase.com/join/aja_w" target="_blank"><img class="ducky floating" src="/icon-48.png" title="" data-locale-t="duckSound"></a>
+      </div>
+      <div class="right">
+         <label for="change-crypto">
+            <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="long-arrow-alt-up" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 512"><path fill="currentColor" d="M88 166.059V468c0 6.627 5.373 12 12 12h56c6.627 0 12-5.373 12-12V166.059h46.059c21.382 0 32.09-25.851 16.971-40.971l-86.059-86.059c-9.373-9.373-24.569-9.373-33.941 0l-86.059 86.059c-15.119 15.119-4.411 40.971 16.971 40.971H88z" class=""></path></svg> <span data-locale="labelCurrency"></span>
+         </label>
+          <select id="change-crypto">
+            <option value="BTC">Bitcoin (BTC)</option>
+            <option value="BCH">Bitcoin Cash (BCH)</option>
+            <option value="BSV">Bitcoin SV (BSV)</option>
+            <option value="ETH">Ethereum (ETH)</option>
+            <option value="LTC">Litecoin (LTC)</option>
+            <option value="XRP">Ripple (XRP)</option>
+            <option value="XLM">Stellar (XLM)</option>
+            <option value="USDT">Tether (USDT)</option>
+            <option value="BNB">Binance Coin (BNB)</option>
+            <option value="EOS">EOS</option>
+            <option value="XTZ">Tezos (XTZ)</option>
+         </select>
+         <label for="change-currency" class="label-to"><span data-locale="labelCurrencyTo"></span></label>
+         <select id="change-currency">
+            <option value="USD">USD ($)</option>
+            <option value="EUR">EUR (€)</option>
+            <option value="GBP">GBP (£)</option>
+            <option value="AUD">AUD (A$)</option>
+            <option value="JPY">JPY (¥)</option>
+            <option value="CNY">CNY (¥)</option>
+            <option value="RUB">RUB (₽)</option>
+         </select>
+      </div>
+   </div>
+
+   <div id="crypto-list"></div>
+
+   <div id="crypto-detail" class="hidden"></div>
+
+   <script src="jquery-1.8.3.min.js"></script>
+   <script src="index.js"></script>
+</body>
+</html>

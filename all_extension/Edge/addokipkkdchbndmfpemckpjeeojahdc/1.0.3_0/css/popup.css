@@ -1,0 +1,36 @@
+.popup-container {
+	width: 700px;
+	min-height: 413px;
+	color: rgb#fff;
+	background-color: #4d4d4e;
+}
+
+canvas {
+	-moz-user-select: none;
+	-webkit-user-select: none;
+	-ms-user-select: none;
+}
+
+a {
+	color: #f2a900;
+}
+
+h2 {
+	color: #fff;
+}
+
+a:hover {
+	color: #fff;
+}
+
+.text-small {
+	font-size: 11px;
+}
+
+.text-right {
+	text-align: right;
+}
+
+.pointer {
+	cursor: pointer;
+}

@@ -1,0 +1,20 @@
+{
+   "Amount": {
+      "message": "رقم"
+   },
+   "AppDesc": {
+      "message": "ریئل ٹائم بٹ کوائن کی قیمت چیک کریں۔"
+   },
+   "AppName": {
+      "message": "مفت ویکیپیڈیا دستگیر"
+   },
+   "NotYet": {
+      "message": "ابھی تک نہیں"
+   },
+   "RateUpdateTime": {
+      "message": "قیمت کو آخری بار اپ ڈیٹ کیا گیا:"
+   },
+   "Unit": {
+      "message": "بی ٹی سی"
+   }
+}

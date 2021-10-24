@@ -1,0 +1,42 @@
+{
+   "author": "Julik",
+   "browser_action": {
+      "default_icon": {
+         "19": "assets/icons/19.png",
+         "38": "assets/icons/38.png"
+      },
+      "default_popup": "popup.html",
+      "default_title": "__MSG_appName__"
+   },
+   "commands": {
+      "_execute_browser_action": {
+         "suggested_key": {
+            "chromeos": "Alt+W",
+            "default": "Alt+W",
+            "linux": "Alt+W",
+            "mac": "Alt+W",
+            "windows": "Alt+W"
+         }
+      }
+   },
+   "default_locale": "en",
+   "description": "__MSG_appDesc__",
+   "icons": {
+      "128": "assets/icons/128.png",
+      "19": "assets/icons/19.png",
+      "32": "assets/icons/32.png",
+      "38": "assets/icons/38.png",
+      "48": "assets/icons/48.png",
+      "64": "assets/icons/64.png"
+   },
+   "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAr7mKJDV7lmi0q9ppuSFqYldpQmowU0N7x6grGMJxlp4xDCJbLhp1GEYWNlApMr/yBFGIbNqI4MIRj0ZdcXKEu7zpwjiAiFrPAiJDFKh0LlXyirHfPkctnjxTXgNaM0dJqA839Qj7iZzD3WuRA20fdtDcsy94ak0VjGWicHENxgp7mX1zq83uQiv0vNUYWmruCfKfMN6ilVGwPkD28j6xrdpmoIp68UJ2k8VrfpN/bM/GAar/n2HKzdDCSNjlIF4PFKuZgrUcf7bhkYOtQl28PLydaiUW8ZnEXMbzsu5boQdB+PYF24kwj3DLhgcPwbU1+shCy8vI1HSeB/aCIs/2uQIDAQAB",
+   "manifest_version": 2,
+   "name": "__MSG_appName__",
+   "offline_enabled": true,
+   "options_ui": {
+      "page": "options.html"
+   },
+   "permissions": [ "storage" ],
+   "update_url": "https://edge.microsoft.com/extensionwebstorebase/v1/crx",
+   "version": "1.7"
+}

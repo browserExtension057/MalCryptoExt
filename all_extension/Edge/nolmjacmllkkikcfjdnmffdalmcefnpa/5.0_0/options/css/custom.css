@@ -1,0 +1,53 @@
+/*
+// Add your own style rules here, not in css/main.css
+// or css/setting.css for easy updating reasons.
+*/
+/*---- highligh Apps ----*/
+.highlightit img {
+    filter: progid:DXImageTransform.Microsoft.Alpha(opacity=50);
+    -moz-opacity: 0.7;
+    opacity: 0.7;
+}
+
+.highlightit:hover img {
+    filter: progid:DXImageTransform.Microsoft.Alpha(opacity=100);
+    -moz-opacity: 1;
+    opacity: 1;
+}
+/*---- highligh social icons ----*/
+.highlightit2 img {
+    filter: progid:DXImageTransform.Microsoft.Alpha(opacity=50);
+    -moz-opacity: 0.8;
+    opacity: 0.8;
+}
+
+.highlightit2:hover img {
+    filter: progid:DXImageTransform.Microsoft.Alpha(opacity=100);
+    -moz-opacity: 1;
+    opacity: 1;
+}
+/*---- style on <hr> divisor ----*/
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 0em 0;
+    padding: 0;
+}
+/*----------------------------*/
+
+/*Colors on Table with Premium features*/
+.table-striped>tbody>tr:nth-of-type(even) {
+    background-color: #e3e1fe8a !important;
+}
+
+.table-striped>tbody>tr:nth-of-type(odd) {
+    background-color: #e3e1fe8a !important;
+}
+
+/*Resize the oinkandstuffApps height*/
+#oinkandstuffApps img {
+	height: 69px;
+}
+

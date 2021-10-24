@@ -1,0 +1,30 @@
+{
+   "background": {
+      "scripts": [ "js/background.js" ]
+   },
+   "browser_action": {
+      "default_icon": {
+         "19": "img/icon19.png",
+         "38": "img/icon38.png"
+      },
+      "default_popup": "popup.html",
+      "default_title": "币圣"
+   },
+   "content_scripts": [ {
+      "css": [ "lib/layer/skin/default/layer.css", "lib/bootstrap.min.css" ],
+      "js": [ "lib/jquery.1.9.1.min.js", "lib/layer/layer.js", "js/content_scripts.js" ],
+      "matches": [ "https://www.jubi.com/coin/trades" ]
+   } ],
+   "content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self'",
+   "description": "币圣币圣币圣!",
+   "icons": {
+      "128": "img/icon128.png",
+      "16": "img/icon16.png",
+      "48": "img/icon48.png"
+   },
+   "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA3YcT4S6ljH1948zcw1TwB18V6r31Ltq08xsAVYf4el4Zv03KHbiPuIDbCEow5RxXz0YYzOhkS0iptoLkeJJ0IgOeE43bhMa90wyxQ2banRm7hi0rc6nLsBDXaXBX0QVPWRdV9A2WRZphxzhhiRSmXKZXO6g7kkdJfEWphdaWjrySAvKK/7547rvhFncWYxN7gLWQqTRil3GTR7OF3GUHG5U+z0YwejnwO8eaRcbpjO3r3hGa/JRkQH6RwZjMWgcLwpEM3YXfRfGv5fpvR0jq/WMigBIKHaIbVVqe2pw93ctWw8qFoYf7tiL2XeMh/lZIYvVnaiNvZdsPt74CY2bo2wIDAQAB",
+   "manifest_version": 2,
+   "name": "币圣",
+   "permissions": [ "http://*/*" ],
+   "version": "1.0"
+}

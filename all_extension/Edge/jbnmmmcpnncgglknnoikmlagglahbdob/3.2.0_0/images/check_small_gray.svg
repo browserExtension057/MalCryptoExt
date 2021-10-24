@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="15px" height="15px" viewBox="0 0 15 15" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: sketchtool 51.2 (57519) - http://www.bohemiancoding.com/sketch -->
+    <title>A619D16E-1C0D-49C4-86D6-F1874AD692B2</title>
+    <desc>Created with sketchtool.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="alert-wallet-address---eth" transform="translate(-146.000000, -369.000000)">
+            <rect id="Rectangle" x="0" y="0" width="320" height="453" rx="5"></rect>
+            <g id="check_small_gray" transform="translate(146.000000, 369.000000)" fill-rule="nonzero">
+                <rect id="Rectangle-2" x="0" y="0" width="15" height="15"></rect>
+                <polygon id="Path-2" fill="#ADB5BD" points="10.3136444 4 11.431048 4.96943194 6.91643879 10.1731397 4 6.3895258 5.17165142 5.48640786 6.9840947 7.8377638"></polygon>
+            </g>
+        </g>
+    </g>
+</svg>

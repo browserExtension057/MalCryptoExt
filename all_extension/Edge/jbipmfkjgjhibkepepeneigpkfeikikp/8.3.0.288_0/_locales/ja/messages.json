@@ -1,0 +1,50 @@
+{
+   "AutoUninstallErrorMessage": {
+      "message": "\u003Cb>安全なパスワード管理アプリ\u003C/b> の自動アンインストール中にエラーが発生しました："
+   },
+   "AutoUninstallingMessage": {
+      "message": "\u003Cb>安全なパスワード管理アプリ\u003C/b> が自動的にアンインストールされるのをお待ちください..."
+   },
+   "ExtensionNotAuthenticatedNotify": {
+      "message": "安全なパスワード管理アプリ は許可されていません。 ブラウザーを再起動してこの拡張機能を許可してください。"
+   },
+   "ExtensionOutdateNotify": {
+      "message": "この拡張機能はバージョンが古く、 \u003Cb>Sticky Password\u003C/b> と互換性がありません。 拡張機能を更新してください。"
+   },
+   "HostOutdateNotify": {
+      "message": "\u003Cb>Sticky Password\u003C/b> はバージョンが古く、このテクステンションと互換性がありません。 Sticky Password を更新してください。"
+   },
+   "ManualUninstallMessage": {
+      "message": "\u003Cp class=\"title\">オートフィル拡張機能を手動でアンインストールするには：\u003C/p>\u003Cp>\u003Cul>\u003Cli>\u003Cb>ツール -> 拡張機能\u003C/b> を選択します。\u003C/li>\u003Cli>リストから \u003Cb>安全なパスワード管理アプリ\u003C/b> を選択して \u003Cb>削除\u003C/b> をクリックします。\u003C/li>\u003Cli>すべてのブラウザーウィンドウを終了して、オートフィル拡張機能を完全に削除してください。\u003C/li>\u003C/ul>\u003C/p>"
+   },
+   "NoUpdatesFound": {
+      "message": "更新が見つかりません！"
+   },
+   "NotInstalledNotify": {
+      "message": "\u003Cb>Sticky Password\u003C/b> はインストールされていないか実行中ではありません。 すべての機能を使用するには \u003Ca href=\"https://www.stickypassword.com\" target=\"_blank\">Sticky Password ホームページ\u003C/a> からインストールしてください。"
+   },
+   "SearchingForUpdate": {
+      "message": "更新を検索..."
+   },
+   "UninstallAutofillPlugin": {
+      "message": "安全なパスワード管理アプリ をアンインストール"
+   },
+   "UpdateExtension": {
+      "message": "拡張機能を更新"
+   },
+   "UpdateHost": {
+      "message": "Sticky Password を更新"
+   },
+   "UpdatePending": {
+      "message": "更新を一時停止中..."
+   },
+   "UpdatingHost": {
+      "message": "Sticky Password を更新中..."
+   },
+   "appDesc": {
+      "message": "パスワードを覚える必要はありません。 Sticky Password は、あなたのパスワードを安全に保存し、ウェブ閲覧中必要な時にあなたに代わって入力します。自動入力です！"
+   },
+   "appName": {
+      "message": "安全なパスワード管理アプリ"
+   }
+}

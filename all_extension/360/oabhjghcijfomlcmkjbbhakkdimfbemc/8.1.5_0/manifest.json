@@ -1,0 +1,62 @@
+{
+   "author": "https://metamask.io",
+   "background": {
+      "persistent": true,
+      "scripts": [ "bg-libs.js", "background.js" ]
+   },
+   "browser_action": {
+      "default_icon": {
+         "128": "images/icon-128.png",
+         "16": "images/icon-16.png",
+         "19": "images/icon-19.png",
+         "32": "images/icon-32.png",
+         "38": "images/icon-38.png",
+         "512": "images/icon-512.png",
+         "64": "images/icon-64.png"
+      },
+      "default_popup": "popup.html",
+      "default_title": "MetaMask"
+   },
+   "commands": {
+      "_execute_browser_action": {
+         "suggested_key": {
+            "chromeos": "Alt+Shift+M",
+            "linux": "Alt+Shift+M",
+            "mac": "Alt+Shift+M",
+            "windows": "Alt+Shift+M"
+         }
+      }
+   },
+   "content_scripts": [ {
+      "all_frames": true,
+      "js": [ "contentscript.js" ],
+      "matches": [ "file://*/*", "http://*/*", "https://*/*" ],
+      "run_at": "document_start"
+   }, {
+      "js": [ "vendor/trezor/content-script.js" ],
+      "matches": [ "*://connect.trezor.io/*/popup.html" ]
+   } ],
+   "default_locale": "en",
+   "description": "__MSG_appDescription__",
+   "externally_connectable": {
+      "ids": [ "*" ],
+      "matches": [ "https://metamask.io/*" ]
+   },
+   "icons": {
+      "128": "images/icon-128.png",
+      "16": "images/icon-16.png",
+      "19": "images/icon-19.png",
+      "32": "images/icon-32.png",
+      "38": "images/icon-38.png",
+      "512": "images/icon-512.png",
+      "64": "images/icon-64.png"
+   },
+   "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAqDiy9HVQAdN9AA0rTn6EdxIR+HOIBkTeb3oQFzhY+vbuwGIlSVDlqzzU6xexgS7QtTtujzgYS93jx/T3AWZ3z85Fq8AgP+tScVAphXqDc+iOwnZABoZAVHd9j/+x+XnwBX/gQrq3z6JmqhgNOkoASH9QplEzDYODoMGAAEurO8OgkchVY18T88qIsoA0YUnX78c5EqK1rP5D56S/oEvGZEVqjaohQS7EJglz/PBbvs/gnltkyHBYb4JpuIxvxm1DAjrBcCYWhuOF53RtsEQz4yk9iLQSNIa8ZbZkY6TjJGrtoVxV/pcq6ZPegldlF5TTinvGbCDvpdASkf7o8sCEywIDAQAB",
+   "manifest_version": 2,
+   "minimum_chrome_version": "52",
+   "name": "__MSG_appName__",
+   "permissions": [ "storage", "unlimitedStorage", "clipboardWrite", "http://localhost:8545/", "https://*.infura.io/", "activeTab", "webRequest", "*://*.eth/", "notifications" ],
+   "short_name": "__MSG_appName__",
+   "version": "8.1.5",
+   "web_accessible_resources": [ "inpage.js", "phishing.html" ]
+}

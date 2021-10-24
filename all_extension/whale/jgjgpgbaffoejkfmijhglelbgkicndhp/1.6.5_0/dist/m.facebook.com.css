@@ -1,0 +1,7 @@
+/* Fixed header to install facebook App. */
+.android #header-notices,
+/* "Get Facebook for Android and browse faster" link in login form. */
+.android a[href*="com.facebook.katana"],
+.android #MChromeHeader #header {
+    display: none !important;
+}

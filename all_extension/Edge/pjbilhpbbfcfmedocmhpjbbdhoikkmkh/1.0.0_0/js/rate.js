@@ -1,0 +1,1 @@
+document.querySelector('.teaser').href = `https://microsoftedge.microsoft.com/addons/detail/${chrome.runtime.id}`;

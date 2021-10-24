@@ -1,0 +1,50 @@
+{
+   "AutoUninstallErrorMessage": {
+      "message": "Fehler bei der automatischen Deinstallation der \u003Cb>Sticky Password - sicherer Passwortmanager Erweiterung\u003C/b>:"
+   },
+   "AutoUninstallingMessage": {
+      "message": "Bitte warten Sie, während die \u003Cb>Sticky Password - sicherer Passwortmanager Erweiterung\u003C/b> automatisch deinstalliert wird..."
+   },
+   "ExtensionNotAuthenticatedNotify": {
+      "message": "Die Sticky Password - sicherer Passwortmanager Erweiterung darf nicht verwendet werden. Bitte starten Sie Ihren Browser neu und erlauben Sie die Erweiterung."
+   },
+   "ExtensionOutdateNotify": {
+      "message": "Die Erweiterung ist veraltet und nicht mit \u003Cb>Sticky Password\u003C/b> kompatibel. Bitte aktualisieren Sie die Erweiterung."
+   },
+   "HostOutdateNotify": {
+      "message": "\u003Cb>Sticky Password\u003C/b> ist veraltet und nicht kompatibel mit dieser Erweiterung. Bitte aktualisieren Sie Sticky Password."
+   },
+   "ManualUninstallMessage": {
+      "message": "\u003Cp class=\"title\">Um die Erweiterung manuell zu deinstallieren:\u003C/p>\u003Cp>\u003Cul>\u003Cli>Klicken Sie \u003Cb>Weitere Tools -> Erweiterungen\u003C/b>.\u003C/li>\u003Cli>Wählen Sie die \u003Cb>Sticky Password - sicherer Passwortmanager \u003C/b> aus der Liste und klicken Sie \u003Cb>Entfernen\u003C/b>.\u003C/li>\u003Cli>Schließen Sie bitte alle Browserfenster, um die Erweiterung komplett zu entfernen.\u003C/li>\u003C/ul>\u003C/p>"
+   },
+   "NoUpdatesFound": {
+      "message": "Keine Aktualisierung gefunden!"
+   },
+   "NotInstalledNotify": {
+      "message": "\u003Cb>Sticky Password\u003C/b> ist nicht installiert oder läuft nicht. Bitte besuchen Sie die \u003Ca href=\"https://www.stickypassword.com\" target=\"_blank\">Sticky Password Homepage\u003C/a> und installieren Sie es, um alle Funktionen nutzen zu können."
+   },
+   "SearchingForUpdate": {
+      "message": "Suche nach Aktualisierungen..."
+   },
+   "UninstallAutofillPlugin": {
+      "message": "Deinstalliere Sticky Password - sicherer Passwortmanager Erweiterung"
+   },
+   "UpdateExtension": {
+      "message": "Erweiterung aktualisieren"
+   },
+   "UpdateHost": {
+      "message": "Aktualisiere Sticky Password"
+   },
+   "UpdatePending": {
+      "message": "Aktualisierung steht aus..."
+   },
+   "UpdatingHost": {
+      "message": "Sticky Password wird aktualisiert..."
+   },
+   "appDesc": {
+      "message": "Vergessen Sie nie wieder ein Passwort. Der Sticky Password Manager speichert sie sicher und gibt sie für Sie ein. Automatisch!"
+   },
+   "appName": {
+      "message": "Sticky Password - sicherer Passwortmanager"
+   }
+}

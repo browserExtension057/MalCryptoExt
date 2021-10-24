@@ -1,0 +1,20 @@
+{
+   "Amount": {
+      "message": "Количество"
+   },
+   "AppDesc": {
+      "message": "Проверете цената в биткойн в реално време."
+   },
+   "AppName": {
+      "message": "Цени на биткойни"
+   },
+   "NotYet": {
+      "message": "Все още не"
+   },
+   "RateUpdateTime": {
+      "message": "Цена последно актуализирана на:"
+   },
+   "Unit": {
+      "message": "БТК"
+   }
+}

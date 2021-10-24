@@ -1,0 +1,49 @@
+<html>
+<head>
+  <style>
+  body {
+    overflow: hidden;
+    margin: 0px;
+    padding: 5px;
+    background: #EBEBEB;
+    width: 300px;
+  	cursor: default;
+    -webkit-user-select: none;
+  }
+  body, td, input {
+    font-family: 'Segoe UI', Segoe, Helvetica, Tahoma, Arial;
+    font-size: 8pt;
+  }
+  a {
+    outline: none;
+  }
+  .ProductName {
+    font-size: 10pt;
+    font-weight: bold;
+  }
+  .NotInstalledNotify {
+    margin: 0px;
+    padding: 5px;
+    border: 1px solid #E2C10B;
+    bordercolor: red;
+  }
+  </style>
+  <script src="spPopup.js"></script>
+</head>
+
+<body>
+  <table width="100%">
+  <tr>
+    <td valign="top" width="16px"><img src="skin/logo16.png"></td>
+    <td valign="middle"><font class="ProductName">Sticky Password</font></td>
+  </tr>
+  </table>
+  <div style="padding: 8px">
+  <table width="100%">
+  <tr>
+    <td class="NotInstalledNotify" id="NotInstalledNotify"></td>
+  </tr>
+  </table>
+  </div>
+</body>
+</html>

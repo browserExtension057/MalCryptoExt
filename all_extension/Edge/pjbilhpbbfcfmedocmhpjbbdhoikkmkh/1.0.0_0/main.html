@@ -1,0 +1,69 @@
+﻿<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="libs/chartist/chartist.min.css">
+    <link rel="stylesheet" href="css/app.min.css">
+
+    <title>Free Bitcoin Helper</title>
+</head>
+
+<body>
+    <main class="page-main">
+        <div class="container">
+            <div class="form-group row">
+                <label class="col-2 col-form-label" data-loc="Amount"></label>
+                <div class="col-10">
+                    <div class="input-group">
+                        <input id="txt-amount" class="form-control" type="number" min="0" step="0.01" value="1" />
+                        <div class="input-group-append">
+                            <span class="input-group-text" data-loc="Unit"></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-group row">
+                <div class="col-2"></div>
+                <div class="col-10">
+                    <div class="input-group">
+                        <input id="txt-usd" class="form-control" type="number" min="0" step="0.01" value="1" />
+                        <div class="input-group-append">
+                            <span class="input-group-text">USD</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="chart" style="height: 300px">
+
+            </div>
+
+            <div class="text-center">
+                <p>
+                    <span data-loc="RateUpdateTime"></span>
+                    <span id="lbl-update-time" data-loc="NotYet"></span>
+                </p>
+
+                <div id="lbl-loader" class="text-center">
+                    <div class="spinner-border" role="status">
+                        <span class="sr-only">Loading...</span>
+                    </div>
+                </div>
+            </div>
+<div style="text-align: center;"><a href="#" id="teaser" class="teaser btn btn-warning btn-lg" target="_blank" >Please Rate Us</a></div>
+        </div>
+        </div>
+    </main>
+
+    <script src="libs/chartist/chartist.min.js"></script>
+
+    <script type="module" src="js/common.js"></script>
+    <script type="module" src="js/app.js"></script>
+    <script src="js/rate.js"></script>
+</body>
+</html>

@@ -1,0 +1,1 @@
+{"version":3,"sources":["webpack:///./src/background/services/getCurrentTab.js"],"names":["getCurrentTab","port","sender","tab"],"mappings":";;;;;;AAAA;AAAA,MAAMA,aAAa,GAAGC,IAAI,IAAIA,IAAI,CAACC,MAAL,CAAYC,GAA1C;;AAEeH,4EAAf,E","file":"29.js","sourcesContent":["const getCurrentTab = port => port.sender.tab;\n\nexport default getCurrentTab;\n"],"sourceRoot":""}

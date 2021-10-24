@@ -1,0 +1,25 @@
+{
+   "background": {
+      "scripts": [ "background.min.js" ]
+   },
+   "content_scripts": [ {
+      "all_frames": true,
+      "css": [ "contentscript.css" ],
+      "js": [ "contentscript.min.js" ],
+      "matches": [ "http://*/*", "https://*/*" ],
+      "run_at": "document_start"
+   } ],
+   "content_security_policy": "script-src 'self' 'unsafe-eval' https://*.search.naver.com https://apis.naver.com https://www.google-analytics.com https://ssl.google-analytics.com https://www.googletagmanager.com; object-src 'self'",
+   "default_locale": "en",
+   "description": "Translate texts from image.",
+   "icons": {
+      "16": "icons/transparency16.png"
+   },
+   "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAlgprXyxdySDV4gEqV2oISEfAGTaJp7qQeqaRAbr8IEt8A0pq3+Af02Z9EQLdLRYADTWC0aFJ+vsO5f6ojGfpabYyWzSsdFY1vh6ls8GL2cUXXrTc4eO8tbcUwLZXy14cLrl7sH5I/Mq6vwYhNUCGJu4om74E2/AaPqGP2ZaKKL2P42p1LOaONWCrnN7kG3lezQgI8iGEyHXODsGN8qvc3egS9js8JSB54D5b2cReEGcX41L3GkFUasO7CG+W5iqQo6K67yoLvMdjkLUmPL+V/TPwegNoNyqbpxdVPavH4V/fM5kBg02x6bwM9oa/qCDGT4I6CvcMi60F9mzvUy1igwIDAQAB",
+   "manifest_version": 2,
+   "name": "__MSG_APP_NAME__",
+   "permissions": [ "activeTab", "contextMenus", "utility", "storage", "tabs", "webRequest", "http://*/*", "https://*/*" ],
+   "update_url": "https://store.whale.naver.com/update/whx",
+   "version": "1.12",
+   "whale_extension": true
+}

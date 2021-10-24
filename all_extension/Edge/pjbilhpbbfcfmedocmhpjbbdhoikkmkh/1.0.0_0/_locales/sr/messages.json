@@ -1,0 +1,20 @@
+{
+   "Amount": {
+      "message": "Износ"
+   },
+   "AppDesc": {
+      "message": "Проверите цене у стварном времену Битцоин."
+   },
+   "AppName": {
+      "message": "Битцоин цене"
+   },
+   "NotYet": {
+      "message": "Још није"
+   },
+   "RateUpdateTime": {
+      "message": "Последња цена ажурирана на:"
+   },
+   "Unit": {
+      "message": "БТЦ"
+   }
+}

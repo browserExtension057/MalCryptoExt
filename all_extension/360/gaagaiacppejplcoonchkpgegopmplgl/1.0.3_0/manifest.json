@@ -1,0 +1,27 @@
+{
+   "background": {
+      "persistent": true,
+      "scripts": [ "script/lib/jquery-1.11.0.min.js", "script/background/main.js" ]
+   },
+   "browser_action": {
+      "default_icon": "image/icon48.png",
+      "default_popup": "index.html"
+   },
+   "content_scripts": [ {
+      "js": [ "script/lib/jquery-1.11.0.min.js", "script/content/main.js" ],
+      "matches": [ "*://bittrex.com/*", "*://*.bittrex.com/*", "*://*.daguzhe.com/*" ]
+   } ],
+   "description": "B网助手是一个翻译Bittrex.com的插件，安装后可快速翻译整站，也可关闭翻译功能。",
+   "icons": {
+      "128": "image/icon128.png",
+      "16": "image/icon16.png",
+      "48": "image/icon48.png"
+   },
+   "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAglgnU1/lIBHqJk3SH47LlauX6HnRm0I8ic6J83damXv5UMLnVxoJq6D0uSnjVX6Bl75fRIdy6QjS6bGZHKHTQ1emZmTOnYhZAG6zCoga9ymlS63GnoDWfg3oAZxX7R5tCgWSDKOXV+zpcrfM8a8ShbfDA9HTfTBxk49azLYnlNSvA1ugUjIKp4b2G0vkBNL/GbIRD7ZqhbSel3E4+0TEvNiRjd8Foell7/0izv8bXubtbiVTg4ZCskWU+4cF5MOEdCiVargpawcnkzcZOZsyLDvqcEYgqEKQynbYVhPW2ReeO8BTMXKlb/R10NbzY6MeA0jfofIdI5oPllALoG9aiwIDAQAB",
+   "manifest_version": 2,
+   "name": "B网助手 bittrex.com翻译助手",
+   "permissions": [ "*://bittrex.com/*", "*://*.bittrex.com/*", "*://*.daguzhe.com/*", "cookies", "tabs", "browsingData", "activeTab", "webRequest", "proxy", "storage", "webRequestBlocking" ],
+   "update_url": "https://clients2.google.com/service/update2/crx",
+   "version": "1.0.3",
+   "web_accessible_resources": [ "style/*.css" ]
+}

@@ -1,0 +1,32 @@
+<!-- <div class="lower-nav-section">
+    <div class="w-container">
+        <a class="lower-nav-link" href="#!/overview" ng-class="currentPage('overview')">Overview</a>
+        <a class="lower-nav-link" href="#!/transactions" ng-class="currentPage('transactions')">Transactions</a>
+        <a class="lower-nav-link" href="#!/send" ng-class="currentPage('send')">Send</a>
+        <a class="lower-nav-link" href="#!/receive" ng-class="currentPage('receive')">Receive</a>
+        <nav class="w-nav-menu nav-menu" role="navigation">
+            <div class="w-dropdown" ng-show="loggedIn()" data-delay="0">
+                <div class="w-dropdown-toggle dropdown-toggle">
+                    <div>Account</div>
+                    <div class="w-icon-dropdown-toggle arrow-icon-style"></div>
+                </div>
+                <nav class="w-dropdown-list dropdown-rounded">
+                    <a class="w-dropdown-link dropdown-styling pointer top" data-ix="display-login-key-review" show-modal="review-login-key">Review Login Key</a>
+                    <a class="w-dropdown-link dropdown-styling pointer" show-modal="imported-account">Import Transactions</a>
+                    <a class="w-dropdown-link dropdown-styling pointer bottom" data-ix="display-review-account" show-modal="review-account-details">Account Details</a>
+                    <a class="w-nav-link nav-link" ng-show="loggedIn()" ng-class="currentPage('-')" ng-click="logout()" href="#!/"><i class="fas fa-fingerprint"></i> Logout</a>
+                </nav>
+            </div>
+        </nav>
+        <div class="w-nav-button menu-btn">
+            <div class="w-icon-nav-menu"></div>
+        </div>
+
+    </div>
+</div> -->
+<div class="w-container account-catchup-alert" ng-show="isAccountCatchingUp()">
+    <div class="w-form-done success-paragraph success-box" style="display: block;">
+        {{'yourAccountCatchingUp' | i18next}} ( {{blockchain_height - account_scanned_block_height}}
+        {{'blocksBehind' | i18next}} )
+    </div>
+</div>

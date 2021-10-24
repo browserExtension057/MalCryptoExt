@@ -1,0 +1,105 @@
+@import url(http://fonts.googleapis.com/earlyaccess/nanumgothic.css);
+body {
+  font-family: 'Nanum Gothic', sans-serif;
+  line-height: 1.5;
+  font-size: 9pt;
+}
+table {
+  border: 1px solid #ccc;
+  border-collapse: collapse;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  table-layout: fixed;
+  
+}
+table caption {
+  font-size: 1.5em;
+  margin: .5em 0 .75em;
+  font-weight: bold;
+}
+table tr {
+  background: #fefefe;
+  border: 1px solid #ccc;
+  padding: .35em;
+  height:30px;
+}
+table th {
+  padding: .625em;
+  text-align: center;
+}
+
+table td {
+  font-family: sans-serif;
+  padding: .325em;
+}
+
+.center {
+  text-align:center;
+}
+
+.right {
+  text-align:right;
+}
+.red {
+  color:#f05;
+  font-weight:bold;
+}
+.blue {
+  color:#05f;
+  font-weight:bold;
+}
+table th {
+  font-size: 1.0em;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  background-color: #cde ;
+}
+
+@media screen and (max-width: 300px) {
+  table {
+    border: 0;
+  }
+  table caption {
+    font-size: 1.3em;
+  }
+  table thead {
+    border: none;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+  }
+  table tr {
+    border-bottom: 3px solid #ddd;
+    display: block;
+    margin-bottom: .625em;
+  }
+  table td {
+    border-bottom: 1px solid #ddd;
+    display: block;
+    font-size: .8em;
+    text-align: right;
+  }
+  table td:before {
+    /*
+    * aria-label has no advantage, it won't be read inside a table
+    content: attr(aria-label);
+    */
+    content: attr(data-label);
+    float: left;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+  table td:last-child {
+    border-bottom: 0;
+  }
+}
+
+.nav-tabs {
+  font-size:11pt;
+  font-weight: bold;
+}

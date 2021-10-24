@@ -1,0 +1,23 @@
+<div class="balance-div middle-container overview-page" style="background-color:white;margin-bottom:10px!important;">
+<!-- <span class="info-headers-icons-o">BALANCE</span>
+	<div class="box-41"><i class="fas fa-university"></i></div>
+		    <div class="w-clearfix">
+        <div class="balance-header">Your Balance / Unlocked Balance</div>
+    </div> -->
+
+    <span class="titleBox">
+        {{'yourBalanceUnlocked' | i18next}}
+    </span>
+    <div class="balance-text" ng-show="!done_loading">
+        {{'fetchingInitialData' | i18next}}
+    </div>
+    <div class="balance-text" ng-show="done_loading">
+        {{balance | money:false:true}} / {{balance_unlocked | money:false:true}}
+        <br>
+        <span class="smallText">
+            {{'refreshed' | i18next}}: {{account_scanned_block_height}} ({{account_scanned_block_timestamp | time}}) / {{blockchain_height}}
+        </span>
+    </div>
+</div>
+
+

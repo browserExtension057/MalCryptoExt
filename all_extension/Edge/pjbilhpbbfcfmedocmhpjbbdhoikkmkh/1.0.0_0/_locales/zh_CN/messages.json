@@ -1,0 +1,20 @@
+{
+   "Amount": {
+      "message": "量"
+   },
+   "AppDesc": {
+      "message": "检查实时比特币价格。"
+   },
+   "AppName": {
+      "message": "比特币价格"
+   },
+   "NotYet": {
+      "message": "还没"
+   },
+   "RateUpdateTime": {
+      "message": "最后更新价格："
+   },
+   "Unit": {
+      "message": "比特币"
+   }
+}

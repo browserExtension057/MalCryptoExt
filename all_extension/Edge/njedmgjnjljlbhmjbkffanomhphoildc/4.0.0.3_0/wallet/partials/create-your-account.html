@@ -1,0 +1,22 @@
+<div>
+  <div class="w-container create-account-container w-row">
+
+    <div class="no-account-div upper-box w-clear" style="clear:both">
+		<div ></div><span class="info-headers-icons">YOUR PRIVATE LOGIN KEY</span>
+      <div class="info-header middle">Copy Your Private Login Keys</div>
+      <div class="result-text">{{mnemonic}}</div>
+    </div>
+    <div class="mid-div w-clear">
+      <div class="w-form formwrap login-key-form">
+        <form id="email-form" name="email-form" data-name="Email Form" data-redirect="/overview.html" ng-submit="login(seed, mnemonic, mnemonic_confirmation)" >
+          <label class="info-header form middle" for="Login-Key">Confirm your Private Login Key</label><i class="fab fa-keycdn"></i>
+         <span class="keyinput"><input class="w-input mnemonic-page" id="Login-Key" type="text" ng-model="mnemonic_confirmation" placeholder="Type your Private Login Key out here to confirm it" name="Login-Key" data-name="Login Key" autocomplete="off" required=""></span>
+          <input class="w-button mnemonic-login" id="form-submit" type="submit" value="LOGIN!" data-wait="Please wait..."><br><br><br>
+        </form>
+        <div class="w-form-fail" style="display: block;" ng-show="!!error">
+          <p>{{error}}</p>
+        </div>
+      </div>
+    </div>
+
+</div>

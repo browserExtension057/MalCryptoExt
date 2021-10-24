@@ -1,0 +1,29 @@
+{
+   "author": "chain@cocosbcx.io",
+   "background": {
+      "page": "pages/background.html",
+      "persistent": true
+   },
+   "browser_action": {
+      "default_popup": "pages/popup.html",
+      "default_title": "CocosPay"
+   },
+   "content_scripts": [ {
+      "all_frames": true,
+      "js": [ "js/cocospay.js", "js/inject.js" ],
+      "matches": [ "\u003Call_urls>" ],
+      "run_at": "document_start"
+   } ],
+   "content_security_policy": "script-src 'self'; object-src 'self'",
+   "description": "CocosPay Chrome Extension",
+   "icons": {
+      "128": "icons/128px.png",
+      "16": "icons/16px.png",
+      "48": "icons/48px.png"
+   },
+   "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAwHRWG55MtSnwGBPpxwjmZMfLzjqbNVizrGcabkWJhVynUEth6YkRbs9Zy2/jbkg9pB/6Kbqa/2xRAZ9GdTxKm2s7asG1LiZtgWWphZgtxh9MPvLEFzvdwn1k2KLEHCSa1C+FXyE+VVBaEA3RQV6evp5cHjkK9hQg9QlTe7btPmfNf2HdQFO+MI165fLQrRQzeJesVVubCffjJjSN0BQJHUKFFru/jRvs6FzcjMBPScdgagckHRq+SRjzjQ+/xbRgKUan8+dJ0Pc5TJql7AuvehcSOWudsJ0hci7Nc+9Df3bSu3vZWJUQxF5WZdzB4DzwzN94TMt8RgQckbC6jAW4bQIDAQAB",
+   "manifest_version": 2,
+   "name": "CocosPay",
+   "version": "1.2.10",
+   "web_accessible_resources": [ "js/cocospay.js", "js/content.js" ]
+}

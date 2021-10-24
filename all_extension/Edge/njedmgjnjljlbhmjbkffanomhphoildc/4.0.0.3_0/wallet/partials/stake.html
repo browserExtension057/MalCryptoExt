@@ -1,0 +1,77 @@
+<div class="w-container account-catchup-alert" ng-show="staking_done_loading && staking_scanned_block_height != staking_blockchain_height">
+    <div class="w-form-done success-paragraph success-box" style="display: block;">
+        {{'yourAccountCatchingUp' | i18next}} ( {{staking_blockchain_height - staking_scanned_block_height}}
+        {{'blocksBehind' | i18next}} )
+    </div>
+</div>
+
+<div class="body-section">
+    <div class="w-container">
+        <div class="w-row">
+            <div class="w-col w-col-6">
+                <h1>Staking Overview</h1>
+                <div class="subhead-text inner overview-page" style="margin-bottom: 0px">
+                    {{'stakingOverviewHeader' | i18next}}<br/><br/>
+                    {{'stakingOverviewText' | i18next}}
+                </div>
+            </div>
+            <div class="w-col w-col-6">
+                <div class="balance-div middle-container overview-page" style="background-color:white;margin-bottom:10px!important;">
+                    <span class="titleBox">{{'stakingBalanceHeader' | i18next}}</span>
+                    <div class="balance-text" ng-show="!staking_done_loading">
+                            {{'fetchingInitialData' | i18next}}
+                    </div>
+                    <div class="balance-text" ng-show="staking_done_loading">
+                        {{staking_balance | money:false:true}} / {{staking_amount | money:false:true}} / {{staking_level}}
+                        <br>
+                        <span class="smallText">
+                            {{'refreshed' | i18next}}: {{staking_scanned_block_height}} ({{staking_scanned_block_timestamp | time}}) / {{staking_blockchain_height}}
+                        </span>
+                    </div>
+                </div>
+            </div>
+            <div class="w-col w-col-12">
+                <div class="subhead-text inner overview-page" style="margin-bottom: 0px">
+                    {{'stakingGuiDownloadText' | i18next}} <a href="https://github.com/ipbc-dev/bittube-staking-gui/releases" class="bt-blue">BitTube Staking GUI</a>.
+                </div>
+            </div>
+
+            <div class="w-col w-col-12">
+                <div class="w-container balance-div  middle-container overview-page">
+                    <span class="titleBox">{{'stakingAddress' | i18next}}</span>
+                    <div class="middle-div">
+                        <div class="move-text-div">
+                        <p class="middle-text">{{staking.public_addr}}</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="w-col w-col-12">
+                <div class="w-container balance-div middle-container overview-page">
+                    <span class="titleBox">{{'stakingHistory' | i18next}}</span>
+    
+                    <table class="responsive-table tableTransactions">
+                      <thead class="tableHeader">
+                        <th class="transaction-head">{{'value' | i18next}} (TUBE)</th>
+                        <th class="transaction-head">{{'dateReceived' | i18next}}</th>
+                        <th class="transaction-head">{{'transactionIDHash' | i18next}}</th>
+                      </thead>
+                      <tbody>
+                        <tr class="received-div" ng-repeat="tx in transactions" show-modal="staking-details?tx_hash={{ tx.hash }}">
+                            <td class="transaction-detail value-bold" style="color: #e65a5a;" ng-show="tx_is_mempool(tx)">
+                                {{tx.amount | money}} {{'unconfirmed' | i18next}}
+                            </td>
+                            <td class="transaction-detail value-bold" ng-show="!tx_is_mempool(tx)">
+                                {{tx.amount | money}} <span ng-show="!tx_is_unlocked(tx)"><i class="fa fa-lock"></i></span>
+                            </td>
+                            <td class="transaction-detail">{{tx.timestamp | time}}</td>
+                            <td class="transaction-detail nerdhide">{{tx.mixin}}</td>
+                            <td class="transaction-address">{{tx.hash}}</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+            </div>
+        </div>
+    </div>
+</div>

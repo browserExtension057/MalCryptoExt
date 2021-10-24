@@ -1,0 +1,29 @@
+{
+   "author": "Bytom frontend, zhitinglin",
+   "background": {
+      "scripts": [ "js/background.js" ]
+   },
+   "browser_action": {
+      "default_icon": "icons/logo.png",
+      "default_popup": "pages/popup.html"
+   },
+   "content_scripts": [ {
+      "all_frames": false,
+      "js": [ "js/content.js" ],
+      "matches": [ "\u003Call_urls>" ],
+      "run_at": "document_end"
+   } ],
+   "content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self'",
+   "description": "Bytom Wallet Chrome extension, Bystore officially changed to Byone.",
+   "icons": {
+      "128": "icons/logo.png",
+      "16": "icons/logo.png",
+      "48": "icons/logo.png"
+   },
+   "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA0fo/5lJBUhHplLMOwL0UjW49a0+L56L177oWQtMz1FMr9SHL1E1BXiuENyekjJfvxbs9X7aLJy/Iq8Ft0eHQQv8g4BFIH/MUPCozpBdmx8wNX1vq+GLWFoVN1N0cNYrPY2LWy5/GhE5wsBh9OiYPDEO5PyRrBjDit4kuZlQ8rFt1pDYeUs6Uk271o2vESEJjwGbKQU3B8OOHvoLVqeIwDQIEoQecbPOj8cD/zguWmCAVP0JKMdcvc8j1YhK2pdg49JMTl7HIHGIa+lJhOEQLtrLEiizplTN+G20zaL3VQe72xyAnttqYlr0czmfDtayW3OZ+vymCdHD1UOzKLGouZQIDAQAB",
+   "manifest_version": 2,
+   "name": "Byone",
+   "permissions": [ "*://*/", "storage", "unlimitedStorage", "contextMenus", "clipboardWrite", "clipboardRead", "background" ],
+   "version": "2.0.0.0",
+   "web_accessible_resources": [ "js/inject.js", "wasm/main.wasm" ]
+}

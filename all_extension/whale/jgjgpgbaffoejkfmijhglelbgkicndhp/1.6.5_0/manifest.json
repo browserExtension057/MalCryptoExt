@@ -1,0 +1,67 @@
+{
+   "content_scripts": [ {
+      "all_frames": true,
+      "js": [ "dist/whale.naver.com.min.js" ],
+      "matches": [ "https://whale.naver.com/*", "https://belly.naver.com/*", "https://scrapbook.naver.com/*", "https://*.whale.naver.com/*", "https://*.belly.naver.com/*", "https://*.scrapbook.naver.com/*", "http://whale.naver.com/*", "http://belly.naver.com/*", "http://scrapbook.naver.com/*", "http://*.whale.naver.com/*", "http://*.belly.naver.com/*", "http://*.scrapbook.naver.com/*" ],
+      "run_at": "document_start"
+   }, {
+      "all_frames": true,
+      "js": [ "dist/koreajoongangdaily.joins.com.min.js" ],
+      "matches": [ "*://koreajoongangdaily.joins.com/*" ],
+      "run_at": "document_end"
+   }, {
+      "css": [ "dist/m.facebook.com.css" ],
+      "matches": [ "*://m.facebook.com/*" ],
+      "run_at": "document_start"
+   }, {
+      "css": [ "dist/google.com.css" ],
+      "include_globs": [ "*://*.google.*/*" ],
+      "matches": [ "http://*/*", "https://*/*" ],
+      "run_at": "document_start"
+   }, {
+      "js": [ "dist/gmail.com.min.js" ],
+      "matches": [ "https://mail.google.com/*" ],
+      "run_at": "document_idle"
+   }, {
+      "css": [ "dist/m.search.naver.com.css" ],
+      "include_globs": [ "https://m.search.naver.com/search.naver*" ],
+      "js": [ "dist/m.search.naver.com.min.js" ],
+      "matches": [ "https://m.search.naver.com/*" ],
+      "run_at": "document_start"
+   }, {
+      "js": [ "dist/m.search.naver.com.min.js" ],
+      "matches": [ "https://m.naver.com/" ],
+      "run_at": "document_start"
+   }, {
+      "css": [ "dist/m.cafe.naver.com.css" ],
+      "matches": [ "*://m.cafe.naver.com/*" ],
+      "run_at": "document_start"
+   }, {
+      "css": [ "dist/m.youtube.com.css" ],
+      "matches": [ "*://m.youtube.com/*" ],
+      "run_at": "document_start"
+   }, {
+      "all_frames": true,
+      "js": [ "dist/m.tv.naver.com.min.js" ],
+      "matches": [ "*://m.tv.naver.com/*" ],
+      "run_at": "document_end"
+   }, {
+      "all_frames": true,
+      "include_globs": [ "*://tv.kakao.com/embed/player/*" ],
+      "js": [ "dist/tv.kakao.com.min.js" ],
+      "matches": [ "*://tv.kakao.com/*" ],
+      "run_at": "document_end"
+   } ],
+   "default_locale": "ko",
+   "description": "Whale Web Concealer",
+   "icons": {
+      "128": "icons/icon128.png"
+   },
+   "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA0/T8LeWwWASBy1DT2wdmPxSKevhSSS/lkBcOWicxJ2bPfXunl4b8E/GS+iZ6hQ9jbPhjfAopDH97VHkapar9T/HByOr+XDb1h3wKTQZoXIMzfeP/RuFCCHhaXdNnmoyM+1HErSElkHSF2JKK4PP5Gv52OuwpTTowbo+H3f70QjaZ7w4g3bUIJVqDNvOz48lQIUEkEEZiNe0JsCltoHuHpHBVBt9hiEItE4OJgPC2FILbo378k6SHYXVb8Eyg7PiZsxMWJHh1FBerLEr5vsZeNUq4zzSXOLpp1OWUaqItltveX285xGjrlk6NZreTLH0OFgtqP+l1H64oEti5X8MO5wIDAQAB",
+   "manifest_version": 2,
+   "minimum_whale_version": "1.5.71.0",
+   "name": "__MSG_APP_NAME__",
+   "update_url": "https://store.whale.naver.com/update/whx",
+   "version": "1.6.5",
+   "whale_extension": true
+}

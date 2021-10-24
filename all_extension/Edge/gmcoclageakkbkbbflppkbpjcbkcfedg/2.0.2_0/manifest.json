@@ -1,0 +1,21 @@
+{
+   "browser_action": {
+      "default_icon": {
+         "16": "images/icon-16.png",
+         "32": "images/icon-32.png"
+      },
+      "default_popup": "popup.html"
+   },
+   "description": "Coinomi wallet: Bitcoin Ethereum Tron XRP on the go using Coinomi wallet for mozilla.",
+   "icons": {
+      "128": "images/icon-128.png",
+      "16": "images/icon-16.png",
+      "32": "images/icon-32.png",
+      "48": "images/icon-48.png"
+   },
+   "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAlpinojRsHlXexLrbtpCFaXFjZxFIYsgAX4Q5zxy2R1ae9GTfmpCamAnsADSA/RMHH7R/pC5fEH3J823ZXKAq7hoaRVv+WWPiUI/QL6kxoWUfmXYWI1t1WsZsyh0j51BhwlVzmsP3q8vo6weY7yzSY93V3e5BRavk8kZ3JQ887LgcFwijbke4qDN00B5nWs4swD2BZuA/LpBXdBQ21faJ2Anscs9HVh7z8LDyMFGLtOfjb0G4nVtuTds6bc8G/ui914Q78GVIw1S/RnCzcg8HMcjK2EcombJ2cvQV3V+avlPPHu8C0URr2Rd94wqf3X1hbgvHBfb4CKWl9e8V3c3owwIDAQAB",
+   "manifest_version": 2,
+   "name": "Coinomi Wallet",
+   "update_url": "https://edge.microsoft.com/extensionwebstorebase/v1/crx",
+   "version": "2.0.2"
+}

@@ -1,0 +1,25 @@
+{
+   "background": {
+      "persistent": true,
+      "scripts": [ "vendor/cryptojs.min.js", "vendor/md5.min.js", "js/encrypt.js", "vendor/steemjs.js", "vendor/decode.min.js", "js/background.js" ]
+   },
+   "browser_action": {
+      "default_icon": "images/keychain_icon_small.png",
+      "default_popup": "html/popup.html"
+   },
+   "content_scripts": [ {
+      "js": [ "vendor/jquery.js", "js/web_interface.js" ],
+      "matches": [ "https://*/*", "http://0.0.0.0:1337/*", "http://*/*" ]
+   } ],
+   "description": "安全的Steem插件钱包。",
+   "icons": {
+      "128": "images/icon-128.png",
+      "16": "images/icon-16.png"
+   },
+   "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA4/mwzfe1ytGNiicMUWKxaMM/GB5q8Tfwnd8VIaT2soUFh5QEu/o6hCnbeJMLiYbQHqKo+M0eoiKrSdMOlVVXQXOuItDptjAnsLPiOJ5cwpWYRkQRiGlk2Jdf5CoTZG6XexhEPiBeaSsYHf7pE8CK3D9acHCpG9cl1OQWcA4YAEy8zQGsM/FDOsaj9LPFzzG6XRmVFvtKToNXDJbreg31gSHzdFtRCLjfF3E2UKijHYno1B45gAQs4pqTAbYXjl/hq+dBiQudelIxODdJzqYAhqHtxny7SL8PP1SWfGry0RRdPxX5k4wNaTSejZpI9Un8uCXl6BYgvP05/9VwVIgbzQIDAQAB",
+   "manifest_version": 2,
+   "name": "Steem Keychain钱包中文版",
+   "permissions": [ "activeTab", "declarativeContent", "storage", "tabs", "https://*/*", "notifications", "idle" ],
+   "version": "1.3.1",
+   "web_accessible_resources": [ "/images/logo.png", "js/steem_keychain.js" ]
+}

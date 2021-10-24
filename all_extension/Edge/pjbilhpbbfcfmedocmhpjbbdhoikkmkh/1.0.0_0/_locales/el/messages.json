@@ -1,0 +1,20 @@
+{
+   "Amount": {
+      "message": "Ποσό"
+   },
+   "AppDesc": {
+      "message": "Ελέγξτε την τιμή Bitcoin σε πραγματικό χρόνο."
+   },
+   "AppName": {
+      "message": "Τιμές Bitcoin"
+   },
+   "NotYet": {
+      "message": "Οχι ακόμα"
+   },
+   "RateUpdateTime": {
+      "message": "Τελευταία ενημέρωση τιμής στις:"
+   },
+   "Unit": {
+      "message": "BTC"
+   }
+}

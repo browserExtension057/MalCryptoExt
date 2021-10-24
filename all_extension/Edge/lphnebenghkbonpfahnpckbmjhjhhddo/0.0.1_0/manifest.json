@@ -1,0 +1,29 @@
+{
+   "author": "D09r",
+   "background": {
+      "page": "background.html",
+      "persistent": true
+   },
+   "browser_action": {
+      "default_icon": "img/coin_32.png",
+      "default_popup": "popup.html",
+      "default_title": "CryptoMining Blocker"
+   },
+   "default_locale": "en",
+   "description": "__MSG_extDescription__",
+   "homepage_url": "https://addons.mozilla.org/firefox/user/D09r",
+   "icons": {
+      "128": "img/coin_128.png",
+      "16": "img/coin_16.png",
+      "32": "img/coin_32.png",
+      "48": "img/coin_48.png",
+      "64": "img/coin_64.png"
+   },
+   "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAthZCA439DeeMTVaIgUAmzRbl6DVD5Cyw1pXxDuYRNlYtpO8dwaB366nkqUWbv1sYhGftz4HI44txrHv2INqnYLtQbzbPW061R05GTULZ1HZVMlas3gxcE8XwfmuZREdrZQerF/2yvQWOhMmdO7/HBw7MN0E6GbJJ+LXClyQ/r6ynuQ8yHVRup9qwBmBbQlipc6HzBaRhSbrHwglt1GSoG39/swv+KnXIhkvJ0q199S2x8LnB7DUZHCp3ESjsS2UhVBs3XFWCZDYCNB/HV6Oxlw/hRB6AqOnGzWFsLi9yxzpcWmWzRXNEJJamuq4xIX15fYsTivnbTRjIfvYObUW/eQIDAQAB",
+   "manifest_version": 2,
+   "name": "__MSG_extName__",
+   "permissions": [ "storage", "notifications", "background", "webRequest", "webRequestBlocking", "\u003Call_urls>" ],
+   "short_name": "CryptoMining Blocker",
+   "update_url": "https://edge.microsoft.com/extensionwebstorebase/v1/crx",
+   "version": "0.0.1"
+}

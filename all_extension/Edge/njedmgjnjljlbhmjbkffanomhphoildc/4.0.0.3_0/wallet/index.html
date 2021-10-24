@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html ng-app="thinWallet">
+
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=0" name="viewport">
+        <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+
+    <title ng-bind="$root.title + ' - Bittube Wallet'">{{'bittubeWallet' | i18next}}</title>
+
+    <link href="css/screen.css" media="screen, projection" rel="stylesheet" type="text/css"/>
+    <link rel="stylesheet" href="/external/fontawesome/css/font-awesome.min.css">
+    <!-- <link href="css/print.css" media="print" rel="stylesheet" type="text/css"/> -->
+    <!--[if IE]>
+    <link href="css/ie.css" media="screen, projection" rel="stylesheet" type="text/css"/>
+    <![endif]-->
+    <link href="css_2/normalize.css" rel="stylesheet"/>
+    <link href="css_2/webflow.css" rel="stylesheet"/>
+    <link href="css_2/moncrypt.webflow.css" rel="stylesheet"/>
+    <link href="/external/mobiscroll/mobiscroll.angularjs.min.css" rel="stylesheet"/>
+
+    <style>
+        .move-text-div {
+            word-wrap: break-word;
+        }
+    </style>
+
+    
+    <script src="/external/aes.js"></script>
+    <script src="/assets/js/http-requests.js"></script>
+
+    <!-- Load Firebase SDK-->
+    <script src="/external/firebase/firebase-app.js"></script>
+    <script src="/external/firebase/firebase-auth.js"></script>
+    <script src="/external/firebase/firebase-config.js"></script>
+    <script src="/external/firebase/firebase-database.js"></script>
+    <script src="/external/firebase/firebase-providers.js"></script>
+
+    <script src="/external/jquery/dist/jquery.min.js"></script>
+    <!--<script src="/assets/js/fastclick/lib/fastclick.js"></script>-->
+    <script src="/external/angular/angular.min.js"></script>
+    <script src="/external/angular/angular-route.min.js"></script>
+   <!-- <script src="/assets/js/ngInfiniteScroll/build/ng-infinite-scroll.min.js"></script>-->
+    <script src="/external/angular/angular-idle.min.js"></script>
+    <script src="/external/moment/moment-with-locales.min.js"></script>
+    <script src="js/webflow.js"></script>
+    <script src="/external/mobiscroll/mobiscroll.angularjs.min.js"></script>
+    <script src="js/crc32.js"></script>
+    <script src="js/mnemonic.js"></script>
+    <script src="/external/qrcode.min.js"></script>
+    <script src="/external/biginteger.js"></script>
+    <script src="/assets/js/biginteger-lowval.js"></script>
+    <script src="js/config.js"></script>
+    <script src="js/lib/mymonero-core.js"></script>
+    <script src="js/crypto.js"></script>    
+    <script src="/external/sha3.min.js"></script>
+    <script src="/external/nacl-fast.min.js"></script>
+    <script src="js/base58.js"></script>
+    <script src="js/cn_util.js"></script>
+
+    <script src="/external/angular/angular-sanitize.min.js"></script>
+    <script src="/external/i18/i18next.min.js"></script>
+    <script src="/external/i18/i18nextXHRBackend.min.js"></script>
+    <script src="/external/i18/ng-i18next.min.js"></script>
+
+    <script src="/external/detect-browser.js"></script>
+
+    <script src="js/app.js"></script>
+
+    <script src="js/filters/money.js"></script>
+    <script src="js/filters/time.js"></script>
+    <script src="js/filters/payment_uri.js"></script>
+    <script src="js/filters/countdown_time.js"></script>
+    <script src="js/services/account.js"></script>
+    <script src="js/services/modal.js"></script>
+    <script src="js/services/apicalls.js"></script>
+    <script src="js/controllers/top_bar.js"></script>
+    <script src="js/controllers/account_overview.js"></script>
+    <script src="js/controllers/generate_wallet.js"></script>
+    <script src="js/controllers/latest_blocks.js"></script>
+    <script src="js/controllers/latest_transactions.js"></script>
+    <script src="js/controllers/login.js"></script>
+    <script src="js/controllers/create_stake.js"></script>
+    <script src="js/controllers/import_wallet.js"></script>
+    <script src="js/controllers/import_account.js"></script>
+    <script src="js/controllers/receive_coins.js"></script>
+    <script src="js/controllers/send_coins.js"></script>
+    <script src="js/controllers/stake_coins.js"></script>
+    <script src="js/controllers/version.js"></script>
+    <script src="js/controllers/transactions.js"></script>
+    <script src="js/controllers/vanity_address.js"></script>
+    <script src="js/controllers/account.js"></script>
+    <script src="js/controllers/transaction_details.js"></script>
+    <script src="js/controllers/staking_details.js"></script>
+    <!--<script src="js/directives/scroll.js"></script>-->
+    <script src="js/directives/qr_code.js"></script>
+    <script src="js/directives/modal.js"></script>
+    <script src="js/directives/transacation.js"></script>
+    <!--<script src="js/directives/forms.js"></script>-->
+    <script src="js/routes.js"></script>
+    <script src="/assets/js/mobile-utilities.js"></script>
+</head>
+
+<body ng-controller="AccountCtrl">
+    <!-- Added Modal for 2FA verification -->
+    <div class="modal-background" id="verifySecretModal">
+        <div class="form-div verifySecretForm">
+            <form id="verify2FA" ng-submit="verify2FASecret(verifySecret)" mobiscroll-form="settings" class="md-login-form" mbsc-enhance mbsc-form>
+
+                    <div class="mbsc-form-group no-margin width80">
+                            <label for="secret-2fa" class="labelFormDonate translate">
+                                    <span class="mbsc-label">{{'enter6Digits' | i18next}}</span>
+                                    <input maxlength="6" class="w-input" id="secret-2fa" type="text" placeholder="{{'code6digits' | i18next}}"
+                                            name="verifySecret" autocomplete="off" required="required" ng-model="verifySecret" class="mainInput inputPayment" data-input-style="outline" required="required">
+                                    
+                                    
+                            </label>
+                    </div>
+
+                    <div class="mbsc-form-group-inset mbsc-padding translate">
+                            <button id="submit-secret" type="submit" class="width77">
+                                <div class="loadingButton displayNone">
+                                    <i class="mbsc-ic mbsc-ic-fa-spinner"></i>
+                                </div>
+                                <span class="textButton">{{'verify' | i18next}}</span>
+                            </button>
+                        </div>
+                        
+
+                    <!-- <div class="submit-div">
+                            <input class="w-button login-btn pointer" id="submit-secret" type="submit" value="Submit"
+                                    data-wait="Please wait...">
+                        </div> -->
+
+<!-- 
+                <label class="field-label" for="your-address"></label>
+                <input class="w-input" id="secret-2fa" type="text" placeholder="6-digit code"
+                    name="verifySecret" autocomplete="off" required="required" ng-model="verifySecret">
+                <div class="submit-div">
+                    <input class="w-button login-btn pointer" id="submit-secret" type="submit" value="Submit"
+                            data-wait="Please wait...">
+                </div>
+                <div class="w-form-fail error-backing" style="display: block;" ng-show="!!secretError">
+                    <p>{{secretError}}</p>
+                </div> -->
+            </form>
+        </div>
+    </div>
+
+    <!-- LOADER -->
+    <div id="divWalletLoader" class="loadercustom loaderSymbol">
+            <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100px" height="100px" viewBox="0 0 400 400" enable-background="new 0 0 400 400" xml:space="preserve">
+                <circle cx="200" cy="200" r="200" fill="#343434"/>
+                    <g transform="rotate(179.633 200 200)">
+                        <path fill="#ffffff" d="M200,350c-82.71,0-150-67.29-150-150S117.29,50,200,50s150,67.29,150,150S282.71,350,200,350z M200,60.611
+                c-76.86,0-139.389,62.53-139.389,139.389S123.14,339.389,200,339.389S339.389,276.86,339.389,200S276.86,60.611,200,60.611z"></path>
+    
+                        <path fill="#ffffff" d="M296.454,153.023c-1.882,0-3.705-1.004-4.667-2.774C273.481,116.551,238.311,95.618,200,95.618
+                c-2.93,0-5.305-2.375-5.305-5.305c0-2.93,2.375-5.305,5.305-5.305c42.204,0,80.948,23.058,101.111,60.177
+                c1.399,2.575,0.446,5.796-2.13,7.195C298.177,152.816,297.309,153.023,296.454,153.023z"></path>
+    
+                <animateTransform attributeType="xml" attributeName="transform" type="rotate" from="0 200 200" to="360 200 200" dur="3s" repeatCount="indefinite">
+                        </animateTransform>
+                    </g>
+    
+                    <g>
+                    <path fill="#ffffff" d="M162.867,276.409c-1.795,0-3.587-0.483-5.204-1.445c-3.116-1.855-4.977-5.126-4.977-8.753V134.935
+                c0-3.626,1.86-6.898,4.976-8.752c3.116-1.854,6.879-1.929,10.066-0.2l0.236,0.136l107.667,65.773
+                c3.204,1.804,5.188,5.189,5.188,8.875c0,3.688-1.987,7.076-5.195,8.879l-107.895,65.519
+                C166.196,275.995,164.531,276.409,162.867,276.409z M163.297,135.701v129.746l106.505-64.682L163.297,135.701z M270.43,201.14
+                h0.01H270.43z"></path>
+                </g>
+    
+                </svg>
+    </div>
+    <!-- END LOADER -->
+
+
+    <!-- START SCREEN LOGIN -->
+    <div id="divLoginWallet" class="mainDivInstalledPage displayNone">
+        <div class="getStarted">
+                <div class="getStartedIcon">
+                <img src="../assets/images/arrow-right.png" class="img-arrow-right">
+                <img src="../assets/images/arrow-left.png" class="img-arrow-left">
+                </div>
+                <div class="divText translate" align="center">
+                    <p class="almostDone"></p>
+
+                    <p class="pSubtitle translate">
+                        {{'clickThe' | i18next}} <span class="bolder">{{'bitTubeBrowserExtension' | i18next}},</span> <br><br> <span></span>{{'to' | i18next}} {{'signIn' | i18next}}</span>
+                    <!-- <span data-i18n="clickThe"></span> <span class="bolder" data-i18n="bitTubeBrowserExtension"></span> <span data-i18n="toLoginNewPassword"></span> -->
+                    </p>
+                </div>
+        </div>
+    </div>
+    <!-- END SCREEN LOGIN -->
+
+<div ng-include src="getModalURL()"></div>
+
+<!-- START DIV FULL HEADER -->
+<div id="divFullHeader" class="divFullHeader displayNone">
+    <!-- DIV LOGO -->
+    <div class="divLogoHeader">
+        <a class="w-nav-brand brand-box"  > <!-- ng-href="{{loggedIn() ? '#!/overview' : '#!/'}}"-->
+            <img src="../assets/images/logo-header.svg" width="150">
+        </a>
+    </div>
+
+    
+   
+</div>
+<!-- END DIV FULL HEADER -->
+
+<section id="mainSection" class="main-section displayNone">
+    <!-- DIV BLACK NAVBAR -->
+    <div class="lower-nav-section">
+        <div class="w-container containerNavbar">
+            <a class="lower-nav-link" href="#!/overview" ng-class="currentPage('overview')" ng-show="loggedIn()">{{'overview' | i18next}}</a>
+            <a class="lower-nav-link" href="#!/transactions" ng-class="currentPage('transactions')" ng-show="loggedIn()">{{'transactions' | i18next}}</a>
+            <a class="lower-nav-link" href="#!/send" ng-class="currentPage('send')" ng-show="loggedIn()">{{'send' | i18next}}</a>
+            <a class="lower-nav-link" href="#!/receive" ng-class="currentPage('receive')" ng-show="loggedIn()">{{'receive' | i18next}}</a>
+            <!-- <a class="lower-nav-link" href="#!/stake" ng-class="currentPage('stake')" ng-show="loggedIn() && isStakeableWallet()" ng-click="checkStakingWallet($event)">{{'Staking' | i18next}}</a> -->
+
+           
+
+
+            <nav class="w-nav-menu nav-menu" role="navigation">
+                <div class="w-dropdown" ng-show="loggedIn()" data-delay="0">
+                    <div class="w-dropdown-toggle dropdown-toggle" > <!-- show-modal="review-account-details"-->
+                        <!-- <div>{{'accountDetails' | i18next}}</div>
+                        <div class="w-icon-dropdown-toggle arrow-icon-style"></div> -->
+                        <span class="mbsc-ic mbsc-ic-fa-cog"></span>
+                    </div>
+                    <nav class="w-dropdown-list dropdown-rounded settingsDropDown">
+                        <!-- <a class="w-dropdown-link dropdown-styling pointer top" data-ix="display-login-key-review" show-modal="review-login-key">Review Login Key</a> -->
+                        <a class="w-dropdown-link dropdown-styling pointer" show-modal="imported-account">{{'importTransactions' | i18next}}</a>
+                        <a class="w-dropdown-link dropdown-styling pointer bottom" data-ix="display-review-account" show-modal="review-account-details">{{'accountDetailsOnly' | i18next}}</a>
+                        <span id="logoutButton" class="w-dropdown-link dropdown-styling pointer bottom" ng-show="loggedIn()" ng-class="currentPage('-')">{{'logout' | i18next}}</span> 
+                      
+                    </nav>
+                </div>
+            </nav>
+
+            <nav id="navSelectWallets" class="w-nav-menu nav-menu" role="navigation">
+                    <div class="w-dropdown" ng-show="loggedIn()" data-delay="0">
+                        <div id="selectWalletsToggle" class="w-dropdown-toggle dropdown-toggle" > <!-- show-modal="review-account-details"-->
+                            <div id="walletName" style="font-size: 18px; color: #00abff;">Online Wallet</div>
+                            <div class="w-icon-dropdown-toggle arrow-icon-style"></div>
+                        </div>
+                        <nav id="selectWallets" class="w-dropdown-list dropdown-rounded">
+                                
+                        </nav>
+                    </div>
+                </nav>
+
+            <div class="w-nav-button menu-btn">
+                <div class="w-icon-nav-menu"></div>
+            </div>
+        </div>
+    </div>
+    <!-- END DIV BLACK NAVBAR -->
+    <div ng-view></div>
+</section>
+<script src="js/idle-timeout.js"></script>
+</body>
+
+</html>

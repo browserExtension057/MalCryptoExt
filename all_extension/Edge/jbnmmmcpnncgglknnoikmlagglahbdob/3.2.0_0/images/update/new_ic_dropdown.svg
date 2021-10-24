@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="8px" height="8px" viewBox="0 0 8 8" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 59.1 (86144) - https://sketch.com -->
+    <title>ic_dropdown</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="ic-dropdown">
+            <polygon id="Triangle-2" fill="#4C6EF5" fill-rule="nonzero" transform="translate(4.000000, 4.000000) scale(-1, 1) rotate(-180.000000) translate(-4.000000, -4.000000) " points="4 2 7 6 1 6"></polygon>
+            <rect id="Rectangle" x="0" y="0" width="8" height="8"></rect>
+        </g>
+    </g>
+</svg>

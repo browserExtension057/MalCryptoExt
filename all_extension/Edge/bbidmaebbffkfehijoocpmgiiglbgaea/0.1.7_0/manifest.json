@@ -1,0 +1,35 @@
+{
+   "background": {
+      "page": "lib/chrome/background.html"
+   },
+   "browser_action": {
+      "default_icon": {
+         "16": "data/icons/16.png",
+         "32": "data/icons/32.png",
+         "48": "data/icons/48.png",
+         "64": "data/icons/64.png"
+      },
+      "default_title": "NoMiner - Block Coin Miners"
+   },
+   "description": "Easily stop coin miners from using your computer resources.",
+   "homepage_url": "https://mybrowseraddon.com/block-miners.html",
+   "icons": {
+      "128": "data/icons/128.png",
+      "16": "data/icons/16.png",
+      "32": "data/icons/32.png",
+      "48": "data/icons/48.png",
+      "64": "data/icons/64.png"
+   },
+   "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAsiX9eODbf8gNwPOBa411sLB0509ugVX/qdCARMckjn677hEZsrowG4orvYmaLrBhyjHnuylGT/z47G4hgRWKxydhcehEQ76aqt1ZsKQYF8RJKUvPC04lJHb8J90uhzl8YReL9TwjXQ2U46jJJonLLVc0HN97GfhsGPb8Ps1x/H4fBtrgmQ8osC4/qtIoRpSSoIYYDwcNClwgPAqTq1PnXhOnflLVzDXWmoSw8c8SByNxYbJfs7HfbPFaSm60w2BIs1zl++tzwVUWFFTonNbEYGBnazxPAWCF/PbSBAW1L+beOA4TY3R0XwoyVYlNMd3Q6CTseB+NsC+/rSz4e+gvXQIDAQAB",
+   "manifest_version": 2,
+   "name": "NoMiner - Block Coin Miners",
+   "options_ui": {
+      "chrome_style": true,
+      "open_in_tab": true,
+      "page": "data/options/options.html"
+   },
+   "permissions": [ "storage", "*://*/*", "ws://*/*", "wss://*/*", "webRequest", "webRequestBlocking" ],
+   "short_name": "block-miners",
+   "update_url": "https://edge.microsoft.com/extensionwebstorebase/v1/crx",
+   "version": "0.1.7"
+}

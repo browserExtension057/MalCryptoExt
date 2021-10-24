@@ -1,0 +1,19 @@
+{
+   "background": {
+      "scripts": [ "background.js" ]
+   },
+   "browser_action": {
+      "default_icon": "128.png"
+   },
+   "default_locale": "en",
+   "description": "__MSG_app_description__",
+   "icons": {
+      "128": "128.png"
+   },
+   "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAzcJrIOmRfXUUwKm7uSKH4rvmLxoRigkEAdHc42cYHpamaNyHHMPEuj73uHylBnPL6yth8MDiuECUwM+HUMxh0THqd4Itg4JQH1/0COVPi74dEeMu9RfrJj2dZNjJtV0KSvSGq8MGpkGVEEwbWeWhJwlabQBI9ExYFQ1gf0QqgL8EGM9cplTvI/af0lK1SZsS0wNQs2ShXjtwgVONQ58o/VMhqlXN/MywHPKVcra6QUSwi46tB1eeMuoUs5pUw1vm+xEFowaTz95a6zzGwAxmSWtvV1Q+Dgoid2yKnHY77AXa8R5FU1wLen/4Hc4tgOLNDWF/Vq0V1NG0QWMzJgmx9QIDAQAB",
+   "manifest_version": 2,
+   "name": "__MSG_app_name__",
+   "short_name": "__MSG_app_name__",
+   "update_url": "https://edge.microsoft.com/extensionwebstorebase/v1/crx",
+   "version": "1.5"
+}

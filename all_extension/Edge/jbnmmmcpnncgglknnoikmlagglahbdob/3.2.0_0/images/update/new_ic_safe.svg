@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="80px" height="80px" viewBox="0 0 80 80" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: sketchtool 59.1 (101010) - https://sketch.com -->
+    <title>D5999E87-9ACA-436D-8837-B627F5C76750</title>
+    <desc>Created with sketchtool.</desc>
+    <defs>
+        <polygon id="path-1" points="0 0.634074074 61.8302381 0.634074074 61.8302381 79.2588889 0 79.2588889"></polygon>
+        <polygon id="path-3" points="0 0.716666667 38.2863 0.716666667 38.2863 39.1665833 0 39.1665833"></polygon>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="ic" transform="translate(-136.000000, -96.000000)">
+            <g id="Group" transform="translate(136.000000, 96.000000)">
+                <rect id="Rectangle" x="0" y="0" width="80" height="80"></rect>
+                <g id="Group-14" transform="translate(9.000000, 0.000000)">
+                    <g id="Group-3" transform="translate(0.000000, 0.106667)">
+                        <mask id="mask-2" fill="white">
+                            <use xlink:href="#path-1"></use>
+                        </mask>
+                        <g id="Clip-2"></g>
+                        <path d="M30.9148238,79.2588889 L61.830681,46.2366667 L61.830681,9.75444444 C44.967419,9.59740741 30.9148238,0.633703704 30.9148238,0.633703704 C30.9148238,0.633703704 16.8629667,9.59740741 -0.000295238095,9.75444444 L-0.000295238095,46.2366667 L30.9148238,79.2588889 Z" id="Fill-1" fill="#4C6EF5" mask="url(#mask-2)"></path>
+                    </g>
+                    <line x1="30.9148238" y1="4.25488889" x2="30.9148238" y2="17.026" id="Fill-4" fill="#B7F2FC"></line>
+                    <polygon id="Fill-6" fill="#FFFFFF" points="30.9148238 75.0173333 58.7388 45.2973333 58.7388 32.661037 30.9148238 32.661037"></polygon>
+                    <path d="M30.9148238,4.25488889 L30.9148238,32.6615556 L58.7388,32.6615556 L58.7388,12.463037 C43.5628238,12.3222963 30.9148238,4.25488889 30.9148238,4.25488889" id="Fill-8" fill="#BAC8FF"></path>
+                    <path d="M30.9148238,4.25488889 C30.9148238,4.25488889 18.2683,12.3222963 3.09158571,12.463037 L3.09158571,32.6615556 L30.9148238,32.6615556 L30.9148238,4.25488889 Z" id="Fill-10" fill="#FFFFFF"></path>
+                    <polygon id="Fill-12" fill="#BAC8FF" points="3.09136429 32.6612593 3.09136429 45.2975556 30.9146024 75.0175556 30.9146024 32.6612593"></polygon>
+                </g>
+                <g id="Group-6" transform="translate(41.000000, 40.000000)">
+                    <g id="Group-3" transform="translate(0.000000, 0.116917)">
+                        <mask id="mask-4" fill="white">
+                            <use xlink:href="#path-3"></use>
+                        </mask>
+                        <g id="Clip-2"></g>
+                        <path d="M38.2863,19.9415833 C38.2863,30.5590833 29.7162574,39.1665833 19.1439383,39.1665833 C8.56995957,39.1665833 -8.29787234e-05,30.5590833 -8.29787234e-05,19.9415833 C-8.29787234e-05,9.32408333 8.56995957,0.716583333 19.1439383,0.716583333 C29.7162574,0.716583333 38.2863,9.32408333 38.2863,19.9415833" id="Fill-1" fill="#0CA678" mask="url(#mask-4)"></path>
+                    </g>
+                    <polygon id="Fill-4" fill="#FFFFFF" points="18.2028766 26.8725 11.1571532 19.3691667 12.9685787 17.6533333 18.2468553 23.2758333 27.2359404 14.1633333 29.004217 15.9225"></polygon>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

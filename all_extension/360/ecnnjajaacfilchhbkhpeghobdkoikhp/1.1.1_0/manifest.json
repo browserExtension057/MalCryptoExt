@@ -1,0 +1,26 @@
+{
+   "background": {
+      "page": "background.html"
+   },
+   "browser_action": {
+      "default_icon": {
+         "128": "icon/icon-128.png",
+         "16": "icon/icon-16.png",
+         "48": "icon/icon-48.png"
+      },
+      "default_popup": "popup.html",
+      "default_title": "AICoin实时行情"
+   },
+   "content_security_policy": "default-src 'self' 'media-src'; script-src 'self' 'unsafe-eval' https://ssl.google-analytics.com; connect-src  https://www.aicoin.cn https://www.aicoin.net.cn https://www.aicoin.com wss://web-stream-v2.aicoin.net.cn wss://widget-stream-v2.aicoin.net.cn; style-src * 'unsafe-inline'; img-src 'self' https://www.google-analytics.com http://www.google-analytics.com https://assets-www.aicoin.net.cn https://stats.g.doubleclick.net data:; object-src 'self'; media-src 'self'",
+   "description": "提供比特币(BTC)、以太坊(ETH)、BCH、EOS等数字货币的行情监控，实时更新来自OKEX、币安、火币等各大平台的数据，并且可以自定义行情列表和设置预警提醒。提供与aicoin.com上完全一致的币种行情。",
+   "icons": {
+      "128": "icon/icon-128.png",
+      "16": "icon/icon-16.png",
+      "48": "icon/icon-48.png"
+   },
+   "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA3H511Y65yMBXB2yUx/cH7sSCD1HokAFfXvJ1BMO0u0nZccCUEXyN6gyw3/ZKi5bidAD2P5IbKXVfT8XMM/rcn92rEo5rhs5CaMCk4DCHFXYdfTooIIYdHd5L76bwcYA39l248lIuZJJehQPNhIB3q9SYXkAO3lzms1cbynwE7xF/CiIEljsB0JU1wjRskYCa6GkqWwAUBtqjUiLaV775Z74w4dd+ObdVp0gs2CKe/AoyDZ2ZqmD4b/w695b+iCS0MY+5bCtJTGbOmJpNQUOExE/LunaNacakuImFmLAIdlOWlyUBWkYa2cztA8/UCv4RJ4ZzeATG1OloxeBEqN2aEwIDAQAB",
+   "manifest_version": 2,
+   "name": "AICoin长城版 实时行情扩展",
+   "permissions": [ "cookies", "storage", "notifications", "webRequest", "webRequestBlocking", "*://*.aicoin.net.cn/", "*://*.aicoin.cn/", "*://*.aicoin.com/" ],
+   "version": "1.1.1"
+}

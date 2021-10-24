@@ -1,0 +1,16 @@
+<div class="modal-background" modal-name="idle-timeout">
+    <div class="w-container">
+        <div class="w-clearfix">
+            <a class="w-inline-block close-modal" hide-modal>
+                <div class="close-overlay pointer">+</div>
+            </a>
+            <h1 class="head-modal">{{'sessionTimedOut' | i18next}}</h1>
+            <div class="subhead-text modal review">{{'sessionTimedOutText' | i18next}}</div>
+            <div class="w-form form-wrapper">
+                <div class="submit-div">
+                    <button id="inactivity_accepted_button" data-ng-click="close_window()" class="login-btn modals pointer">{{'okThanks' | i18next}}</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

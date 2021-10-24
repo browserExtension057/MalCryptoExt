@@ -1,0 +1,44 @@
+{
+   "background": {
+      "persistent": true,
+      "scripts": [ "./js/bg.js" ]
+   },
+   "browser_action": {
+      "default_icon": "img/logos/bitbns-48--white.png",
+      "default_popup": "popup.html"
+   },
+   "content_scripts": [ {
+      "css": [ "./css/styles.css" ],
+      "js": [ "./js/binance.js" ],
+      "matches": [ "https://*.binance.com/*" ]
+   }, {
+      "css": [ "./css/styles.css" ],
+      "js": [ "./js/gateio.js" ],
+      "matches": [ "https://*.gate.io/*" ]
+   }, {
+      "css": [ "./css/styles.css" ],
+      "js": [ "./js/huobi.js" ],
+      "matches": [ "https://*.huobi.com/*", "https://*.hbg.com/*" ]
+   }, {
+      "css": [ "./css/styles.css" ],
+      "js": [ "./js/kucoin.js" ],
+      "matches": [ "https://*.kucoin.com/*" ]
+   } ],
+   "content_security_policy": "script-src 'self'; object-src 'self'",
+   "current_locale": "10",
+   "description": "Explore arbitrage opportunities and trade faster between Bitbns, Binance, Huobi, Gate.io and Kucoin",
+   "icons": {
+      "128": "img/logos/logo-128--whiteTxt.png",
+      "16": "img/logos/logo-16--whiteTxt.png",
+      "32": "img/logos/logo-32--whiteTxt.png",
+      "48": "img/logos/logo-48--whiteTxt.png"
+   },
+   "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAuQCiWXOru/JdelFMNf6nMvtrsOOFeb783jt7VBoUvlOYNQtS+5RggWTFJLL3u0kSUVJ+Bi9U8gPavlARXParHWRZ6ZVrNRRYjrmhQD9YCicQTTQkwJcG7Qa9acBan4q+T0a6veUdJoYngjlAYEehxWqXF0Jb0Jgai+vg2DGUmc2CNqR2A0XsZXuVYyzHpgqbeJsNrG9Xq09YrGr720CkSBldE3U+QMaZWOxhj0RHW5LB90J/5xQ9ll35XtmLjt7q4ezXINc1rAnzyi6GUJ5A4RPbXxCWSNp8qQIMKqiAUGPCZpW29B002nURsw2psphlMCznwke5IIbv0JHTrdCCxwIDAQAB",
+   "manifest_version": 2,
+   "name": "Bitbns Extension",
+   "permissions": [ "webRequest", "https://bitbns.com/*", "https://api.bitbns.com/*", "https://buyhatke.com/*" ],
+   "short_name": "Bitbns",
+   "update_url": "https://edge.microsoft.com/extensionwebstorebase/v1/crx",
+   "version": "2.5.1",
+   "web_accessible_resources": [ "img/*" ]
+}

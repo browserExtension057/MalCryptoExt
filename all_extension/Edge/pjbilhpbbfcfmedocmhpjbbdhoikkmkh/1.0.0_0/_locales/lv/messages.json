@@ -1,0 +1,20 @@
+{
+   "Amount": {
+      "message": "summa"
+   },
+   "AppDesc": {
+      "message": "Pārbaudiet reālā laika Bitcoin cenu."
+   },
+   "AppName": {
+      "message": "Bitcoin cenas"
+   },
+   "NotYet": {
+      "message": "Vēl nē"
+   },
+   "RateUpdateTime": {
+      "message": "Cena pēdējo reizi atjaunināta:"
+   },
+   "Unit": {
+      "message": "BTC"
+   }
+}

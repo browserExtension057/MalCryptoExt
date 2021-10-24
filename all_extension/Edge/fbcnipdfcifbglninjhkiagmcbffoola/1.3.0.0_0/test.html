@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Test</title>
+    <style type="text/css">
+      canvas { 
+        border: 1px solid black;
+        background: url("icon48.png") no-repeat;
+        background-size: 100%;
+       }
+    </style>
+</head>
+<body>
+<div>
+    <canvas id="canvas" height="38px" width="38px"></canvas>
+</div>
+<script type="text/javascript">
+    var canvas = document.getElementById('canvas');
+    var context = canvas.getContext('2d');
+    
+    context.font = "12px Times New Roman";
+    context.fillStyle = "red";
+    context.fillText('0.115',0,15);
+    // ...draw to the canvas...
+    var imageData = context.getImageData(0, 0, 19, 19);
+    chrome.browserAction.setIcon({
+      imageData: imageData
+    });
+</script>
+</body>
+</html>

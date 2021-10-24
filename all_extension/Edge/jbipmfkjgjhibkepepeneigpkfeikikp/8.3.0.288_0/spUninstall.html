@@ -1,0 +1,57 @@
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=windows-1251">
+  <link rel="icon" href="skin/logo16.png">
+  <style>
+   body, table { font-family: Arial, Helvetica; font-size: 13px; color: #000000; margin: 0; padding: 0; border: 0; }
+   li          { margin-left: -15; }
+   ul          { list-style-type: square; }
+   a           { outline: none; }
+   a:link      { color: #5C9CD5; text-decoration: underline; }
+   a:active    { color: #5C9CD5; text-decoration: underline; }
+   a:visited   { color: #5C9CD5; text-decoration: underline; }
+   a:hover     { color: #5C9CD5; text-decoration: underline; }
+   .tblHeader  { background-color: #0895d0; text-align: center; padding-top: 20px; padding-bottom: 20px;}
+   .title      { font-size: 15px; color: #5C9CD5; }
+   .header     { font-family: Arial, Helvetica, sans-serif; font-size: 20px; color: #FFFFFF; }
+   #lblErrorMessage{font-size: 40px; line-height: 48px;}
+   #lblHeader{font-size: 55px; line-height: 55px;}
+  </style>
+  <script src="spRequire.js"></script>
+  <script src="spLog.js"></script>
+  <script src="spStrings.js"></script>
+  <script src="spFormElementPrototype.js"></script>
+  <script src="spAutofillCore.js"></script>
+  <script src="spUninstall.js"></script>
+</head>
+
+<body>
+
+<table width="100%" height="75" cellpadding="0" cellspacing="10" border="0" class="tblHeader">
+<tr>
+  <td>
+    <font class="header" id="lblHeader"></font>
+  </td>
+</tr>
+</table>
+
+<table width="100%" style="max-width: 1060px; margin: 0 auto;" cellpadding="0" cellspacing="10" border="0">
+<tr>
+  <td>
+    <div id="divErrorMessage" style="display: none">
+      <font id="lblErrorMessage"></font>
+      <p><textarea id="memErrorMessage" cols="60" rows="6"></textarea></p>
+    </div>
+
+    <div id="divUninstallAction"></div>
+  </td>
+</tr>
+<tr>
+  <td>
+    <font color="#999999">Copyright (C) 2019 Lamantine Software a.s. <a href="https://www.stickypassword.com" target="_blank">Sticky Password</a></font>
+  </td>
+</tr>
+</table>
+
+</body>
+</html>

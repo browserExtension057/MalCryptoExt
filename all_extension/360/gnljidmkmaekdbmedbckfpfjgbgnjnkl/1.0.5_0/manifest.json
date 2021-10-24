@@ -1,0 +1,27 @@
+{
+   "background": {
+      "persistent": true,
+      "scripts": [ "script/lib/jquery-1.11.0.min.js", "script/background/main.js" ]
+   },
+   "browser_action": {
+      "default_icon": "image/icon48.png",
+      "default_popup": "index.html"
+   },
+   "content_scripts": [ {
+      "js": [ "script/lib/jquery-1.11.0.min.js", "script/content/main.js" ],
+      "matches": [ "*://*/*", "\u003Call_urls>" ]
+   } ],
+   "description": "P网助手是一个翻译poloniex.com网站的插件",
+   "icons": {
+      "128": "image/icon128.png",
+      "16": "image/icon16.png",
+      "48": "image/icon48.png"
+   },
+   "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAy+noptcc5KaWlzYFpfYLCxXjp8XHay78Mz2/iqHGuV1c+06WrcPYt/Q96TRt72efHxuq6qewWWGEaaVB/2qjjowoEXllD6fL6B6coFpp9j1R2Sl/zaYO28DdolqTRBcuRj2U4KVD9f3K3XYVC5MABUutB8GhjO/9GEuMgduZIHQBgVnj6GwnwEBkBhkI0MrsBYcZUXLEbcacprryttb5DvdQ1b/cMFbQAS47DJgi+P0znDDpIYHNb10Da1HZFghHaVsF7yUE3VMGf9FROWBkh3K+j6UcWjP3dj/eHFd+Y6PgT0bP/R2UAhMAIG+C9mCqoW8wfTkCwMPuTCUKd/HlAwIDAQAB",
+   "manifest_version": 2,
+   "name": "P网助手 poloniex.com翻译助手",
+   "permissions": [ "*://poloniex.com/*", "*://*.poloniex.com/*", "*://*.daguzhe.com/*", "cookies", "tabs", "browsingData", "activeTab", "webRequest", "storage", "webRequestBlocking" ],
+   "update_url": "https://clients2.google.com/service/update2/crx",
+   "version": "1.0.5",
+   "web_accessible_resources": [ "style/*.css" ]
+}

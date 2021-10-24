@@ -1,0 +1,20 @@
+{
+   "Amount": {
+      "message": "كمية"
+   },
+   "AppDesc": {
+      "message": "تحقق في الوقت الحقيقي سعر Bitcoin."
+   },
+   "AppName": {
+      "message": "أسعار البيتكوين"
+   },
+   "NotYet": {
+      "message": "ليس بعد"
+   },
+   "RateUpdateTime": {
+      "message": "تم تحديث السعر في:"
+   },
+   "Unit": {
+      "message": "BTC"
+   }
+}

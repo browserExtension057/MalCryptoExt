@@ -1,0 +1,22 @@
+whale-ocr {
+    all: initial;
+    position: absolute;
+    top: 0;
+    left: 0;
+    cursor: crosshair;
+
+    opacity: 0;
+    transition: opacity 0.2s ease-out;
+
+    /* Note: zIndex should be lower than a quicksearch UI's. */
+    z-index: 2147483546;
+}
+
+whale-ocr[ready] {
+    opacity: 1;
+}
+
+/* Note: This is needed due to whale-ocr { all: initial; } */
+whale-ocr[hidden] {
+    display: none;
+}

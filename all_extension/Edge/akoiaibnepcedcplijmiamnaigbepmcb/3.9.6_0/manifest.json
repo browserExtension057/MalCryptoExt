@@ -1,0 +1,43 @@
+{
+   "background": {
+      "page": "background.html"
+   },
+   "browser_action": {
+      "default_icon": {
+         "128": "img/icon-128.png",
+         "16": "img/icon-16.png",
+         "48": "img/icon-48.png"
+      },
+      "default_title": "Yoroi"
+   },
+   "browser_specific_settings": {
+      "gecko": {
+         "id": "{530f7c6c-6077-4703-8f71-cb368c663e35}"
+      }
+   },
+   "content_scripts": [ {
+      "js": [ "js/trezor-content-script.js" ],
+      "matches": [ "*://connect.trezor.io/*/popup.html" ]
+   }, {
+      "js": [ "js/ledger-content-script.js" ],
+      "matches": [ "https://emurgo.github.io/yoroi-extension-ledger-connect/*" ]
+   } ],
+   "content_security_policy": "default-src 'self' ; frame-src https://adapools.yoroiwallet.com https://connect.trezor.io/ https://emurgo.github.io/yoroi-extension-ledger-bridge; script-src 'self' 'wasm-eval'  blob:; object-src 'self' ; connect-src https://*.yoroiwallet.com wss://*.yoroiwallet.com:443; style-src * 'unsafe-inline' 'self'  blob:; img-src 'self'  data:;",
+   "description": "A simple, secure and fast Cardano ADA wallet.",
+   "icons": {
+      "128": "img/icon-128.png",
+      "16": "img/icon-16.png",
+      "48": "img/icon-48.png"
+   },
+   "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEApUxFJwnzrTE62EUNH4XYg835Y22Th1dXBqR4NT9pDr10FASuuHwTLOSpxr55VdOK6aPWfScMB2hiUMc1oYZIcYp1g52YZYCzKMfZ/kiTGC88Z8rnmYVwNAvZuC7voKj746/ZnD8UTCHaOeSGu9Q8FcpF0pHlkKnRdBbw8yyqlpYDX+A17pxnPu0F+XZsvEVJh98BHIiMmLQqip51QTPSCMY6A3gGw3aY/D0WpWvpssM853U5sNSTi/cjAQM7gLJdEgu+s1+zVXCw8ls9MjaAfl3gLVt54bHRgHaPAmuchQkr4Vm6R9BpNpvrnEF+Jer0yhYGCoFvtg6oiMa3nOfKYQIDAQAB",
+   "manifest_version": 2,
+   "name": "Yoroi",
+   "permissions": [ "storage", "*://connect.trezor.io/*", "https://emurgo.github.io/yoroi-extension-ledger-connect/*" ],
+   "protocol_handlers": [ {
+      "name": "Yoroi",
+      "protocol": "web+cardano",
+      "uriTemplate": "main_window.html#/send-from-uri?q=%s"
+   } ],
+   "update_url": "https://edge.microsoft.com/extensionwebstorebase/v1/crx",
+   "version": "3.9.6"
+}

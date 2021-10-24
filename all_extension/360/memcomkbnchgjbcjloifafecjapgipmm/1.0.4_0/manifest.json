@@ -1,0 +1,27 @@
+{
+   "background": {
+      "persistent": true,
+      "scripts": [ "script/lib/jquery-1.11.0.min.js", "script/background/main.js" ]
+   },
+   "browser_action": {
+      "default_icon": "image/icon48.png",
+      "default_popup": "index.html"
+   },
+   "content_scripts": [ {
+      "js": [ "script/lib/jquery-1.11.0.min.js", "script/content/main.js" ],
+      "matches": [ "*://*/*", "\u003Call_urls>" ]
+   } ],
+   "description": "超级K线是一个集成区块链多平台K线查看工具，集成有火币、币安、okex、bitfinex等平台的K线数据，方便用户查看同一时段、不同平台的价格波动及趋势。",
+   "icons": {
+      "128": "image/icon128.png",
+      "16": "image/icon16.png",
+      "48": "image/icon48.png"
+   },
+   "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAlaLhNQTsLZr+5zBtGtQElHRgY9MgtQGj5IUKr11ZdbFSjKCFmES5kcj6001LpAaJbITyyZC2Z4MNZdbbe/7YIqkMoARLaBCKOQdUyMmnPwVusQOP6gR2KS+wKvLurJztHOsYl2wFgI+fpLTJ4Us0bkADfdi6DLKtN4EBVsSzLBH3aORio2MJ7CICgYBOuPlmDKC0ri5M2ERvy2yxe7tdbzvtXKIh0edWHZalJm4OoJbe/8fcXM9FQrOuj+dj1Xmlj7rDOzNzk0r7LkIvhOdBMc7ySjudbT0eNyDltMy15yVWJJZs3NqmOl2ORH2jGduR3zfaHMO56BnwpF32v0Nl9wIDAQAB",
+   "manifest_version": 2,
+   "name": "超级K线",
+   "permissions": [ "*://lianzhuli.com/*", "*://*.lianzhuli.com/*", "*://*.daguzhe.com/*", "cookies", "tabs", "browsingData", "activeTab", "webRequest", "storage", "webRequestBlocking" ],
+   "update_url": "https://clients2.google.com/service/update2/crx",
+   "version": "1.0.4",
+   "web_accessible_resources": [ "style/*.css" ]
+}

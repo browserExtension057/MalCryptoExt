@@ -1,0 +1,3 @@
+This addon is using the following filter list for blocking crypto mining domains:
+
+https://github.com/hoshsadiq/adblock-nocoin-list/blob/master/hosts.txt

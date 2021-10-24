@@ -1,0 +1,32 @@
+{
+   "background": {
+      "page": "spBackground.html"
+   },
+   "browser_action": {
+      "default_icon": "skin/logo16-disabled.png",
+      "default_popup": "spPopup.html",
+      "default_title": "Sticky Password"
+   },
+   "content_scripts": [ {
+      "all_frames": true,
+      "js": [ "spRequire.js", "spLog.js", "spStrings.js", "spFormElementPrototype.js", "spAutofillCore.js", "spBrowserSpecificTools.js", "spPageEventsMonitor.js", "spContent.js" ],
+      "matches": [ "http://*/*", "https://*/*" ],
+      "run_at": "document_start"
+   } ],
+   "content_security_policy": "script-src 'self'; object-src 'self'",
+   "default_locale": "en",
+   "description": "__MSG_appDesc__",
+   "homepage_url": "https://www.stickypassword.com",
+   "icons": {
+      "128": "skin/logo128.png",
+      "16": "skin/logo16.png",
+      "32": "skin/logo32.png",
+      "48": "skin/logo48.png"
+   },
+   "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAvHqzMtzcAU0AEv8LvrbTCpI19Zh++cjm/De3+sA1lYNarZF7YqHSwpvc6UiaOID9+n4rR3GjcGdLNxtBzvbu6btsN0kH5V/a4984gYnKU/2xE2mGu6mSYyI8WEpTDjv0k3BxhVFJzEv/1iBc7UPrp7uv0z99rWNkAylFYkwZ8dY6QKrJmaM2FJIPLmlIo5PlhsJ0mC/62BmCM2iXxjr/zT9ngpFmRvnYdopfFmYpvWdTZ42lA8V/ZgyQWnAajcZeCBv7/RXWV/1yQrpx/btcJ2zfenhIK1O4FLxP47f39ZlH/NHuYsU1qbKgX8PZGOVXGaH+6ne23KeW0V0eBB2BmwIDAQAB",
+   "manifest_version": 2,
+   "name": "__MSG_appName__",
+   "permissions": [ "tabs", "notifications", "nativeMessaging" ],
+   "update_url": "https://edge.microsoft.com/extensionwebstorebase/v1/crx",
+   "version": "8.3.0.288"
+}

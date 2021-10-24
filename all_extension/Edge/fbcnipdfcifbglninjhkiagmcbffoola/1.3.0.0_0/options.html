@@ -1,0 +1,125 @@
+<html>
+<head>
+    <title>BTC Ticker - Options</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css"/>
+
+</head>
+<body style="background-color: #F5F5F5;">
+<div class="container well" style="margin-top: 25px; background-color: #FFF;">
+    <form class="form-horizontal">
+        <fieldset>
+
+            <!-- Form Name -->
+            <legend>BTC Ticker - Options</legend>
+
+            <div class="control-group">
+                <label class="control-label">Exchange service</label>
+                <div class="controls">
+                    <label class="radio">
+                        <input class="exchangeService" type="radio" name="service" value="binance" data-service="binance">
+                        Binance
+                    </label>
+                    <label class="radio">
+                        <input class="exchangeService" type="radio" name="service" value="bitfinex" data-service="bitfinex">
+                        Bitfinex
+                    </label>
+                    <label class="radio">
+                        <input class="exchangeService" type="radio" name="service" value="bittrex" data-service="bittrex">
+                        Bittrex
+                    </label>
+                    <label class="radio">
+                        <input class="exchangeService" type="radio" name="service" value="hitbtc" data-service="hitbtc">
+                        Hitbtc
+                    </label>
+                    <label class="radio">
+                        <input class="exchangeService" type="radio" name="service" value="Kraken" data-service="Kraken">
+                        Kraken
+                    </label>
+                    <label class="radio">
+                        <input class="exchangeService" type="radio" name="service" value="Poloniex" checked="checked"
+                               data-service="Poloniex">
+                        Poloniex
+                    </label>
+                </div>
+            </div>
+
+            <!-- Multiple Radios -->
+            <div class="control-group">
+                <label class="control-label">Pair</label>
+                <div class="controls pairs">
+                </div>
+            </div>
+
+            <!-- Text input-->
+            <div class="control-group">
+                <label class="control-label">Update delay, sec</label>
+                <div class="controls">
+                    <input id="updateDelay" name="updateDelay" type="text" placeholder="" class="input-medium"
+                           style="height: 30px;">
+                </div>
+            </div>
+
+            <!-- Multiple Checkboxes -->
+            <div class="control-group">
+                <label class="control-label">Alerts?</label>
+                <div class="controls">
+                    <label class="checkbox">
+                        <input id="alertsCheckbox" type="checkbox" name="Alerts" value="Yes, please">
+                        Yes, please
+                    </label>
+                </div>
+            </div>
+
+            <!-- Text input-->
+            <div class="control-group">
+                <label class="control-label">Alert threshold</label>
+                <div class="controls">
+                    <input id="alertsAmountChange" name="textinput" type="text" placeholder="" class="input-medium"
+                           style="height: 30px;">
+                    <p class="help-block" style="font-size: 12px; width: 500px;">How much should the price change to get
+                        an alert. For example, if is set to 10 and your target currency is USDT, whenever BTC goes $10
+                        up or down you'll get a notification. Decimal numbers are supported (0.01, 0.001 etc)</p>
+                </div>
+            </div>
+
+            <div class="control-group">
+                <label class="control-label">Alerts sounds?</label>
+                <div class="controls">
+                    <label class="checkbox">
+                        <input id="notisoundsCheckbox" type="checkbox" name="Alerts" value="Yes, please">
+                        Yes
+                    </label>
+                </div>
+            </div>
+
+            <!-- Multiple Checkboxes -->
+            <div class="control-group">
+                <label class="control-label">Chart?</label>
+                <div class="controls">
+                    <label class="checkbox">
+                        <input id="chartCheckbox" type="checkbox" name="chart" value="Yes, please">
+                        Yes
+                    </label>
+                </div>
+            </div>
+
+            <div class="control-group">
+                <label class="control-label">Funds for the toys for my daughter!</label>
+                <div class="controls">
+                    <div style="padding-top: 5px;">ETH: 0xEe9fb7267c806C0424A68AbF72D9f2b5B519207B</div>
+                    <div style="padding-top: 5px;">BTC: 16KAiDKKoZKfnUM5oGrn1FtzM51Tw4Grfj</div>
+                </div>
+            </div>
+
+            <div class="control-group">
+                <div class="controls">
+                    <div id="saveOptionsButton" class="btn btn-primary">Save changes</div>
+                </div>
+            </div>
+
+        </fieldset>
+    </form>
+</div>
+<script data-main="js/options" src="js/require.js"></script>
+</body>
+</html>

@@ -1,0 +1,50 @@
+{
+   "AutoUninstallErrorMessage": {
+      "message": "Erreur lors de la désinstallation automatique de \u003Cb>Sticky Password gestionnaire de mots de passe\u003C/b> :"
+   },
+   "AutoUninstallingMessage": {
+      "message": "Veuillez patienter pendant la désinstallation automatique de \u003Cb>Sticky Password gestionnaire de mots de passe\u003C/b>..."
+   },
+   "ExtensionNotAuthenticatedNotify": {
+      "message": "Sticky Password gestionnaire de mots de passe n'est pas autorisé. Relancez le navigateur et autorisez cette extension."
+   },
+   "ExtensionOutdateNotify": {
+      "message": "Cette extension est obsolète et incompatible avec \u003Cb>Sticky Password\u003C/b>. Mettez à jour cette extension."
+   },
+   "HostOutdateNotify": {
+      "message": "\u003Cb>Sticky Password\u003C/b> est obsolète et incompatible avec cette extension. Mettez à jour Sticky Password."
+   },
+   "ManualUninstallMessage": {
+      "message": "\u003Cp class=\"title\">Pour désinstaller manuellement l'extension de remplissage automatique :\u003C/p>\u003Cp>\u003Cul>\u003Cli>Cliquez sur \u003Cb>Outils -> Extensions\u003C/b>.\u003C/li>\u003Cli>Sélectionnez \u003Cb>Sticky Password gestionnaire de mots de passe\u003C/b> dans la liste, puis cliquez sur \u003Cb>Supprimer\u003C/b>.\u003C/li>\u003Cli>Veillez à fermer toutes les fenêtres de navigation pour retirer complètement l'extension de remplissage automatique.\u003C/li>\u003C/ul>\u003C/p>"
+   },
+   "NoUpdatesFound": {
+      "message": "Aucune mise à jour trouvée."
+   },
+   "NotInstalledNotify": {
+      "message": "\u003Cb>Sticky Password\u003C/b> n'est pas installé ou actif. Visitez \u003Ca href=\"https://www.stickypassword.com\" target=\"_blank\">Sticky Password homepage\u003C/a> et installez-le pour pouvoir utiliser toutes ses fonctions."
+   },
+   "SearchingForUpdate": {
+      "message": "Recherche d'une mise à jour..."
+   },
+   "UninstallAutofillPlugin": {
+      "message": "Désinstaller Sticky Password gestionnaire de mots de passe"
+   },
+   "UpdateExtension": {
+      "message": "Mettre à jour l'extension"
+   },
+   "UpdateHost": {
+      "message": "Mettre à jour Sticky Password"
+   },
+   "UpdatePending": {
+      "message": "Mise à jour en attente..."
+   },
+   "UpdatingHost": {
+      "message": "Tentative de mise à jour de Sticky Password..."
+   },
+   "appDesc": {
+      "message": "N’oubliez plus jamais un mot de passe. Le gestionnaire Sticky Password les enregistre en toute sécurité. Automatiquement!"
+   },
+   "appName": {
+      "message": "Sticky Password gestionnaire de mots de passe"
+   }
+}

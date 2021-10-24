@@ -1,0 +1,378 @@
+{
+   "alterbarDisabled": {
+      "description": "알림설정을 꺼놨을때 검색창 하단에 나오는 문구",
+      "message": "Alter is disabled."
+   },
+   "caseOpenAction": {
+      "description": "Report Now",
+      "message": "신고하기"
+   },
+   "caseOpenTitle": {
+      "description": "Found Something Suspicious?",
+      "message": "의심스러운 데이터를 발견하셨나요?"
+   },
+   "errorConn": {
+      "description": "우리 서버가 접속이 안될 때 뜨는 메세지",
+      "message": "Unable to connect to server. Please try again later."
+   },
+   "errorServer": {
+      "description": "",
+      "message": "Unable to connect to server."
+   },
+   "errorSignature": {
+      "description": "우리 서버의 검증이 실패했을때. 뭔가 중간에 공격을당했을수도 있다. 경고 메세지",
+      "message": "Unable to connect to server. Please contact the team."
+   },
+   "indicatorBlacklistDescription": {
+      "description": "Blacklist desc1",
+      "message": "검색하신 데이터는 안전하지 않습니다."
+   },
+   "indicatorBlacklistDescription2": {
+      "description": "Blacklist desc2",
+      "message": "연결 또는 송금하는 것을 주의해 주세요."
+   },
+   "indicatorBlacklistType": {
+      "description": "Blacklist header",
+      "message": "위험해요!"
+   },
+   "indicatorDetailInfo": {
+      "description": "Indicator Info",
+      "message": "데이터 정보"
+   },
+   "indicatorDetailLink": {
+      "description": "Details Link",
+      "message": "자세히 보기"
+   },
+   "indicatorDetailNumber": {
+      "description": "Indicator Number",
+      "message": "데이터 번호"
+   },
+   "indicatorDetailPattern": {
+      "description": "Indicator Pattern",
+      "message": "값"
+   },
+   "indicatorDetailType": {
+      "description": "Indicator Type",
+      "message": "타입"
+   },
+   "indicatorDetailsAction": {
+      "description": "검색 결과 상세보기 버튼 문구",
+      "message": "Check Details"
+   },
+   "indicatorUnknownDescription": {
+      "description": "검색 결과 없을때 보여주는 문구",
+      "message": "데이터가 센티넬 포털에 등록되어 있지 않습니다."
+   },
+   "indicatorUnknownHeader": {
+      "description": "Unknown Indicator",
+      "message": "일치하는 결과 없음"
+   },
+   "indicatorWhitelistDescription": {
+      "description": "화이트리스트 검색 결과 설명",
+      "message": "검색하신 데이터는 의심스러운 활동과 연관이 없어. 안전한 것으로 검증되었습니다."
+   },
+   "indicatorWhitelistType": {
+      "description": "화이트리스트 검색 결과 제목",
+      "message": "안전해요."
+   },
+   "loadedResourcesMoreDetails": {
+      "description": "Button to see list of malicious URLs detected by Network Resource Scanner.",
+      "message": "Details"
+   },
+   "monitoring": {
+      "description": "아이콘 우측 클릭하면 나오는 자동 모니터링 껐다 켰다나는 메뉴 문구",
+      "message": "Active Protection"
+   },
+   "monitoringBlacklistDesc": {
+      "description": "자동 모니터링 블랙리스트 웹사이트 들어갔을때 나오는 팝업 설명",
+      "message": "This site \u003Cspan class='punyhighlight'>\"$1\"\u003C/span> is detected as suspicious by Uppsala Security, which may carry out illicit activities not limited to installing malware on your machine, impersonation to collect Personal Identifiable Information (PII), and cryptojacking without consent. Please proceed with care. "
+   },
+   "monitoringBlacklistGoBack": {
+      "description": "자동 모니터링 블랙리스트 웹사이트 들어갔을때 나오는 팝업에서 뒤로가기 버튼",
+      "message": "Back to safety"
+   },
+   "monitoringBlacklistProceed": {
+      "description": "자동 모니터링 블랙리스트 웹사이트 들어갔을때 나오는 팝업에서 그냥쓰기 버튼",
+      "message": "Proceed anyway"
+   },
+   "monitoringBlacklistTitle": {
+      "description": "자동 모니터링 블랙리스트 웹사이트 들어갔을때 나오는 팝업 타이틀",
+      "message": "Suspicious Site Ahead"
+   },
+   "monitoringDisabled": {
+      "description": "자동모니터링 꺼놨을때 검색창 하단에 나오는 문구",
+      "message": "Active Protection is disabled."
+   },
+   "monitoringLoadedResourcesOverview": {
+      "description": "message for Network Resource Scanner popup",
+      "message": " Suspicious URLs detected by Network Resource Scanner"
+   },
+   "monitoringPunycodTrunoff": {
+      "description": "자동 모니터링 Punycode 웹사이트 들어갔을때 설정을 종료하는 버튼",
+      "message": "Turn off punycode block"
+   },
+   "monitoringPunycodeDesc": {
+      "description": "자동 모니터링 Punycode 웹사이트 들어갔을때 나오는 팝업 타이틀",
+      "message": "This site \u003Cspan class='punyhighlight'>\"$1\"\u003C/span> is flag as suspicious by default due to the domain name uses Punycode. Most Punycode domain website are associated with impersonation activities. Please proceed with care. "
+   },
+   "monitoringPunycodeGoBack": {
+      "description": "자동 모니터링 Punycode 웹사이트 들어갔을때 나오는 팝업에서 뒤로가기 버튼",
+      "message": "Back to safety"
+   },
+   "monitoringPunycodeProceed": {
+      "description": "자동 모니터링 Punycode 웹사이트 들어갔을때 나오는 팝업에서 그냥쓰기 버튼",
+      "message": "Proceed anyway"
+   },
+   "monitoringPunycodeTitle": {
+      "description": "자동 모니터링 Punycode 웹사이트 들어갔을때 나오는 팝업 타이틀",
+      "message": "Suspicious Site Ahead (Punycode Block)"
+   },
+   "monitoringWhitelist": {
+      "description": "자동 모니터링 화이트리스트 웹사이트 들어갔을때 나오는 팝업 문구",
+      "message": "This Website is safe."
+   },
+   "relatedICO": {
+      "description": "검색결과에서 연관 ICO",
+      "message": "Related \u003Cspan class='related-ico-symbol'>$1\u003C/span>"
+   },
+   "rp_contact_desc": {
+      "description": "Report Page - Contact Desc",
+      "message": "이메일 주소를 입력하세요."
+   },
+   "rp_contact_header": {
+      "description": "Report Page - Contact Header",
+      "message": "연락처"
+   },
+   "rp_datasubtype_header": {
+      "description": "Report Page - Data Subtype Header",
+      "message": "데이터 세부 정보"
+   },
+   "rp_datasubtype_placeholder": {
+      "description": "Report Page - Data Subtype Placeholder",
+      "message": "데이터 타입을 먼저 선택하세요."
+   },
+   "rp_datatype_header": {
+      "description": "Report Page - Data Type Header",
+      "message": "데이터 타입"
+   },
+   "rp_datatype_placeholder": {
+      "description": "Report Page - Data Type Placeholder",
+      "message": "데이터 타입을 선택하세요."
+   },
+   "rp_details_desc": {
+      "description": "Report Page - Details Desc",
+      "message": "신고할 사항에 대해 자세히 적어주세요."
+   },
+   "rp_details_header": {
+      "description": "Report Page - Details Header",
+      "message": "내용"
+   },
+   "rp_details_placeholder": {
+      "description": "Report Page - Details Placeholder",
+      "message": "자세한 경위를 육하원칙에 맞게 적어주세요."
+   },
+   "rp_header": {
+      "description": "Report Page Header",
+      "message": "신고서 작성"
+   },
+   "rp_pattern_desc": {
+      "description": "Report Page - Pattern Desc",
+      "message": "정확한 암호화폐 월렛 주소, IP, URL, 도메인 등을 작성해 주세요."
+   },
+   "rp_pattern_header": {
+      "description": "Report Page - Pattern Header",
+      "message": "데이터 값"
+   },
+   "rp_pattern_placeholder": {
+      "description": "Report Page - Pattern Placeholder",
+      "message": "암호화폐 월렛 주소 또는 URL, 도메인 등"
+   },
+   "rp_secType_bl": {
+      "description": "Report Page - Sec Type Header Option",
+      "message": "블랙리스트"
+   },
+   "rp_secType_header": {
+      "description": "Report Page - Sec Type Header",
+      "message": "데이터 카테고리"
+   },
+   "rp_secType_wl": {
+      "description": "Report Page - Sec Type Header Option",
+      "message": "화이트리스트"
+   },
+   "rp_sectags_header": {
+      "description": "Report Page - Sec Tags Header",
+      "message": "태그"
+   },
+   "rp_submit_btn": {
+      "description": "Report Page - Submit Btn",
+      "message": "제출하기"
+   },
+   "rp_success_desc": {
+      "description": "Report Page - Success Popup desc",
+      "message": "신고서가 제출되었습니다. 센티넬 포털에서 자세한 내용을 확인해 보세요."
+   },
+   "rp_success_submitanother": {
+      "description": "Report Page - Success Popup Submit another",
+      "message": "다른 신고서 제출하기"
+   },
+   "rp_success_text": {
+      "description": "Report Page - Success Popup text",
+      "message": "신고서 제출 완료!"
+   },
+   "searchButton": {
+      "description": "Search",
+      "message": "Search"
+   },
+   "searchHint": {
+      "description": "Search a URL, Wallet Address, Telegram ID",
+      "message": "URL, 월렛 주소, 암호화폐를 검색해 보세요"
+   },
+   "settings_bl_blockpunycode_desc": {
+      "description": "Settings (Blacklist) - Block Punycode URL desc",
+      "message": "퓨니코드(punycode) 문자 형식의 URL을 차단합니다."
+   },
+   "settings_bl_blockpunycode_header": {
+      "description": "Settings (Blacklist) - Block Punycode URL header",
+      "message": "퓨니코드(punycode) URL 차단"
+   },
+   "settings_bl_blocksurl_desc": {
+      "description": "Settings (Blacklist) - Block Suspicious URL desc",
+      "message": "URL 차단 방법을 선택할 수 있습니다."
+   },
+   "settings_bl_blocksurl_header": {
+      "description": "Settings (Blacklist) - Block Suspicious URL header",
+      "message": "의심스러운 URL 차단"
+   },
+   "settings_bl_blocksurl_overlay": {
+      "description": "Settings (Blacklist) - Block Suspicious URL option1 - Overlay",
+      "message": "오버레이"
+   },
+   "settings_bl_blocksurl_redirection": {
+      "description": "Settings (Blacklist) - Block Suspicious URL option2 - Redirection",
+      "message": "새페이지"
+   },
+   "settings_bl_nrs_alert": {
+      "description": "Settings (Blacklist) - Network Resource Scanner Alerts Toggle Btn",
+      "message": "네트워크 리소스 알림 활성화"
+   },
+   "settings_bl_nrs_alert_layout": {
+      "description": "Settings (Blacklist) - Network Resource Scanner Alert Layout Header",
+      "message": "알림 레이아웃"
+   },
+   "settings_bl_nrs_desc": {
+      "description": "Settings (Blacklist) - Network Resource Scanner desc",
+      "message": "의심스러운 네트워크 리소스를 감지합니다."
+   },
+   "settings_bl_nrs_header": {
+      "description": "Settings (Blacklist) - Network Resource Scanner header",
+      "message": "네트워크 리소스 스캐너"
+   },
+   "settings_bl_nrs_toggle": {
+      "description": "Settings (Blacklist) - Network Resource Scanner Toggle Btn",
+      "message": ""
+   },
+   "settings_blacklist_tab": {
+      "description": "Settings - Tab (Blacklist)",
+      "message": "위험"
+   },
+   "settings_general_ap_desc": {
+      "description": "Settings (General) - Active Protection Desc",
+      "message": "UPPward 보안기능을 활성화 합니다."
+   },
+   "settings_general_ap_header": {
+      "description": "Settings (General) - Active Protection Header",
+      "message": "보안 활성화"
+   },
+   "settings_general_ch_desc": {
+      "description": "Settings (General) - Crypto Highlight Desc",
+      "message": "웹사이트 내 위험한 암호화폐 주소를 표시합니다."
+   },
+   "settings_general_ch_header": {
+      "description": "Settings (General) - Crypto Highlight Header",
+      "message": "암호화폐 주소 하이라이트 활성화"
+   },
+   "settings_general_reset_btn": {
+      "description": "Settings (General) - Reset Btn",
+      "message": "초기화 하기"
+   },
+   "settings_general_reset_desc": {
+      "description": "Settings (General) - Reset Desc",
+      "message": "기본 설정으로 초기화 합니다."
+   },
+   "settings_general_reset_header": {
+      "description": "Settings (General) - Reset Header",
+      "message": "초기화"
+   },
+   "settings_general_tab": {
+      "description": "Settings - Tab (General)",
+      "message": "일반"
+   },
+   "settings_priv_ga_desc1": {
+      "description": "Settings (Privacy) - GA Desc Pt1",
+      "message": "Google Analytics 는 UPPward의 검색 기능 추적과 업데이트를 돕습니다. "
+   },
+   "settings_priv_ga_desc2": {
+      "description": "Settings (Privacy) - GA Desc Pt2",
+      "message": "을 확인해 주세요."
+   },
+   "settings_priv_ga_desclink": {
+      "description": "Settings (Privacy) - GA Desc Link",
+      "message": "개인정보보호정책"
+   },
+   "settings_priv_ga_header": {
+      "description": "Settings (Privacy) - GA Header",
+      "message": "Google Analytics 추적"
+   },
+   "settings_priv_ga_toggle": {
+      "description": "Settings (Privacy) - GA Toggle",
+      "message": "Google Analytics 활성화"
+   },
+   "settings_priv_thanks_first": {
+      "description": "Settings (Privacy) - Initial thanks message (First paragraph)",
+      "message": "디지털 자산을 지키는 가장 쉬운 보안, UPPward 설치 & 업데이트를 축하합니다."
+   },
+   "settings_priv_thanks_second": {
+      "description": "Settings (Privacy) - Initial thanks message (Second paragraph)",
+      "message": "개인정보 설정 페이지를 확인해 주세요. 설정하지 않은 경우 옵션을 비활성화 합니다."
+   },
+   "settings_privacy_tab": {
+      "description": "Settings - Tab (Privacy)",
+      "message": "개인정보"
+   },
+   "settings_title": {
+      "description": "Settings - Title",
+      "message": "설정"
+   },
+   "settings_whitelist_tab": {
+      "description": "Settings - Tab (Whitelist)",
+      "message": "안전"
+   },
+   "settings_wl_alert_desc": {
+      "description": "Settings (Whitelist) - Alert Desc",
+      "message": "안전한 웹사이트 에 대한 알림 기능입니다."
+   },
+   "settings_wl_alert_header": {
+      "description": "Settings (Whitelist) - Alert Header",
+      "message": "알림 활성화"
+   },
+   "settings_wl_displaytime_header": {
+      "description": "Settings (Whitelist) - Display Time Header",
+      "message": "표시 시간"
+   },
+   "settings_wl_layout_header": {
+      "description": "Settings (Whitelist) - Alert Layout Type Header",
+      "message": "알림 레이아웃"
+   },
+   "twitBadgeBlacklistText": {
+      "description": "Twitter Badge Alt Text (whitelist)",
+      "message": "This account is blacklisted by Sentinel Protocol"
+   },
+   "twitBadgeUnknownText": {
+      "description": "Twitter Badge Alt Text (Unknown)",
+      "message": "This account has not been categorized by Sentinel Protocol"
+   },
+   "twitBadgeWhitelistText": {
+      "description": "Twitter Badge Alt Text (whitelist)",
+      "message": "This account is whitelisted by Sentinel Protocol"
+   }
+}

@@ -1,0 +1,20 @@
+{
+   "Amount": {
+      "message": "रकम"
+   },
+   "AppDesc": {
+      "message": "वास्तविक समय Bitcoin मूल्य की जाँच करें।"
+   },
+   "AppName": {
+      "message": "बिटकॉइन की कीमतें"
+   },
+   "NotYet": {
+      "message": "अभी नहीं"
+   },
+   "RateUpdateTime": {
+      "message": "मूल्य अंतिम बार अपडेट किया गया:"
+   },
+   "Unit": {
+      "message": "बीटीसी"
+   }
+}

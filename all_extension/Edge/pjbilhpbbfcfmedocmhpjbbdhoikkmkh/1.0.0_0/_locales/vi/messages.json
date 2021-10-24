@@ -1,0 +1,20 @@
+{
+   "Amount": {
+      "message": "Số tiền"
+   },
+   "AppDesc": {
+      "message": "Kiểm tra giá Bitcoin theo thời gian thực."
+   },
+   "AppName": {
+      "message": "Giá bitcoin"
+   },
+   "NotYet": {
+      "message": "Chưa"
+   },
+   "RateUpdateTime": {
+      "message": "Giá cập nhật lần cuối tại:"
+   },
+   "Unit": {
+      "message": "BTC"
+   }
+}

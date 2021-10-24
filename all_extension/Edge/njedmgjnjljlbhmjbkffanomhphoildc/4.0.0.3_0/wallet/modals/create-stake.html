@@ -1,0 +1,122 @@
+<div class="modal-background" modal-name="create-stake" ng-controller="CreateStakeCtrl">
+    <div class="w-container">
+        <div class="w-clearfix modal-box">
+            <a class="w-inline-block close-modal" hide-modal ng-if="step != 'confirm'">
+                <div class="close-overlay pointer" data-ix="close-overlay">+</div>
+            </a>
+            <div class="modalhead-div">
+                <h1 class="head-modal">{{'stakingSetupHeader' | i18next}} {{name}}</h1>
+            </div>
+            <div id="create-stake-modal-container">
+                <div class="customloader loaderSymbol" style="text-align: center" ng-if="loading">
+                    <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100px" height="100px" viewBox="0 0 100 100" style="enable-background:new 0 0 100 100;" xml:space="preserve">
+                        <circle cx="50" cy="50" r="50" fill="#343434"></circle>
+                        <g transform="rotate(307.959 50 50)">
+                                <path fill="#ffffff" d="M50,17.9c-1,0-1.9,0.8-1.9,1.9s0.8,1.9,1.9,1.9c10.4,0,20,5.7,25,14.9c0.3,0.6,0.9,1,1.6,1
+                                        c0.3,0,0.6-0.1,0.9-0.2c0.4-0.2,0.8-0.6,0.9-1.1c0.1-0.5,0.1-1-0.1-1.4C72.6,24.3,61.8,17.9,50,17.9z" />
+                                <animateTransform attributeType="xml" attributeName="transform" type="rotate" from="0 50 50" to="360 50 50" dur="3s" repeatCount="indefinite">
+                                </animateTransform>
+                        </g>
+                        <g>
+                                <path fill="#ffffff" d="M71.1,47.4L41.3,29.2c-1-0.5-2.2-0.5-3.2,0.1c-1,0.6-1.6,1.6-1.6,2.8v36.2c0,1.1,0.6,2.2,1.6,2.8
+                                        c0.5,0.3,1.1,0.5,1.6,0.5c0.5,0,1.1-0.1,1.6-0.4L71.1,53c1-0.6,1.6-1.6,1.6-2.8C72.7,49.1,72.1,48,71.1,47.4z M68.5,50.2
+                                        L40.3,67.4V33L68.5,50.2z" />
+                                <path fill="#ffffff" d="M79.6,20.4C71.7,12.6,61.2,8.2,50,8.2c-11.2,0-21.7,4.3-29.6,12.2C12.6,28.3,8.2,38.8,8.2,50
+                                        c0,11.2,4.3,21.7,12.2,29.6c7.9,7.9,18.4,12.2,29.6,12.2c11.2,0,21.7-4.3,29.6-12.2c7.9-7.9,12.2-18.4,12.2-29.6
+                                        C91.8,38.8,87.4,28.3,79.6,20.4z M88.1,50c0,10.2-4,19.7-11.2,26.9C69.7,84.1,60.2,88.1,50,88.1c-10.2,0-19.7-4-26.9-11.2
+                                        C15.9,69.7,11.9,60.2,11.9,50c0-10.2,4-19.7,11.2-26.9c7.2-7.2,16.8-11.2,26.9-11.2c10.2,0,19.7,4,26.9,11.2
+                                        C84.1,30.3,88.1,39.8,88.1,50z" />
+                        </g>
+                    </svg>
+                </div>
+
+                <div ng-if="error.length">
+                    <p class="step-name">Error!</p>
+                    <p class="step-instructions">{{error}}</p>
+                </div>
+
+                <div class="create-stake-wallet-step" ng-if="step == 'start' && !loading && !error.length">
+                    <p class="step-name">{{'stakingSetupCreationHeader' | i18next}}</p>
+                    <p class="step-instructions">
+                        {{'stakingSetupCreationText' | i18next}}
+                    </p>
+                    <div class="create-stake-btn" ng-click="simpleStakingSettings()">
+                        {{'stakingSetupSimpleGeneration' | i18next}}
+                    </div>
+                    <div class="create-stake-btn" style="float: right" ng-click="generateSelfStaking()">
+                        {{'stakingSetupGenerateSelf' | i18next}}
+                    </div>
+                </div>
+
+                <div class="create-stake-wallet-step" ng-if="step == 'simple' && !loading && !error.length">
+                    <p class="step-name">{{'stakingSetupSimpleGenerationHeader' | i18next}}</p>
+                    <p class="step-instructions">
+                        {{'stakingSetupSimpleGenerationText1' | i18next}}
+                    </p>
+                    <p class="step-instructions">
+                        {{'stakingSetupSimpleGenerationText2' | i18next}}
+                    </p>
+                    <div>
+                        <label><input type="checkbox" ng-model="model.save_keys" /> {{'stakingSetupSimpleSaveKeys' | i18next}}</label>
+                    </div>
+                    <div class="create-stake-btn" ng-click="generateSimpleStaking()">
+                        {{'generateStakingWallet' | i18next}}
+                    </div>
+                    <div class="create-stake-btn" style="float: right" ng-click="goToStart()">
+                        {{'returnToSelection' | i18next}}
+                    </div>
+                </div>
+
+                <div class="create-stake-wallet-step" ng-if="step == 'confirm' && !loading && !error.length">
+                    <p class="step-name">{{'stakingSetupConfirmHeader' | i18next}}</p>
+                    <p class="step-instructions">
+                        {{'stakingSetupConfirmText' | i18next}}
+                    </p>
+                    <div>
+                        <label>{{'baseAddress' | i18next}}:</label>
+                        <div class="create-stake-field address" style="word-break: break-all">{{client.setup.address}}</div>
+                        <label>{{'baseSeed' | i18next}}:</label>
+                        <div class="create-stake-field address" style="word-break: break-all">{{client.setup.seed}}</div>
+                        <label>{{'multisigAddress' | i18next}}:</label>
+                        <div class="create-stake-field address" style="word-break: break-all">{{client.multisig.address}}</div>
+                        <label>{{'multisigSeed' | i18next}}:</label>
+                        <div class="create-stake-field address" style="word-break: break-all">{{client.multisig.seed}}</div>
+                        <label>{{'walletPassword' | i18next}}:</label>
+                        <div class="create-stake-field address" style="word-break: break-all">{{client.download.password}}</div>
+                    </div>
+                    <div class="create-stake-btn" ng-click="downloadWalletKeys($event)">
+                        {{'stakingSetupConfirmDownload' | i18next}}
+                    </div>
+                    <div class="create-stake-btn" ng-click="confirmSimpleStaking()" ng-if="downloaded" style="margin-top: 20px">
+                        {{'stakingSetupConfirmConfirm' | i18next}}
+                    </div>
+                </div>
+
+                <div class="create-stake-wallet-step" ng-if="step == 'self' && !loading && !error.length">
+                    <p class="step-name">{{'stakingSetupSelfHeader' | i18next}}</p>
+                    <p class="step-instructions">
+                        {{'stakingSetupSelfText1' | i18next}}
+                        <a href="https://github.com/ipbc-dev/bittube/releases/latest/download/bittube-gen-staking-client.zip" class="bt-blue">bittube-gen-staking-client</a>
+                    </p>
+                    <p class="step-instructions">{{'stakingSetupSelfText2' | i18next}}</p>
+                    <p class="step-instructions bt-blue" style="word-break: break-all">{{msig}}</p>
+                    <p class="step-instructions">
+                        {{'stakingSetupSelfText3' | i18next}}
+                    </p>
+                    <div>
+                        <label for="wallet_address">{{'multisigAddress' | i18next}}:</label>
+                        <input name="wallet_address" class="create-stake-field address width100" placeholder="bx..." ng-model="model.address" />
+                        <label for="wallet_msig">{{'multisigMessage' | i18next}}:</label>
+                        <input name="wallet_msig" class="create-stake-field address width100" placeholder="MultisigV1.." ng-model="model.msig" />
+                    </div>
+                    <div class="create-stake-btn" ng-if="model.address.length == 97 && model.address.indexOf('bx') === 0 && model.msig.length == 186 && model.msig.indexOf('MultisigV1') === 0" ng-click="generateStakingWallet()">
+                        {{'generateStakingWallet' | i18next}}
+                    </div>
+                    <div class="create-stake-btn" style="float: right" ng-click="goToStart()">
+                        {{'returnToSelection' | i18next}}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

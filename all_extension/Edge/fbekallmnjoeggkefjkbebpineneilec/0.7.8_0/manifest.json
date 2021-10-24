@@ -1,0 +1,52 @@
+{
+   "author": "https://zilpay.xyz/",
+   "background": {
+      "scripts": [ "background.js" ]
+   },
+   "browser_action": {
+      "default_icon": {
+         "19": "icons/icon19.png",
+         "38": "icons/icon38.png"
+      },
+      "default_popup": "popup.html",
+      "default_title": "ZilPay"
+   },
+   "commands": {
+      "_execute_browser_action": {
+         "suggested_key": {
+            "chromeos": "Alt+Shift+Z",
+            "linux": "Alt+Shift+Z",
+            "mac": "Alt+Shift+Z",
+            "windows": "Alt+Shift+Z"
+         }
+      }
+   },
+   "content_scripts": [ {
+      "all_frames": true,
+      "js": [ "content.js" ],
+      "matches": [ "*://*/*" ],
+      "run_at": "document_start"
+   } ],
+   "description": "ZilPay browser Extension for zilliqa blockchain",
+   "homepage_url": "https://zilpay.xyz",
+   "icons": {
+      "128": "icons/icon128.png",
+      "16": "icons/icon16.png",
+      "19": "icons/icon19.png",
+      "38": "icons/icon38.png",
+      "39": "icons/icon39.png",
+      "48": "icons/icon48.png",
+      "96": "icons/icon96.png"
+   },
+   "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA5nSW7JKwe+Y7tKd8xL0rmuAfmclDIbAQ3d8KoCbEnBRCotUbP6rpFiQUY0m6mbqLfajLXAsf43l4/Qfcvuigh3xJUDl0fkykR3VmqRwhKKflJ9tWdT2FtXdc0OGoesr1YFRoM6BucWp+ubXHw76On1sUvnHoydaxFWa8ML834BDDK1NP1HGON0+0uswyFCyKKCQb1Xh8XDhDbU4jtlvlC2Gtbbjq+EEcjq5N5PcKpX9mbBONZ2UXUMEh3jF2qKJDvnoUG54Kr8sqR/+xAImGFnE4gsaYGwTcRTTYqKFPxYbbXBhDjM+xNuyCM4QuImQv1KzlAXDYk8ME3SYJQfNvNQIDAQAB",
+   "manifest_version": 2,
+   "name": "ZilPay",
+   "permissions": [ "storage", "notifications", "webRequest", "*://*.zil/*", "https://api.coingecko.com/api/v3/simple/price", "https://api.zilliqa.com/", "https://dev-api.zilliqa.com/", "https://zilpay.xyz/*", "http://127.0.0.1/*" ],
+   "short_name": "ZilPay Zilliqa wallet",
+   "storage": {
+      "managed_schema": "schema.json"
+   },
+   "update_url": "https://edge.microsoft.com/extensionwebstorebase/v1/crx",
+   "version": "0.7.8",
+   "web_accessible_resources": [ "inpage.js" ]
+}

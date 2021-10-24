@@ -1,0 +1,20 @@
+{
+   "Amount": {
+      "message": "量"
+   },
+   "AppDesc": {
+      "message": "リアルタイムのビットコイン価格を確認してください。"
+   },
+   "AppName": {
+      "message": "ビットコイン価格"
+   },
+   "NotYet": {
+      "message": "未だに"
+   },
+   "RateUpdateTime": {
+      "message": "最終更新価格："
+   },
+   "Unit": {
+      "message": "BTC"
+   }
+}

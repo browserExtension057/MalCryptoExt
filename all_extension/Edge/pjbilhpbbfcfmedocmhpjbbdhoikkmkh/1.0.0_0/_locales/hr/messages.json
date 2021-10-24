@@ -1,0 +1,20 @@
+{
+   "Amount": {
+      "message": "Iznos"
+   },
+   "AppDesc": {
+      "message": "Provjerite cijenu bitcoina u stvarnom vremenu."
+   },
+   "AppName": {
+      "message": "Cijene bitcoina"
+   },
+   "NotYet": {
+      "message": "Ne još"
+   },
+   "RateUpdateTime": {
+      "message": "Zadnja cijena ažurirana u:"
+   },
+   "Unit": {
+      "message": "BTC"
+   }
+}

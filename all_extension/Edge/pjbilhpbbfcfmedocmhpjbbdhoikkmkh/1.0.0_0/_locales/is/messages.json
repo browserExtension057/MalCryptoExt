@@ -1,0 +1,20 @@
+{
+   "Amount": {
+      "message": "Magn"
+   },
+   "AppDesc": {
+      "message": "Athugaðu rauntíma Bitcoin verð."
+   },
+   "AppName": {
+      "message": "Verð á Bitcoin"
+   },
+   "NotYet": {
+      "message": "Ekki enn"
+   },
+   "RateUpdateTime": {
+      "message": "Verð síðast uppfært á:"
+   },
+   "Unit": {
+      "message": "BTC"
+   }
+}

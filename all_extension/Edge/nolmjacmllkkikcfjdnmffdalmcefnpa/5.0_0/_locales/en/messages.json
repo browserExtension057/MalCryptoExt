@@ -1,0 +1,14 @@
+{
+   "chrome_extension_description": {
+      "message": "Cryptocurrency market. Bitcoin and Coindesk News. Also ethereum, litecoin, cash. Price flutuation charts. Wallet and price ticker."
+   },
+   "chrome_extension_download_all_link": {
+      "message": "https://www.oinkandstuff.com/downloads-for-microsoft-edge/"
+   },
+   "chrome_extension_link": {
+      "message": "https://www.oinkandstuff.com/project/bitcoin-monero-miner/"
+   },
+   "chrome_extension_name": {
+      "message": "Bitcoin Crypto News"
+   }
+}

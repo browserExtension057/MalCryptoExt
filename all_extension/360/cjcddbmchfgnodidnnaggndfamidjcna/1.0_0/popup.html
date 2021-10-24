@@ -1,0 +1,371 @@
+<html>
+<head>
+    <meta charset="utf-8">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            width: 600px;
+            height: 100%;
+        }
+
+        div {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+<div id="bisheng_div">
+    <table id="tableWrap" class="table table-hover table-bordered table-striped table-condensed"    >
+        <tr >
+            <th>#</th>
+            <th>名</th>
+            <th>今日涨跌</th>
+            <th>最新</th>
+            <th>委托</th>
+            <th>参考</th>
+            <th>最高/低价</th>
+            <th>可用/冻结</th>
+            <th>价值/投入</th>
+            <th style="width:50px;">盈余</th>
+        </tr>
+        <tr v-for="(bean, index ) in beans " >
+            <td >
+              {{index+1}}
+            </td>
+
+            <td :class="[(bean.balance || bean.lock)?'text-shadow-yellow':'']">
+                <a :href="'https://www.jubi.com/coin/'+bean.key" style="display: block;" target="_blank" >
+                {{bean.val[0]}}<br/>{{bean.key}}
+                </a>
+            </td>
+            <td  colspan="3"   >
+                <span v-if="bean.arrow==1" class=" text-shadow"  style="font-weight: bold">↑
+                </span>
+                <span v-else-if="bean.arrow==2" class="text-shadow-success" style="font-weight: bold" >↓</span>
+                <span v-else="">&nbsp;&nbsp;</span>
+                <span   :title="bean.key"   :class="'history '+[(bean.updown>0)?'text-shadow':'text-shadow-success']"  >％{{bean.updown}}
+                &nbsp;&nbsp;&nbsp;&nbsp;￥{{bean.val[1]}}</span>
+                <table v-show="bean.weituo.length!=0" class="table table-hover table-bordered table-striped table-condensed" style="margin: 5px 0 0 0;"  >
+                    <tr v-for="w in bean.weituo" >
+                        <td v-if="w.type=='sell'"  style="font-weight: bold;background-color: #d3c526;" >
+                            {{w.type}}
+                        </td>
+                        <td v-else=""  style="font-weight: bold;background-color: #fa9999;"  >
+                            {{w.type}}
+                        </td>
+                        <td >
+                        <span v-if="w.type=='sell' && (w.price/bean.val[1]) < 1.03   "  style="font-weight: bold;background-color: #d3c526;" >
+                            ￥{{w.price}}
+                        </span>
+                        <span v-else-if="w.type=='buy' && (bean.val[1]/w.price) < 1.03   "  style="font-weight: bold;background-color: #fa9999;" >
+                            ￥{{w.price}}
+                        </span>
+                        <span v-else="">￥{{w.price}}</span>
+
+                        </td>
+                        <td :id="w.id" :data-key="bean.key" style="cursor: pointer;" title="取消订单" class="cancel" >
+                            {{w.num_total}}
+                        </td>
+                    </tr>
+                </table>
+
+            </td>
+            <td class="down-order-buy" :data-key="bean.key"  title="买"  >
+                <span v-if="bean.proportion">
+                    <span :class="[bean.proportion>0?'text-shadow':'text-shadow-success']" >
+                        %{{bean.proportion}}</span>
+                    <br>
+                    <span style="font-weight: bold;">￥{{bean.myprice}}</span>
+                </span>
+            </td>
+            <td class="down-order"  :data-key="bean.key"  title="卖">
+                {{bean.val[4]}}<br>{{bean.val[5]}}
+            </td>
+            <td :id="bean.key+'_balance'"   :data-key="bean.key"  :data-type="'buy'"      class="text-shadow-yellow mulitybuy"  >
+                {{bean.balance}}
+                <br>
+                {{bean.lock}}
+            </td>
+            <td  :data-key="bean.key"  :data-type="'sell'"   class="mulitybuy">
+                {{bean.total}}
+                <br>
+                {{bean.touru}}
+            </td>
+            <td  :class="[(bean.last>0)?'text-shadow':'text-shadow-success']" >
+                {{bean.last}}
+            </td>
+        </tr>
+        <tr>
+            <td colspan="4">
+                <span v-if="!pwd">
+                    <input type="text" id="pwd" style="width: 100px;height: 20px;"   >
+                    <input type="button" style="width: 50px;height: 20px;"   value="确定"  placeholder="支付密码"  id="subpwd"   >
+                </span>
+                <span v-else="">
+                    <input type="button" style="width: 50px;height: 20px;"  value="取消"  id="cancelpwd"   >
+                </div>
+            </td>
+            <td colspan="6" style="text-align: right;" >
+                总:￥{{cny.total}}
+                &nbsp;余:￥{{cny.balance}}
+                &nbsp;冻:￥{{cny.lock}}
+                &nbsp;买:￥{{totalPrice.toFixed(2)}}
+                &nbsp;盈￥{{totalLast.toFixed(2)}}
+            </td>
+        </tr>
+
+    </table>
+    <div id="layer_notice"    style="display: none;width:500px;padding: 20px;"  >
+        <div class="sell" >卖</div>
+        <span v-if="obeans[showKey]" >{{obeans[showKey].val[0]}}{{showKey}} ￥{{obeans[showKey].val[1]}}</span>
+        <table class="table table-hover table-bordered table-striped table-condensed" style="margin: 0 0 0 0;"  >
+            <tr >
+                <td>
+                    卖出价格
+                </td>
+                <td>
+                    <input type="text" id="price" v-model="price"  >
+                    当前价格<a  href="javascript:void(0);"   id="currentPrice"  v-if="obeans[showKey]"  v-on:click="setPrice(100)" >￥{{obeans[showKey].val[1]}}</a>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    &nbsp;&nbsp;
+                    <input id="ex2" style="width: 100px;"  data-slider-id='ex1Slider2' type="text" data-slider-min="0" data-slider-max="100" data-slider-step="1"
+                           data-slider-tooltip="hide" data-slider-handle="round"
+                    />
+                    &nbsp;&nbsp;<span id="ex1tip2" style="width:35px;display:inline-block;">0%</span>
+                    &nbsp;&nbsp;<button class="btn btn-xs" href="javascript:void(0);" v-on:click="setPrice(5)">+5%</button>
+                    &nbsp;&nbsp;<button class="btn btn-xs" v-on:click="setPrice(10)">+10%</button>
+                    &nbsp;&nbsp;<button class="btn btn-xs" v-on:click="setPrice(15)">+15%</button>
+                    &nbsp;&nbsp;<button class="btn btn-xs" v-on:click="setPrice(20)">+20%</button>
+                    &nbsp;&nbsp;<button class="btn btn-xs" v-on:click="setPrice(50)">+50%</button>
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    卖出数量
+                </td>
+                <td>
+                    <input type="text" id="number" v-model="number" >
+                    最大可卖<a  href="javascript:void(0);"   id="maxsell" v-if="obeans[showKey]"  v-on:click="setMax(100)" >{{obeans[showKey].balance||0}}</a>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2" >
+                    &nbsp;&nbsp;
+                    <input style="width: 100px;"  id="ex1" data-slider-id='ex1Slider' type="text" data-slider-min="0" data-slider-max="100" data-slider-step="1"
+                           data-slider-tooltip="hide" data-slider-handle="round"
+                    />
+                    &nbsp;&nbsp;<span id="ex1tip" style="width:35px;display:inline-block;">0%</span>
+                    &nbsp;&nbsp;<button class="btn btn-xs" href="javascript:void(0);" v-on:click="setMax(5)">5%</button>
+                    &nbsp;&nbsp;<button class="btn btn-xs" v-on:click="setMax(10)">10%</button>
+                    &nbsp;&nbsp;<button class="btn btn-xs" v-on:click="setMax(15)">15%</button>
+                    &nbsp;&nbsp;<button class="btn btn-xs" v-on:click="setMax(20)">20%</button>
+                    &nbsp;&nbsp;<button class="btn btn-xs" v-on:click="setMax(50)">50%</button>
+                </td>
+            </tr>
+            <tr>
+                <td >
+                    合计
+                </td>
+                <td>￥{{price * number}}</td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <input type="button"   class="btn btn-success btn-sm"  value="确认卖出"  v-on:click="orderok"  >
+                </td>
+            </tr>
+        </table>
+
+    </div>
+
+    <div id="layer_notice_buy"    style="display: none;width:500px;padding: 20px;"  >
+        <div class="buy" >买</div>
+        <span v-if="obeans[showKey]" >{{obeans[showKey].val[0]}}{{showKey}} ￥{{obeans[showKey].val[1]}}</span>
+        <table class="table table-hover table-bordered table-striped table-condensed" style="margin: 0 0 0 0;"  >
+            <tr >
+                <td>
+                    买入价格
+                </td>
+                <td>
+                    <input type="text" id="pricebuy" v-model="price"  >
+                    当前价格<a  href="javascript:void(0);"   id="currentPrice"  v-if="obeans[showKey]"  v-on:click="setBuyPrice(100)" >￥{{obeans[showKey].val[1]}}</a>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    &nbsp;&nbsp;
+                    <input id="ex4" style="width: 100px;"  data-slider-id='ex1Slider4' type="text" data-slider-min="0" data-slider-max="100" data-slider-step="1"
+                           data-slider-tooltip="hide" data-slider-handle="round"
+                    />
+                    &nbsp;&nbsp;<span id="ex1tip4" style="width:35px;display:inline-block;">0%</span>
+                    &nbsp;&nbsp;<button class="btn btn-xs" v-on:click="setBuyPrice(5)">-5%</button>
+                    &nbsp;&nbsp;<button class="btn btn-xs" v-on:click="setBuyPrice(10)">-10%</button>
+                    &nbsp;&nbsp;<button class="btn btn-xs" v-on:click="setBuyPrice(15)">-15%</button>
+                    &nbsp;&nbsp;<button class="btn btn-xs" v-on:click="setBuyPrice(20)">-20%</button>
+                    &nbsp;&nbsp;<button class="btn btn-xs" v-on:click="setBuyPrice(50)">-50%</button>
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    买入数量
+                </td>
+                <td>
+                    <input type="text" id="numberbuy" v-model="number" >
+                    最大可买<a  href="javascript:void(0);"   id="maxsell" v-if="obeans[showKey]"  v-on:click="setMax(100)" >
+                    {{maxcanbuy}}
+                </a>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2" >
+                    &nbsp;&nbsp;
+                    <input style="width: 100px;"  id="ex3" data-slider-id='ex1Slider3' type="text" data-slider-min="0" data-slider-max="100" data-slider-step="1"
+                           data-slider-tooltip="hide" data-slider-handle="round"
+                    />
+                    &nbsp;&nbsp;<span id="ex1tip3" style="width:35px;display:inline-block;">0%</span>
+                    &nbsp;&nbsp;<button class="btn btn-xs" v-on:click="setMax(5)">5%</button>
+                    &nbsp;&nbsp;<button class="btn btn-xs" v-on:click="setMax(10)">10%</button>
+                    &nbsp;&nbsp;<button class="btn btn-xs" v-on:click="setMax(15)">15%</button>
+                    &nbsp;&nbsp;<button class="btn btn-xs" v-on:click="setMax(20)">20%</button>
+                    &nbsp;&nbsp;<button class="btn btn-xs" v-on:click="setMax(50)">50%</button>
+                </td>
+            </tr>
+            <tr>
+                <td >
+                    合计
+                </td>
+                <td>￥{{price * number}}</td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <input type="button"  class="btn btn-danger btn-sm" value="确认买入"  v-on:click="orderok"  >
+                </td>
+            </tr>
+        </table>
+    </div>
+
+
+
+
+    <div id="mulitybuy"    style="display: none;width:500px;padding: 20px;"  >
+        <div v-if="ordertype=='buy'"  class="buy" style="font-size: 30px;"  >分段买</div>
+        <div v-else=""  class="sell" style="font-size: 30px;"  >分段卖</div>
+        <span v-if="obeans[showKey]" >{{obeans[showKey].val[0]}}{{showKey}} ￥{{obeans[showKey].val[1]}}</span>
+        <table class="table table-hover table-bordered table-striped table-condensed" style="margin: 0 0 0 0;" >
+            <tr>
+                <td>
+                    min:
+                </td>
+                <td>
+                    <input  v-model="minprice"   >
+                </td>
+                <td>
+                    max;
+                </td>
+                <td>
+                    <input  v-model="maxprice"   >
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    段数
+                </td>
+                <td>
+                    <input  v-model="mulitynum"    >
+                </td>
+                <td>
+                    方式
+                </td>
+                <td>
+                    平均<input type="radio" name="mulitytype"  value="0"   v-model="picked" >
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    数量
+                </td>
+                <td>
+                    <input  v-model="everynum"   >
+                </td>
+                <td>
+                    方式
+                </td>
+                <td>
+                    平均<input type="radio" name="mulitytypeNum"  value="0"    v-model="pickedNum" >
+                </td>
+            </tr>
+            <tr>
+                <td colspan="4" id="partwrap"  >
+                    <span v-for="(a,index) in mulitypars" >
+                        <input type="text" style="width:60px;margin-right: 10px;" v-model="mulitypars[index]"  class="mulitypart"   >
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="4" id="numwrap" >
+                    <span v-for="(b , indexb) in mulityparsNum" >
+                        <input type="text" style="width:60px;margin-right: 10px;" :value="mulityparsNum[indexb]"  class="mulityparsNum" >
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="4" id="pricewrap" >
+                    <span v-for="(c,index) in mulityparsPrice" >
+                        <input type="text" style="width:60px;margin-right: 10px;"  :value="c" class="mulitypartPrice"   >
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td >
+                     <span v-if="ordertype=='sell'" style="font-weight: bold;" >
+                         (卖)数量<span v-if="obeans[showKey]">({{obeans[showKey].balance||0}})</span>
+                     </span>
+                    <span v-else="" >
+                         (卖)数量<span v-if="obeans[showKey]">({{obeans[showKey].balance||0}})</span>
+                    </span>
+                </td>
+                <td id="totalNum">
+
+                </td>
+
+                <td >
+                    <span v-if="ordertype=='buy'" style="font-weight: bold;" >
+                        钱(￥{{cny.balance}}):
+                    </span>
+                    <span v-else="">
+                        钱(￥{{cny.balance}}):
+                    </span>
+                </td>
+                <td id="totalMoney">
+
+                </td>
+            </tr>
+            <tr>
+                <td colspan="4" >
+                    <button class="btn btn-sm" id="mulityOrder"  >{{ordertype=='sell'?'卖':'买'}}</button>
+                </td>
+            </tr>
+
+        </table>
+
+    </div>
+</div>
+<script src="lib/jquery.1.9.1.min.js"></script>
+<script src="lib/vue.min.js"></script>
+<script src="lib/layer/layer.js"></script>
+<link href="lib/bootstrap.min.css" rel="stylesheet">
+<link href="lib/layer/skin/default/layer.css" rel="stylesheet">
+<link href="lib/bootstrap-slider.min.css" rel="stylesheet">
+<script src="lib/bootstrap-slider.min.js"></script>
+<script src="js/Bisheng.js"></script>
+</body>
+</html>

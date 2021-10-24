@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=0" name="viewport">
+        <meta name="mobile-web-app-capable" content="yes">
+<!-- <title data-i18n="dashboardName"></title> -->
+<title>AdBlocker</title>
+<link href="css/dashboard.css" rel="stylesheet" type="text/css">
+<link href="css/common.css" rel="stylesheet" type="text/css">
+<link href="css/styleUblock.css" rel="stylesheet" type="text/css">
+<link rel="shortcut icon" type="image/png" href="/assets/images/get_started16.png"/>
+
+ <!-- Load Mobiscroll  -->
+<script src="/external/mobiscroll/mobiscroll.javascript.min.js"></script>
+<link href="/external/mobiscroll/mobiscroll.javascript.min.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+
+        <div id="divFullHeader" class="divFullHeader">
+                <!-- DIV LOGO -->
+                <div class="divLogoHeader">
+                    <a class="w-nav-brand brand-box" href="#">
+                        <img src="/assets/images/logo-header.svg" width="150">
+                    </a>
+                </div>
+                <!-- DIV MENU -->
+                <div class="lower-nav-section">
+                    <div class="w-container containerNavbar">
+                        <div id="dashboard-nav">
+                            <div id="dashboard-nav-widgets">
+                               <a class="tabButton" href="#settings.html" data-i18n="settingsPageName"></a><!--
+                                --><a class="tabButton" href="#3p-filters.html" data-i18n="3pPageName"></a><!--
+                                --><a class="tabButton" href="#1p-filters.html" data-i18n="1pPageName"></a><!--
+                                --><a class="tabButton" href="#dyna-rules.html" data-i18n="rulesPageName"></a><!--
+                                --><a class="tabButton" href="#whitelist.html" data-i18n="whitelistPageName"></a><!--
+                                --><a class="tabButton" href="#shortcuts.html" data-i18n="shortcutsPageName"></a><!--
+                                --><a class="tabButton" href="#about.html" data-i18n="aboutPageName"></a><!--
+                                --><a id="closeAdblock" class="tabButton" href="#" data-i18n="closeUblock"></a>
+                            </div>
+                        </div>
+                   </div>
+                </div>
+            
+                
+               
+        </div>       
+
+<div class="divIframeUblock">
+    <iframe id="iframe" src=""></iframe>
+</div>
+<script src="js/vapi.js"></script>
+<script src="js/vapi-common.js"></script>
+<script src="js/vapi-client.js"></script>
+<script src="js/udom.js"></script>
+<script src="js/i18n.js"></script>
+<script src="js/dashboard.js"></script>
+
+</body>
+</html>
+

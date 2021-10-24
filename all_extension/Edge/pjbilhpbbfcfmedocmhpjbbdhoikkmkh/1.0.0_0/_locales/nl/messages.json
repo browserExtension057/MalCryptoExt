@@ -1,0 +1,20 @@
+{
+   "Amount": {
+      "message": "Bedrag"
+   },
+   "AppDesc": {
+      "message": "Controleer realtime Bitcoin-prijs."
+   },
+   "AppName": {
+      "message": "Bitcoin-prijzen"
+   },
+   "NotYet": {
+      "message": "Nog niet"
+   },
+   "RateUpdateTime": {
+      "message": "Prijs laatst bijgewerkt op:"
+   },
+   "Unit": {
+      "message": "BTC"
+   }
+}

@@ -1,0 +1,14 @@
+{
+   "appDescription": {
+      "description": "The description of the application",
+      "message": "Metacoin Browser extension"
+   },
+   "appName": {
+      "description": "The name of the application",
+      "message": "MetaWallet"
+   },
+   "contextOpenPopup": {
+      "description": "Context menu",
+      "message": "ウィンドウで開く"
+   }
+}

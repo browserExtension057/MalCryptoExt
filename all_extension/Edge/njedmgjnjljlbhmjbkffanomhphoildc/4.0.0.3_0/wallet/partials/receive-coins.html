@@ -1,0 +1,110 @@
+<div ng-include src="'partials/account-nav.html'"></div>
+
+<div class="body-section">
+    <div class="w-container">
+        <div>
+            <div class="w-row">
+                <div class="w-col w-col-6 w-clearfix">
+                    <div class="header-div-block width100">
+                        <h1 class="heading-contained">{{'receive' | i18next}}</h1>
+                        <div class="subhead-text inner">
+                                {{'receiveText' | i18next}} 
+                        </div>
+
+                    </div>
+                </div>
+                <div class="w-col w-col-6">
+                    <ng-include src="'partials/account-balance.html'"></ng-include>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="w-container middle-container receive">
+        <div class="middle-div receive">
+            <div class="w-form send-form receive">
+						   <!-- <span class="info-headers-icons-o">RECEIVE MONEY</span>
+    <div class="box-41"><i class="fas fa-arrow-left"></i></div> -->
+
+                    <span class="titleBox">{{'receiveMoney' | i18next}} </span>
+                    <div ng-app="thinwalletApp">
+                            <div class="qrCodeDiv">
+                                    <qr-code integrated_address={{integarted_address}}></qr-code>
+                                </div>
+                        <form mobiscroll-form="settings" class="md-login-form" id="formReciveCoins">
+                                <div class="mbsc-form-group no-margin">
+                                        <label for="integrated-address" class="labelFormDonate">
+                                                {{'integratedAddress' | i18next}}
+                                                <input id="integrated-address" type="text"
+                                                name="integrated-address" data-name="integrated-address" ng-model="integarted_address" value="{{integarted_address}} " data-input-style="outline" class="mainInput" readonly>
+
+                                        </label>
+
+
+                                </div>
+
+                                <div class="mbsc-form-group no-margin">
+                                        <label for="integrated-address" class="labelFormDonate inputWidth">
+                                                {{'paymentIDMax' | i18next}}
+                                                <input id="payment_id8" type="text" ng-model="payment_id8"
+                                                name="payment_id8" data-name="payment_id8" data-input-style="outline" class="mainInput" />
+
+                                        </label>
+
+                                        <label for="integrated-address" class="labelFormDonate inputWidth">
+                                                {{'finalPaymentID' | i18next}}
+                                                <input id="payment_id8_final" type="text" ng-model="payment_id8_rendered"
+                                                name="payment_id8" data-name="payment_id8" value="{{payment_id8_rendered}}" disabled data-input-style="outline" class="mainInput" />
+
+                                        </label>
+                                </div>
+                        </form>
+                    </div>
+                    <!-- <label class="send-label" for="Receiver-address">   Integrated Address
+                    </label>
+                    <div class="move-text-div">
+                        <div class="middle-text receive qrcodeaddress">
+                            {{integarted_address}}
+                        </div>
+                    </div> -->
+
+
+                    <!-- <div class="w-col w-col-6 responsive-column">
+                        <label class="send-label" for="payment_id8">
+                            Payment ID (max 16 [0-9a-f] characters)
+                        </label>
+                        <input class="w-input" id="payment_id8" type="text" ng-model="payment_id8"
+                               placeholder="e.g. 671a4f30238c5152"
+                               name="payment_id8" data-name="payment_id8">
+                    </div>
+
+
+                    <div class="w-col w-col-6 responsive-column">
+                        <label class="send-label" for="payment_id8_rendered">
+                            Final payment ID
+                        </label>
+                        <div class="move-text-div">
+                            <div class="middle-text receive">
+                                {{payment_id8_rendered}}
+                            </div>
+                        </div>
+                    </div>     -->
+
+
+
+                    <!-- <div class="submit-div small-top-margin">
+                      <a class="login-btn modals pointer" ng-click="new_payment_id8()">Generate new integrated address</a>
+                    </div>             -->
+                    <div class="divSendButton">
+                            <a id="generate_new_id" class="login-btn modals pointer" ng-click="new_payment_id8()">{{'GenerateNewIntegratedAddress' | i18next}}</a>
+                          </div>
+
+
+                    <div class="w-form-fail error-backing" style="display: block;" ng-show="!!error">
+                        <p>{{error}}</p>
+                    </div>
+
+            </div>
+        </div>
+    </div>
+</div>

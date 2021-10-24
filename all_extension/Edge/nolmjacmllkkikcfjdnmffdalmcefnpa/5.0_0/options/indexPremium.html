@@ -1,0 +1,150 @@
+<!--
+// Copyright (c) 2011 Frank Kohlhepp
+// https://github.com/frankkohlhepp/fancy-settings
+// License: LGPL v2.1
+-->
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title id="title"></title> <!-- #### CHANGE HERE #### -->
+    <!-- Stylesheets -->
+    <link id="favicon" rel="icon" href="">
+    <link rel="stylesheet" type="text/css" href="lib/default.css">
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <link rel="stylesheet" type="text/css" href="css/setting.css">
+    <link rel="stylesheet" type="text/css" href="css/custom.css">
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="css/indexPremium.css">
+
+    <!-- JavaScripts -->
+    <script src="lib/mootools-core.js"></script>
+    <script src="lib/store.js"></script>
+    <script src="js/classes/tab.js"></script>
+    <script src="js/classes/setting.js"></script>
+    <script src="js/classes/search.js"></script>
+    <script src="js/classes/fancy-settings.js"></script>
+    <script src="../i18n.js"></script>
+    <script src="../js/i18n/i18n.js"></script>
+    <script type="text/javascript" src="../js/jquery/jquery.min.js"></script>
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/initInAppPayment.js"></script>
+	<script type="text/javascript" src="js/initFreePremium.js"></script>
+
+</head>
+<body class="no-select">
+    <div id="sidebar" class="fancy">
+        <div id="oinkandstuffSocial">
+            <div style="text-align:center;">
+				<a title="Facebook" href="http://www.facebook.com/oinkandstuffofficial" class="highlightit2" target="_blank"><img class="alignnone  wp-image-746" title="Facebook" src="../img/Footer/button_facebook.png" width="47" height="47" /></a>
+				<a title="Twitter" href="http://twitter.com/oinkandstuff" class="highlightit2" target="_blank"><img class="alignnone  wp-image-747" title="Twitter" src="../img/Footer/button_twitter.png" width="47" height="47" /></a>
+				<a title="Website" href="http://www.oinkandstuff.com" class="highlightit2" target="_blank"><img class="alignnone  wp-image-745" title="Website" src="../img/Footer/button_home.png" width="47" height="47" /></a>
+				<a title="LinkedIn" href="https://www.linkedin.com/company/oink-and-stuff" class="highlightit2" target="_blank"><img class="alignnone  wp-image-747" title="LinkedIn" src="../img/Footer/button_linkedin.png" width="47" height="47" /></a>
+				<a title="Youtube" href="https://www.youtube.com/oinkandstuff?sub_confirmation=1" class="highlightit2" target="_blank"><img class="alignnone  wp-image-748" title="Youtube" src="../img/Footer/button_youtube.png" width="47" height="47" /></a>
+				<a title="Instagram" href="https://www.instagram.com/oinkandstuffofficial/" class="highlightit2" target="_blank"><img class="alignnone  wp-image-748" title="Instagram" src="../img/Footer/button_instagram.png" width="47" height="47" /></a>
+			</div>
+            <div style="text-align:center;">
+                <font style="font-size:10px;"><b>Copyright &copy; <font id="appName"></font> v<font id="appVersion"></font></b></font> <!-- #### CHANGE HERE #### -->
+            </div>
+        </div>
+        <hr style="margin: 0.1em 0; ">
+    </div>
+    <div id="content">
+        <div id="oinkandstuffApps">
+			<!-- #### CHANGE THIS SECTION #### -->
+			<a href="https://www.oinkandstuff.com/project/facebook-messenger/#download" target="_blank" class="highlightit"><img src="../img/web_store_facebook_download.png" title="Download" style=""></a>
+			<a href="https://www.oinkandstuff.com/project/social-media-hub/#download" target="_blank" class="highlightit"><img src="../img/web_store_hub_download.png" title="Download" style=""></a>
+			<a href="https://www.oinkandstuff.com/project/social-media-hub/#download" target="_blank" class="highlightit"><img src="../img/web_store_hub_lite_download.png" title="Download" style=""></a>
+			<a href="https://www.oinkandstuff.com/project/whatsapp-messenger/#download" target="_blank" class="highlightit"><img src="../img/web_store_whatsapp_download.png" title="Download" style=""></a>
+			<a href="https://www.oinkandstuff.com/project/instagram-web/#download" target="_blank" class="highlightit"><img src="../img/web_store_instagram_download.png" title="Download" style=""></a>
+			<a href="https://www.oinkandstuff.com/project/easy-twitter/#download" target="_blank" class="highlightit"><img src="../img/web_store_twitter_download.png" title="Download" style=""></a>
+			<a href="https://www.oinkandstuff.com/project/pip-picture-in-picture-plus/#download" target="_blank" class="highlightit"><img src="../img/web_store_pip_download.png" title="Download" style=""></a>
+			<a href="https://www.oinkandstuff.com/project/drumpfinator-extreme-edition/#download" target="_blank" class="highlightit"><img src="../img/web_store_drumpfinator_download.png" title="Download" style=""></a>
+			<a href="https://www.oinkandstuff.com/project/linkedin-lite/#download" target="_blank" class="highlightit"><img src="../img/web_store_linkedin_download.png" title="Download" style=""></a>
+			<a href="https://events.oinkandstuff.com/" target="_blank" class="highlightit"><img src="../img/web_store_events_download.png" title="Download" style=""></a>
+			<a href="https://www.oinkandstuff.com/project/skype-messenger/#download" target="_blank" class="highlightit"><img src="../img/web_store_skype_download.png" title="Download" style=""></a>
+			<a href="https://www.oinkandstuff.com/project/chat-and-meet-for-hangouts/#download" target="_blank" class="highlightit"><img src="../img/web_store_hangouts_download.png" title="Download" style=""></a>
+			<a href="https://www.oinkandstuff.com/project/red-messenger-for-youtube/#download" target="_blank" class="highlightit"><img src="../img/web_store_youtube_download.png" title="Download" style=""></a>
+			<a href="https://www.oinkandstuff.com/project/companion-for-reddit/#download" target="_blank" class="highlightit"><img src="../img/web_store_reddit_download.png" title="Download" style=""></a>
+			<a href="https://www.oinkandstuff.com/project/hub-for-google-news-buzzfeed/#download" target="_blank" class="highlightit"><img src="../img/web_store_buzzfeed_download.png" title="Download" style=""></a>
+			<a href="https://www.oinkandstuff.com/project/swipe-for-tinder/#download" target="_blank" class="highlightit"><img src="../img/web_store_tinder_download.png" title="Download" style=""></a>
+			<a href="https://www.oinkandstuff.com/project/bitcoin-monero-miner/#download" target="_blank" class="highlightit"><img src="../img/web_store_bitcoin_download.png" title="Download" style=""></a>
+			<a href="https://www.oinkandstuff.com/project/web-for-android-messages/#download" target="_blank" class="highlightit"><img src="../img/web_store_androidMessages_download.png" title="Download" style=""></a>
+			<a href="https://www.oinkandstuff.com/project/instant-games/#download" target="_blank" class="highlightit"><img src="../img/web_store_instantGames_download.png" title="Download" style=""></a>
+			<a href="https://www.oinkandstuff.com/project/web-for-telegram/#download" target="_blank" class="highlightit"><img src="../img/web_store_telegram_download.png" title="Download" style=""></a>
+			<a href="https://www.oinkandstuff.com/project/emoji-keyboard/#download" target="_blank" class="highlightit"><img src="../img/web_store_emoji_download.png" title="Download" style=""></a>
+			<a href="https://www.oinkandstuff.com/project/direct-message-dm-for-instagram/#download" target="_blank" class="highlightit"><img src="../img/web_store_instagram_dm_download.png" title="Download" style=""></a>
+			<a href="https://www.oinkandstuff.com/project/url-shortener-plus/#download" target="_blank" class="highlightit"><img src="../img/web_store_urlShortener_download.png" title="Download" style=""></a>
+			<a href="https://www.oinkandstuff.com/project/chat-multi-messenger/#download" target="_blank" class="highlightit"><img src="../img/web_store_multiMessenger_download.png" title="Download" style=""></a>
+			<!-- #### CHANGE THIS SECTION #### -->
+        </div>
+		<hr style="margin: 0.1em 0; ">
+        <div id="load" style="width:100%; height:100%; position:fixed; z-index:9999; background:url('data:image/gif;base64,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') no-repeat center 50px rgba(0,0,0,0.25);"></div>
+        <div id="premiumFeatures" style="width: 100%; text-align: center; ">
+            <nav class="navbar navbar-default" role="navigation">
+                <div class="navbar-header">
+                    <a class="navbar-brand">Choose a Premium Feature</a>
+                </div>
+            </nav>
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th class="name">Item</th>
+                        <th class="desc">Description</th>
+                        <th class="price">Price</th>
+                        <th class="action"></th>
+                    </tr>
+                </thead>
+                <tbody id="inAppPayment"></tbody>
+            </table>
+            <br />
+            <p id="status" class="bg-primary"></p>
+            <p id="info" class="bg-danger"><a id="infowebsite" href="#" target="_blank">Click to view details and images about this features.</a></p>
+			<p id="info" class="bg-danger">Google In-App purchase: TUTORIAL - <a id="infoPremiumWebsite" href="https://www.oinkandstuff.com/premium-features/" target="_blank">Google Pay</a></p>
+			<iframe width="616" height="347" src="https://www.youtube.com/embed/SHAm9NFQWj0" frameborder="0" allowfullscreen></iframe>
+			<p id="info" class="bg-danger">FREE exclusive features</p>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/xNYcx2ChGSQ" frameborder="0" allowfullscreen></iframe>
+			<iframe width="560" height="315" src="https://www.youtube.com/embed/QaBOf-G2wS0" frameborder="0" allowfullscreen></iframe>
+			<p id="info" class="bg-danger">Shop for physical goods on <a id="infoPremiumWebsite" href="https://www.oinkandstuff.com/shop/" target="_blank">Oinkandstuff Shop</a></p>
+			<p><a href="https://www.oinkandstuff.com/shop/" target="_blank"><img src="../img/oinkandstuff-shop-banner.png" title="Shop" style=""></a></p>
+            <br />
+			<!-- Modal License-->
+            <div id="modalLicense" class="modal fade">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                            <h4 class="modal-title">License Data</h4>
+                        </div>
+                        <div class="modal-body">
+                            <pre class="license">license data</pre>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+                        </div>
+                    </div><!-- /.modal-content -->
+                </div><!-- /.modal-dialog -->
+            </div><!-- /.modal -->
+			<!-- Modal onError-->
+			<div id="loginBrowserModal" class="modal fade" role="dialog">
+			  <div class="modal-dialog">
+				<!-- Modal content-->
+				<div class="modal-content">
+				  <div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal">&times;</button>
+					<h4 class="modal-title">Login to Chrome</h4>
+				  </div>
+				  <div class="modal-body">
+					<p>For premium features you must login to your Google Account.</p><br \>
+					<p>Open this link in a new tab: </p><a id="chromeSignIn" href="chrome://chrome-signin" target="_blank">chrome://chrome-signin</a>
+				  </div>
+				  <div class="modal-footer">
+					<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+				  </div>
+				</div>
+			  </div>
+			</div>			
+        </div>
+    </div>
+</body>
+</html>

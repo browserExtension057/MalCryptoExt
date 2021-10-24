@@ -1,0 +1,275 @@
+{
+   "APP_NAME": {
+      "message": "Translate Image"
+   },
+   "ERR_FAILED": {
+      "message": "Text cannot be recognized."
+   },
+   "ERR_MAX_SIZE": {
+      "message": "Size up to $1 x $2 px."
+   },
+   "HELP_INSTRUCTION": {
+      "message": "Select the area with the letters."
+   },
+   "LANG_AM": {
+      "message": "Amharic"
+   },
+   "LANG_AR": {
+      "message": "Arabic"
+   },
+   "LANG_AS": {
+      "message": "Assamese"
+   },
+   "LANG_AZ": {
+      "message": "Azerbaijani"
+   },
+   "LANG_BE": {
+      "message": "Belarusian"
+   },
+   "LANG_BG": {
+      "message": "Bulgarian"
+   },
+   "LANG_BN": {
+      "message": "Bengali"
+   },
+   "LANG_BR": {
+      "message": "Portuguese"
+   },
+   "LANG_BS": {
+      "message": "Bosnian"
+   },
+   "LANG_CA": {
+      "message": "Catalan"
+   },
+   "LANG_CS": {
+      "message": "Czech"
+   },
+   "LANG_CY": {
+      "message": "Welsh"
+   },
+   "LANG_DA": {
+      "message": "Danish"
+   },
+   "LANG_DE": {
+      "message": "German"
+   },
+   "LANG_EL": {
+      "message": "Greek"
+   },
+   "LANG_EN": {
+      "message": "English"
+   },
+   "LANG_ES": {
+      "message": "Spanish"
+   },
+   "LANG_ET": {
+      "message": "Estonian"
+   },
+   "LANG_EU": {
+      "message": "Basque"
+   },
+   "LANG_FA": {
+      "message": "Persian"
+   },
+   "LANG_FI": {
+      "message": "Finnish"
+   },
+   "LANG_FR": {
+      "message": "French"
+   },
+   "LANG_GA": {
+      "message": "Irish"
+   },
+   "LANG_GD": {
+      "message": "Scottish Gaelic"
+   },
+   "LANG_GL": {
+      "message": "Galician"
+   },
+   "LANG_GU": {
+      "message": "Gujarati"
+   },
+   "LANG_HI": {
+      "message": "Hindi"
+   },
+   "LANG_HR": {
+      "message": "Croatian"
+   },
+   "LANG_HU": {
+      "message": "Hungarian"
+   },
+   "LANG_HY": {
+      "message": "Armenian"
+   },
+   "LANG_ID": {
+      "message": "Indonesian"
+   },
+   "LANG_IG": {
+      "message": "Igbo"
+   },
+   "LANG_IS": {
+      "message": "Icelandic"
+   },
+   "LANG_IT": {
+      "message": "Italian"
+   },
+   "LANG_IW": {
+      "message": "Hebrew"
+   },
+   "LANG_JA": {
+      "message": "Japanese"
+   },
+   "LANG_KA": {
+      "message": "Georgian"
+   },
+   "LANG_KK": {
+      "message": "Kazakh"
+   },
+   "LANG_KM": {
+      "message": "Khmer"
+   },
+   "LANG_KN": {
+      "message": "Kannada"
+   },
+   "LANG_KO": {
+      "message": "Korean"
+   },
+   "LANG_KY": {
+      "message": "Kyrgyz"
+   },
+   "LANG_LB": {
+      "message": "Luxembourgish"
+   },
+   "LANG_LO": {
+      "message": "Lao"
+   },
+   "LANG_LT": {
+      "message": "Lithuanian"
+   },
+   "LANG_LV": {
+      "message": "Latvian"
+   },
+   "LANG_MK": {
+      "message": "Macedonian"
+   },
+   "LANG_ML": {
+      "message": "Malayalam"
+   },
+   "LANG_MN": {
+      "message": "Mongolian"
+   },
+   "LANG_MR": {
+      "message": "Marathi"
+   },
+   "LANG_MS": {
+      "message": "Malay"
+   },
+   "LANG_MT": {
+      "message": "Maltese"
+   },
+   "LANG_NE": {
+      "message": "Nepali"
+   },
+   "LANG_NL": {
+      "message": "Dutch"
+   },
+   "LANG_NN": {
+      "message": "Norwegian Nynorsk"
+   },
+   "LANG_NO": {
+      "message": "Norwegian Bokmål"
+   },
+   "LANG_OR": {
+      "message": "Oriya"
+   },
+   "LANG_PA": {
+      "message": "Punjabi"
+   },
+   "LANG_PL": {
+      "message": "Polish"
+   },
+   "LANG_PT": {
+      "message": "Portuguese"
+   },
+   "LANG_QU": {
+      "message": "Quechua"
+   },
+   "LANG_RO": {
+      "message": "Romanian"
+   },
+   "LANG_RU": {
+      "message": "Russian"
+   },
+   "LANG_RW": {
+      "message": "Kinyarwanda"
+   },
+   "LANG_SI": {
+      "message": "Sinhala"
+   },
+   "LANG_SK": {
+      "message": "Slovak"
+   },
+   "LANG_SL": {
+      "message": "Slovenian"
+   },
+   "LANG_SR": {
+      "message": "Serbian"
+   },
+   "LANG_SV": {
+      "message": "Swedish"
+   },
+   "LANG_SW": {
+      "message": "Swahili"
+   },
+   "LANG_TA": {
+      "message": "Tamil"
+   },
+   "LANG_TE": {
+      "message": "Telugu"
+   },
+   "LANG_TH": {
+      "message": "Thai"
+   },
+   "LANG_TI": {
+      "message": "Tigrinya"
+   },
+   "LANG_TL": {
+      "message": "Filipino"
+   },
+   "LANG_TR": {
+      "message": "Turkish"
+   },
+   "LANG_UG": {
+      "message": "Uyghur"
+   },
+   "LANG_UK": {
+      "message": "Ukrainian"
+   },
+   "LANG_UR": {
+      "message": "Urdu"
+   },
+   "LANG_UZ": {
+      "message": "Uzbek"
+   },
+   "LANG_VI": {
+      "message": "Vietnamese"
+   },
+   "LANG_YO": {
+      "message": "Yoruba"
+   },
+   "LANG_ZH": {
+      "message": "Chinese"
+   },
+   "LANG_ZHCN": {
+      "message": "Chinese Simplified"
+   },
+   "LANG_ZHTW": {
+      "message": "Chinese Traditional"
+   },
+   "LANG_ZU": {
+      "message": "Zulu"
+   },
+   "MENUITEM_TEXT": {
+      "message": "Translate text in images"
+   }
+}

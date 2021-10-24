@@ -1,0 +1,276 @@
+.uppward-setting * {
+  box-sizing: border-box; }
+
+.uppward-setting .title-area {
+  padding: 20px 24px 10px;
+  font-size: 16px;
+  font-weight: bold;
+  line-height: 24px; }
+  .uppward-setting .title-area .button-back {
+    float: left; }
+  .uppward-setting .title-area .settingstitle::after {
+    content: "__MSG_settings_title__"; }
+
+.uppward-setting .uppward-content {
+  padding: 0 24px 32px;
+  line-height: 1.3;
+  color: #868E96; }
+  .uppward-setting .uppward-content .uppward-section {
+    margin-top: 24px; }
+    .uppward-setting .uppward-content .uppward-section.hide {
+      display: none; }
+    .uppward-setting .uppward-content .uppward-section .section-thanks {
+      padding-bottom: 16px;
+      font-size: 11px;
+      font-style: italic; }
+      .uppward-setting .uppward-content .uppward-section .section-thanks.first {
+        padding-bottom: 8px; }
+      .uppward-setting .uppward-content .uppward-section .section-thanks.first::after {
+        content: "__MSG_settings_priv_thanks_first__"; }
+      .uppward-setting .uppward-content .uppward-section .section-thanks.second::after {
+        content: "__MSG_settings_priv_thanks_second__"; }
+      .uppward-setting .uppward-content .uppward-section .section-thanks.hide {
+        display: none; }
+    .uppward-setting .uppward-content .uppward-section .section-title {
+      padding-bottom: 3px;
+      font-size: 13px;
+      font-weight: normal;
+      color: #002C37; }
+      .uppward-setting .uppward-content .uppward-section .section-title.activeprot::after {
+        content: "__MSG_settings_general_ap_header__"; }
+      .uppward-setting .uppward-content .uppward-section .section-title.ch::after {
+        content: "__MSG_settings_general_ch_header__"; }
+      .uppward-setting .uppward-content .uppward-section .section-title.reset::after {
+        content: "__MSG_settings_general_reset_header__"; }
+      .uppward-setting .uppward-content .uppward-section .section-title.blocksurl::after {
+        content: "__MSG_settings_bl_blocksurl_header__"; }
+      .uppward-setting .uppward-content .uppward-section .section-title.blockpunycode::after {
+        content: "__MSG_settings_bl_blockpunycode_header__"; }
+      .uppward-setting .uppward-content .uppward-section .section-title.nrs::after {
+        content: "__MSG_settings_bl_nrs_header__"; }
+      .uppward-setting .uppward-content .uppward-section .section-title.alertheader::after {
+        content: "__MSG_settings_wl_alert_header__"; }
+      .uppward-setting .uppward-content .uppward-section .section-title.displayheader::after {
+        content: "__MSG_settings_wl_displaytime_header__"; }
+      .uppward-setting .uppward-content .uppward-section .section-title.alertlayout::after {
+        content: "__MSG_settings_wl_layout_header__"; }
+      .uppward-setting .uppward-content .uppward-section .section-title.gatracking::after {
+        content: "__MSG_settings_priv_ga_header__"; }
+    .uppward-setting .uppward-content .uppward-section .section-desc {
+      padding-bottom: 7px;
+      font-size: 11px; }
+      .uppward-setting .uppward-content .uppward-section .section-desc.main-desc {
+        padding-bottom: 14px;
+        color: #002C34; }
+      .uppward-setting .uppward-content .uppward-section .section-desc.activeprotdesc::after {
+        content: "__MSG_settings_general_ap_desc__"; }
+      .uppward-setting .uppward-content .uppward-section .section-desc.chdesc::after {
+        content: "__MSG_settings_general_ch_desc__"; }
+      .uppward-setting .uppward-content .uppward-section .section-desc.resetdesc::after {
+        content: "__MSG_settings_general_reset_desc__"; }
+      .uppward-setting .uppward-content .uppward-section .section-desc.blocksurldesc::after {
+        content: "__MSG_settings_bl_blocksurl_desc__"; }
+      .uppward-setting .uppward-content .uppward-section .section-desc.blockpunycodedesc::after {
+        content: "__MSG_settings_bl_blockpunycode_desc__"; }
+      .uppward-setting .uppward-content .uppward-section .section-desc.nrsdesc::after {
+        content: "__MSG_settings_bl_nrs_desc__"; }
+      .uppward-setting .uppward-content .uppward-section .section-desc.nrstoggle::after {
+        content: "__MSG_settings_bl_nrs_toggle__"; }
+      .uppward-setting .uppward-content .uppward-section .section-desc.nrsalert::after {
+        content: "__MSG_settings_bl_nrs_alert__"; }
+      .uppward-setting .uppward-content .uppward-section .section-desc.nrsalertlayout::after {
+        content: "__MSG_settings_bl_nrs_alert_layout__"; }
+      .uppward-setting .uppward-content .uppward-section .section-desc.alertdesc::after {
+        content: "__MSG_settings_wl_alert_desc__"; }
+      .uppward-setting .uppward-content .uppward-section .section-desc.gatoggle::after {
+        content: "__MSG_settings_priv_ga_toggle__"; }
+      .uppward-setting .uppward-content .uppward-section .section-desc.btn-text {
+        padding-top: 5px; }
+    .uppward-setting .uppward-content .uppward-section .section-half {
+      display: inline-block;
+      width: 50%; }
+    .uppward-setting .uppward-content .uppward-section .dropdown-select {
+      display: inline-block;
+      width: 118px; }
+      .uppward-setting .uppward-content .uppward-section .dropdown-select .select-button,
+      .uppward-setting .uppward-content .uppward-section .dropdown-select .select-list {
+        width: 100%;
+        border-radius: 3px;
+        border: 1px solid #CED4DA;
+        background-color: #FFFFFF;
+        font-size: 12px; }
+      .uppward-setting .uppward-content .uppward-section .dropdown-select .select-button {
+        position: relative;
+        height: 28px;
+        padding: 0 16px 0 7px;
+        background-image: url(images/update/new_ic_dropdown.svg);
+        background-repeat: no-repeat;
+        background-size: 8px;
+        background-position: right 7px center;
+        text-align: left;
+        color: #212529; }
+        .uppward-setting .uppward-content .uppward-section .dropdown-select .select-button:disabled {
+          background-image: url(images/update/ic-dropdown-disable.svg);
+          background-color: #F8F9FA;
+          color: #ADB5BD; }
+      .uppward-setting .uppward-content .uppward-section .dropdown-select .select-list {
+        display: none;
+        position: absolute;
+        z-index: 2;
+        width: 118px;
+        padding: 2px; }
+        .uppward-setting .uppward-content .uppward-section .dropdown-select .select-list li a {
+          display: block;
+          padding: 0 5px;
+          line-height: 24px;
+          text-decoration: none;
+          color: #212529; }
+          .uppward-setting .uppward-content .uppward-section .dropdown-select .select-list li a#overlayoption::after {
+            content: "__MSG_settings_bl_blocksurl_overlay__"; }
+          .uppward-setting .uppward-content .uppward-section .dropdown-select .select-list li a#redirectionoption::after {
+            content: "__MSG_settings_bl_blocksurl_redirection__"; }
+        .uppward-setting .uppward-content .uppward-section .dropdown-select .select-list li.selected a {
+          background-color: #B2C0F7; }
+    .uppward-setting .uppward-content .uppward-section .switch {
+      position: relative;
+      width: 80px; }
+      .uppward-setting .uppward-content .uppward-section .switch.multi {
+        padding-bottom: 14px; }
+      .uppward-setting .uppward-content .uppward-section .switch.checked .switch-inner {
+        margin-left: 0; }
+      .uppward-setting .uppward-content .uppward-section .switch.checked .switch-switch {
+        right: 0; }
+      .uppward-setting .uppward-content .uppward-section .switch .switch-checkbox {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 0;
+        height: 0;
+        margin: 0;
+        visibility: hidden;
+        z-index: -1; }
+      .uppward-setting .uppward-content .uppward-section .switch .switch-label {
+        display: block;
+        position: relative;
+        border-radius: 16px;
+        overflow: hidden;
+        cursor: pointer; }
+      .uppward-setting .uppward-content .uppward-section .switch .switch-inner {
+        display: block;
+        width: 200%;
+        margin-left: -80px;
+        transition: margin 0.2s ease-in 0s; }
+        .uppward-setting .uppward-content .uppward-section .switch .switch-inner:before, .uppward-setting .uppward-content .uppward-section .switch .switch-inner:after {
+          display: block;
+          float: left;
+          width: 50%;
+          height: 32px;
+          padding: 0;
+          line-height: 32px;
+          font-size: 12px;
+          color: white;
+          box-sizing: border-box; }
+        .uppward-setting .uppward-content .uppward-section .switch .switch-inner:before {
+          content: "Yes";
+          padding-left: 14px;
+          background-color: #4C6EF5;
+          color: #FFFFFF; }
+        .uppward-setting .uppward-content .uppward-section .switch .switch-inner:after {
+          content: "No";
+          padding-right: 14px;
+          background-color: #868E96;
+          color: #FFFFFF;
+          text-align: right; }
+        .uppward-setting .uppward-content .uppward-section .switch .switch-inner.disabled:before, .uppward-setting .uppward-content .uppward-section .switch .switch-inner.disabled:after {
+          background-color: #DDDDDD;
+          color: #868E96; }
+      .uppward-setting .uppward-content .uppward-section .switch .switch-switch {
+        display: block;
+        width: 28px;
+        height: 28px;
+        margin: 2px;
+        background: #FFFFFF;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        right: 48px;
+        transition: all 0.2s ease-in 0s;
+        border-radius: 28px; }
+      .uppward-setting .uppward-content .uppward-section .switch.no-animation .switch-inner {
+        transition: none; }
+      .uppward-setting .uppward-content .uppward-section .switch.no-animation .switch-switch {
+        transition: none; }
+    .uppward-setting .uppward-content .uppward-section .button-layout-wrap .button-layout {
+      width: 64px;
+      height: 44px;
+      padding: 0;
+      margin-right: 5px;
+      border: 2px solid #FFFFFF;
+      border-radius: 0;
+      background-repeat: no-repeat;
+      background-size: cover; }
+      .uppward-setting .uppward-content .uppward-section .button-layout-wrap .button-layout:last-child {
+        margin-right: 0; }
+      .uppward-setting .uppward-content .uppward-section .button-layout-wrap .button-layout:hover {
+        cursor: pointer; }
+      .uppward-setting .uppward-content .uppward-section .button-layout-wrap .button-layout.selected {
+        border: 2px solid #4C6EF5; }
+      .uppward-setting .uppward-content .uppward-section .button-layout-wrap .button-layout:disabled {
+        border: 0; }
+      .uppward-setting .uppward-content .uppward-section .button-layout-wrap .button-layout.top {
+        background-image: url(images/update/layout-top.svg); }
+        .uppward-setting .uppward-content .uppward-section .button-layout-wrap .button-layout.top.bl {
+          background-image: url(images/update/ic_blacklist_layout01.svg); }
+        .uppward-setting .uppward-content .uppward-section .button-layout-wrap .button-layout.top:disabled {
+          background-image: url(images/update/layout-top-disable.svg); }
+      .uppward-setting .uppward-content .uppward-section .button-layout-wrap .button-layout.bottom {
+        background-image: url(images/update/layout-bottom.svg); }
+        .uppward-setting .uppward-content .uppward-section .button-layout-wrap .button-layout.bottom.bl {
+          background-image: url(images/update/ic_blacklist_layout02.svg); }
+        .uppward-setting .uppward-content .uppward-section .button-layout-wrap .button-layout.bottom:disabled {
+          background-image: url(images/update/layout-bottom-disable.svg); }
+      .uppward-setting .uppward-content .uppward-section .button-layout-wrap .button-layout.top-banner {
+        background-image: url(images/update/layout-top-banner.svg); }
+        .uppward-setting .uppward-content .uppward-section .button-layout-wrap .button-layout.top-banner.bl {
+          background-image: url(images/update/ic_blacklist_layout03.svg); }
+        .uppward-setting .uppward-content .uppward-section .button-layout-wrap .button-layout.top-banner:disabled {
+          background-image: url(images/update/layout-top-banner-disable.svg); }
+      .uppward-setting .uppward-content .uppward-section .button-layout-wrap .button-layout.bottom-banner {
+        background-image: url(images/update/layout-bottom-banner.svg); }
+        .uppward-setting .uppward-content .uppward-section .button-layout-wrap .button-layout.bottom-banner.bl {
+          background-image: url(images/update/ic_blacklist_layout04.svg); }
+        .uppward-setting .uppward-content .uppward-section .button-layout-wrap .button-layout.bottom-banner:disabled {
+          background-image: url(images/update/layout-bottom-banner-disable.svg); }
+    .uppward-setting .uppward-content .uppward-section .button-color {
+      width: 34px;
+      height: 34px;
+      border: 6px solid #F1F3F5;
+      border-radius: 0;
+      background-color: #20C997; }
+      .uppward-setting .uppward-content .uppward-section .button-color:disabled {
+        background-color: #CED4DA !important; }
+    .uppward-setting .uppward-content .uppward-section .form-control {
+      width: 218px;
+      height: 34px;
+      float: right;
+      background-color: #fff;
+      font-size: 11px; }
+      .uppward-setting .uppward-content .uppward-section .form-control:disabled {
+        background-color: #F8F9FA;
+        color: #ADB5BD; }
+  .uppward-setting .uppward-content .button-reset {
+    width: unset;
+    height: 28px;
+    padding: 5px 7px;
+    border: 1px solid #CED4DA;
+    background-color: #FFFFFF;
+    font-size: 12px;
+    line-height: 16px;
+    color: #495057;
+    text-align: center;
+    border-radius: 3px; }
+    .uppward-setting .uppward-content .button-reset:hover {
+      background-color: #dfe3e7;
+      color: #002C37; }
+  .uppward-setting .uppward-content .button-reset::after {
+    content: "__MSG_settings_general_reset_btn__"; }

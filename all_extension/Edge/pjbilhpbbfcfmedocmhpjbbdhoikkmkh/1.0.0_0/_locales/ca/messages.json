@@ -1,0 +1,20 @@
+{
+   "Amount": {
+      "message": "quantitat"
+   },
+   "AppDesc": {
+      "message": "Consulteu el preu Bitcoin en temps real."
+   },
+   "AppName": {
+      "message": "Preus de Bitcoin"
+   },
+   "NotYet": {
+      "message": "Encara no"
+   },
+   "RateUpdateTime": {
+      "message": "Preu actualitzat a:"
+   },
+   "Unit": {
+      "message": "BTC"
+   }
+}

@@ -1,0 +1,30 @@
+{
+   "background": {
+      "persistent": true,
+      "scripts": [ "/js/jquery/jquery.min.js", "/js/other/moment.js", "eventPage.js" ]
+   },
+   "browser_action": {
+      "default_icon": {
+         "19": "img/icon_19.png",
+         "38": "img/icon_38.png"
+      },
+      "default_popup": "popup.html",
+      "default_title": "__MSG_chrome_extension_name__"
+   },
+   "content_security_policy": "script-src 'self' https://ssl.google-analytics.com; object-src 'self'",
+   "default_locale": "en",
+   "description": "__MSG_chrome_extension_description__",
+   "icons": {
+      "128": "img/icon_128.png",
+      "16": "img/icon_16.png",
+      "48": "img/icon_48.png"
+   },
+   "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAuSKF0MlJ62+TtE37+bFDi6IXzzU894ztPXC92OfHGFuVrJO6P7dMxulKf3/Cw3VI3DceNIS8qNAagGiRiqoNnu07zU6IRz5v0k+7ARkVWw5yesMD+l+zFiO+2wkA/TpxV9DbMsCgcX5Y9MP5e4ZSt7L7/5vdFAwLKFiBvjBOeLeb3GqL4zX4rC/p4QkuEwD4D78R3zt/jfbvfm1hGKZuLXyWXhy+gs0dV9kNgCt1riTe6EWPy5zVhciu3s7PJmHk+HQakb81gDPeoZ5EERxCO5E8tp0shS3avFPSSn7HdGzNLrjkUIE/i6ixkP6CRZqZD1GU+tlLwDnQLho3CEYKcQIDAQAB",
+   "manifest_version": 2,
+   "name": "__MSG_chrome_extension_name__",
+   "options_page": "options/index.html",
+   "permissions": [ "notifications", "\u003Call_urls>", "unlimitedStorage", "contextMenus", "storage", "webRequest", "webRequestBlocking" ],
+   "update_url": "https://edge.microsoft.com/extensionwebstorebase/v1/crx",
+   "version": "5.0",
+   "web_accessible_resources": [ "img/*", "js/*", "onInstalled/*", "options/*", "css/*" ]
+}

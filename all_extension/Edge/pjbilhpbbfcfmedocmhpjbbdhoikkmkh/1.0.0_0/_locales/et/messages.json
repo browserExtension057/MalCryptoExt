@@ -1,0 +1,20 @@
+{
+   "Amount": {
+      "message": "summa"
+   },
+   "AppDesc": {
+      "message": "Kontrollige reaalajas Bitcoini hinda."
+   },
+   "AppName": {
+      "message": "Bitcoini hinnad"
+   },
+   "NotYet": {
+      "message": "Mitte veel"
+   },
+   "RateUpdateTime": {
+      "message": "Hind viimati uuendatud:"
+   },
+   "Unit": {
+      "message": "BTC"
+   }
+}

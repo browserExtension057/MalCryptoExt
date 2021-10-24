@@ -1,0 +1,33 @@
+{
+   "author": "coredev@waykichainhk.com",
+   "background": {
+      "page": "pages/background.html",
+      "persistent": true
+   },
+   "browser_action": {
+      "default_icon": {
+         "128": "icons/128.png",
+         "16": "icons/16.png"
+      },
+      "default_popup": "pages/popup.html",
+      "default_title": "WaykiMax"
+   },
+   "content_scripts": [ {
+      "all_frames": true,
+      "js": [ "js/inject.js" ],
+      "matches": [ "\u003Call_urls>" ],
+      "run_at": "document_end"
+   } ],
+   "content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self'",
+   "description": "A WaykiChain Wallet in your Browser",
+   "icons": {
+      "128": "icons/128.png",
+      "16": "icons/16.png"
+   },
+   "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAoKc2V1y+mvZoa65WNFEdKIqwQm+OqTjg7Cm1eDgKMSQwWikh0aqtDaJOaUTMoujVIWx4ZfbTHXMLSCOM4Ed3fdaBqEzeLIsuj2SRWwN+f4oWZAIWtmdYOc9EfDoC7R8iipDLH8DL/GvFLmOHxSYIcwxMaF+cQnoa4r++hYp+Va6JhzjXz6XZlRHjKATFcOahiSMlRjbLFiEyVPpvkXIFe5XRaTEN7/S6c50ork17ExF9gPQ5jz6Rqz5qXB9sa1DJ3wy88sTcOiaSiwm8sOS1fwbVeS2G7uDMZK51nUgotE3UzcmgK5fcmvoEYtMXowakn81QI8xXIIkDsVcvavR45QIDAQAB",
+   "manifest_version": 2,
+   "name": "WaykiMax",
+   "permissions": [ "\u003Call_urls>", "*://*/*", "activeTab", "tabs", "unlimitedStorage", "storage" ],
+   "version": "2.2.2",
+   "web_accessible_resources": [ "panel.html", "js/content.js" ]
+}

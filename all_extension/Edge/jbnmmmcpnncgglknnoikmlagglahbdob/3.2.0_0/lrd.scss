@@ -1,0 +1,228 @@
+html, body {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  margin: 0;
+  padding: 0;
+  font-family: 'Spoqa Han Sans', 'Sans-serif';
+  font-size: 0;
+}
+
+#header {
+  //width: 100%;
+  min-width: 1132px;
+  padding: 16px;
+  z-index: 3;
+  background-color: white;
+  border-bottom: 1px solid #CED4DA;
+
+  &.scroll {
+    top: 0;
+    position: fixed;
+  }
+
+  .inner {
+    display: flex;
+    justify-content: space-between;
+    width: 1132px;
+    margin: auto;
+
+    .left {
+      .company-logo {
+        display: inline-block;
+        top: 6px;
+        width: 231px;
+        height: 37px;
+        background: url('images/lrd/logo_uppsalasecurityportal.png') no-repeat;
+        background-size: auto 24px;
+        background-position: left center;
+      }
+    }
+
+    .right {
+      .suspicious {
+        display: inline-block;
+        font-size: 12px;
+        line-height: 32px;
+        color: #212529;
+        font-family: 'Roboto', sans-serif;
+        padding-right: 16px;
+      }
+
+      .reportbtn {
+        display: inline-block;
+        a {
+          display: inline-block;
+          cursor: pointer;
+          position: relative;
+          font-family: 'Roboto', sans-serif;
+          font-size: 12px;
+          line-height:14px;
+          text-decoration: none;
+          margin: auto;
+          padding: 12px 19px;
+          background-color: #4C6EF5;
+          color: #FFF;
+          border-radius: 3px;
+          text-align: center;
+        }
+      }
+    }
+  }
+}
+#main {
+  .inner {
+    padding: 40px 16px 146px;
+    //width: 100%;
+
+    .urls {
+      width: 1132px;
+      margin: auto;
+
+      .title {
+        font-size: 16px;
+        line-height: 19px;
+        color: #343A40;
+        font-family: 'Roboto', sans-serif;
+        font-weight: 700;
+        padding-bottom: 24px;
+
+        .num-sus {
+          display: inline-block;
+        }
+
+        .text {
+          display: inline-block;
+        }
+      }
+
+      .list {
+        .header {
+          padding-bottom: 12px;
+          border-bottom: 1px solid #CED4DA;
+        }
+      }
+
+      .header {
+        font-size: 13px;
+        line-height: 15px;
+        color: #868E96;
+        font-family: 'Roboto', sans-serif;
+      }
+      .row {
+        font-size: 14px;
+        line-height: 48px;
+        height: 48px;
+        color: #212529;
+        font-family: 'Roboto', sans-serif;
+        display: flex;
+        justify-content: space-between;
+      }
+
+      .number {
+        display: inline-block;
+        padding-right: 33px;
+      }
+
+      .url {
+        display: inline-block;
+        position: absolute;
+        max-height: 48px;
+        overflow: hidden;
+        word-break: break-all;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        max-width: 975px;
+      }
+
+      .more {
+        padding-left: 33px;
+      }
+    }
+  }
+}
+
+
+.footer {
+  height: auto;
+  width: 100%;
+  padding: 40px 0;
+  background-color: #000000;
+  color: white;
+
+  .inner {
+    padding: 0 16px;
+    width: 1132px;
+    margin: auto;
+
+    .row {
+      vertical-align: top;
+
+      &:first-child {
+        margin-bottom: 14px;
+      }
+
+      .company-logo {
+        display: inline-block;
+        position: relative;
+        width: 174px;
+        height: 24px;
+        background: url(images/lrd/iconpack.svg) no-repeat;
+        background-position: 0px -20px;
+        background-size: 232px auto;
+      }
+
+      .icon-pack {
+        float: right;
+
+        .icon {
+          display: inline-block;
+          margin-right: 16px;
+          width: 27px;
+          height: 27px;
+          background: url('images/lrd/iconpack.svg') no-repeat;
+
+          &.facebook {
+            background-position: 0px -344px;
+          }
+
+          &.twitter {
+            background-position: 0px -371px;
+          }
+
+          &.medium {
+            background-position: 0px -398px;
+          }
+
+          &.reddit {
+            background-position: 0px -425px;
+          }
+
+          &.linkedin {
+            background-position: 0px -452px;
+          }
+
+          &.youtube {
+            background-position: 0px -479px;
+          }
+        }
+      }
+
+      .bottom-box {
+        display: inline-block;
+        width: 49%;
+        vertical-align: bottom;
+
+        &.copyright {
+          font-size: 13px;
+          font-family: 'Spoqa Han Sans', 'Sans-serif';
+          color: #868E96;
+          width: 51%;
+        }
+      }
+    }
+  }
+
+}

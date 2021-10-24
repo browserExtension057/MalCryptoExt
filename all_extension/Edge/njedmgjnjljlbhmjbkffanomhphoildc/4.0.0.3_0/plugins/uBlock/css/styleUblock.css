@@ -1,0 +1,362 @@
+
+.divLogoHeader{
+  background: #ffffff;
+  float: left;
+  width: 100%;
+}
+
+.mbsc-mobiscroll a, .mbsc-mobiscroll a:hover, .mbsc-mobiscroll a:active, .mbsc-mobiscroll a:visited{
+  color: #00abff !important;
+  text-decoration: none !important;
+}
+.w-nav-brand.brand-box{
+  position: relative;
+  float: left;
+  text-decoration: none;
+  color: #222;
+  margin: 0 auto;
+  width: 100%;
+  text-align: center;
+  z-index: 90;
+  margin-top: 10px;
+}
+.lower-nav-section{
+  border-bottom: 1px none #5891db;
+  background-color: #343434;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+  height: 71px;
+  float: left;
+  width: 100%;
+  margin-top: -40px;
+  color: white !important;
+}
+
+.containerNavbar{
+  min-height: 71px;
+  padding-top: 25px;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 80vw;
+}
+
+.divIframeUblock, .divAdvancedSettings{
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 80vw;
+  margin-top: 220px;
+  height: 100%;
+  padding-bottom: 50px;
+  overflow: hidden;
+}
+
+.divAdvancedSettings{
+  height: 75vh !important;
+  text-align: left;
+  width: 100%;
+  word-wrap: normal;
+}
+.divIframeUblock > iframe{
+  height: 100%;
+
+}
+::-webkit-scrollbar {
+  display: none;
+}
+
+
+/* OVERRIDE MOBISCROLL STYLE */
+#settingsForm, #aboutForm, .liForm{
+  color: #343434 !important;
+  font-size: 15px;
+  background: transparent !important;
+}
+
+#settingsForm input[type="checkbox"]{
+  width: 20px;
+}
+
+#settingsForm > .width50 > .mbsc-form-group-inset, #settingsForm > .width100 > .width50 > .mbsc-form-group-inset{
+  margin: 0em !important;
+  padding: 0em !important;
+  float: left;
+  position: relative;
+  width: 100%;
+}
+
+.leftNoMarginNoPadding{
+  margin: 0px !important;
+  padding: 0px !important;
+  width: 90%;
+  position: relative;
+  display: flex;
+}
+#settingsForm .labelFormDonate > .mbsc-checkbox-box, .liForm .labelFormDonate > .mbsc-checkbox-box {
+  background: white !important;
+  width: 20px !important;
+  height: 20px !important;
+  left: 0 !important;
+  border: 1px solid #dfdfdf !important;
+  border-radius: 4px !important;
+  right: unset !important;
+}
+
+#settingsForm .labelFormDonate, .liForm .labelFormDonate{
+  padding: 10px !important;
+  float: left;
+}
+
+#settingsForm .labelFormDonate.mbsc-input, #settingsForm .labelFormDonate.mbsc-checkbox, .liForm .labelFormDonate.mbsc-input, .liForm .labelFormDonate.mbsc-checkbox{
+margin: 0px !important
+}
+#settingsForm .labelFormDonate > .mbsc-checkbox-box, .liForm .labelFormDonate > .mbsc-checkbox-box{
+  top: 46% !important;
+}
+#settingsForm .labelFormDonate > .mbsc-checkbox-box:after{
+  border: .125em solid #00abff !important;
+  border-top: 0 !important;
+  border-right: 0 !important;
+}
+
+.liForm .labelFormDonate > .mbsc-checkbox-box:after {
+  border: .125em solid #00abff !important;
+  border-top: 0 !important;
+  border-right: 0 !important;
+  top: 5px;
+  left: 4px;
+}
+
+#settingsForm .labelFormDonate > .mbsc-label, .liForm .labelFormDonate > .mbsc-label {
+  margin-left: 20px;
+  float: left;
+}
+
+
+.checkBoxFilters a.content{
+  margin-left: 19px;
+  font-size: 16px;
+  font-family: 'Open Sans',sans-serif !important;
+  margin-top: 1px;
+}
+
+.checkBoxFilters input[type="checkbox"]{
+  width: 20px;
+}
+
+.checkBoxFilters .iconFilter{
+  margin-left: 8px;
+  font-size: 17px;
+  vertical-align: middle;
+}
+#settingsForm .labelFormDonate > .mbsc-label[title=")"], #settingsForm .labelFormDonate > .mbsc-label[title="kB"]{
+  margin-left: 0px;
+}
+.listEntries{
+  padding: 0px !important;
+}
+.labelFormDonate > a{
+  float: left;
+}
+.iconInfo{
+  /* position: absolute !important;
+  right: 10px !important;
+  top: 14px;
+  z-index: 9; */
+  position: absolute !important;
+  right: -30px !important;
+  top: 18px !important;
+  font-size: 20px;
+  z-index: 9;
+  opacity: 1 !important;
+}
+
+.width50{
+  width: 40% !important;
+  float: left;
+  padding: 0 5%;
+
+}
+
+.width100{
+  width: 100%;
+  float: left;
+}
+div.subgroup {
+  margin-top: 1em;
+  margin-bottom: .5em;
+}
+div.subgroup > span ,  div.subgroup > p {
+  font-size: larger;
+  font-weight: bold;
+}
+
+.divSettingInfo{
+  position: relative;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  display: grid;
+}
+
+#settingsForm .divSettingInfo > label{
+  padding: 0px !important;
+}
+
+#settingsForm .divSettingInfo > .iconInfo{
+  top: 7px !important;
+}
+
+
+/* Scrollbar Custum Start*/
+
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 3px rgba(0,0,0,0.3); 
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  -webkit-box-shadow: inset 0 0 3px rgba(0,0,0,0.5); 
+}
+
+/*Scrollbar Custum End*/
+body{
+  float: left;
+  overflow: auto;
+  width: 100%;
+  overflow-x: hidden !important;
+}
+
+.divButtonsSetting{
+  width: 100%;
+  float: left;
+  margin-top: 20px;
+  margin-bottom: 30px;
+  text-align: left;
+}
+
+
+
+#localData > ul{
+  list-style: none;
+  padding: 0px;
+}
+
+.aboutDivLinks{
+  margin: 10px !important;
+  padding: 0px !important;
+  margin-left: 0px !important;
+}
+
+#loggerForm, #filterLogForm{
+  background: #ffffff;
+  width: 100%;
+  display: flex;
+}
+#loggerForm .labelCoinSelect{
+  color: #343434;
+  border-radius: 4px;
+  border: 1px solid #dfdfdf;
+  margin-left: 13px !important;
+  margin-top: 7px !important;
+  margin-bottom: 0px !important;
+  margin-right: 5px !important;
+  width: 250px;
+  height: 32px;
+}
+#loggerForm button{
+  border-radius: 4px;
+}
+.translateInput{
+  /* position: absolute;
+  top: -6px;
+  z-index: 1;
+  background: #ffffff;
+  padding: 0 .333334em;
+  left: 1.083334em;
+  right: auto;
+  font-size: 0.75em; */
+  position: absolute;
+  top: -5px;
+  z-index: 1;
+  background: #ffffff;
+  padding: 0 .333334em;
+  left: 1.083334em;
+  right: auto;
+  font-size: 10px;
+}
+
+
+.mbsc-mobiscroll .mbsc-input-outline input.mainInput{
+  height: 32px;
+  border-radius: 4px !important;
+  padding: 8px;
+}
+
+
+.labelFormDonate{
+  margin: 7px !important;
+}
+.labelCoinSelect .mbsc-control{
+  padding: 0px 6px !important;
+  height: 32px !important;
+  color: #343434 !important;
+  border: none !important;
+  font-size: 13px !important;
+}
+
+.labelCoinSelect .mbsc-ic-arrow-down5{
+  font-size: 15px !important;
+  top: 8px !important;
+  right: 5px !important;
+}
+
+.mbsc-ic-ion-refresh.needtab, .mbsc-ic-fa-code{
+  /* margin-top: 5px; */
+}
+.mbsc-ic-fa-code{
+  margin-left: 5px;
+}
+
+#filterLogForm .buttonsBittube{
+  height: 30px;
+  margin-top: 8px;
+  padding: 4px !important;
+  font-size: 18px !important;
+  margin: 8px 0px;
+  border-radius: 4px;
+}
+
+#clean{
+  margin-left: 5px !important;
+  margin-right: 5px !important;
+}
+
+.buttonsFilters{
+  font-size: 18px !important;
+  /* height: 26px !important; */
+  padding: 6px !important;
+  height: 32px;
+  width: 32px;
+}
+
+#toggler.vCompactToggler{
+  font-size: 22px !important;
+  width: 28px !important;
+  text-align: center;
+}
+
+
+@media (max-width: 700px) {
+  .width50{
+    width: 100% !important;
+  }
+
+  .divIframeUblock > iframe {
+    padding: 10px;
+    /* background: white; */
+  }
+
+} 

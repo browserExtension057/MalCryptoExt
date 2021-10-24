@@ -1,0 +1,32 @@
+{
+   "background": {
+      "scripts": [ "lib/sea.js", "bg.js" ]
+   },
+   "browser_action": {
+      "default_icon": "icons/icon.png",
+      "default_popup": "popup.html",
+      "default_title": "zh_CN"
+   },
+   "content_scripts": [ {
+      "all_frames": false,
+      "js": [ "straightGoogle.js" ],
+      "matches": [ "http://*/*", "https://*/*" ],
+      "run_at": "document_end"
+   } ],
+   "content_security_policy": "script-src 'self' 'unsafe-eval' https://ssl.google-analytics.com; object-src 'self'",
+   "default_locale": "zh_CN",
+   "description": "数字币全网通，VIP线路，为您解决火币网，币安网,ZB平台等比特币交易平台无法打开的问题，简单安装，设置，免费高速解决问题。",
+   "icons": {
+      "128": "icons/icon-128.png",
+      "16": "icons/icon.png"
+   },
+   "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAh7kikUK/zEbq7E6cpcUxY97UDG4zwi8YnufTo5ld9mmpLHtex/pKaYNuHNUkCxj5MBYYNddxsuG6901FSCP6gk8dGlXMgfAQHmaXcvjdiNwygtF0wzidll/tmAn7wpZbSEA39s3h9oNAo/OjwyPQOZKoUEeLzi8K9okD27PTt0Qw07GZO52eenNn7lTOPjBYR7ir02pzSwcNvtp9pOVgxVPLgjJkhWiUxdKOMvn6owJnumjvXDJUrRbvxNgXBwOtl8Ac6QJuwuH0lgqr4v9586Fut+Zw2lYgbmtEp9Uv+z1SfSpIdiUUi8llB+P3VyixpsGzk2wO6VvdCQ8+odw3HQIDAQAB",
+   "manifest_version": 2,
+   "minimum_chrome_version": "18.0.0",
+   "name": "数字币全网通",
+   "options_page": "options.html",
+   "permissions": [ "proxy", "tabs", "contextMenus", "webRequest", "webRequestBlocking", "webNavigation", "unlimitedStorage", "notifications", "\u003Call_urls>", "http://*/*", "https://*/*", "ftp://*/*" ],
+   "update_url": "https://clients2.google.com/service/update2/crx",
+   "version": "2.2.3",
+   "web_accessible_resources": [ "first.html" ]
+}

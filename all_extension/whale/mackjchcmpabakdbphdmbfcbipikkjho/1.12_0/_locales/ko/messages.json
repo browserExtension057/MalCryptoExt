@@ -1,0 +1,275 @@
+{
+   "APP_NAME": {
+      "message": "이미지 번역하기"
+   },
+   "ERR_FAILED": {
+      "message": "글자를 인식할 수 없습니다."
+   },
+   "ERR_MAX_SIZE": {
+      "message": "$1 x $2이 최대 크기입니다."
+   },
+   "HELP_INSTRUCTION": {
+      "message": "글자가 있는 영역을 선택하세요."
+   },
+   "LANG_AM": {
+      "message": "암하라어"
+   },
+   "LANG_AR": {
+      "message": "아랍어"
+   },
+   "LANG_AS": {
+      "message": "아삼어"
+   },
+   "LANG_AZ": {
+      "message": "아제르바이잔어"
+   },
+   "LANG_BE": {
+      "message": "벨라루스어"
+   },
+   "LANG_BG": {
+      "message": "불가리아어"
+   },
+   "LANG_BN": {
+      "message": "벵골어"
+   },
+   "LANG_BR": {
+      "message": "브라질 포르투갈어"
+   },
+   "LANG_BS": {
+      "message": "보스니아어"
+   },
+   "LANG_CA": {
+      "message": "카탈로니아어"
+   },
+   "LANG_CS": {
+      "message": "체코어"
+   },
+   "LANG_CY": {
+      "message": "웨일스어"
+   },
+   "LANG_DA": {
+      "message": "덴마크어"
+   },
+   "LANG_DE": {
+      "message": "독일어"
+   },
+   "LANG_EL": {
+      "message": "그리스어"
+   },
+   "LANG_EN": {
+      "message": "영어"
+   },
+   "LANG_ES": {
+      "message": "스페인어"
+   },
+   "LANG_ET": {
+      "message": "에스토니아어"
+   },
+   "LANG_EU": {
+      "message": "바스크어"
+   },
+   "LANG_FA": {
+      "message": "페르시아어"
+   },
+   "LANG_FI": {
+      "message": "핀란드어"
+   },
+   "LANG_FR": {
+      "message": "프랑스어"
+   },
+   "LANG_GA": {
+      "message": "아일랜드어"
+   },
+   "LANG_GD": {
+      "message": "스코틀랜드 게일어"
+   },
+   "LANG_GU": {
+      "message": "구자라트어"
+   },
+   "LANG_HI": {
+      "message": "힌디어"
+   },
+   "LANG_HR": {
+      "message": "크로아티아어"
+   },
+   "LANG_HU": {
+      "message": "헝가리어"
+   },
+   "LANG_HY": {
+      "message": "아르메니아어"
+   },
+   "LANG_ID": {
+      "message": "인도네시아어"
+   },
+   "LANG_IG": {
+      "message": "이그보어"
+   },
+   "LANG_IS": {
+      "message": "아이슬란드어"
+   },
+   "LANG_IT": {
+      "message": "이탈리아어"
+   },
+   "LANG_IW": {
+      "message": "히브리어"
+   },
+   "LANG_JA": {
+      "message": "일본어"
+   },
+   "LANG_KA": {
+      "message": "조지아어"
+   },
+   "LANG_KK": {
+      "message": "카자흐어"
+   },
+   "LANG_KM": {
+      "message": "캄보디아어"
+   },
+   "LANG_KN": {
+      "message": "칸나다어"
+   },
+   "LANG_KO": {
+      "message": "한국어"
+   },
+   "LANG_KY": {
+      "message": "키르기스어"
+   },
+   "LANG_LB": {
+      "message": "룩셈부르크어"
+   },
+   "LANG_LO": {
+      "message": "라오어"
+   },
+   "LANG_LT": {
+      "message": "리투아니아어"
+   },
+   "LANG_LV": {
+      "message": "라트비아어"
+   },
+   "LANG_MK": {
+      "message": "마케도니아어"
+   },
+   "LANG_ML": {
+      "message": "말라얄람어"
+   },
+   "LANG_MN": {
+      "message": "몽고어"
+   },
+   "LANG_MR": {
+      "message": "마라티어"
+   },
+   "LANG_MS": {
+      "message": "말레이어"
+   },
+   "LANG_MT": {
+      "message": "몰타어"
+   },
+   "LANG_NE": {
+      "message": "네팔어"
+   },
+   "LANG_NL": {
+      "message": "네덜란드어"
+   },
+   "LANG_NN": {
+      "message": "노르웨이어"
+   },
+   "LANG_NO": {
+      "message": "노르웨이어"
+   },
+   "LANG_OR": {
+      "message": "오리야어"
+   },
+   "LANG_PA": {
+      "message": "펀잡어"
+   },
+   "LANG_PL": {
+      "message": "폴란드어"
+   },
+   "LANG_PT": {
+      "message": "포르투갈어"
+   },
+   "LANG_QU": {
+      "message": "케추아어"
+   },
+   "LANG_RO": {
+      "message": "루마니아어"
+   },
+   "LANG_RU": {
+      "message": "러시아어"
+   },
+   "LANG_RW": {
+      "message": "르완다어"
+   },
+   "LANG_SI": {
+      "message": "스리랑카어"
+   },
+   "LANG_SK": {
+      "message": "슬로바키아어"
+   },
+   "LANG_SL": {
+      "message": "슬로베니아어"
+   },
+   "LANG_SQ": {
+      "message": "알바니아어"
+   },
+   "LANG_SR": {
+      "message": "세르비아어"
+   },
+   "LANG_SV": {
+      "message": "스웨덴어"
+   },
+   "LANG_SW": {
+      "message": "스와힐리어"
+   },
+   "LANG_TA": {
+      "message": "타밀어"
+   },
+   "LANG_TE": {
+      "message": "텔루구어"
+   },
+   "LANG_TH": {
+      "message": "태국어"
+   },
+   "LANG_TI": {
+      "message": "티그리냐어"
+   },
+   "LANG_TL": {
+      "message": "필리핀어"
+   },
+   "LANG_TR": {
+      "message": "터키어"
+   },
+   "LANG_UG": {
+      "message": "위구르어"
+   },
+   "LANG_UK": {
+      "message": "우크라이나어"
+   },
+   "LANG_UR": {
+      "message": "우르두어"
+   },
+   "LANG_UZ": {
+      "message": "우즈베크어"
+   },
+   "LANG_VI": {
+      "message": "베트남어"
+   },
+   "LANG_YO": {
+      "message": "요루바어"
+   },
+   "LANG_ZH": {
+      "message": "중국어"
+   },
+   "LANG_ZHCN": {
+      "message": "중국어 간체"
+   },
+   "LANG_ZHTW": {
+      "message": "중국어 번체"
+   },
+   "LANG_ZU": {
+      "message": "줄루어"
+   },
+   "MENUITEM_TEXT": {
+      "message": "이미지 안에 있는 글자 번역"
+   }
+}

@@ -1,0 +1,39 @@
+{
+   "background": {
+      "persistent": true,
+      "scripts": [ "background.js" ]
+   },
+   "browser_action": {
+      "default_popup": "popup/popup.html",
+      "default_title": "Math Wallet"
+   },
+   "content_scripts": [ {
+      "js": [ "content.js" ],
+      "matches": [ "file://*/*", "http://*/*", "https://*/*" ],
+      "run_at": "document_start"
+   }, {
+      "js": [ "content_start.js" ],
+      "matches": [ "file://*/*", "http://*/*", "https://*/*" ],
+      "run_at": "document_start"
+   }, {
+      "js": [ "content_end.js" ],
+      "matches": [ "file://*/*", "http://*/*", "https://*/*" ],
+      "run_at": "document_end"
+   } ],
+   "content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self'",
+   "description": "The MetaMask Scatter TronLink PolkadotJS Alternative All-in-One Crypto Wallet",
+   "homepage_url": "http://www.mathwallet.org",
+   "icons": {
+      "128": "icons/icon_128.png",
+      "16": "icons/icon_16.png",
+      "32": "icons/icon_32.png",
+      "48": "icons/icon_48.png"
+   },
+   "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAwIxjgbL5wkzEmhrYzJPE06h6z1I1QHlyV/0ppgpLhUorhXFCpg6A3vKyLzoaG3osf60MD98WF6cy/FPbYSNkBD2XtOzPUlYSxJUeoS6Ny7QtXgGQ4h869gVeRliFSkIs1HxRhc1C7PAFMv9zMy8ZwBNqU4YCovFqmrM2CNSbtPJpG89JV/+O7szcyLguOlRyU2KQft6r9s+ln0om223esMZUVJa4py18BKWyFefYvSd/jgkMeh+Uh+9CIKdD/UgCK1kiLwgAiq7iPypLRAnsroQVbsUmjPSvjzasDFPbDsSaRxS0ZmKY+o38QI5G6CVz/S1mR+1GhG2roaK4pN/MVQIDAQAB",
+   "manifest_version": 2,
+   "name": "Math Wallet",
+   "permissions": [ "storage", "unlimitedStorage", "http://*/*", "https://*/*" ],
+   "update_url": "http://clients2.google.com/service/update2/crx",
+   "version": "2.1.9",
+   "web_accessible_resources": [ "inject.js", "inject_start.js", "inject_end.js" ]
+}

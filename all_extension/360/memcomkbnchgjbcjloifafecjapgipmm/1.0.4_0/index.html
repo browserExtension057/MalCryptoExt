@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+
+<head lang="en">
+	<meta charset="UTF-8">
+	<title>超级K线</title>
+	<style>
+		body,
+		div,
+		p,
+		ul,
+		ol,
+		li,
+		iframe {
+			padding: 0;
+			margin: 0;
+		}
+
+		body {
+			width: 320px;
+			padding: 10px;
+		}
+
+		a {
+			color: #38f;
+			text-decoration: none;
+		}
+
+		a:hover {
+			text-decoration: underline;
+		}
+
+		.box .hd {
+			line-height: 1.6;
+			padding-bottom: 10px;
+			margin-bottom: 10px;
+			border-bottom: 1px solid #ccc;
+			font-size: 14px;
+		}
+
+		.box strong {
+			font-weight: bold;
+			font-size: 16px;
+		}
+
+		.box strong img {
+			float: left;
+			margin: 6px 4px 0 0;
+		}
+
+		.box .bd {
+			line-height: 1.6;
+		}
+
+		.input-text {
+			line-height: 24px;
+			padding: 2px 5px;
+			box-sizing: border-box;
+			width: 90%;
+		}
+
+		.submit {
+			line-height: 30px;
+			padding: 0 10px;
+			background: #2095f2;
+			color: #fff;
+			border: none;
+			cursor: pointer;
+			border-radius: 8%;
+			font-size: 14px;
+			width: 50%;
+		}
+
+		.item {
+			margin-bottom: 10px;
+			vertical-align: middle;
+			font-size: 14px;
+		}
+
+		.item label {
+			display: block;
+		}
+
+		.checkbox {
+			vertical-align: top;
+			margin: 5px 5px 0 0;
+		}
+	</style>
+</head>
+
+<body>
+	<div class="box">
+		<div class="hd">
+			<strong>
+				<img src="./image/icon48.png" alt="超级K线" width="16" height="16">
+				<a href="http://lianzhuli.com/k.htm#btc" target="_blank">超级K线</a>
+				<span id="version"></span>
+			</strong>
+		</div>
+		<div class="bd">
+			<p id="description"></p>
+			<!-- <p class="item">
+				<label for="">超时时间</label>
+				<input type="text" id="timeout" class="input-text" value=""> s
+			</p>-->
+		</div>
+	</div>
+
+	<script src="/script/lib/jquery-1.11.0.min.js"></script>
+	<script src="/script/popup/index.js"></script>
+</body>
+
+</html>

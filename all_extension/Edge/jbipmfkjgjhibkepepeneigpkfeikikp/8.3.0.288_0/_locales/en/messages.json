@@ -1,0 +1,50 @@
+{
+   "AutoUninstallErrorMessage": {
+      "message": "Error while automatically uninstalling \u003Cb>Sticky Password manager & safe\u003C/b>:"
+   },
+   "AutoUninstallingMessage": {
+      "message": "Please wait, while \u003Cb>Sticky Password manager & safe\u003C/b> is automatically uninstalled..."
+   },
+   "ExtensionNotAuthenticatedNotify": {
+      "message": "The Sticky Password manager & safe is not allowed. Please relaunch browser and allow this extension."
+   },
+   "ExtensionOutdateNotify": {
+      "message": "This extension is outdated and not compatible with \u003Cb>Sticky Password\u003C/b>. Please update this extension."
+   },
+   "HostOutdateNotify": {
+      "message": "\u003Cb>Sticky Password\u003C/b> is outdated and not compatible with this extension. Please update Sticky Password."
+   },
+   "ManualUninstallMessage": {
+      "message": "\u003Cp class=\"title\">To uninstall the extension manually:\u003C/p>\u003Cp>\u003Cul>\u003Cli>Click \u003Cb>Tools -> Extensions\u003C/b>.\u003C/li>\u003Cli>Select \u003Cb>Sticky Password manager & safe\u003C/b> from the list and click \u003Cb>Remove\u003C/b>.\u003C/li>\u003Cli>Make sure to close all browser windows to completely remove the extension.\u003C/li>\u003C/ul>\u003C/p>"
+   },
+   "NoUpdatesFound": {
+      "message": "No updates found!"
+   },
+   "NotInstalledNotify": {
+      "message": "\u003Cb>Sticky Password\u003C/b> is not installed or running. Please, visit \u003Ca href=\"https://www.stickypassword.com\" target=\"_blank\">Sticky Password homepage\u003C/a> and install it to use all it's features."
+   },
+   "SearchingForUpdate": {
+      "message": "Searching for update..."
+   },
+   "UninstallAutofillPlugin": {
+      "message": "Uninstall Sticky Password manager & safe"
+   },
+   "UpdateExtension": {
+      "message": "Update extension"
+   },
+   "UpdateHost": {
+      "message": "Update Sticky Password"
+   },
+   "UpdatePending": {
+      "message": "Update pending..."
+   },
+   "UpdatingHost": {
+      "message": "Trying to update Sticky Password..."
+   },
+   "appDesc": {
+      "message": "Never forget a password again. Sticky Password manager saves them securely and types them for you as you browse. Automatically!"
+   },
+   "appName": {
+      "message": "Sticky Password manager & safe"
+   }
+}

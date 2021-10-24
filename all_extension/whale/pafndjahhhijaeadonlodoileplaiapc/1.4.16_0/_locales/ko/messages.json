@@ -1,0 +1,14 @@
+{
+   "appDescription": {
+      "description": "The description of the application",
+      "message": "메타코인 브라우저 확장 프로그램"
+   },
+   "appName": {
+      "description": "The name of the application",
+      "message": "메타월렛"
+   },
+   "contextOpenPopup": {
+      "description": "Context menu",
+      "message": "새창으로 열기"
+   }
+}

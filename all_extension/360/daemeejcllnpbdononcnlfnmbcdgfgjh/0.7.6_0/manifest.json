@@ -1,0 +1,30 @@
+{
+   "author": "Matus Zamborsky \u003Czamborsky@gmail.com>",
+   "background": {
+      "page": "background.html",
+      "persistent": true
+   },
+   "browser_action": {
+      "default_title": "Open the wallet"
+   },
+   "content_scripts": [ {
+      "all_frames": true,
+      "js": [ "/static/js/content.js" ],
+      "matches": [ "file://*/*", "http://*/*", "https://*/*" ],
+      "run_at": "document_start"
+   } ],
+   "description": "Cyano钱包 - 本体钱包中文版",
+   "externally_connectable": {
+
+   },
+   "icons": {
+      "128": "logo.png",
+      "32": "logo32.png",
+      "48": "favicon.png"
+   },
+   "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA06hgWSreW6m81Alt8eVPAIri2lH90foPjQ83SlsJob0gincDAzEC42dIYQYUcRCaJqlhx4zLi8uzOIXzaxB1yIMCMwvPg1y/Ga3lyo7WT4/95QNzjy5MSmWX1+NeQmdB5PR02jtb4cVAqzCfAold0JHZ4+q0RJVh2v/pVNG+tfVxFcehQK+jbTjbsSX+/42CJIGbewb4T+GCCOJbZW7HTTM6gHdovvRPeMNH4OnRVElhbp6gKfNxxiuE8zmXmfOe8EqpQ4vnz3psYW03AXhFXjuGFepN+bUXafpLSY1YwOvJJ/9Zs8fms/iuFMKq0tl1e5ITL6crsuzrTnXbpq4gtwIDAQAB",
+   "manifest_version": 2,
+   "name": "Cyano本体钱包中文版",
+   "permissions": [ "storage", "http://127.0.0.1/*", "webRequest", "webRequestBlocking" ],
+   "version": "0.7.6"
+}

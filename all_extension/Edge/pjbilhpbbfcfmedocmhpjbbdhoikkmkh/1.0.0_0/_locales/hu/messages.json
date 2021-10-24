@@ -1,0 +1,20 @@
+{
+   "Amount": {
+      "message": "Összeg"
+   },
+   "AppDesc": {
+      "message": "Ellenőrizze a valós idejű Bitcoin árat."
+   },
+   "AppName": {
+      "message": "Bitcoin árak"
+   },
+   "NotYet": {
+      "message": "Még nem"
+   },
+   "RateUpdateTime": {
+      "message": "Az ár utoljára frissítve:"
+   },
+   "Unit": {
+      "message": "BTC"
+   }
+}

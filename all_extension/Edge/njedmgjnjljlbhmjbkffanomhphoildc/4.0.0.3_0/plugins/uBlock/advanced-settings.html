@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=0" name="viewport">
+        <meta name="mobile-web-app-capable" content="yes">
+<title data-i18n="advancedSettingsPageName"></title>
+
+<link rel="stylesheet" href="lib/codemirror/lib/codemirror.css">
+
+<link rel="stylesheet" type="text/css" href="css/common.css">
+<link rel="stylesheet" type="text/css" href="css/dashboard-common.css">
+<link rel="stylesheet" type="text/css" href="css/advanced-settings.css">
+<link rel="stylesheet" href="css/codemirror.css">
+<link rel="shortcut icon" type="image/png" href="/assets/images/get_started16.png"/>
+
+
+<link rel="stylesheet" type="text/css" href="css/styleUblock.css">
+ <!-- Load Mobiscroll  -->
+ <script src="/external/mobiscroll/mobiscroll.javascript.min.js"></script>
+ <link href="/external/mobiscroll/mobiscroll.javascript.min.css" rel="stylesheet" type="text/css">
+</head>
+
+<body class="bodyAdvancedSettings">
+
+        <div id="divFullHeader" class="divFullHeader">
+                <!-- DIV LOGO -->
+                <div class="divLogoHeader">
+                    <a class="w-nav-brand brand-box" href="#">
+                        <img src="/assets/images/logo-header.svg" width="150">
+                    </a>
+                </div>
+                <!-- DIV MENU -->
+                <div class="lower-nav-section">
+                    <div class="w-container containerNavbar containerNavAdvancedSettings">
+                       <span data-i18n="advancedSettingsPageName" style="color: #ffffff;"></span>
+                   </div>
+                </div>
+            
+                
+               
+        </div>       
+<div class="body" align="center" style="float: left; width: 100%;">
+    <p><span data-i18n="advancedSettingsWarning"></span> <a class="mbsc-ic mbsc-ic-ion-ios7-information info important" href="https://github.com/gorhill/uBlock/wiki/Advanced-settings" target="_blank" style="vertical-align: middle;"></a>
+    <p>
+        <button id="advancedSettingsApply" class="buttonsBittube important" type="button" disabled data-i18n="genericApplyChanges"></button>&ensp;
+</div>
+
+<div id="advancedSettings" class="codeMirrorContainer codeMirrorFillVertical divAdvancedSettings"></div>
+
+<script src="lib/codemirror/lib/codemirror.js"></script>
+<script src="lib/codemirror/addon/selection/active-line.js"></script>
+
+<script src="js/vapi.js"></script>
+<script src="js/vapi-common.js"></script>
+<script src="js/vapi-client.js"></script>
+<script src="js/udom.js"></script>
+<script src="js/i18n.js"></script>
+<script src="js/dashboard-common.js"></script>
+<script src="js/advanced-settings.js"></script>
+
+</body>
+</html>

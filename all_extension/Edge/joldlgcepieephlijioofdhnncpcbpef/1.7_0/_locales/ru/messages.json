@@ -1,0 +1,38 @@
+{
+   "amount": {
+      "message": "количество"
+   },
+   "appDesc": {
+      "message": "Конвертер монет для Edge быстрый и простой в использовании"
+   },
+   "appName": {
+      "message": "Конвертер валют PRO"
+   },
+   "back": {
+      "message": "назад"
+   },
+   "btconvert": {
+      "message": "конвертировать"
+   },
+   "configuration": {
+      "message": "конфигурация"
+   },
+   "dark": {
+      "message": "Темно"
+   },
+   "helpnote": {
+      "message": "Нажмите + чтобы добавить валюты"
+   },
+   "light": {
+      "message": "Свет"
+   },
+   "openextension": {
+      "message": "Активация"
+   },
+   "selectcurrencies": {
+      "message": "Выберите валюты"
+   },
+   "theme": {
+      "message": "тема"
+   }
+}

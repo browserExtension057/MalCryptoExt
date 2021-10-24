@@ -1,0 +1,39 @@
+{
+   "author": "Sentinel Protocol",
+   "background": {
+      "scripts": [ "jquery.min.js", "lodash.min.js", "async.min.js", "raven.min.js", "crypto-js.js", "jsencrypt.min.js", "background.js" ]
+   },
+   "browser_action": {
+      "default_icon": {
+         "16": "images/app_ic_gray_16.png",
+         "32": "images/app_ic_gray_32.png",
+         "48": "images/app_ic_gray_48.png"
+      },
+      "default_popup": "ba.html"
+   },
+   "content_scripts": [ {
+      "all_frames": false,
+      "css": [ "cs.min.css" ],
+      "js": [ "cs.js" ],
+      "matches": [ "*://*/*" ],
+      "run_at": "document_end"
+   } ],
+   "content_security_policy": "script-src 'self' https://www.google-analytics.com; object-src 'self'",
+   "default_locale": "en",
+   "description": "Protection solution against cyber threat, cryptocurrency scams, and frauds.",
+   "icons": {
+      "128": "images/icon128.png",
+      "16": "images/icon16.png",
+      "256": "images/icon256.png",
+      "32": "images/icon32.png",
+      "48": "images/icon48.png",
+      "64": "images/icon64.png"
+   },
+   "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAx8ukhk4grDOaHmsqIVPKqTJ7anqWecmPGt77Rqw3mK/+2JdO3bInidjnaiUinK8zUOHb6fLHIXIoYPfqmEjMsvh6HZNXom38z6DSgz1whRTDSTPSB2gV0Dlv7Vay42+HwHMrIut2gNKsA4oMpKn7AFPjg28qYL2bMBUCk02JuiyeS1axoFC7esP5XYxwMTu9OH5fExN1uR9qHUQopp1IBYtJFWUQD0XEV86RNwfbtvmxTQCuQZhIcX6mkCNbPVGxDSk+KNTYMWYvkKHXCXlAlKAwFCGLEbl2X0YrV/5ozutU7DcCJjab5uucmB6THHtVGDr4N8Ml9r7elArMmg4ESQIDAQAB",
+   "manifest_version": 2,
+   "name": "UPPward (Network Defence Security)",
+   "permissions": [ "storage", "tabs", "contextMenus", "activeTab", "webNavigation", "webRequest", "*://*/*" ],
+   "update_url": "https://edge.microsoft.com/extensionwebstorebase/v1/crx",
+   "version": "3.2.0",
+   "web_accessible_resources": [ "images/update/ic-safecheck-green.svg", "images/update/ic-cancel-green.svg", "images/update/ic-safecheck.svg", "images/update/ic-cancel.svg", "images/update/ic-warning.svg", "images/update/ic_green.png", "images/update/ic_red.png", "images/update/ic_yellow.png", "images/update/ic_white.png", "images/update/ic_blacklist_noti.svg", "images/update/ic_blacklist_noti_red.svg", "images/update/ic_close.svg" ]
+}

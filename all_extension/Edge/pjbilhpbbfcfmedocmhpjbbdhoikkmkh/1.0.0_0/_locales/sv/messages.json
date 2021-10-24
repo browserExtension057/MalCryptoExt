@@ -1,0 +1,20 @@
+{
+   "Amount": {
+      "message": "mängd"
+   },
+   "AppDesc": {
+      "message": "Kontrollera Bitcoin-pris i realtid."
+   },
+   "AppName": {
+      "message": "Bitcoin-priser"
+   },
+   "NotYet": {
+      "message": "Inte än"
+   },
+   "RateUpdateTime": {
+      "message": "Pris uppdaterat senast till:"
+   },
+   "Unit": {
+      "message": "BTC"
+   }
+}

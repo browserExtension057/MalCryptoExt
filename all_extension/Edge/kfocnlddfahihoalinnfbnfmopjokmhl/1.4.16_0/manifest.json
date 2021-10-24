@@ -1,0 +1,56 @@
+{
+   "author": "https://metacoin.network",
+   "background": {
+      "persistent": true,
+      "scripts": [ "js/background.js" ]
+   },
+   "browser_action": {
+      "default_icon": {
+         "19": "icons/19.png",
+         "38": "icons/38.png"
+      },
+      "default_popup": "index.html",
+      "default_title": "__MSG_appName__"
+   },
+   "commands": {
+      "_execute_browser_action": {
+         "description": "Open popup metawallet",
+         "suggested_key": {
+            "chromeos": "Alt+W",
+            "linux": "Alt+W",
+            "mac": "Ctrl+W",
+            "windows": "Alt+W"
+         }
+      },
+      "open-window": {
+         "description": "Open window metawallet",
+         "suggested_key": {
+            "chromeos": "Alt+Shift+W",
+            "linux": "Alt+Shift+W",
+            "mac": "Ctrl+Shift+W",
+            "windows": "Alt+Shift+W"
+         }
+      }
+   },
+   "content_security_policy": "script-src 'self' ; object-src 'self'",
+   "default_locale": "en",
+   "description": "__MSG_appDescription__",
+   "externally_connectable": {
+      "ids": [ "*" ],
+      "matches": [ "https://t.me/MetacoinWalletBot/*", "https://dapp.metacoin.network/*" ]
+   },
+   "homepage_url": "http://localhost:8080/",
+   "icons": {
+      "128": "icons/128.png",
+      "16": "icons/16.png",
+      "48": "icons/48.png"
+   },
+   "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAq4dm6o+dOfCCSwPGwxV/97PzeFQBNBlZMnDwIj/ZmXw0I+gqg0eey2EwPwQnDzUN1iYOhEH19C+uEJ1vwDN2qbw6mFPxLct9KdeduhF4Qaux4DvsMGKiYT9b8mX9Z2ZYFuU6mNUATNEmbLvHfLDOJXVRreE2/mciysggB6vKcmkX9ksBfRHHhcs4nOWVc6gafi+4HTfa+xaTw3sdZwXHnl6MChH1QY8rgMsU6VHnXflSg3gSPva0ydFZE8b+Lb/e3i0B33xBWH+h4jmm1V1vmSLlK1c+uze0oMD8AymUYymM5WaHfiz0yAFCK6RdxDGAbIDlKKqdYmmUqXAahkzRnwIDAQAB",
+   "manifest_version": 2,
+   "name": "__MSG_appName__",
+   "permissions": [ "storage", "alarms", "contextMenus", "https://dapp.metacoin.network/*", "https://*.metascan.io/*", "activeTab" ],
+   "short_name": "__MSG_appName__",
+   "update_url": "https://edge.microsoft.com/extensionwebstorebase/v1/crx",
+   "version": "1.4.16",
+   "web_accessible_resources": [ "/popup/*" ]
+}

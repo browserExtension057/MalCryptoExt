@@ -1,0 +1,36 @@
+{
+   "author": "SAASPASS, 44 Tehama Street, San Francisco, CA 94105",
+   "background": {
+      "scripts": [ "background.js" ]
+   },
+   "browser_action": {
+      "default_icon": "icons/orca-128.png",
+      "default_popup": "popup.html",
+      "default_title": "SAASPASS Password Manager"
+   },
+   "content_scripts": [ {
+      "all_frames": true,
+      "exclude_matches": [ "https://www.saaspass.com/*", "http://localhost:3000/*" ],
+      "js": [ "content.js" ],
+      "matches": [ "https://*/*" ]
+   }, {
+      "all_frames": true,
+      "js": [ "portal.js" ],
+      "matches": [ "https://www.saaspass.com/*", "http://localhost:3000/*" ]
+   } ],
+   "description": "SAASPASS is a free password manager & authenticator 2FA code generator with autofill & autologin capabilities.",
+   "icons": {
+      "128": "icons/orca-128.png"
+   },
+   "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA3aTT+v8Abou5rjty5EZaqnKU0tYODlmdBNY3lDNxRuArBjts5LujW0QX1uEXEHFp0AZ3BsNCA0ppJ9qvxRrBByZDpsQ3YEl2lBZ1UUixUR98LhstlRQQzpVIlusr0FeC2uOUqmYj3l/8DTm0XFDWihbbRloXvp7kf31NsbsDjnnRn6l6UeHWv1RQsexd90afbZzgwob28d9j+ENRm1fRh73REbCUqXG2Lzms+wDazBX1tWy+YosN+3qPJ3m+taCzpC/NXQNa5uyR4VPFPzXpHnDpkBs/D92F5QaAckBho/iM2gmxLwjDLCZydFXdsd3ZBgbCl1BEGtoMc4Gr/Dnf2QIDAQAB",
+   "manifest_version": 2,
+   "name": "SAASPASS Password Manager & Authenticator 2FA",
+   "options_ui": {
+      "page": "options.html"
+   },
+   "permissions": [ "*://*/*", "storage", "tabs" ],
+   "short_name": "Password Manager",
+   "update_url": "https://edge.microsoft.com/extensionwebstorebase/v1/crx",
+   "version": "3.0.1",
+   "web_accessible_resources": [ "selectAccountFrame.html", "saveCredentialsFrame.html", "src/images/orca-18.png" ]
+}

@@ -1,0 +1,20 @@
+{
+   "Amount": {
+      "message": "양"
+   },
+   "AppDesc": {
+      "message": "실시간 비트 코인 가격을 확인하십시오."
+   },
+   "AppName": {
+      "message": "비트 코인 가격"
+   },
+   "NotYet": {
+      "message": "아직"
+   },
+   "RateUpdateTime": {
+      "message": "최종 가격 :"
+   },
+   "Unit": {
+      "message": "BTC"
+   }
+}

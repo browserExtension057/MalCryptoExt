@@ -1,0 +1,3230 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8"/>
+	<meta content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=0" name="viewport">
+	<meta name="mobile-web-app-capable" content="yes">
+	<link rel="stylesheet" type="text/css" href="assets/css/grid.css">
+	</link>
+
+	<!-- Custom styles for Top menu Only -->
+
+	<link rel="stylesheet" type="text/css" href="assets/css/theme.css">
+	</link>
+
+	<link rel="stylesheet" href="/external/fontawesome/css/font-awesome.min.css">
+	</link>
+
+
+	<link rel="stylesheet" href="assets/css/flags.css">
+	</link>
+
+	<!-- [if IE 7]>
+        <link rel="stylesheet" href="assets/css/font-awesome-ie7.min.css">
+    <![endif] -->
+	<script src="assets/js/http-requests.js"></script>
+	<script src="external/aes.js"></script>
+	<script src="/external/moment/moment-with-locales.min.js"></script>
+	<script src="wallet/js/crc32.js?1"></script>
+	<script src="wallet/js/mnemonic.js?2"></script>
+	<script src="/external/qrcode.min.js?1"></script>
+	<script src="/external/biginteger.js?1"></script>
+	<script src="/assets/js/biginteger-lowval.js?1"></script>
+	<script src="wallet/js/config.js?4"></script>
+	<script src="wallet/js/crypto.js?1"></script>
+	<script src="/external/sha3.min.js?1"></script>
+	<script src="/external/nacl-fast.min.js?1"></script>
+	<script src="wallet/js/base58.js?1"></script>
+	<script src="wallet/js/cn_util.js?2"></script>
+	<!-- Load Mobiscroll  -->
+	<script src="/external/mobiscroll/mobiscroll.javascript.min.js"></script>
+	<link href="/external/mobiscroll/mobiscroll.javascript.min.css" rel="stylesheet" type="text/css">
+	<!-- <link href="assets/css/bittube-fonts.css" rel="stylesheet" type="text/css"> -->
+	<link href="assets/css/coin-font.css" rel="stylesheet" type="text/css">
+
+	<!-- Load Firebase SDK  -->
+	<script src="/external/firebase/firebase-app.js"></script>
+	<script src="/external/firebase/firebase-auth.js"></script>
+	<script src="/external/firebase/firebase-config.js"></script>
+	<script src="/external/firebase/firebase-database.js"></script>
+	<script src="/external/firebase/firebase-providers.js"></script>
+	<script src="/external/firebase/firebase-storage.js"></script>
+
+	<!-- morris for chart -->
+	<script src="/external/Chart.bundle.min.js"></script>
+	<script src="assets/js/javascript.gp"></script>
+	<script src="wallet/js/lib/mymonero-core.js"></script>
+	<script src="assets/js/walletHelpers.js"></script>
+	<!-- IMPORT CROPPIE -->
+	<script src="/external/jquery/dist/jquery.min.js"></script>
+	<!-- https://code.jquery.com/jquery-3.3.1.min.js -->
+	<script src="/external/croppie/croppie.min.js"></script>
+	<!-- https://cdnjs.cloudflare.com/ajax/libs/croppie/2.6.0/croppie.min.js-->
+	<link href="/external/croppie/croppie.css" rel="stylesheet" type="text/css">
+	<!-- https://cdnjs.cloudflare.com/ajax/libs/croppie/2.6.0/croppie.css -->
+
+
+	<!-- load main.js, nav.js and header.js-->
+	<script src="assets/js/main.js"></script>
+	<script src="assets/js/nav.js"></script>
+	<script src="assets/js/header.js"></script>
+	<script src="assets/js/register.js"></script>
+	<script src="assets/js/account.js"></script>
+	<script src="assets/js/options.js"></script>
+	<script src="assets/js/mobile-utilities.js"></script>
+</head>
+
+
+<body>
+
+	<iframe src="https://pay.bittube.cash/notify/frame.html" class="displayNone"></iframe>
+	<div class="container maxWidth360">
+		<div class="row">
+			<div class="medium-4">
+				<div id="mainContentAirtime" class="panel panel-green effect5">
+					<div class="panel-heading width360 headerContent" align="center">
+						<div class="divWallet">
+							<a id="walletItem" href="#" data-i18n="wallet">
+								<img src="./assets/images/wallet.svg" alt="wallet">
+								<span class="myWallet translate" data-i18n="myWallet"></span>
+							</a>
+						</div>
+
+						<div id="powerButton" class="divLogoFlip cursorPointer">
+							<div id="buttonFlip" class="ch-item ch-img-1">
+								<div class="ch-info-wrap">
+									<div class="ch-info">
+										<div class="ch-info-front ch-img-1">
+											<img src="assets/images/logo-header.svg" class="logoHeader" id="logoheader">
+										</div>
+										<div class="ch-info-back">
+											<button id="buttonStandBy" class="active">
+												<i class="fa fa-power-off"></i>
+											</button>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div id="divBuyTubes">
+							<a id="buttonBuyTubes" class="translate">
+								<img src="./assets/images/buyTube.svg" alt="wallet">
+								<span data-i18n="[html]html.buy"></span>
+							</a>
+						</div>
+					</div>
+					<div class="panel-body">
+						<div id="airtimeMessagesContainer">
+						</div>
+						<div id="divAccountOptions" class="accountContainer">
+							<div class="menuContainer">
+								<ul class="menuList">
+									<li class="v-align">
+
+										<a id="showProfile" href="#">
+											<img id="profileImageIcon" src="" class="iconAccount">
+											<span class="v-align translate" data-i18n="profile"></span>
+										</a>
+									</li>
+									<li class="v-align">
+										<a href="/history.html">
+											<img src="/assets/images/account_icons/account__history.svg" class="iconAccount">
+											<span class="v-align translate" data-i18n="history"></span>
+										</a>
+									</li>
+									<li class="v-align">
+										<a id="showSecurity" href="#">
+											<img src="/assets/images/account_icons/account__security.svg" class="iconAccount">
+											<span class="v-align translate" data-i18n="security"></span>
+										</a>
+									</li>
+									<li class="v-align">
+											<a disabled id="showGetVerified" href="#">
+												<img src="/assets/images/account_icons/account__getverified.svg" class="iconAccount">
+												<span class="v-align translate" data-i18n="getVerified"></span>
+											</a>
+										</li>
+									<li class="v-align">
+
+										<a id="showReferral" href="#" class="displayNone">
+											<img src="/assets/images/account_icons/account__share.svg" class="iconAccount">
+											<span class="v-align translate" data-i18n="shareMyReferral"></span>
+										</a>
+									</li>
+									<li class="v-align">
+
+										<a target="blank"
+											href="https://chrome.google.com/webstore/detail/bittube-airtime-donations/cnogbbmciffpibmkphohpebghmomaemi/reviews?utm_source=chrome-ntp-icon">
+											<img src="/assets/images/account_icons/account__rate.svg" class="iconAccount">
+											<span class="v-align translate" data-i18n="rateUs"></span>
+										</a>
+									</li>
+									<li class="v-align">
+
+
+										<a id="showConvertTubes" href="#">
+											<img src="/assets/images/account_icons/account__convert.svg" class="iconAccount">
+											<span class="v-align translate" data-i18n="convertMyTUBEs"></span>
+										</a>
+									</li>
+
+									<li class="v-align">
+
+										<a id="showChangeCurrency" href="#">
+											<img src="/assets/images/account_icons/account__change.svg" class="iconAccount">
+											<span class="v-align"><span class="translate" data-i18n="changeCurrency"></span> (<span
+													id="defaultCurrency"></span>)</span>
+										</a>
+
+									</li>
+								</ul>
+							</div>
+							<div class="otherLinksContainer">
+								<ul class="otherList">
+									<li>
+										<a id="logoutButton" href="#">
+											<img src="/assets/images/account_icons/account__logout.svg" class="iconAccount">
+											<span class="v-align translate" data-i18n="logout">
+											</span>
+										</a>
+									</li>
+									<li><a id="showAbout" href="#">
+											<img src="/assets/images/account_icons/account__about.svg" class="iconAccount">
+											<span class="v-align translate" data-i18n="about">
+											</span>
+										</a></li>
+									<li><a target="blank" href="https://kb.bittube.app/">
+											<img src="/assets/images/account_icons/account__faq.svg" class="iconAccount">
+											<span class="v-align">FAQ
+											</span>
+										</a></li>
+								</ul>
+							</div>
+							<div class="copyright"> Copyright © <span class="year"></span> BitTube. <span class="translate"
+									data-i18n="allRights"></span></div>
+
+						</div>
+					</div>
+					<div id="userSuggestions">
+						<div id="shareReferral" class="translate">
+							<span data-i18n="shareYourReferral"></span>
+							<i class="mbsc-ic mbsc-ic-fa-close closeSuggestions" data-suggestion="referral"></i>
+						</div>
+						<div id="suggestionSecurity" class="displayNone translate">
+							<span data-i18n="forHighestLevel"></span>
+							<i class="mbsc-ic mbsc-ic-fa-close closeSuggestions" data-suggestion="2FA"></i>
+						</div>
+					</div>
+
+
+
+					<!-- START DIV PROFILE -->
+					<div id="divProfile" class="displayNone minHeight350 divsAccountView">
+						<div id="divMainProfile" align="center">
+							<form class=" profileForm md-login-form">
+								<div class="divProfileForm">
+
+									<div class="divHeaderProfile">
+										<span class="translate" data-i18n="profile"></span>
+										<i id="closeProfile" class="mbsc-ic mbsc-ic-ion-ios7-close-outline closeSectionProfile"></i>
+									</div>
+
+									<div id="divUSerImageProfile" class="width100 no-margin translate" align="center">
+										<div class="leftUserImage">
+											<img class="userProfilePic" src="assets/images/logo-header.svg" id="imageUserProfile">
+											<span id="uploadButton" class="changeProfilePic" data-i18n="changeProfilePic"></span>
+										</div>
+										<div class="rightFields rightUserImage v-align">
+
+										</div>
+
+										<input type="file" id="upload" class="item-img file center-block displayNone " name="file_photo" />
+									</div>
+
+									<div class="divUserInfos translate">
+										<div class="usernameForm no-margin width100 ">
+											<div class="leftFields v-align"><span data-i18n="username"></span></div>
+											<input class="rightFields formInput" id="username" type="text" name="username"
+												data-input-style="outline" required="required" />
+										</div>
+										<div class="languageForm no-margin width100 ">
+											<div class="leftFields v-align"><span data-i18n="profileLanguage"></span></div>
+											<select class="rightFields formInput" id="changeLanguage" data-input-style="outline">
+												<option id="de" value="de">Deutsch</option>
+												<option id="en" value="en">English</option>
+												<option id="es" value="es">Español</option>
+												<option id="fr" value="fr">Français</option>
+												<option id="nl" value="nl">Nederlands</option>
+												<option id="pl" value="pl">Polski</option>
+												<option id="pt_PT" value="pt_PT">Português</option>
+												<option id="ro" value="ro">Română</option>
+												<option id="fi" value="fi">Suomi</option>
+												<option id='ar' value="ar">العربية</option>
+												<option id='bg' value="bg">Български</option>
+												<option id='it' value="it">Italiano</option>
+												<option id="pt_BR" value="pt_BR">Brasileiro</option>
+												<option id="ru" value="ru">русский</option>
+											</select>
+										</div>
+
+										<button id="buttonSaveSettings" class="saveUserSettings">
+											<div class="loadingButton displayNone">
+												<i class="mbsc-ic mbsc-ic-fa-spinner"></i>
+											</div>
+											<span class="textButton" data-i18n="save"></span>
+										</button>
+										<!-- I HAVE DELETED THE MOBISCROLL LANGUAGE HANDLING FROM FIREBASE-PROVIDER.JS l.287 -->
+									</div>
+								</div>
+							</form>
+						</div>
+
+						<div id="divCroppieImage">
+
+							<div class="divProfileForm translate" align="center">
+								<div id="headerProfilePicture" class="divHeaderProfile marginBottom10 displayNone">
+									<span data-i18n="changeProfilePic"></span>
+									<i id="cancelCrop" class="mbsc-ic mbsc-ic-ion-ios7-close-outline closeSectionProfile"></i>
+								</div>
+
+								<div id="upload-picture" class="center-block"></div>
+								<button type="button" id="cropImageBtn"
+									class="customButtonStyle customButtonStyleSelected marginTop5 displayNone" data-i18n="save"></button>
+							</div>
+						</div>
+
+
+						<!-- END DIV USER PROFILE PICTURE -->
+
+					</div>
+					<!-- END DIV PROFILE -->
+
+					<!-- STARAT DIV REFERRAL -->
+					<div id="divProfileReferral" class="displayNone profileForm divsAccountView">
+						<div id="divReferralLink" class="divProfileForm displayNone translate">
+							<div class="divHeaderProfile">
+								<span data-i18n="shareMyReferral"></span>
+								<i id="closeReferral" class="mbsc-ic mbsc-ic-ion-ios7-close-outline closeSectionProfile"></i>
+							</div>
+
+							<p class="translate paddingLeft10 paddingRight10">
+
+								<span data-i18n="get5TUBEs"></span>
+								<br>
+								<span data-i18n="creditedDelay"></span>
+							</p>
+							<div class=" mbsc-form-group no-margin translate paddingLeft10 paddingRight10">
+								<label for="name" class="labelFormDonate translate">
+									<input id="referral_link" name="referral_link" type="text" data-input-style="outline"
+										disabled="disabled" class="mainInput backgroundInputDisabled" />
+									<div id="buttonCopyRefLink" class="copyReferral translate">
+										<div class="loadingButton displayNone">
+											<i class="mbsc-ic mbsc-ic-fa-spinner"></i>
+										</div>
+										<span class="textButton" data-i18n="copy"></span>
+									</div>
+									<div id="loadingReferral" class="loadingInput">
+										<i class="mbsc-ic mbsc-ic-fa-spinner"></i>
+									</div>
+
+								</label>
+							</div>
+						</div>
+					</div>
+					<!-- END DIV REFERRAL -->
+
+
+					<!-- START DIV SECURITY -->
+					<div id="divSecurity" class="displayNone minHeight350 divsAccountView">
+						<div align="center">
+
+							<form id="securityForm" class="md-login-form" mbsc-enhance mbsc-form autocomplete="off">
+								<!-- TODO PUT THIS INSIDE DIV ! -->
+								<div id="divProfileQR" class="divProfileForm displayNone marginTop20">
+									<div class="divHeaderProfile">
+										<span class="translate" data-i18n="security"></span>
+										<i id="closeSecurity2FA" class="mbsc-ic mbsc-ic-ion-ios7-close-outline closeSectionProfile"></i>
+									</div>
+									<div id="divQRCode" class="displayNone translate">
+										<img id="2faqrcode" src="">
+										<p id="hashQRCode" class="font9 marginTop-5 marginBottom7"></p>
+										<span id="text" data-i18n="typeBellow2FA"></span>
+									</div>
+									<p id="titleSecurityPage"
+										class="no-margin displayNone translate paddingTop10 paddingLeft15 paddingRight15 defaultColor" align="left">
+										<span data-i18n="[html]titleSecurityPage"></span>
+									</p>
+									<p id="textDisable2FA"
+										class="no-margin displayNone translate paddingTop10 paddingLeft15 paddingRight15" align="left">
+										<span data-i18n="[html]toDisable2FA"></span>
+										<br> <span data-i18n="type6Digits"></span></p>
+									<div id="divInput2FA" class="mbsc-form-group no-margin width100 paddingLeft15 paddingRight15">
+
+										<label for="name" class="labelFormDonate translate">
+											<span id="label2FA" class="translateInput dynamicLabel" data-i18n="2FACode"></span>
+											<input id="verifySecret" name="verifiySecret" type="text" maxlength="6" data-input-style="outline"
+												required="required" class="defaultInput" />
+											<button id="disable2FA" class="displayNone">
+												<div class="loadingButton displayNone">
+													<i class="mbsc-ic mbsc-ic-fa-spinner"></i>
+												</div>
+												<span class="textButton" data-i18n="disable2FA"></span>
+											</button>
+
+											<button id="verifySecretButton" class="displayNone">
+												<div class="loadingButton displayNone">
+													<i class="mbsc-ic mbsc-ic-fa-spinner"></i>
+												</div>
+												<span class="textButton" data-i18n="enable2FA"></span>
+											</button>
+										</label>
+									</div>
+								</div>
+
+
+								<div id="divGenerateSecret" class="mbsc-form-group no-margin divProfileForm displayNone translate">
+									<div class="divHeaderProfile">
+										<span class="translate" data-i18n="security"></span>
+										<i id="closeSecurity" class="mbsc-ic mbsc-ic-ion-ios7-close-outline closeSectionProfile"></i>
+									</div>
+									<p class="paddingLeft10 paddingRight10" align="left">
+										<span data-i18n="toEnable2FA"></span>
+										<span class="defaultColor"> Google
+											Authenticator </span> or <span class="defaultColor">Authy</span>.
+										<br> <span class="linHeight2-5" data-i18n="pleaseInstall"></span></p>
+									<button id="generateSecret" class="customButtonStyle customButtonStyleSelected marginBottom10">
+										<div class="loadingButton displayNone">
+											<i class="mbsc-ic mbsc-ic-fa-spinner"></i>
+										</div>
+										<span class="textButton" data-i18n="enable2FA"></span>
+									</button>
+								</div>
+							</form>
+						</div>
+
+
+					</div>
+					<!-- END DIV SECURITY -->
+
+					<!-- START DIV GET VERIFIED -->
+					<div id="divGetVerified" class="divsAccountView displayNone translate">
+							<div class="divProfileForm marginTop20 minHeight390">
+								<div class="divHeaderProfile">
+									<span data-i18n="getVerified"></span>
+									<i id="closeGetVeried" class="mbsc-ic mbsc-ic-ion-ios7-close-outline closeSectionProfile"></i>
+								</div>
+								<div id="divTabsGetVerified" class="positionRelative">
+										<ul id="tabsGetVerified" class="mbsc-cloak translate">
+												<li id="tabAirtime" data-tab="basic" data-selected="true">
+													<span data-i18n="basicTab"></span>
+													<img src="assets/images/check.svg" class="checkTab displayNone" id="checkBasicTab">
+												</li>
+												<li id="tabVpn" data-tab="plus">
+													<span data-i18n="plusTab"></span>
+													<img src="assets/images/check.svg" class="checkTab displayNone" id="checkPlusTab">
+												</li>       
+								</ul>
+								</div>
+								<!-- START TAB BASIC -->
+								<div id="apps-tab-basic" class="md-apps-tab md-apps-tab-sel translate">
+									<div id="mainDivBasicVerification">
+											<div class="divIntroTabsGetVerified">
+													<p>
+														- <span data-i18n="basicFeature1"></span>
+														<br>
+														- <span data-i18n="basicFeature2"></span>
+														<br>
+														- <span data-i18n="basicFeature3"></span>
+														<br>
+														- <span data-i18n="basicFeature4"></span>
+														<br><br>
+														<b><span data-i18n="requeriments"> </b> <span data-i18n="phoneOrStaking"></span>
+													</p>
+												</div>
+		
+												<div class="divButtonsVerifiy marginTop20">
+														<input readonly id="userPhone" name="phone" type="text" data-input-style="outline"
+														class="defaultInput marginBottom10 hidden" />
+														<button id="deletePhoneNumber" class="buttonDefault mbsc-btn-block md-signup-btn translate marginTop10">
+																<div class="loadingButton displayNone">
+																	<i class="mbsc-ic mbsc-ic-fa-spinner"></i>
+																</div>
+																<span class="textButton" data-i18n="deletePhoneNumber"></span>
+														</button>
+		
+														<button id="verifyByPhoneNumber" class="displayNone buttonDefault mbsc-btn-block md-signup-btn translate marginTop10">
+																<div class="loadingButton displayNone">
+																	<i class="mbsc-ic mbsc-ic-fa-spinner"></i>
+																</div>
+																<span class="textButton" data-i18n="verifyByPhoneNumber"></span>
+														</button>
+		
+															<button id="stakeTUBEs" type="submit" class="buttonDefault mbsc-btn-block md-signup-btn translate marginTop10">
+																	<div class="loadingButton displayNone">
+																		<i class="mbsc-ic mbsc-ic-fa-spinner"></i>
+																	</div>
+																	<span class="textButton" data-i18n="stakeTUBEs"></span>
+															</button>
+												</div>
+												<!-- <div class="divNote">
+														<p><b><span data-i18n="noteVerify"></span> </b> <span data-i18n="completingBothVerifications"></span></p>
+													</div> -->
+									</div>
+										
+
+										<div id="divRegisterPhoneNumber" class="displayNone marginTop60">
+												<p class="noMarginTop translate" data-i18n="registerPhone"></p>
+												<div class="paddingLeft5 paddingRight5 inlineFlex width100">
+													<label for="country" class="labelCountryCode translate">
+														<span class="translateInput" data-i18n="countryCode">
+														</span>
+			
+														<div id="divCountryCode" data-input-style="outline" class="defaultInput marginTop5 cursorPointer"
+															align="left">
+															<span id="flagCountry" class="spanFlag flag-US"></span>
+															<span id="countryExtension">
+																+1 </span>
+														</div>
+													</label>
+			
+													<label for="phone" class="labelPhoneNumber translate">
+														<span class="spanCountryCode translateInput" data-i18n="phoneNumber"></span>
+														<input id="phone" name="phone" type="text" class="defaultInput" data-input-style="outline"
+															required="required">
+													</label>
+												</div>
+												<div class="subPhone mbsc-form-group-inset mbsc-padding noMarginBottom no-padding">
+														<button id="backToGetVerified" type="submit" class="buttonDefault mbsc-btn-block md-signup-btn translate">
+																<div class="loadingButton displayNone">
+																	<i class="mbsc-ic mbsc-ic-fa-spinner"></i>
+																</div>
+																<span class="textButton" data-i18n="back"></span>
+															</button>
+
+													<button id="requestCall" type="submit" class="buttonDefault mbsc-btn-block md-signup-btn translate">
+														<div class="loadingButton displayNone">
+															<i class="mbsc-ic mbsc-ic-fa-spinner"></i>
+														</div>
+														<span class="textButton" data-i18n="sendSMS"></span>
+													</button>
+
+												</div>
+											</div>
+
+											<div id="verifyCode" class="displayNone marginTop60">
+													<div>
+														<div>
+															<label for="name" class="labelPhoneNumber translate no-margin">
+																<span id="verificationLabel" data-i18n="verificationCode"
+																	class="spanCountryCode dynamicLabel translateInput"></span>
+																<input id="code" type="text" name="code" data-input-style="outline" required="required"
+																	class="defaultInput" minlength="6" maxlength="6" />
+															</label>
+														</div>
+				
+														<p class="translate" align="left"> <span data-i18n="callYou"></span>
+															<span id="userNumber"></span>
+															<span data-i18n="giveYouCode"></span>
+														</p>
+				
+														<button id="verifyCodebutton"
+															class="buttonDefault mbsc-btn-block md-signup-btn translate marginTop10">
+															<div class="loadingButton displayNone">
+																<i class="mbsc-ic mbsc-ic-fa-spinner"></i>
+															</div>
+															<span class="textButton" data-i18n="verify"></span>
+														</button>
+													</div>
+												</div>
+
+												<div id="divConfirm2FACode" class="marginTop60 displayNone">
+
+														<form class="md-login-form" mbsc-enhance mbsc-form>
+															<div class="mbsc-form-group no-margin">
+																<p class="noMarginTop paddingTop10" align="left" data-i18n="2FAdeleteNumber">
+					
+																</p>
+																<label id="labelverifySecretDeletePhone" for="name" class="labelFormDonate translate no-margin">
+																	<span id="label2FADeletePhone" class="translateInput dynamicLabel" data-i18n="2FACode"></span>
+																	<input id="verifySecretDeletePhone" name="verifiySecret" type="text" maxlength="6"
+																		data-input-style="outline" required="required" class="defaultInput" />
+					
+																</label>
+															</div>
+					
+															<div class="mbsc-form-group-inset translate no-margin">
+																<button id="confirm2fa" type="submit" class="width100 marginTop12 marginBottom20">
+																	<div class="loadingButton displayNone">
+																		<i class="mbsc-ic mbsc-ic-fa-spinner"></i>
+																	</div>
+																	<span class="textButton" data-i18n="confirm"></span>
+																</button>
+															</div>
+														</form>
+													</div>
+
+												<div id="countriesDiv" class="translate">
+														<!-- START DIV CONTENT -->
+														<div class="grid positionRelative maxHeight320 paddingLeft10 paddingRight10">
+															<div class="divHeaderProfile">
+																<span class="translate" data-i18n="selectCountry"></span>
+																<i id="closeSearchCountry" class="mbsc-ic mbsc-ic-ion-ios7-close-outline closeSectionProfile"></i>
+															</div>
+															<div class="divSearchCountry marginTop10">
+																<div class="divCountySearch">
+																	<label for="name" class="labelFormDonate translate">
+																		<span id="labelInputLinkAccount" class="dynamicLabel" data-i18n="search"></span>
+																		<input id="countrySearch" name="countrySearch" type="text" minlength="2" class="defaultInput"
+																			data-input-style="outline">
+					
+																	</label>
+																</div>
+															</div>
+															<ul class="countryList">
+					
+																<li class="liCountry" data-extension="+93" data-countryname="Afghanistan">
+																	<span class="spanFlag flag-AF"></span>
+																	<span class="countryName">Afghanistan</span>
+																	<br>
+																	<span class="countryExtension">+93</span>
+																</li>
+					
+																<li class="liCountry" data-extension="+355" data-countryname="Albania">
+																	<span class="spanFlag flag-AL"></span>
+																	<span class="countryName">Albania</span>
+																	<br>
+																	<span class="countryExtension">+355</span>
+																</li>
+					
+																<li class="liCountry" data-extension="+213" data-countryname="Algeria">
+																	<span class="spanFlag flag-DZ"></span>
+																	<span class="countryName">Algeria</span>
+																	<br>
+																	<span class="countryExtension">+213</span>
+																</li>
+					
+																<li class="liCountry" data-extension="+1-684" data-countryname="American Samoa">
+																	<span class="spanFlag flag-AS"></span>
+																	<span class="countryName">American
+																		Samoa</span>
+																	<br>
+																	<span class="countryExtension">+1-684</span>
+																</li>
+					
+																<li class="liCountry" data-extension="+376" data-countryname="Andorra">
+																	<span class="spanFlag flag-AD"></span>
+																	<span class="countryName">Andorra</span>
+																	<br>
+																	<span class="countryExtension">+376</span>
+																</li>
+					
+																<li class="liCountry" data-extension="+244" data-countryname="Angola">
+																	<span class="spanFlag flag-AO"></span>
+																	<span class="countryName">Angola</span>
+																	<br>
+																	<span class="countryExtension">+244</span>
+																</li>
+					
+																<li class="liCountry" data-extension="+1-264" data-countryname="Anguilla">
+																	<span class="spanFlag flag-AI"></span>
+																	<span class="countryName">Anguilla</span>
+																	<br>
+																	<span class="countryExtension">+1-264</span>
+																</li>
+					
+																<li class="liCountry" data-extension="+672" data-countryname="Antarctica">
+																	<span class="spanFlag flag-AQ"></span>
+																	<span class="countryName">Antarctica</span>
+																	<br>
+																	<span class="countryExtension">+672</span>
+																</li>
+					
+																<li class="liCountry" data-extension="+1-268" data-countryname="Antigua and Barbuda">
+																	<span class="spanFlag flag-AG"></span>
+																	<span class="countryName">Antigua
+																		and Barbuda</span>
+																	<br>
+																	<span class="countryExtension">+1-268</span>
+																</li>
+					
+																<li class="liCountry" data-extension="+54" data-countryname="Argentina">
+																	<span class="spanFlag flag-AR"></span>
+																	<span class="countryName">Argentina</span>
+																	<br>
+																	<span class="countryExtension">+54</span>
+																</li>
+					
+																<li class="liCountry" data-extension="+374" data-countryname="Armenia">
+																	<span class="spanFlag flag-AM"></span>
+																	<span class="countryName">Armenia</span>
+																	<br>
+																	<span class="countryExtension">+374</span>
+																</li>
+					
+																<li class="liCountry" data-extension="+297" data-countryname="Aruba">
+																	<span class="spanFlag flag-AW"></span>
+																	<span class="countryName">Aruba</span>
+																	<br>
+																	<span class="countryExtension">+297</span>
+																</li>
+					
+																<li class="liCountry" data-extension="+61" data-countryname="Australia">
+																	<span class="spanFlag flag-AU"></span>
+																	<span class="countryName">Australia</span>
+																	<br>
+																	<span class="countryExtension">+61</span>
+																</li>
+					
+																<li class="liCountry" data-extension="+43" data-countryname="Austria">
+																	<span class="spanFlag flag-AT"></span>
+																	<span class="countryName">Austria</span>
+																	<br>
+																	<span class="countryExtension">+43</span>
+																</li>
+					
+																<li class="liCountry" data-extension="+994" data-countryname="Azerbaijan">
+																	<span class="spanFlag flag-AZ"></span>
+																	<span class="countryName">Azerbaijan</span>
+																	<br>
+																	<span class="countryExtension">+994</span>
+																</li>
+					
+																<li class="liCountry" data-extension="+1-242" data-countryname="Bahamas">
+																	<span class="spanFlag flag-BS"></span>
+																	<span class="countryName">Bahamas</span>
+																	<br>
+																	<span class="countryExtension">+1-242</span>
+																</li>
+					
+																<li class="liCountry" data-extension="+973" data-countryname="Bahrain">
+																	<span class="spanFlag flag-BH"></span>
+																	<span class="countryName">Bahrain</span>
+																	<br>
+																	<span class="countryExtension">+973</span>
+																</li>
+					
+																<li class="liCountry" data-extension="+880" data-countryname="Bangladesh">
+																	<span class="spanFlag flag-BD"></span>
+																	<span class="countryName">Bangladesh</span>
+																	<br>
+																	<span class="countryExtension">+880</span>
+																</li>
+					
+																<li class="liCountry" data-extension="+1-246" data-countryname="Barbados">
+																	<span class="spanFlag flag-BB"></span>
+																	<span class="countryName">Barbados</span>
+																	<br>
+																	<span class="countryExtension">+1-246</span>
+																</li>
+					
+																<li class="liCountry" data-extension="+375" data-countryname="Belarus">
+																	<span class="spanFlag flag-BY"></span>
+																	<span class="countryName">Belarus</span>
+																	<br>
+																	<span class="countryExtension">+375</span>
+																</li>
+					
+																<li class="liCountry" data-extension="+32" data-countryname="Belgium">
+																	<span class="spanFlag flag-BE"></span>
+																	<span class="countryName">Belgium</span>
+																	<br>
+																	<span class="countryExtension">+32</span>
+																</li>
+					
+																<li class="liCountry" data-extension="+501" data-countryname="Belize">
+																	<span class="spanFlag flag-BZ"></span>
+																	<span class="countryName">Belize</span>
+																	<br>
+																	<span class="countryExtension">+501</span>
+																</li>
+					
+																<li class="liCountry" data-extension="+229" data-countryname="Benin">
+																	<span class="spanFlag flag-BJ"></span>
+																	<span class="countryName">Benin</span>
+																	<br>
+																	<span class="countryExtension">+229</span>
+																</li>
+					
+																<li class="liCountry" data-extension="+1-441" data-countryname="Bermuda">
+																	<span class="spanFlag flag-BM"></span>
+																	<span class="countryName">Bermuda</span>
+																	<br>
+																	<span class="countryExtension">+1-441</span>
+																</li>
+					
+																<li class="liCountry" data-extension="+975" data-countryname="Bhutan">
+																	<span class="spanFlag flag-BT"></span>
+																	<span class="countryName">Bhutan</span>
+																	<br>
+																	<span class="countryExtension">+975</span>
+																</li>
+					
+																<li class="liCountry" data-extension="+591" data-countryname="Bolivia">
+																	<span class="spanFlag flag-BO"></span>
+																	<span class="countryName">Bolivia</span>
+																	<br>
+																	<span class="countryExtension">+591</span>
+																</li>
+					
+																<li class="liCountry" data-extension="+387" data-countryname="Bosnia and Herzegovina">
+																	<span class="spanFlag flag-BA"></span>
+																	<span class="countryName">Bosnia
+																		and Herzegovina</span>
+																	<br>
+																	<span class="countryExtension">+387</span>
+																</li>
+					
+																<li class="liCountry" data-extension="+267" data-countryname="Botswana">
+																	<span class="spanFlag flag-BW"></span>
+																	<span class="countryName">Botswana</span>
+																	<br>
+																	<span class="countryExtension">+267</span>
+																</li>
+					
+																<li class="liCountry" data-extension="+55" data-countryname="Brazil">
+																	<span class="spanFlag flag-BR"></span>
+																	<span class="countryName">Brazil</span>
+																	<br>
+																	<span class="countryExtension">+55</span>
+																</li>
+					
+																<li class="liCountry" data-extension="+246" data-countryname="British Indian Ocean Territory">
+																	<span class="spanFlag flag-IO"></span>
+																	<span class="countryName">British
+																		Indian Ocean
+																		Territory</span>
+																	<br>
+																	<span class="countryExtension">+246</span>
+																</li>
+					
+																<li class="liCountry" data-extension="+1-284" data-countryname="British Virgin Islands">
+																	<span class="spanFlag flag-VG"></span>
+																	<span class="countryName">British
+																		Virgin Islands</span>
+																	<br>
+																	<span class="countryExtension">+1-284</span>
+																</li>
+					
+																<li class="liCountry" data-extension="+673" data-countryname="Brunei">
+																	<span class="spanFlag flag-BN"></span>
+																	<span class="countryName">Brunei</span>
+																	<br>
+																	<span class="countryExtension">+673</span>
+																</li>
+					
+																<li class="liCountry" data-extension="+359" data-countryname="Bulgaria">
+																	<span class="spanFlag flag-BG"></span>
+																	<span class="countryName">Bulgaria</span>
+																	<br>
+																	<span class="countryExtension">+359</span>
+																</li>
+					
+																<li class="liCountry" data-extension="+226" data-countryname="Burkina Faso">
+																	<span class="spanFlag flag-BF"></span>
+																	<span class="countryName">Burkina
+																		Faso</span>
+																	<br>
+																	<span class="countryExtension">+226</span>
+																</li>
+					
+																<li class="liCountry" data-extension="+257" data-countryname="Burundi">
+																	<span class="spanFlag flag-BI"></span>
+																	<span class="countryName">Burundi</span>
+																	<br>
+																	<span class="countryExtension">+257</span>
+																</li>
+					
+																<li class="liCountry" data-extension="+855" data-countryname="Cambodia">
+																	<span class="spanFlag flag-BH"></span>
+																	<span class="countryName">Cambodia</span>
+																	<br>
+																	<span class="countryExtension">+855</span>
+					
+																</li>
+					
+																<li class="liCountry" data-extension="+237" data-countryname="Cameroon">
+																	<span class="spanFlag flag-CM"></span>
+																	<span class="countryName">Cameroon</span>
+																	<br>
+																	<span class="countryExtension">+237</span>
+																</li>
+					
+																<li class="liCountry" data-extension="+1" data-countryname="Canada">
+																	<span class="spanFlag flag-CA"></span>
+																	<span class="countryName">Canada</span>
+																	<br>
+																	<span class="countryExtension">+1</span>
+																</li>
+					
+																<li class="liCountry" data-extension="+238" data-countryname="Cape Verde">
+																	<span class="spanFlag flag-CV"></span>
+																	<span class="countryName">Cape
+																		Verde</span>
+																	<br>
+																	<span class="countryExtension">+238</span>
+																</li>
+					
+																<li class="liCountry" data-extension="+1-345" data-countryname="Cayman Islands">
+																	<span class="spanFlag flag-KY"></span>
+																	<span class="countryName">Cayman
+																		Islands</span>
+																	<br>
+																	<span class="countryExtension">+1-345</span>
+																</li>
+					
+																<li class="liCountry" data-extension="+236" data-countryname="Central African Republic">
+																	<span class="spanFlag flag-CF"></span>
+																	<span class="countryName">Central
+																		African
+																		Republic</span>
+																	<br>
+																	<span class="countryExtension">+236</span>
+																</li>
+					
+																<li class="liCountry" data-extension="+235" data-countryname="Chad">
+																	<span class="spanFlag flag-TD"></span>
+																	<span class="countryName">Chad</span>
+																	<br>
+																	<span class="countryExtension">+235</span>
+																</li>
+					
+																<li class="liCountry" data-extension="+56" data-countryname="Chile">
+																	<span class="spanFlag flag-CL"></span>
+																	<span class="countryName">Chile</span>
+																	<br>
+																	<span class="countryExtension">+56</span>
+																</li>
+					
+																<li class="liCountry" data-extension="+86" data-countryname="China">
+																	<span class="spanFlag flag-CN"></span>
+																	<span class="countryName">China</span>
+																	<br>
+																	<span class="countryExtension">+86</span>
+																</li>
+					
+																<li class="liCountry" data-extension="+61" data-countryname="Christmas Island">
+																	<span class="spanFlag flag-CX"></span>
+																	<span class="countryName">Christmas
+																		Island</span>
+																	<br>
+																	<span class="countryExtension">+61</span>
+																</li>
+					
+																<li class="liCountry" data-extension="+61" data-countryname="Cocos Islands">
+																	<span class="spanFlag flag-CC"></span>
+																	<span class="countryName">Cocos
+																		Islands</span>
+																	<br>
+																	<span class="countryExtension">+61</span>
+																</li>
+					
+																<li class="liCountry" data-extension="+57" data-countryname="Colombia">
+																	<span class="spanFlag flag-CO"></span>
+																	<span class="countryName">Colombia</span>
+																	<br>
+																	<span class="countryExtension">+57</span>
+																</li>
+					
+																<li class="liCountry" data-extension="+269" data-countryname="Comoros">
+																	<span class="spanFlag flag-KM"></span>
+																	<span class="countryName">Comoros</span>
+																	<br>
+																	<span class="countryExtension">+269</span>
+																</li>
+					
+																<li class="liCountry" data-extension="+682" data-countryname="Cook Islands">
+																	<span class="spanFlag flag-CK"></span>
+																	<span class="countryName">Cook
+																		Islands</span>
+																	<br>
+																	<span class="countryExtension">+682</span>
+																</li>
+					
+																<li class="liCountry" data-extension="+506" data-countryname="Costa Rica">
+																	<span class="spanFlag flag-CR"></span>
+																	<span class="countryName">Costa
+																		Rica</span>
+																	<br>
+																	<span class="countryExtension">+506</span>
+																</li>
+					
+																<li class="liCountry" data-extension="+385" data-countryname="Croatia">
+																	<span class="spanFlag flag-HR"></span>
+																	<span class="countryName">Croatia</span>
+																	<br>
+																	<span class="countryExtension">+385</span>
+																</li>
+					
+																<li class="liCountry" data-extension="+53" data-countryname="Cuba">
+																	<span class="spanFlag flag-CU"></span>
+																	<span class="countryName">Cuba</span>
+																	<br>
+																	<span class="countryExtension">+53</span>
+																</li>
+					
+																<li class="liCountry" data-extension="+599" data-countryname="Curacao">
+																	<span class="spanFlag flag-CW"></span>
+																	<span class="countryName">Curacao</span>
+																	<br>
+																	<span class="countryExtension">+599</span>
+																</li>
+					
+																<li class="liCountry" data-extension="+357" data-countryname="Cyprus">
+																	<span class="spanFlag flag-CY"></span>
+																	<span class="countryName">Cyprus</span>
+																	<br>
+																	<span class="countryExtension">+357</span>
+																</li>
+					
+																<li class="liCountry" data-extension="+420" data-countryname="Czech Republic">
+																	<span class="spanFlag flag-CZ"></span>
+																	<span class="countryName">Czech
+																		Republic</span>
+																	<br>
+																	<span class="countryExtension">+420</span>
+																</li>
+					
+																<li class="liCountry" data-extension="+243" data-countryname="Democratic Republic of the Congo">
+																	<span class="spanFlag flag-CD"></span>
+																	<span class="countryName">Democratic
+																		Republic of the
+																		Congo</span>
+																	<br>
+																	<span class="countryExtension">+243</span>
+																</li>
+					
+																<li class="liCountry" data-extension="+45" data-countryname="Denmark">
+																	<span class="spanFlag flag-DK"></span>
+																	<span class="countryName">Denmark</span>
+																	<br>
+																	<span class="countryExtension">+45</span>
+																</li>
+					
+																<li class="liCountry" data-extension="+253" data-countryname="Djibouti">
+																	<span class="spanFlag flag-DJ"></span>
+																	<span class="countryName">Djibouti</span>
+																	<br>
+																	<span class="countryExtension">+253</span>
+																</li>
+					
+																<li class="liCountry" data-extension="+1-767" data-countryname="Dominica">
+																	<span class="spanFlag flag-DM"></span>
+																	<span class="countryName">Dominica</span>
+																	<br>
+																	<span class="countryExtension">+1-767</span>
+																</li>
+					
+																<li class="liCountry" data-extension="+1-809" data-countryname="Dominican Republic">
+																	<span class="spanFlag flag-DO"></span>
+																	<span class="countryName">Dominican
+																		Republic</span>
+																	<br>
+																	<span class="countryExtension">+1-809</span>
+																</li>
+					
+																<li class="liCountry" data-extension="+670" data-countryname="East Timor">
+																	<span class="spanFlag flag-TL"></span>
+																	<span class="countryName">East
+																		Timor</span>
+																	<br>
+																	<span class="countryExtension">+670</span>
+																</li>
+					
+																<li class="liCountry" data-extension="+593" data-countryname="Ecuador">
+																	<span class="spanFlag flag-EC"></span>
+																	<span class="countryName">Ecuador</span>
+																	<br>
+																	<span class="countryExtension">+593</span>
+																</li>
+					
+																<li class="liCountry" data-extension="+20" data-countryname="Egypt">
+																	<span class="spanFlag flag-EG"></span>
+																	<span class="countryName">Egypt</span>
+																	<br>
+																	<span class="countryExtension">+20</span>
+																</li>
+					
+																<li class="liCountry" data-extension="+503" data-countryname="El Salvador">
+																	<span class="spanFlag flag-SV"></span>
+																	<span class="countryName">El
+																		Salvador</span>
+																	<br>
+																	<span class="countryExtension">+503</span>
+																</li>
+					
+																<li class="liCountry" data-extension="+240" data-countryname="Equatorial Guinea">
+																	<span class="spanFlag flag-GQ"></span>
+																	<span class="countryName">Equatorial
+																		Guinea</span>
+																	<br>
+																	<span class="countryExtension">+240</span>
+																</li>
+					
+																<li class="liCountry" data-extension="+291" data-countryname="Eritrea">
+																	<span class="spanFlag flag-ER"></span>
+																	<span class="countryName">Eritrea</span>
+																	<br>
+																	<span class="countryExtension">+291</span>
+																</li>
+					
+																<li class="liCountry" data-extension="+372" data-countryname="Estonia">
+																	<span class="spanFlag flag-EE"></span>
+																	<span class="countryName">Estonia</span>
+																	<br>
+																	<span class="countryExtension">+372</span>
+																</li>
+					
+																<li class="liCountry" data-extension="+251" data-countryname="Ethiopia">
+																	<span class="spanFlag flag-ET"></span>
+																	<span class="countryName">Ethiopia</span>
+																	<br>
+																	<span class="countryExtension">+251</span>
+																</li>
+					
+																<li class="liCountry" data-extension="+500" data-countryname="Falkland Islands">
+																	<span class="spanFlag flag-FK"></span>
+																	<span class="countryName">Falkland
+																		Islands</span>
+																	<br>
+																	<span class="countryExtension">+500</span>
+																</li>
+					
+																<li class="liCountry" data-extension="+298" data-countryname="Faroe Islands">
+																	<span class="spanFlag flag-FO"></span>
+																	<span class="countryName">Faroe
+																		Islands</span>
+																	<br>
+																	<span class="countryExtension">+298</span>
+																</li>
+					
+																<li class="liCountry" data-extension="+679" data-countryname="Fiji">
+																	<span class="spanFlag flag-FRJ"></span>
+																	<span class="countryName">Fiji</span>
+																	<br>
+																	<span class="countryExtension">+679</span>
+																</li>
+					
+																<li class="liCountry" data-extension="+358" data-countryname="Finland">
+																	<span class="spanFlag flag-FI"></span>
+																	<span class="countryName">Finland</span>
+																	<br>
+																	<span class="countryExtension">+358</span>
+																</li>
+					
+																<li class="liCountry" data-extension="+33" data-countryname="France">
+																	<span class="spanFlag flag-FR"></span>
+																	<span class="countryName">France</span>
+																	<br>
+																	<span class="countryExtension">+33</span>
+																</li>
+					
+																<li class="liCountry" data-extension="+689" data-countryname="French Polynesia">
+																	<span class="spanFlag flag-PF"></span>
+																	<span class="countryName">French
+																		Polynesia</span>
+																	<br>
+																	<span class="countryExtension">+689</span>
+																</li>
+					
+																<li class="liCountry" data-extension="+241" data-countryname="Gabon">
+																	<span class="spanFlag flag-GA"></span>
+																	<span class="countryName">Gabon</span>
+																	<br>
+																	<span class="countryExtension">+241</span>
+																</li>
+					
+																<li class="liCountry" data-extension="+220" data-countryname="Gambia">
+																	<span class="spanFlag flag-GM"></span>
+																	<span class="countryName">Gambia</span>
+																	<br>
+																	<span class="countryExtension">+220</span>
+																</li>
+					
+																<li class="liCountry" data-extension="+995" data-countryname="Georgia">
+																	<span class="spanFlag flag-GE"></span>
+																	<span class="countryName">Georgia</span>
+																	<br>
+																	<span class="countryExtension">+995</span>
+																</li>
+					
+																<li class="liCountry" data-extension="+49" data-countryname="Germany">
+																	<span class="spanFlag flag-DE"></span>
+																	<span class="countryName">Germany</span>
+																	<br>
+																	<span class="countryExtension">+49</span>
+																</li>
+					
+																<li class="liCountry" data-extension="+233" data-countryname="Ghana">
+																	<span class="spanFlag flag-GH"></span>
+																	<span class="countryName">Ghana</span>
+																	<br>
+																	<span class="countryExtension">+233</span>
+																</li>
+					
+																<li class="liCountry" data-extension="+350" data-countryname="Gibraltar">
+																	<span class="spanFlag flag-GI"></span>
+																	<span class="countryName">Gibraltar</span>
+																	<br>
+																	<span class="countryExtension">+350</span>
+																</li>
+					
+																<li class="liCountry" data-extension="+30" data-countryname="Greece">
+																	<span class="spanFlag flag-GR"></span>
+																	<span class="countryName">Greece</span>
+																	<br>
+																	<span class="countryExtension">+30</span>
+																</li>
+					
+																<li class="liCountry" data-extension="+299" data-countryname="Greenland">
+																	<span class="spanFlag flag-GL"></span>
+																	<span class="countryName">Greenland</span>
+																	<br>
+																	<span class="countryExtension">+299</span>
+																</li>
+					
+																<li class="liCountry" data-extension="+1-473" data-countryname="Grenada">
+																	<span class="spanFlag flag-GD"></span>
+																	<span class="countryName">Grenada</span>
+																	<br>
+																	<span class="countryExtension">+1-473</span>
+																</li>
+					
+																<li class="liCountry" data-extension="+1-671" data-countryname="Guam">
+																	<span class="spanFlag flag-GU"></span>
+																	<span class="countryName">Guam</span>
+																	<br>
+																	<span class="countryExtension">+1-671</span>
+																</li>
+					
+																<li class="liCountry" data-extension="+502" data-countryname="Guatemala">
+																	<span class="spanFlag flag-GT"></span>
+																	<span class="countryName">Guatemala</span>
+																	<br>
+																	<span class="countryExtension">+502</span>
+																</li>
+					
+																<li class="liCountry" data-extension="+44-1481" data-countryname="Guernsey">
+																	<span class="spanFlag flag-GG"></span>
+																	<span class="countryName">Guernsey</span>
+																	<br>
+																	<span class="countryExtension">+44-1481</span>
+																</li>
+					
+																<li class="liCountry" data-extension="+224" data-countryname="Guinea">
+																	<span class="spanFlag flag-GN"></span>
+																	<span class="countryName">Guinea</span>
+																	<br>
+																	<span class="countryExtension">+224</span>
+																</li>
+					
+																<li class="liCountry" data-extension="+245" data-countryname="Guinea-Bissau">
+																	<span class="spanFlag flag-GW"></span>
+																	<span class="countryName">Guinea-Bissau</span>
+																	<br>
+																	<span class="countryExtension">+245</span>
+																</li>
+					
+																<li class="liCountry" data-extension="+592" data-countryname="Guyana">
+																	<span class="spanFlag flag-GY"></span>
+																	<span class="countryName">Guyana</span>
+																	<br>
+																	<span class="countryExtension">+592</span>
+																</li>
+					
+																<li class="liCountry" data-extension="+509" data-countryname="Haiti">
+																	<span class="spanFlag flag-HT"></span>
+																	<span class="countryName">Haiti</span>
+																	<br>
+																	<span class="countryExtension">+509</span>
+																</li>
+					
+																<li class="liCountry" data-extension="+504" data-countryname="Honduras">
+																	<span class="spanFlag flag-HN"></span>
+																	<span class="countryName">Honduras</span>
+																	<br>
+																	<span class="countryExtension">+504</span>
+																</li>
+					
+																<li class="liCountry" data-extension="+852" data-countryname="Hong Kong">
+																	<span class="spanFlag flag-HK"></span>
+																	<span class="countryName">Hong
+																		Kong</span>
+																	<br>
+																	<span class="countryExtension">+852</span>
+																</li>
+					
+																<li class="liCountry" data-extension="+36" data-countryname="Hungary">
+																	<span class="spanFlag flag-HU"></span>
+																	<span class="countryName">Hungary</span>
+																	<br>
+																	<span class="countryExtension">+36</span>
+																</li>
+					
+																<li class="liCountry" data-extension="+354" data-countryname="Iceland">
+																	<span class="spanFlag flag-IS"></span>
+																	<span class="countryName">Iceland</span>
+																	<br>
+																	<span class="countryExtension">+354</span>
+																</li>
+					
+																<li class="liCountry" data-extension="+91" data-countryname="India">
+																	<span class="spanFlag flag-IN"></span>
+																	<span class="countryName">India</span>
+																	<br>
+																	<span class="countryExtension">+91</span>
+																</li>
+					
+																<li class="liCountry" data-extension="+62" data-countryname="Indonesia">
+																	<span class="spanFlag flag-ID"></span>
+																	<span class="countryName">Indonesia</span>
+																	<br>
+																	<span class="countryExtension">+62</span>
+																</li>
+					
+																<li class="liCountry" data-extension="+98" data-countryname="Iran">
+																	<span class="spanFlag flag-IR"></span>
+																	<span class="countryName">Iran</span>
+																	<br>
+																	<span class="countryExtension">+98</span>
+																</li>
+					
+																<li class="liCountry" data-extension="+964" data-countryname="Iraq">
+																	<span class="spanFlag flag-IQ"></span>
+																	<span class="countryName">Iraq</span>
+																	<br>
+																	<span class="countryExtension">+964</span>
+																</li>
+					
+																<li class="liCountry" data-extension="+353" data-countryname="Ireland">
+																	<span class="spanFlag flag-IE"></span>
+																	<span class="countryName">Ireland</span>
+																	<br>
+																	<span class="countryExtension">+353</span>
+																</li>
+					
+																<li class="liCountry" data-extension="+44-1624" data-countryname="Isle of Man">
+																	<span class="spanFlag flag-IM"></span>
+																	<span class="countryName">Isle
+																		of Man</span>
+																	<br>
+																	<span class="countryExtension">+44-1624</span>
+																</li>
+					
+																<li class="liCountry" data-extension="+972" data-countryname="Israel">
+																	<span class="spanFlag flag-IL"></span>
+																	<span class="countryName">Israel</span>
+																	<br>
+																	<span class="countryExtension">+972</span>
+																</li>
+					
+																<li class="liCountry" data-extension="+39" data-countryname="Italy">
+																	<span class="spanFlag flag-IT"></span>
+																	<span class="countryName">Italy</span>
+																	<br>
+																	<span class="countryExtension">+39</span>
+																</li>
+					
+																<li class="liCountry" data-extension="+225" data-countryname="Ivory Coast">
+																	<span class="spanFlag flag-CI"></span>
+																	<span class="countryName">Ivory
+																		Coast</span>
+																	<br>
+																	<span class="countryExtension">+225</span>
+																</li>
+					
+																<li class="liCountry" data-extension="+1-876" data-countryname="Jamaica">
+																	<span class="spanFlag flag-JM"></span>
+																	<span class="countryName">Jamaica</span>
+																	<br>
+																	<span class="countryExtension">+1-876</span>
+																</li>
+					
+																<li class="liCountry" data-extension="+81" data-countryname="Japan">
+																	<span class="spanFlag flag-JP"></span>
+																	<span class="countryName">Japan</span>
+																	<br>
+																	<span class="countryExtension">+81</span>
+																</li>
+					
+																<li class="liCountry" data-extension="+44-1534" data-countryname="Jersey">
+																	<span class="spanFlag flag-JE"></span>
+																	<span class="countryName">Jersey</span>
+																	<br>
+																	<span class="countryExtension">+44-1534</span>
+																</li>
+					
+																<li class="liCountry" data-extension="+962" data-countryname="Jordan">
+																	<span class="spanFlag flag-JO"></span>
+																	<span class="countryName">Jordan</span>
+																	<br>
+																	<span class="countryExtension">+962</span>
+																</li>
+					
+																<li class="liCountry" data-extension="+7" data-countryname="Kazakhstan">
+																	<span class="spanFlag flag-KZ"></span>
+																	<span class="countryName">Kazakhstan</span>
+																	<br>
+																	<span class="countryExtension">+7</span>
+																</li>
+					
+																<li class="liCountry" data-extension="+254" data-countryname="Kenya">
+																	<span class="spanFlag flag-KE"></span>
+																	<span class="countryName">Kenya</span>
+																	<br>
+																	<span class="countryExtension">+254</span>
+																</li>
+					
+																<li class="liCountry" data-extension="+686" data-countryname="Kiribati">
+																	<span class="spanFlag flag-KI"></span>
+																	<span class="countryName">Kiribati</span>
+																	<br>
+																	<span class="countryExtension">+686</span>
+																</li>
+					
+																<li class="liCountry" data-extension="+383" data-countryname="Kosovo">
+																	<span class="spanFlag flag-XK"></span>
+																	<span class="countryName">Kosovo</span>
+																	<br>
+																	<span class="countryExtension">+383</span>
+																</li>
+					
+																<li class="liCountry" data-extension="+965" data-countryname="Kuwait">
+																	<span class="spanFlag flag-KW"></span>
+																	<span class="countryName">Kuwait</span>
+																	<br>
+																	<span class="countryExtension">+965</span>
+																</li>
+					
+																<li class="liCountry" data-extension="+996" data-countryname="Kyrgyzstan">
+																	<span class="spanFlag flag-KG"></span>
+																	<span class="countryName">Kyrgyzstan</span>
+																	<br>
+																	<span class="countryExtension">+996</span>
+																</li>
+					
+																<li class="liCountry" data-extension="+856" data-countryname="Laos">
+																	<span class="spanFlag flag-LA"></span>
+																	<span class="countryName">Laos</span>
+																	<br>
+																	<span class="countryExtension">+856</span>
+																</li>
+					
+																<li class="liCountry" data-extension="+371" data-countryname="Latvia">
+																	<span class="spanFlag flag-LV"></span>
+																	<span class="countryName">Latvia</span>
+																	<br>
+																	<span class="countryExtension">+371</span>
+																</li>
+					
+																<li class="liCountry" data-extension="+961" data-countryname="Lebanon">
+																	<span class="spanFlag flag-LB"></span>
+																	<span class="countryName">Lebanon</span>
+																	<br>
+																	<span class="countryExtension">+961</span>
+																</li>
+					
+																<li class="liCountry" data-extension="+266" data-countryname="Lesotho">
+																	<span class="spanFlag flag-LS"></span>
+																	<span class="countryName">Lesotho</span>
+																	<br>
+																	<span class="countryExtension">+266</span>
+																</li>
+					
+																<li class="liCountry" data-extension="+231" data-countryname="Liberia">
+																	<span class="spanFlag flag-LR"></span>
+																	<span class="countryName">Liberia</span>
+																	<br>
+																	<span class="countryExtension">+231</span>
+																</li>
+					
+																<li class="liCountry" data-extension="+218" data-countryname="Libya">
+																	<span class="spanFlag flag-LY"></span>
+																	<span class="countryName">Libya</span>
+																	<br>
+																	<span class="countryExtension">+218</span>
+																</li>
+					
+																<li class="liCountry" data-extension="+423" data-countryname="Liechtenstein">
+																	<span class="spanFlag flag-LI"></span>
+																	<span class="countryName">Liechtenstein</span>
+																	<br>
+																	<span class="countryExtension">+423</span>
+																</li>
+					
+																<li class="liCountry" data-extension="+370" data-countryname="Lithuania">
+																	<span class="spanFlag flag-LT"></span>
+																	<span class="countryName">Lithuania</span>
+																	<br>
+																	<span class="countryExtension">+370</span>
+																</li>
+					
+																<li class="liCountry" data-extension="+352" data-countryname="Luxembourg">
+																	<span class="spanFlag flag-LU"></span>
+																	<span class="countryName">Luxembourg</span>
+																	<br>
+																	<span class="countryExtension">+352</span>
+																</li>
+					
+																<li class="liCountry" data-extension="+853" data-countryname="Macau">
+																	<span class="spanFlag flag-MO"></span>
+																	<span class="countryName">Macau</span>
+																	<br>
+																	<span class="countryExtension">+853</span>
+																</li>
+					
+																<li class="liCountry" data-extension="+389" data-countryname="Macedonia">
+																	<span class="spanFlag flag-MK"></span>
+																	<span class="countryName">Macedonia</span>
+																	<br>
+																	<span class="countryExtension">+389</span>
+																</li>
+					
+																<li class="liCountry" data-extension="+261" data-countryname="Madagascar">
+																	<span class="spanFlag flag-MG"></span>
+																	<span class="countryName">Madagascar</span>
+																	<br>
+																	<span class="countryExtension">+261</span>
+																</li>
+					
+																<li class="liCountry" data-extension="+265" data-countryname="Malawi">
+																	<span class="spanFlag flag-MW"></span>
+																	<span class="countryName">Malawi</span>
+																	<br>
+																	<span class="countryExtension">+265</span>
+																</li>
+					
+																<li class="liCountry" data-extension="+60" data-countryname="Malaysia">
+																	<span class="spanFlag flag-MY"></span>
+																	<span class="countryName">Malaysia</span>
+																	<br>
+																	<span class="countryExtension">+60</span>
+																</li>
+					
+																<li class="liCountry" data-extension="+960" data-countryname="Maldives">
+																	<span class="spanFlag flag-MV"></span>
+																	<span class="countryName">Maldives</span>
+																	<br>
+																	<span class="countryExtension">+960</span>
+																</li>
+					
+																<li class="liCountry" data-extension="+223" data-countryname="Mali">
+																	<span class="spanFlag flag-ML"></span>
+																	<span class="countryName">Mali</span>
+																	<br>
+																	<span class="countryExtension">+223</span>
+																</li>
+					
+																<li class="liCountry" data-extension="+356" data-countryname="Malta">
+																	<span class="spanFlag flag-MT"></span>
+																	<span class="countryName">Malta</span>
+																	<br>
+																	<span class="countryExtension">+356</span>
+																</li>
+					
+																<li class="liCountry" data-extension="+692" data-countryname="Marshall Islands">
+																	<span class="spanFlag flag-MH"></span>
+																	<span class="countryName">Marshall
+																		Islands</span>
+																	<br>
+																	<span class="countryExtension">+692</span>
+																</li>
+					
+																<li class="liCountry" data-extension="+222" data-countryname="Mauritania">
+																	<span class="spanFlag flag-MR"></span>
+																	<span class="countryName">Mauritania</span>
+																	<br>
+																	<span class="countryExtension">+222</span>
+																</li>
+					
+																<li class="liCountry" data-extension="+230" data-countryname="Mauritius">
+																	<span class="spanFlag flag-MU"></span>
+																	<span class="countryName">Mauritius</span>
+																	<br>
+																	<span class="countryExtension">+230</span>
+																</li>
+					
+																<li class="liCountry" data-extension="+262" data-countryname="Mayotte">
+																	<span class="spanFlag flag-YT"></span>
+																	<span class="countryName">Mayotte</span>
+																	<br>
+																	<span class="countryExtension">+262</span>
+																</li>
+					
+																<li class="liCountry" data-extension="+52" data-countryname="Mexico">
+																	<span class="spanFlag flag-MX"></span>
+																	<span class="countryName">Mexico</span>
+																	<br>
+																	<span class="countryExtension">+52</span>
+																</li>
+					
+																<li class="liCountry" data-extension="+691" data-countryname="Micronesia">
+																	<span class="spanFlag flag-FM"></span>
+																	<span class="countryName">Micronesia</span>
+																	<br>
+																	<span class="countryExtension">+691</span>
+																</li>
+					
+																<li class="liCountry" data-extension="+373" data-countryname="Moldova">
+																	<span class="spanFlag flag-MD"></span>
+																	<span class="countryName">Moldova</span>
+																	<br>
+																	<span class="countryExtension">+373</span>
+																</li>
+					
+																<li class="liCountry" data-extension="+377" data-countryname="Monaco">
+																	<span class="spanFlag flag-MC"></span>
+																	<span class="countryName">Monaco</span>
+																	<br>
+																	<span class="countryExtension">+377</span>
+																</li>
+					
+																<li class="liCountry" data-extension="+976" data-countryname="Mongolia">
+																	<span class="spanFlag flag-MN"></span>
+																	<span class="countryName">Mongolia</span>
+																	<br>
+																	<span class="countryExtension">+976</span>
+																</li>
+					
+																<li class="liCountry" data-extension="+382" data-countryname="Montenegro">
+																	<span class="spanFlag flag-ME"></span>
+																	<span class="countryName">Montenegro</span>
+																	<br>
+																	<span class="countryExtension">+382</span>
+																</li>
+					
+																<li class="liCountry" data-extension="+1-664" data-countryname="Montserrat">
+																	<span class="spanFlag flag-MS"></span>
+																	<span class="countryName">Montserrat</span>
+																	<br>
+																	<span class="countryExtension">+1-664</span>
+																</li>
+					
+																<li class="liCountry" data-extension="+212" data-countryname="Morocco">
+																	<span class="spanFlag flag-MA"></span>
+																	<span class="countryName">Morocco</span>
+																	<br>
+																	<span class="countryExtension">+212</span>
+																</li>
+					
+																<li class="liCountry" data-extension="+258" data-countryname="Mozambique">
+																	<span class="spanFlag flag-MZ"></span>
+																	<span class="countryName">Mozambique</span>
+																	<br>
+																	<span class="countryExtension">+258</span>
+																</li>
+					
+																<li class="liCountry" data-extension="+95" data-countryname="Myanmar">
+																	<span class="spanFlag flag-MM"></span>
+																	<span class="countryName">Myanmar</span>
+																	<br>
+																	<span class="countryExtension">+95</span>
+																</li>
+					
+																<li class="liCountry" data-extension="+264" data-countryname="Namibia">
+																	<span class="spanFlag flag-NA"></span>
+																	<span class="countryName">Namibia</span>
+																	<br>
+																	<span class="countryExtension">+264</span>
+																</li>
+					
+																<li class="liCountry" data-extension="+674" data-countryname="Nauru">
+																	<span class="spanFlag flag-NR"></span>
+																	<span class="countryName">Nauru</span>
+																	<br>
+																	<span class="countryExtension">+674</span>
+																</li>
+					
+																<li class="liCountry" data-extension="+977" data-countryname="Nepal">
+																	<span class="spanFlag flag-NP"></span>
+																	<span class="countryName">Nepal</span>
+																	<br>
+																	<span class="countryExtension">+977</span>
+																</li>
+					
+																<li class="liCountry" data-extension="+31" data-countryname="Netherlands">
+																	<span class="spanFlag flag-NL"></span>
+																	<span class="countryName">Netherlands</span>
+																	<br>
+																	<span class="countryExtension">+31</span>
+																</li>
+					
+																<li class="liCountry" data-extension="+599" data-countryname="BurunNetherlands Antillesdi">
+																	<span class="spanFlag flag-AN"></span>
+																	<span class="countryName">BurunNetherlands
+																		Antillesdi</span>
+																	<br>
+																	<span class="countryExtension">+599</span>
+																</li>
+					
+																<li class="liCountry" data-extension="+687" data-countryname="New Caledonia">
+																	<span class="spanFlag flag-NC"></span>
+																	<span class="countryName">New
+																		Caledonia</span>
+																	<br>
+																	<span class="countryExtension">+687</span>
+																</li>
+					
+																<li class="liCountry" data-extension="+64" data-countryname="New Zealand">
+																	<span class="spanFlag flag-NZ"></span>
+																	<span class="countryName">New
+																		Zealand</span>
+																	<br>
+																	<span class="countryExtension">+64</span>
+																</li>
+					
+																<li class="liCountry" data-extension="+505" data-countryname="Nicaragua">
+																	<span class="spanFlag flag-NI"></span>
+																	<span class="countryName">Nicaragua</span>
+																	<br>
+																	<span class="countryExtension">+505</span>
+																</li>
+					
+																<li class="liCountry" data-extension="+227" data-countryname="Niger">
+																	<span class="spanFlag flag-NE"></span>
+																	<span class="countryName">Niger</span>
+																	<br>
+																	<span class="countryExtension">+227</span>
+																</li>
+					
+																<li class="liCountry" data-extension="+234" data-countryname="Nigeria">
+																	<span class="spanFlag flag-NG"></span>
+																	<span class="countryName">Nigeria</span>
+																	<br>
+																	<span class="countryExtension">+234</span>
+																</li>
+					
+																<li class="liCountry" data-extension="+683" data-countryname="Niue">
+																	<span class="spanFlag flag-NU"></span>
+																	<span class="countryName">Niue</span>
+																	<br>
+																	<span class="countryExtension">+683</span>
+																</li>
+					
+																<li class="liCountry" data-extension="+850" data-countryname="North Korea">
+																	<span class="spanFlag flag-KP"></span>
+																	<span class="countryName">North
+																		Korea</span>
+																	<br>
+																	<span class="countryExtension">+850</span>
+																</li>
+					
+																<li class="liCountry" data-extension="+1-670" data-countryname="Northern Mariana Islands">
+																	<span class="spanFlag flag-MP"></span>
+																	<span class="countryName">Northern
+																		Mariana Islands</span>
+																	<br>
+																	<span class="countryExtension">+1-670</span>
+																</li>
+					
+																<li class="liCountry" data-extension="+47" data-countryname="Norway">
+																	<span class="spanFlag flag-NO"></span>
+																	<span class="countryName">Norway</span>
+																	<br>
+																	<span class="countryExtension">+47</span>
+																</li>
+					
+																<li class="liCountry" data-extension="+968" data-countryname="Oman">
+																	<span class="spanFlag flag-OM"></span>
+																	<span class="countryName">Oman</span>
+																	<br>
+																	<span class="countryExtension">+968</span>
+																</li>
+					
+																<li class="liCountry" data-extension="+92" data-countryname="Pakistan">
+																	<span class="spanFlag flag-PK"></span>
+																	<span class="countryName">Pakistan</span>
+																	<br>
+																	<span class="countryExtension">+92</span>
+																</li>
+					
+																<li class="liCountry" data-extension="+680" data-countryname="Palau">
+																	<span class="spanFlag flag-PW"></span>
+																	<span class="countryName">Palau</span>
+																	<br>
+																	<span class="countryExtension">+680</span>
+																</li>
+					
+																<li class="liCountry" data-extension="+970" data-countryname="Palestine">
+																	<span class="spanFlag flag-PS"></span>
+																	<span class="countryName">Palestine</span>
+																	<br>
+																	<span class="countryExtension">+970</span>
+																</li>
+					
+																<li class="liCountry" data-extension="+507" data-countryname="Panama">
+																	<span class="spanFlag flag-PA"></span>
+																	<span class="countryName">Panama</span>
+																	<br>
+																	<span class="countryExtension">+507</span>
+																</li>
+					
+																<li class="liCountry" data-extension="+675" data-countryname="Papua New Guinea">
+																	<span class="spanFlag flag-PG"></span>
+																	<span class="countryName">Papua
+																		New Guinea</span>
+																	<br>
+																	<span class="countryExtension">+675</span>
+																</li>
+					
+																<li class="liCountry" data-extension="+595" data-countryname="Paraguay">
+																	<span class="spanFlag flag-PY"></span>
+																	<span class="countryName">Paraguay</span>
+																	<br>
+																	<span class="countryExtension">+595</span>
+																</li>
+					
+																<li class="liCountry" data-extension="+51" data-countryname="Peru">
+																	<span class="spanFlag flag-PE"></span>
+																	<span class="countryName">Peru</span>
+																	<br>
+																	<span class="countryExtension">+51</span>
+																</li>
+					
+																<li class="liCountry" data-extension="+63" data-countryname="Philippines">
+																	<span class="spanFlag flag-PH"></span>
+																	<span class="countryName">Philippines</span>
+																	<br>
+																	<span class="countryExtension">+63</span>
+																</li>
+					
+																<li class="liCountry" data-extension="+64" data-countryname="Pitcairn">
+																	<span class="spanFlag flag-PN"></span>
+																	<span class="countryName">Pitcairn</span>
+																	<br>
+																	<span class="countryExtension">+64</span>
+																</li>
+					
+																<li class="liCountry" data-extension="+48" data-countryname="Poland">
+																	<span class="spanFlag flag-PL"></span>
+																	<span class="countryName">Poland</span>
+																	<br>
+																	<span class="countryExtension">+48</span>
+																</li>
+					
+																<li class="liCountry" data-extension="+351" data-countryname="Portugal">
+																	<span class="spanFlag flag-PT"></span>
+																	<span class="countryName">Portugal</span>
+																	<br>
+																	<span class="countryExtension">+351</span>
+																</li>
+					
+																<li class="liCountry" data-extension="+1-787" data-countryname="Puerto Rico">
+																	<span class="spanFlag flag-PR"></span>
+																	<span class="countryName">Puerto
+																		Rico</span>
+																	<br>
+																	<span class="countryExtension">+1-787</span>
+																</li>
+					
+																<li class="liCountry" data-extension="+974" data-countryname="Qatar">
+																	<span class="spanFlag flag-QA"></span>
+																	<span class="countryName">Qatar</span>
+																	<br>
+																	<span class="countryExtension">+974</span>
+																</li>
+					
+																<li class="liCountry" data-extension="+242" data-countryname="Republic of the Congo">
+																	<span class="spanFlag flag-CG"></span>
+																	<span class="countryName">Republic
+																		of the Congo</span>
+																	<br>
+																	<span class="countryExtension">+242</span>
+																</li>
+					
+																<li class="liCountry" data-extension="+262" data-countryname="Reunion">
+																	<span class="spanFlag flag-RE"></span>
+																	<span class="countryName">Reunion</span>
+																	<br>
+																	<span class="countryExtension">+262</span>
+																</li>
+					
+																<li class="liCountry" data-extension="+40" data-countryname="Romania">
+																	<span class="spanFlag flag-RO"></span>
+																	<span class="countryName">Romania</span>
+																	<br>
+																	<span class="countryExtension">+40</span>
+																</li>
+					
+																<li class="liCountry" data-extension="+7" data-countryname="Russia">
+																	<span class="spanFlag flag-RU"></span>
+																	<span class="countryName">Russia</span>
+																	<br>
+																	<span class="countryExtension">+7</span>
+																</li>
+					
+																<li class="liCountry" data-extension="+250" data-countryname="Rwanda">
+																	<span class="spanFlag flag-RW"></span>
+																	<span class="countryName">Rwanda</span>
+																	<br>
+																	<span class="countryExtension">+250</span>
+																</li>
+					
+																<li class="liCountry" data-extension="+590" data-countryname="Saint Barthelemy">
+																	<span class="spanFlag flag-BL"></span>
+																	<span class="countryName">Saint
+																		Barthelemy</span>
+																	<br>
+																	<span class="countryExtension">+590</span>
+																</li>
+					
+																<li class="liCountry" data-extension="+290" data-countryname="Saint Helena">
+																	<span class="spanFlag flag-SH"></span>
+																	<span class="countryName">Saint
+																		Helena</span>
+																	<br>
+																	<span class="countryExtension">+290</span>
+																</li>
+					
+																<li class="liCountry" data-extension="+1-869" data-countryname="Saint Kitts and Nevis">
+																	<span class="spanFlag flag-KN"></span>
+																	<span class="countryName">Saint
+																		Kitts and Nevis</span>
+																	<br>
+																	<span class="countryExtension">+1-869</span>
+																</li>
+					
+																<li class="liCountry" data-extension="+1-758" data-countryname="Saint Lucia">
+																	<span class="spanFlag flag-LC"></span>
+																	<span class="countryName">Saint
+																		Lucia</span>
+																	<br>
+																	<span class="countryExtension">+1-758</span>
+																</li>
+					
+																<li class="liCountry" data-extension="+590" data-countryname="Saint Martin">
+																	<span class="spanFlag flag-MF"></span>
+																	<span class="countryName">Saint
+																		Martin</span>
+																	<br>
+																	<span class="countryExtension">+590</span>
+																</li>
+					
+																<li class="liCountry" data-extension="+508" data-countryname="Saint Pierre and Miquelon">
+																	<span class="spanFlag flag-PM"></span>
+																	<span class="countryName">Saint
+																		Pierre and
+																		Miquelon</span>
+																	<br>
+																	<span class="countryExtension">+508</span>
+																</li>
+					
+																<li class="liCountry" data-extension="+1-784" data-countryname="Saint Vincent and the Grenadines">
+																	<span class="spanFlag flag-VC"></span>
+																	<span class="countryName">Saint
+																		Vincent and the
+																		Grenadines</span>
+																	<br>
+																	<span class="countryExtension">+1-784</span>
+																</li>
+					
+																<li class="liCountry" data-extension="+685" data-countryname="Samoa">
+																	<span class="spanFlag flag-WS"></span>
+																	<span class="countryName">Samoa</span>
+																	<br>
+																	<span class="countryExtension">+685</span>
+																</li>
+					
+																<li class="liCountry" data-extension="+378" data-countryname="San Marino">
+																	<span class="spanFlag flag-SM"></span>
+																	<span class="countryName">San
+																		Marino</span>
+																	<br>
+																	<span class="countryExtension">+378</span>
+																</li>
+					
+																<li class="liCountry" data-extension="+239" data-countryname="Sao Tome and Principe">
+																	<span class="spanFlag flag-ST"></span>
+																	<span class="countryName">Sao
+																		Tome and
+																		Principe</span>
+																	<br>
+																	<span class="countryExtension">+239</span>
+																</li>
+					
+																<li class="liCountry" data-extension="+966" data-countryname="Saudi Arabia">
+																	<span class="spanFlag flag-SA"></span>
+																	<span class="countryName">Saudi
+																		Arabia</span>
+																	<br>
+																	<span class="countryExtension">+966</span>
+																</li>
+					
+																<li class="liCountry" data-extension="+221" data-countryname="Senegal">
+																	<span class="spanFlag flag-SN"></span>
+																	<span class="countryName">Senegal</span>
+																	<br>
+																	<span class="countryExtension">+221</span>
+																</li>
+					
+																<li class="liCountry" data-extension="+381" data-countryname="Serbia">
+																	<span class="spanFlag flag-RS"></span>
+																	<span class="countryName">Serbia</span>
+																	<br>
+																	<span class="countryExtension">+381</span>
+																</li>
+					
+																<li class="liCountry" data-extension="+248" data-countryname="Seychelles">
+																	<span class="spanFlag flag-SC"></span>
+																	<span class="countryName">Seychelles</span>
+																	<br>
+																	<span class="countryExtension">+248</span>
+																</li>
+					
+																<li class="liCountry" data-extension="+232" data-countryname="Sierra Leone">
+																	<span class="spanFlag flag-SL"></span>
+																	<span class="countryName">Sierra
+																		Leone</span>
+																	<br>
+																	<span class="countryExtension">+232</span>
+																</li>
+					
+																<li class="liCountry" data-extension="+65" data-countryname="Singapore">
+																	<span class="spanFlag flag-SG"></span>
+																	<span class="countryName">Singapore</span>
+																	<br>
+																	<span class="countryExtension">+65</span>
+																</li>
+					
+																<li class="liCountry" data-extension="+1-721" data-countryname="Sint Maarten">
+																	<span class="spanFlag flag-SX"></span>
+																	<span class="countryName">Sint
+																		Maarten</span>
+																	<br>
+																	<span class="countryExtension">+1-721</span>
+																</li>
+					
+																<li class="liCountry" data-extension="+421" data-countryname="Slovakia">
+																	<span class="spanFlag flag-SK"></span>
+																	<span class="countryName">Slovakia</span>
+																	<br>
+																	<span class="countryExtension">+421</span>
+																</li>
+					
+																<li class="liCountry" data-extension="+386" data-countryname="Slovenia">
+																	<span class="spanFlag flag-SI"></span>
+																	<span class="countryName">Slovenia</span>
+																	<br>
+																	<span class="countryExtension">+386</span>
+																</li>
+					
+																<li class="liCountry" data-extension="+677" data-countryname="Solomon Islands">
+																	<span class="spanFlag flag-SB"></span>
+																	<span class="countryName">Solomon
+																		Islands</span>
+																	<br>
+																	<span class="countryExtension">+677</span>
+																</li>
+					
+																<li class="liCountry" data-extension="+252" data-countryname="Somalia">
+																	<span class="spanFlag flag-SO"></span>
+																	<span class="countryName">Somalia</span>
+																	<br>
+																	<span class="countryExtension">+252</span>
+																</li>
+					
+																<li class="liCountry" data-extension="+27" data-countryname="South Africa">
+																	<span class="spanFlag flag-ZA"></span>
+																	<span class="countryName">South
+																		Africa</span>
+																	<br>
+																	<span class="countryExtension">+27</span>
+																</li>
+					
+																<li class="liCountry" data-extension="+82" data-countryname="South Korea">
+																	<span class="spanFlag flag-KR"></span>
+																	<span class="countryName">South
+																		Korea</span>
+																	<br>
+																	<span class="countryExtension">+82</span>
+																</li>
+					
+																<li class="liCountry" data-extension="+211" data-countryname="South Sudan">
+																	<span class="spanFlag flag-SS"></span>
+																	<span class="countryName">South
+																		Sudan</span>
+																	<br>
+																	<span class="countryExtension">+211</span>
+																</li>
+					
+																<li class="liCountry" data-extension="+34" data-countryname="Spain">
+																	<span class="spanFlag flag-ES"></span>
+																	<span class="countryName">Spain</span>
+																	<br>
+																	<span class="countryExtension">+34</span>
+																</li>
+					
+																<li class="liCountry" data-extension="+94" data-countryname="Sri Lanka">
+																	<span class="spanFlag flag-LK"></span>
+																	<span class="countryName">Sri
+																		Lanka</span>
+																	<br>
+																	<span class="countryExtension">+94</span>
+																</li>
+					
+																<li class="liCountry" data-extension="+249" data-countryname="Sudan">
+																	<span class="spanFlag flag-SD"></span>
+																	<span class="countryName">Sudan</span>
+																	<br>
+																	<span class="countryExtension">+249</span>
+																</li>
+					
+																<li class="liCountry" data-extension="+597" data-countryname="Suriname">
+																	<span class="spanFlag flag-SR"></span>
+																	<span class="countryName">Suriname</span>
+																	<br>
+																	<span class="countryExtension">+597</span>
+																</li>
+					
+																<li class="liCountry" data-extension="+47" data-countryname="Svalbard and Jan Mayen">
+																	<span class="spanFlag flag-SJ"></span>
+																	<span class="countryName">Svalbard
+																		and Jan Mayen</span>
+																	<br>
+																	<span class="countryExtension">+47</span>
+																</li>
+					
+																<li class="liCountry" data-extension="+268" data-countryname="Swaziland">
+																	<span class="spanFlag flag-SZ"></span>
+																	<span class="countryName">Swaziland</span>
+																	<br>
+																	<span class="countryExtension">+268</span>
+																</li>
+					
+																<li class="liCountry" data-extension="+46" data-countryname="Sweden">
+																	<span class="spanFlag flag-SE"></span>
+																	<span class="countryName">Sweden</span>
+																	<br>
+																	<span class="countryExtension">+46</span>
+																</li>
+					
+																<li class="liCountry" data-extension="+41" data-countryname="Switzerland">
+																	<span class="spanFlag flag-CH"></span>
+																	<span class="countryName">Switzerland</span>
+																	<br>
+																	<span class="countryExtension">+41</span>
+																</li>
+					
+																<li class="liCountry" data-extension="+963" data-countryname="Syria">
+																	<span class="spanFlag flag-SY"></span>
+																	<span class="countryName">Syria</span>
+																	<br>
+																	<span class="countryExtension">+963</span>
+																</li>
+					
+																<li class="liCountry" data-extension="+886" data-countryname="Taiwan">
+																	<span class="spanFlag flag-TW"></span>
+																	<span class="countryName">Taiwan</span>
+																	<br>
+																	<span class="countryExtension">+886</span>
+																</li>
+					
+																<li class="liCountry" data-extension="+992" data-countryname="Tajikistan">
+																	<span class="spanFlag flag-TJ"></span>
+																	<span class="countryName">Tajikistan</span>
+																	<br>
+																	<span class="countryExtension">+992</span>
+																</li>
+					
+																<li class="liCountry" data-extension="+257" data-countryname="Burundi">
+																	<span class="spanFlag flag-BI"></span>
+																	<span class="countryName">Burundi</span>
+																	<br>
+																	<span class="countryExtension">+257</span>
+																</li>
+					
+																<li class="liCountry" data-extension="+255" data-countryname="Tanzania">
+																	<span class="spanFlag flag-TZ"></span>
+																	<span class="countryName">Tanzania</span>
+																	<br>
+																	<span class="countryExtension">+255</span>
+																</li>
+					
+																<li class="liCountry" data-extension="+66" data-countryname="Thailand">
+																	<span class="spanFlag flag-TH"></span>
+																	<span class="countryName">Thailand</span>
+																	<br>
+																	<span class="countryExtension">+66</span>
+																</li>
+					
+																<li class="liCountry" data-extension="+228" data-countryname="Togo">
+																	<span class="spanFlag flag-TG"></span>
+																	<span class="countryName">Togo</span>
+																	<br>
+																	<span class="countryExtension">+228</span>
+																</li>
+					
+																<li class="liCountry" data-extension="+690" data-countryname="Tokelau">
+																	<span class="spanFlag flag-TK"></span>
+																	<span class="countryName">Tokelau</span>
+																	<br>
+																	<span class="countryExtension">+690</span>
+																</li>
+					
+																<li class="liCountry" data-extension="+676" data-countryname="Tonga">
+																	<span class="spanFlag flag-TO"></span>
+																	<span class="countryName">Tonga</span>
+																	<br>
+																	<span class="countryExtension">+676</span>
+																</li>
+					
+																<li class="liCountry" data-extension="+1-868" data-countryname="Trinidad and Tobago">
+																	<span class="spanFlag flag-TT"></span>
+																	<span class="countryName">Trinidad
+																		and Tobago</span>
+																	<br>
+																	<span class="countryExtension">+1-868</span>
+																</li>
+					
+																<li class="liCountry" data-extension="+216" data-countryname="Tunisia">
+																	<span class="spanFlag flag-TN"></span>
+																	<span class="countryName">Tunisia</span>
+																	<br>
+																	<span class="countryExtension">+216</span>
+																</li>
+					
+																<li class="liCountry" data-extension="+90" data-countryname="Turkey">
+																	<span class="spanFlag flag-TR"></span>
+																	<span class="countryName">Turkey</span>
+																	<br>
+																	<span class="countryExtension">+90</span>
+																</li>
+					
+																<li class="liCountry" data-extension="+993" data-countryname="Turkmenistan">
+																	<span class="spanFlag flag-TM"></span>
+																	<span class="countryName">Turkmenistan</span>
+																	<br>
+																	<span class="countryExtension">+993</span>
+																</li>
+					
+																<li class="liCountry" data-extension="+1-649" data-countryname="Turks and Caicos Islands">
+																	<span class="spanFlag flag-TC"></span>
+																	<span class="countryName">Turks
+																		and Caicos
+																		Islands</span>
+																	<br>
+																	<span class="countryExtension">+1-649</span>
+																</li>
+					
+																<li class="liCountry" data-extension="+688" data-countryname="Tuvalu">
+																	<span class="spanFlag flag-TV"></span>
+																	<span class="countryName">Tuvalu</span>
+																	<br>
+																	<span class="countryExtension">+688</span>
+																</li>
+					
+																<li class="liCountry" data-extension="+1-340" data-countryname="U.S. Virgin Islands">
+																	<span class="spanFlag flag-VI"></span>
+																	<span class="countryName">U.S.
+																		Virgin Islands</span>
+																	<br>
+																	<span class="countryExtension">+1-340</span>
+																</li>
+					
+																<li class="liCountry" data-extension="+256" data-countryname="Uganda">
+																	<span class="spanFlag flag-UG"></span>
+																	<span class="countryName">Uganda</span>
+																	<br>
+																	<span class="countryExtension">+256</span>
+																</li>
+					
+																<li class="liCountry" data-extension="+380" data-countryname="Ukraine">
+																	<span class="spanFlag flag-UA"></span>
+																	<span class="countryName">Ukraine</span>
+																	<br>
+																	<span class="countryExtension">+380</span>
+																</li>
+					
+																<li class="liCountry" data-extension="+971" data-countryname="United Arab Emirates">
+																	<span class="spanFlag flag-AE"></span>
+																	<span class="countryName">United
+																		Arab Emirates</span>
+																	<br>
+																	<span class="countryExtension">+971</span>
+																</li>
+					
+																<li class="liCountry" data-extension="+44" data-countryname="United Kingdom">
+																	<span class="spanFlag flag-GB"></span>
+																	<span class="countryName">United
+																		Kingdom</span>
+																	<br>
+																	<span class="countryExtension">+44</span>
+																</li>
+					
+																<li class="liCountry" data-extension="+1" data-countryname="United States">
+																	<span class="spanFlag flag-US"></span>
+																	<span class="countryName">United
+																		States</span>
+																	<br>
+																	<span class="countryExtension">+1</span>
+																</li>
+					
+																<li class="liCountry" data-extension="+598" data-countryname="Uruguay">
+																	<span class="spanFlag flag-UY"></span>
+																	<span class="countryName">Uruguay</span>
+																	<br>
+																	<span class="countryExtension">+598</span>
+																</li>
+					
+																<li class="liCountry" data-extension="+998" data-countryname="Uzbekistan">
+																	<span class="spanFlag flag-UZ"></span>
+																	<span class="countryName">Uzbekistan</span>
+																	<br>
+																	<span class="countryExtension">+998</span>
+					
+																</li>
+					
+																<li class="liCountry" data-extension="+678" data-countryname="Vanuatu">
+																	<span class="spanFlag flag-VU"></span>
+																	<span class="countryName">Vanuatu</span>
+																	<br>
+																	<span class="countryExtension">+678</span>
+																</li>
+					
+																<li class="liCountry" data-extension="+379" data-countryname="Vatican">
+																	<span class="spanFlag flag-VA"></span>
+																	<span class="countryName">Vatican</span>
+																	<br>
+																	<span class="countryExtension">+379</span>
+																</li>
+					
+																<li class="liCountry" data-extension="+58" data-countryname="Venezuela">
+																	<span class="spanFlag flag-VE"></span>
+																	<span class="countryName">Venezuela</span>
+																	<br>
+																	<span class="countryExtension">+58</span>
+																</li>
+					
+																<li class="liCountry" data-extension="+84" data-countryname="Vietnam">
+																	<span class="spanFlag flag-VN"></span>
+																	<span class="countryName">Vietnam</span>
+																	<br>
+																	<span class="countryExtension">+84</span>
+																</li>
+					
+																<li class="liCountry" data-extension="+681" data-countryname="Wallis and Futuna">
+																	<span class="spanFlag flag-WF"></span>
+																	<span class="countryName">Wallis
+																		and Futuna</span>
+																	<br>
+																	<span class="countryExtension">+681</span>
+					
+																</li>
+					
+																<li class="liCountry" data-extension="+212" data-countryname="Western Sahara">
+																	<span class="spanFlag flag-EH"></span>
+																	<span class="countryName">Western
+																		Sahara</span>
+																	<br>
+																	<span class="countryExtension">+212</span>
+					
+																</li>
+					
+																<li class="liCountry" data-extension="+967" data-countryname="Yemen">
+																	<span class="spanFlag flag-YE"></span>
+																	<span class="countryName">Yemen</span>
+																	<br>
+																	<span class="countryExtension">+967</span>
+					
+																</li>
+					
+																<li class="liCountry" data-extension="+260" data-countryname="Zambia">
+																	<span class="spanFlag flag-ZM"></span>
+																	<span class="countryName">Zambia</span>
+																	<br>
+																	<span class="countryExtension">+260</span>
+																</li>
+					
+																<li class="liCountry" data-extension="+263" data-countryname="Zimbabwe">
+																	<span class="spanFlag flag-ZW"></span>
+																	<span class="countryName">Zimbabwe</span>
+																	<br>
+																	<span class="countryExtension">+263</span>
+																</li>
+					
+													</ul>
+														</div>
+														<!-- END DIV CONTENT -->
+													</div>
+
+									
+										<!-- start divDeletePhoneNumber -->
+										<!-- <div id="divDeletePhoneNumber" class="divProfileForm marginTop10 hidden" align="left">
+												<div class="mbsc-form-group no-margin width100 paddingLeft15 paddingRight15">
+													<label for="name" class="labelFormDonate translate">
+														<span class="translateInput" data-i18n="phoneNumber"></span>
+														<input readonly id="userPhone" name="phone" type="text" data-input-style="outline"
+															class="defaultInput marginBottom10" />
+														<span class="phoneAdvice" data-i18n="deletePhoneNoti"></span>
+													</label>
+												</div>
+												<button id="deletePhoneNumber" class="width100 marginTop10 translate marginBottom10">
+													<div class="loadingButton displayNone">
+														<i class="mbsc-ic mbsc-ic-fa-spinner"></i>
+													</div>
+													<span class="textButton" data-i18n="delete"></span>
+												</button>
+											</div> -->
+										<!-- end div deletePhoneNumber -->
+								</div>
+								<!-- END TAB BASIC -->
+
+								<!-- START TAB PLUS -->
+								<div id="apps-tab-plus" class="md-apps-tab">
+									<!-- div basic verification -->
+								<div id="basicVerification" class="levelVerificationDivs marginTop60">
+										<!-- <span data-i18n="plusTab"></span> <span id="verificationBadge" class="verificationBadge displayNone" data-i18n="verifiedText"> <i class="mbsc-ic mbsc-ic-fa-check"></i></span> -->
+										<p>
+												<span data-i18n="plusFeature1"></span>
+												<!-- <br>
+												- <span data-i18n="plusFeature2"></span> -->
+												<br>
+												- <span data-i18n="plusFeature3"></span>
+										</p>
+										<p>
+												<b><span data-i18n="requeriments"></span> </b> <span data-i18n="requeriments1"></span>
+										</p>
+										<button id="buttonStartVerifyDocuments" class="buttonDefault marginTop10 translate marginBottom10 width100">
+											<div class="loadingButton displayNone">
+												<i class="mbsc-ic mbsc-ic-fa-spinner"></i>
+											</div>
+											<span class="textButton" data-i18n="getVerified"></span>
+										</button>
+								</div>
+								<div id="divVerifyDocuments" class="displayNone">
+									
+
+										<form id="submitPhotosForm" class="md-login-form" mbsc-enhance mbsc-form autocomplete="off">
+												<p class="introText" data-i18n="toGetVerified">
+											
+													</p>
+													<p class="noMarginBottom" data-i18n="selectOne">
+														
+													</p>
+													<div id="divSelectDocument" mbsc-form>
+														<div class="mbsc-form-group no-margin">
+															<label>
+																	<input type="radio" id="nationalIdCheck" class="checkBoxDocuments" value="nationalId" name="documentSelection" checked>
+																	<span data-i18n="nationalId"></span>
+															</label>
+															<label>
+																	<input type="radio" id="passportCheck" class="checkBoxDocuments" value="passport" name="documentSelection">
+																	<span data-i18n="passport">
+															</label>
+														</div>
+													</div>
+											<div id="documentsNationalId" class="">
+												<div class="mbsc-form-group no-margin width100">
+													<div id="divImage1" class="divUploadImages marginBottom10 translate">
+																<div id="divImageDocument1">
+																		<img src="assets/images/selectImage.svg">
+																</div>
+																<div id="divWrongImage1" class="divIconWrongImage displayNone">
+																	<i class="mbsc-ic mbsc-ic-material-close"></i>
+																</div>
+																<div id="divIconWrontImage1" class="displayNone divWrongSelfie">
+																		Upload a new image
+																</div>
+
+																<div id="divImgVerified1" class="divIconWrongImage displayNone colorGreen borderGreen">
+																		<i class="mbsc-ic mbsc-ic-fa-check colorGreen"></i>
+																	</div>
+																	<div id="divIconImgVerified1" class="displayNone divWrongSelfie colorGreen">
+																			Verified
+																	</div>
+													</div>
+													<div id="divImage2" class="divUploadImages marginBottom10 translate">
+															<div id="divImageDocument2">
+																	<img src="assets/images/selectImage.svg">
+																</div>
+																<div id="divWrongImage2" class="divIconWrongImage displayNone">
+																	<i class="mbsc-ic mbsc-ic-material-close"></i>
+																</div>
+																<div id="divIconWrontImage2" class="displayNone divWrongSelfie">
+																		Upload a new image
+																</div>
+
+																<div id="divImgVerified2" class="divIconWrongImage displayNone colorGreen borderGreen">
+																	<i class="mbsc-ic mbsc-ic-fa-check colorGreen"></i>
+																</div>
+																<div id="divIconImgVerified2" class="displayNone divWrongSelfie colorGreen">
+																		Verified
+																</div>
+				
+													</div>
+													<input type="file" id="inputImage1" class="displayNone">
+													<input type="file" id="inputImage2" class="displayNone">
+												</div>
+											</div>
+											<div id="documentPassport" class="displayNone">
+													<div class="mbsc-form-group no-margin width100">
+														<div id="divImagePassport" class="divUploadImages marginBottom10 translate">
+															<i class="mbsc-ic mbsc-ic-fa-address-card-o"></i>
+															<span data-i18n="selectImageText"></span>
+														</div>
+														<input type="file" id="inputImagePassport" class="displayNone">
+													</div>
+												</div>
+
+												<button id="buttonBackToGetVerified" class="width77 marginTop10 translate marginBottom10">
+														<div class="loadingButton displayNone">
+															<i class="mbsc-ic mbsc-ic-fa-spinner"></i>
+														</div>
+														<span class="textButton" data-i18n="back"></span>
+													</button>
+
+												<button id="buttonUploadPhotos" class="width77 marginTop10 translate marginBottom10">
+													<div class="loadingButton displayNone">
+														<i class="mbsc-ic mbsc-ic-fa-spinner"></i>
+													</div>
+													<span class="textButton" data-i18n="continue"></span>
+												</button>
+											</form>
+								</div>
+
+								<div id="divVerifySelfie" class="displayNone">
+										<form id="submitSelfieForm" class="md-login-form" mbsc-enhance mbsc-form autocomplete="off">
+												<p align="left" class="introText" data-i18n="">
+														<span data-i18n="uploadSelfieText"></span>
+														
+												</p>
+												<div class="mbsc-form-group margin5 width100-15">
+													<div id="divSelfie" class="divUploadImages marginBottom10 translate">
+														<div id="divImagesSelfie">
+															<img src="assets/images/verify_gif_v2.gif">
+														</div>
+														<div id="divIconWrongSelfie" class="divIconWrongImage displayNone">
+															<i class="mbsc-ic mbsc-ic-material-close"></i>
+														</div>
+														<div id="divWrongSelfie" class="displayNone divWrongSelfie">
+																Upload a new image
+														</div>
+
+														<div id="divImgVerifiedSelfie" class="divIconWrongImage displayNone colorGreen borderGreen">
+																<i class="mbsc-ic mbsc-ic-fa-check colorGreen"></i>
+															</div>
+															<div id="divIconImgVerifiedSelfie" class="displayNone divWrongSelfie colorGreen">
+																	Verified
+															</div>
+															
+													</div>
+													<div id="divVerificationCode" class="divUploadImages marginBottom10 translate">
+															<p align="left" data-i18n="writeByHand"></p>
+															<p align="left" class="defaultColor" id="pCode"></p>
+															<p align="left" class="defaultColor" id="pDate"></p>
+															<p align="left" class="defaultColor" id="pBitTubeWord">BitTube</p>
+													</div>
+														<input type="file" id="inputSelfie" class="displayNone">
+												</div>
+												<!-- <p align="left" class="introText translate noMarginTop">
+														<span data-i18n="uploadSelfie3"></span>
+												</p> -->
+
+												<div class="mbsc-form-group width100-15 inlineFlex marginTop20">
+														<label for="fullName" class="labelFormDonate translate width100">
+															<span id="labelAccountName" class="translateInput"
+																data-i18n="nameAndSurname"></span>
+															<input id="fullName" type="text" name="fullName" class="defaultInput" placeholder="Name and surname"
+																data-input-style="outline" required="required" class="mainInput" />
+														</label>
+													</div>
+					
+												<button id="backToDocuments" class="width50 marginTop10 translate marginBottom10">
+														<div class="loadingButton displayNone">
+															<i class="mbsc-ic mbsc-ic-fa-spinner"></i>
+														</div>
+														<span class="textButton" data-i18n="back"></span>
+													</button>
+												<button id="buttonUploadSelfie" class="width77 marginTop10 translate marginBottom10">
+													<div class="loadingButton displayNone">
+														<i class="mbsc-ic mbsc-ic-fa-spinner"></i>
+													</div>
+													<span class="textButton" data-i18n="continue"></span>
+												</button>
+											</form>
+											
+								</div>
+								
+								<!-- end div basic verification -->
+								</div>
+								<!-- END TAB PLUS -->
+								
+								
+								
+							</div>
+					</div>
+					<!-- END DIV GET VERIFIED -->
+
+
+					<!-- START DIV CONVERT MY TUBES -->
+					<div id="divConvertTubes" class="displayNone translate divsAccountView">
+						<div align="center" class="divProfileForm marginTop10">
+							<form id="linkBankForm" class="md-login-form displayNone" mbsc-enhance mbsc-form autocomplete="off">
+								<div class="divHeaderProfile">
+									<span data-i18n="convertMyTUBEs"></span>
+									<i class="mbsc-ic mbsc-ic-ion-ios7-close-outline closeSectionProfile closeConvertTubes"></i>
+								</div>
+								<p align="left" class="paddingLeft10 paddingRight10 translate" data-i18n="convertTUBEsText"></p>
+
+								<div class="mbsc-form-group margin5 width100-15 inlineFlex">
+									<label for="accountName" class="labelFormDonate translate width100">
+										<span id="labelAccountName" class="translateInput dynamicLabel labelBank"
+											data-i18n="accountName"></span>
+										<input id="accountName" type="text" name="accountName" class="defaultInput bankInput"
+											data-input-style="outline" required="required" class="mainInput" />
+									</label>
+								</div>
+
+								<div class="mbsc-form-group margin5 width100-15 inlineFlex">
+									<label for="firstName" class="labelFormDonate translate ">
+										<span id="labelFirstName" class="translateInput dynamicLabel labelBank"
+											data-i18n="firstName"></span>
+										<input id="firstName" type="text" name="firstName" class="defaultInput bankInput"
+											data-input-style="outline" required="required" class="mainInput" />
+									</label>
+
+									<label for="lastName" class="labelFormDonate translate ">
+										<span id="labelLastName" class="translateInput dynamicLabel labelBank" data-i18n="lastName"></span>
+										<input id="lastName" type="text" name="lastName" class="defaultInput bankInput"
+											data-input-style="outline" required="required" class="mainInput" />
+									</label>
+								</div>
+								<div class="mbsc-form-group margin5 width100-15 inlineFlex">
+									<label for="userIBAN" class="labelFormDonate translate">
+										<span id="labelIBAN" class="translateInput dynamicLabel labelBank" data-i18n="accountNumber"></span>
+										<input id="userIBAN" type="text" name="userIBAN" class="defaultInput bankInput"
+											data-input-style="outline" required="required" class="mainInput" />
+									</label>
+									<label for="bic-swift" class="labelFormDonate translate">
+										<span id="labelBIC" class="translateInput dynamicLabel labelBank" data-i18n="">BIC/SWIFT</span>
+										<input id="bic-swift" type="text" name="bic-swift" class="defaultInput bankInput"
+											data-input-style="outline" class="mainInput" />
+									</label>
+								</div>
+								<!-- <p align="left" class="paddingLeft10 paddingRight10 marginTop5" data-i18n="verifyBankText"> </p> -->
+								<button id="linkBankButton" class="width77 marginTop10 translate marginBottom10">
+									<div class="loadingButton displayNone">
+										<i class="mbsc-ic mbsc-ic-fa-spinner"></i>
+									</div>
+									<span class="textButton" data-i18n="verifyBankAccount"></span>
+								</button>
+							</form>
+
+
+							<form id="formVerifyBank" class="md-login-form displayNone translate" mbsc-enhance mbsc-form
+								autocomplete="off">
+
+
+								<div class="divHeaderProfile">
+									<span data-i18n="convertMyTUBEs"></span>
+									<i class="mbsc-ic mbsc-ic-ion-ios7-close-outline closeSectionProfile closeConvertTubes"></i>
+								</div>
+								<p align="left" class="paddingLeft10 paddingRight10 marginBottom20" data-i18n="codeBankTransfer"></p>
+								<div id="divVerifyAccount" class="mbsc-form-group margin5 width100">
+									<label for="verificationCode" class="labelFormDonate translate ">
+										<span id="labelVerificationBank" class="translateInput dynamicLabel labelBank"
+											data-i18n="verificationCode"></span>
+										<input id="verificationCode" type="text" name="verificationCode" class="defaultInput bankInput"
+											data-input-style="outline" required="required" class="mainInput" />
+									</label>
+								</div>
+
+								<button id="verifyBankAccount" class="marginTop10 translate marginBottom10">
+									<div class="loadingButton displayNone">
+										<i class="mbsc-ic mbsc-ic-fa-spinner"></i>
+									</div>
+									<span class="textButton" data-i18n="verify"></span>
+								</button>
+							</form>
+
+							<form id="formConvertTubes" class="md-login-form displayNone translate" mbsc-enhance mbsc-form
+								autocomplete="off">
+								<div class="divHeaderProfile">
+									<span data-i18n="convertMyTUBEs"></span>
+									<i class="mbsc-ic mbsc-ic-ion-ios7-close-outline closeSectionProfile closeConvertTubes"></i>
+								</div>
+
+								<div class="md-donate-balance marginTop10 noMarginBottom positionRelative">
+									<span>
+										<b><span data-i18n="availableBalance"></span></b>
+										<div id="loadingAvailable" class="loadingAirtime loadingWalletAmount loadingAvailable">
+											<img src="assets/images/bittube-20.svg" style="margin-left: 15px;">
+										</div>
+										<span id="available" class="tube-balance displayNone"></span>
+									</span>
+								</div>
+
+								<div id="changeWalletDiv" class="mbsc-form-group no-margin width100 positionRelative">
+
+									<label class="labelCoinSelect no-margin">
+
+										<select id="changeWallet" data-input-style="outline" disabled="disabled">
+
+										</select>
+									</label>
+
+								</div>
+
+								<div class="mbsc-form-group margin5 width100 floatLeft">
+									<label for="transferTUBEs" class="labelFormDonate translate ">
+										<!-- <span class="translateInput dynamicLabel labelBank" data-i18n="" >Verification code</span> -->
+										<input id="transferTUBEs" type="text" name="verificationCode" class="bankInput"
+											data-input-style="outline" required="required" class="mainInput" />
+
+										<img id="minusAmountWithdraw" src="/assets/images/minus.svg" class="iconsInput">
+										<img id="plusAmountWithdraw" src="/assets/images/plus.svg" class="iconsInput">
+										<button class="buttonDefault no-margin translate" id="buttonTransferTUBEs" align="center"
+											disabled="disabled">
+											<span class="textButton" data-i18n="send">
+											</span>
+										</button>
+									</label>
+								</div>
+
+								<p align="left" class="paddingLeft10 paddingRight10 translate">
+									<div class="positionRelative paddingLeftRight13 marginTop95" align="left">
+											<span data-i18n="youWillTransfer"></span><span id="quantityToTransfer"></span> <br>
+											<span class="defaultColor" data-i18n="importantBankInfo"></span>
+											<i id="iconInfoFee" class="mbsc-ic mbsc-ic-fa-question-circle defaultColor iconInfoFee"></i>
+											<span id="spanFeeHint" class="tooltipConvertTubes translate" data-i18n="tooltipConvertTubes"></span>
+									</div>
+								</p>
+
+
+								<div id="divAccountInfo" class="translate">
+									<p align="left">
+										<b><span data-i18n="to">:</span> </b> <span id="accountUserName"></span>
+									</p>
+									<p align="left">
+										<b><span data-i18n="accountName"></span>: </b> <span id="bankName"></span>
+									</p>
+									<p align="left">
+										<b><span class="translate" data-i18n="accountNumber"></span>: </b> <span id="bankIBAN"></span>
+									</p>
+									<button id="modifyAccount" class="marginTop10 translate">
+										<div class="loadingButton displayNone">
+											<i class="mbsc-ic mbsc-ic-fa-spinner"></i>
+										</div>
+										<span class="textButton" data-i18n="modifyBankAccount"></span>
+									</button>
+								</div>
+
+								<!--  -->
+							</form>
+
+							<div class="displayNone padding10 translate" id="confirmWithdraw" align="left">
+								<p class="txIntro"><span data-i18n="transactionDetails"></span><span data-i18n="transaction"></span></p>
+								<p class="font13 pDonateToPublisher breakWord noMarginTop translate" align="left">
+									<span class="txLabel" data-i18n="[prepend]walletAddress">&nbsp;</span>
+									<br>
+									<div class="txInput">
+										<span id="spanWalletAddress" class="inputContent  breakAll"></span>
+										<span class="txCopy v-align">
+											<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+												<path
+													d="M13.3333 6H7.33333C6.59695 6 6 6.59695 6 7.33333V13.3333C6 14.0697 6.59695 14.6667 7.33333 14.6667H13.3333C14.0697 14.6667 14.6667 14.0697 14.6667 13.3333V7.33333C14.6667 6.59695 14.0697 6 13.3333 6Z"
+													stroke="#00ABFF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+												<path
+													d="M3.33337 10.0002H2.66671C2.31309 10.0002 1.97395 9.85969 1.7239 9.60964C1.47385 9.35959 1.33337 9.02045 1.33337 8.66683V2.66683C1.33337 2.31321 1.47385 1.97407 1.7239 1.72402C1.97395 1.47397 2.31309 1.3335 2.66671 1.3335H8.66671C9.02033 1.3335 9.35947 1.47397 9.60952 1.72402C9.85956 1.97407 10 2.31321 10 2.66683V3.3335"
+													stroke="#00ABFF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+											</svg>
+										</span>
+									</div>
+								</p>
+
+								<p class="font13 pDonateToPublisher noMarginBottom translate" align="left">
+
+									<span class="txLabel" data-i18n="amount">:&nbsp;</span>
+									<br>
+									<span class="txInput">
+										
+										<span id="spanAmount" class=" inputContent breakWord"></span>
+										<i id="donationAmountTubeIcon" class="icon-font-tube tubeFont displayNone no-margin"></i>
+										<span class="txCopy v-align">
+											<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+												<path
+													d="M13.3333 6H7.33333C6.59695 6 6 6.59695 6 7.33333V13.3333C6 14.0697 6.59695 14.6667 7.33333 14.6667H13.3333C14.0697 14.6667 14.6667 14.0697 14.6667 13.3333V7.33333C14.6667 6.59695 14.0697 6 13.3333 6Z"
+													stroke="#00ABFF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+												<path
+													d="M3.33337 10.0002H2.66671C2.31309 10.0002 1.97395 9.85969 1.7239 9.60964C1.47385 9.35959 1.33337 9.02045 1.33337 8.66683V2.66683C1.33337 2.31321 1.47385 1.97407 1.7239 1.72402C1.97395 1.47397 2.31309 1.3335 2.66671 1.3335H8.66671C9.02033 1.3335 9.35947 1.47397 9.60952 1.72402C9.85956 1.97407 10 2.31321 10 2.66683V3.3335"
+													stroke="#00ABFF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+											</svg>
+										</span>
+									</span>
+								</p>
+
+								<p class="font13 pDonateToPublisher noMarginBottom translate" align="left">
+
+									<span class="txLabel" data-i18n="fiatAmount"></span>&nbsp;
+									<br>
+									<span class="txInput">
+										<i id="donationAmountTubeIcon" class="icon-font-tube tubeFont displayNone no-margin"></i>
+										<span id="fiatAmountWithdraw" class=" inputContent breakWord"></span>
+										<span class="txCopy v-align">
+											<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+												<path
+													d="M13.3333 6H7.33333C6.59695 6 6 6.59695 6 7.33333V13.3333C6 14.0697 6.59695 14.6667 7.33333 14.6667H13.3333C14.0697 14.6667 14.6667 14.0697 14.6667 13.3333V7.33333C14.6667 6.59695 14.0697 6 13.3333 6Z"
+													stroke="#00ABFF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+												<path
+													d="M3.33337 10.0002H2.66671C2.31309 10.0002 1.97395 9.85969 1.7239 9.60964C1.47385 9.35959 1.33337 9.02045 1.33337 8.66683V2.66683C1.33337 2.31321 1.47385 1.97407 1.7239 1.72402C1.97395 1.47397 2.31309 1.3335 2.66671 1.3335H8.66671C9.02033 1.3335 9.35947 1.47397 9.60952 1.72402C9.85956 1.97407 10 2.31321 10 2.66683V3.3335"
+													stroke="#00ABFF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+											</svg>
+										</span>
+									</span>
+								</p>
+
+								<p class="font13 pDonateToPublisher noMarginBottom translate" align="left">
+
+									<span class="txLabel" data-i18n="[prepend]paymentID">&nbsp;</span>
+									<br>
+									<span class="txInput">
+										<span id="spanPaymentId" class="inputContent breakWord"></span>
+										<span class="txCopy v-align">
+											<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+												<path
+													d="M13.3333 6H7.33333C6.59695 6 6 6.59695 6 7.33333V13.3333C6 14.0697 6.59695 14.6667 7.33333 14.6667H13.3333C14.0697 14.6667 14.6667 14.0697 14.6667 13.3333V7.33333C14.6667 6.59695 14.0697 6 13.3333 6Z"
+													stroke="#00ABFF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+												<path
+													d="M3.33337 10.0002H2.66671C2.31309 10.0002 1.97395 9.85969 1.7239 9.60964C1.47385 9.35959 1.33337 9.02045 1.33337 8.66683V2.66683C1.33337 2.31321 1.47385 1.97407 1.7239 1.72402C1.97395 1.47397 2.31309 1.3335 2.66671 1.3335H8.66671C9.02033 1.3335 9.35947 1.47397 9.60952 1.72402C9.85956 1.97407 10 2.31321 10 2.66683V3.3335"
+													stroke="#00ABFF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+											</svg>
+										</span>
+									</span>
+
+								</p>
+
+								<div class="divButtonsConfirmCancel marginTop20 marginBottom20 translate" align="center">
+									<button id="buttonConfirm" class="confirmCancelButton buttonGreen">
+										<div class="loadingButton displayNone">
+											<i class="mbsc-ic mbsc-ic-fa-spinner"></i>
+										</div>
+										<span class="textButton" data-i18n="confirm"></span>
+
+									</button>
+									<button id="buttonCancel" class="confirmCancelButton buttonGray" data-i18n="cancel"></button>
+								</div>
+							</div>
+
+							<div class="displayNone" id="deleteAccount2FA">
+								<div class="marginTop20">
+									<form id="donate-verifyForm" class="md-login-form paddingLeft15 paddingRight15" mbsc-enhance
+										mbsc-form>
+										<div class="translate">
+											<p id="text2fa" class="noMarginTop marginBottom20" align="left">
+
+											</p>
+											<label for="name" class="labelFormDonate translate">
+												<span id="labelConfir2FA" class="translateInput dynamicLabel" data-i18n="2FACode"></span>
+												<input id="input2FAdeleteAccount" name="verifiySecret" type="text" maxlength="6"
+													data-input-style="outline" required="required" class="defaultInput" />
+											</label>
+										</div>
+
+										<div class="mbsc-form-group-inset mbsc-padding translate no-margin no-padding">
+											<button id="confirm2FAAccount" type="submit"
+												class="width100 marginTop20 marginBottom10 translate">
+												<div class="loadingButton displayNone">
+													<i class="mbsc-ic mbsc-ic-fa-spinner"></i>
+												</div>
+												<span class="textButton" data-i18n="confirm"></span>
+											</button>
+										</div>
+									</form>
+								</div>
+
+							</div>
+						</div>
+
+					</div>
+					<!-- END DIV CONVERTY MY TUBES -->
+					<!-- START DIV CHANGE DEFAULT CURRENCY -->
+					<div id="divChangeCurrency" class="displayNone profileForm translate divsAccountView">
+						<div class="divProfileForm">
+							<div class="divHeaderProfile">
+								<span data-i18n="changeCurrency"></span>
+								<i id="closeChangeCurrency" class="mbsc-ic mbsc-ic-ion-ios7-close-outline closeSectionProfile"></i>
+							</div>
+							<form id="changeCurrencyForm" class="md-login-form paddingLeft15 paddingRight15" mbsc-enhance mbsc-form>
+								<div class="mbsc-form-group no-margin width100 positionRelative">
+									<p style="width: calc(100% - 70%);float: left;margin: 4px 0px 0px 0px;" data-i18n="currency"></p>
+									<label class="labelCoinSelect">
+
+										<select id="selectFiat" data-input-style="outline">
+											<option value="USD">USD</option>
+											<option value="EUR">EUR</option>
+											<option value="GBP">GBP</option>
+											<option value="NZD">NZD</option>
+											<option value="AUD">AUD</option>
+
+										</select>
+									</label>
+
+								</div>
+
+								<div class="mbsc-form-group-inset mbsc-padding translate no-margin no-padding">
+									<button id="saveCurrency" type="submit" class="width100 marginTop20 marginBottom10 translate">
+										<div class="loadingButton displayNone">
+											<i class="mbsc-ic mbsc-ic-fa-spinner"></i>
+										</div>
+										<span class="textButton" data-i18n="save"></span>
+									</button>
+								</div>
+							</form>
+						</div>
+
+					</div>
+
+					<!-- END DIV CHANGE DEFAULT CURRENCY -->
+					<!-- START DIV VPN -->
+					<div id="comingSoonVpn" class="comingSoonVpn displayNone">
+						<div class="popupCard">
+							<div class="popupHeader">
+								<div class="headerBg"></div>
+								<img src="assets/images/logo-header.svg" alt="Bittube" class="logoHeader">
+								<!-- <span class="popupTitle"><span>Good </span> news!</span> -->
+								<span class="popupTitle translate"><span data-i18n="vpnSubscription"></span>
+							</div>
+							<div class="popupContent translate">
+								<p data-i18n="vpnSubscriptionText"></p>
+								<!-- <p>As we continue to build new and exciting tools to improve your online experience, we have plans to release a VPN service inside the AirTime extension.</p>
+                                                                <p>Our goal is creating more autonomy for everyone on the Internet. Your privacy and security is an integral part of that goal.</p>
+                                                                <p>We will keep you updated through our social media and blog. Stay tuned!</p> -->
+							</div>
+							<div class="rating-stars">
+								<div id="closeModalVpn" class="translate" data-i18n="gotit">
+
+								</div>
+
+							</div>
+						</div>
+					</div>
+				
+					<!-- END DIV VPN -->
+
+					<!-- START DIV ABOUT -->
+					<div id="divInfoAbout" class="displayNone profileForm translate divsAccountView">
+						<div class="divProfileForm">
+							<div class="divHeaderProfile">
+								<span class="translate" data-i18n="about"></span>
+								<i id="closeAbout" class="mbsc-ic mbsc-ic-ion-ios7-close-outline closeSectionProfile"></i>
+							</div>
+
+							<div class="maxHeight345">
+								<h3 align="center" data-i18n="aboutUsPage.title"></h3>
+								<span data-i18n="aboutUsPage.text1"></span>
+								<br>
+								<span data-i18n="aboutUsPage.text2"></span>
+								<br>
+								<span data-i18n="aboutUsPage.text3"></span>
+								<br><br>
+
+								<span class="bolder" data-i18n="aboutUsPage.features"></span>
+
+								<ul style="margin-top: 5px; margin-bottom: 5px; padding-left: 28px !important;">
+									<li data-i18n="aboutUsPage.features1"></li>
+									<li data-i18n="aboutUsPage.features2"> </li>
+									<li data-i18n="aboutUsPage.features3"></li>
+									<li data-i18n="aboutUsPage.features4"></li>
+									<li data-i18n="aboutUsPage.features5"></li>
+									<li data-i18n="aboutUsPage.features6"></li>
+									<li data-i18n="aboutUsPage.features7"></li>
+									<li data-i18n="aboutUsPage.features8"></li>
+									<li data-i18n="aboutUsPage.features9"></li>
+									<li data-i18n="aboutUsPage.features10"></li>
+									<li data-i18n="aboutUsPage.features11"></li>
+									<li data-i18n="aboutUsPage.features12"></li>
+									<li data-i18n="aboutUsPage.features13"></li>
+								</ul>
+								<br>
+								<span class="bolder" data-i18n="aboutUsPage.glossary"></span>
+								<br><br>
+								<span class="bolder translate" data-i18n="aboutUsPage.airTimeModel"></span>
+								<span data-i18n="aboutUsPage.airTimeModelText"></span>
+								<br><br>
+								<span class="bolder" data-i18n="aboutUsPage.airTime"></span>
+								<span data-i18n="aboutUsPage.airtimeText">.</span>
+								<br><br>
+								<span class="bolder" data-i18n="aboutUsPage.bitTubeWallet"></span>
+								<span data-i18n="aboutUsPage.bitTubeWalletText"></span>
+								<br><br>
+								<span class="bolder" data-i18n="aboutUsPage.walletAddress"></span>
+								<span data-i18n="aboutUsPage.walletAddressText"></span>
+								<br><br>
+								<span class="bolder" data-i18n="aboutUsPage.privateKey"></span>
+								<span data-i18n="aboutUsPage.privateKeyText"></span>
+								<br><br>
+								<span class="bolder" data-i18n="aboutUsPage.viewWallet"></span>
+								<span data-i18n="aboutUsPage.viewWalletText"></span>
+								<br><br>
+								<span class="bolder" data-i18n="aboutUsPage.viewKey"></span>
+								<span data-i18n="aboutUsPage.viewKeyText"></span>
+								<br><br>
+								<span class="bolder" data-i18n="aboutUsPage.confirmation"></span>
+								<span data-i18n="aboutUsPage.confirmationText"></span>
+								<br><br>
+								<span data-i18n="aboutUsPage.bitTubeBrowser"></span>
+								<br><br>
+								<span class="bolder" data-i18n="aboutUsPage.office"></span>
+								<br><br>
+
+								BitTubeINT OÜ.<br>
+								Kinga tn 3, Kesklinna linnaosa, Tallinn, Harju maakond, 10146 <br>
+								Republic of Estonia<br>
+								Registry code: 14649039 <br>
+								<b>Exchange License:</b> FVR000731<br>
+								<b>Wallet Licence:</b> FRK000635<br>
+								EU Regulated & Secure
+								<br><br>
+								<label class="labelCopyRight">&copy;</label> <span data-i18n="copyRightText"></span>
+								<br><br>
+								<span id="pVersion"></span>
+							</div>
+						</div>
+					</div>
+					<!-- END DIV ABOUT -->
+					<!-- POPUP CONFIRM deleteNumber -->
+					<div id="deleteNumber" style="display: none;">
+						<div class="md-dialog popUpResendEmail translate" align="center">
+							<h3 class="md-text-center" data-i18n="deletePhone"></h3>
+							<p class="md-text-center">
+								<span data-i18n="areYouSure"></span>
+							</p>
+						</div>
+					</div>
+					<!-- END POPUP CONFIRM deleteNumber -->
+
+					<!-- POPUP CONFIRM deleteNumber -->
+					<div id="modifyAccountModal" style="display: none;">
+						<div class="md-dialog popUpResendEmail translate" align="center">
+							<h3 class="md-text-center" data-i18n="modifyYourBankAccount"></h3>
+							<p align="left">
+								<span class="translate" data-i18n="modifyBankAccountAreYouSure"></span>
+								<br><br>
+								<span class="translate" data-i18n="modifyBankAccountInfo"></span>
+							</p>
+						</div>
+					</div>
+
+					<div id="modalStake" style="display: none;">
+						<div class="md-dialog popUpResendEmail translate" align="center">
+							<h3 class="md-text-center" data-i18n="stakeTUBEs"></h3>
+							<p align="left">
+								<span class="translate" data-i18n="stakeText1"></span>
+								<br><br>
+								<span class="translate" data-i18n="stakeText2"></span>
+							</p>
+						</div>
+					</div>
+					
+					<div id="modalUserNotVerified" style="display: none;">
+							<div class="md-dialog popUpResendEmail translate" align="center">
+								<h3 class="md-text-center" data-i18n="info"></h3>
+								<p align="left">
+									<span id="textUserModal" class="translate" data-i18n=""></span>
+									
+								</p>
+							</div>
+					</div>
+
+					<div id="modalImagesError" style="display: none;">
+							<div class="md-dialog popUpResendEmail translate" align="center">
+								<h3 class="md-text-center" data-i18n="info"></h3>
+								<p align="left">
+									<span id="textImagesError" class="translate"></span>
+									
+								</p>
+							</div>
+					</div>
+					<!-- END POPUP CONFIRM deleteNumber -->
+
+					<!-- POPUP DONATION SENT -->
+					<div id="transactionSent" style="display: none;">
+						<div class="md-dialog popUpResendEmail translate" align="center">
+							<h3 class="md-text-center" data-i18n="transactionSent"></h3>
+
+							<div class="divBill minHeight120">
+
+								<p align="left" class="margin10">
+									<span class="defaultColor" data-i18n="transactionWithdrawal">
+
+									</span>
+								</p>
+
+								<p align="left" class="breakAll margin10">
+									<span id="amountDonated" class="defaultColor"></span>
+								</p>
+								<p align="left" class="breakAll margin10">
+									<span class="bolder" data-i18n="paymentID"></span>
+									<br>
+									<span id="paymentIdSpan" class="breakAll"></span>
+								</p>
+								<p align="left" class="breakAll margin10">
+									<span class="bolder" data-i18n="transactionHash"></span>
+									<br>
+									<span id="tx_hash" class="breakAll marginBottom20"></span>
+								</p>
+
+								<p id="qrDonation" align="left" class="breakAll margin10 marginTop20">
+
+								</p>
+							</div>
+
+						</div>
+					</div>
+					<!-- END POPUP DONATION SENT -->
+
+
+					<!-- POPUP DONATION ERROR -->
+					<div id="transactionError" style="display: none;">
+						<div class="md-dialog popUpResendEmail translate" align="center">
+							<h3 class="md-text-center" data-i18n="transactionError"></h3>
+							<p align="left">
+								<span data-i18n="transactionErrorText"></span>
+								<br><br>
+								<span data-i18n="plsTryAgainLater"></span>
+
+							</p>
+							<p class="noMarginBottom" align="left"><b><span class="translate" data-i18n="infoError"></span></b></p>
+							<p align="left" class="noMarginTop" id="donationError"></p>
+						</div>
+					</div>
+					<!-- END POPUP DONATION ERROR -->
+
+
+					<!-- START DIV FOOTER -->
+					<div class="mbsc-grid divFooter" align="center">
+						<div class="mbsc-row">
+							<div class="mbsc-col  footerElem">
+								<a href="/airtime.html" href="#" data-i18n="home" class="menuContent">
+									<svg width="28" height="28" viewBox="0 0 31 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<path
+											d="M25.4932 4.73391C22.7815 2.0424 19.1757 0.560059 15.3405 0.560059C11.5052 0.560059 7.8997 2.04225 5.18783 4.73376C2.47597 7.42541 0.982422 11.004 0.982422 14.8103C0.982422 18.6167 2.47597 22.1952 5.18783 24.8869C7.89955 27.5784 11.5053 29.0607 15.3406 29.0607C19.1759 29.0607 22.7815 27.5784 25.4934 24.8869C28.2052 22.1954 29.6988 18.6168 29.6988 14.8103C29.6988 11.0038 28.2052 7.42541 25.4932 4.73391Z"
+											fill="#343434" />
+										<path
+											d="M21.3919 14.0767L12.8563 8.90166L12.8364 8.89042C12.5484 8.73548 12.2089 8.74225 11.9276 8.90828C11.6464 9.07446 11.4784 9.36764 11.4784 9.6925V20.019C11.4784 20.3439 11.6463 20.6371 11.9276 20.8033C12.0709 20.8878 12.2333 20.9326 12.3975 20.9326C12.5492 20.9326 12.7009 20.894 12.8357 20.8216L21.3881 15.6672C21.6782 15.5061 21.8582 15.2009 21.8582 14.871C21.8584 14.5423 21.6796 14.2384 21.3919 14.0767ZM20.6575 14.8705L12.5438 19.761V9.95113L20.6575 14.8705Z"
+											fill="white" />
+										<path
+											d="M15.3406 5.65332C15.0469 5.65332 14.808 5.89049 14.808 6.18195C14.808 6.4734 15.0468 6.71071 15.3406 6.71071C18.336 6.71071 21.0857 8.33504 22.5169 10.9499C22.6103 11.1204 22.7896 11.2263 22.9854 11.2263C23.0736 11.2263 23.1615 11.2041 23.2393 11.1622C23.3643 11.0948 23.4554 10.9831 23.4959 10.8476C23.5363 10.7122 23.5212 10.5692 23.4533 10.4452C21.8351 7.48947 18.7267 5.65332 15.3406 5.65332Z"
+											fill="white" />
+										<path
+											d="M23.8265 6.38811C21.5599 4.13839 18.5461 2.89941 15.3406 2.89941C12.1352 2.89941 9.12138 4.13854 6.85465 6.38811C4.58792 8.63782 3.33972 11.6289 3.33972 14.8104C3.33972 17.9919 4.58807 20.983 6.8548 23.2325C9.12138 25.4823 12.1352 26.7212 15.3406 26.7212C18.5461 26.7212 21.5599 25.4823 23.8265 23.2325C26.0932 20.983 27.3416 17.9918 27.3416 14.8104C27.3416 11.6289 26.0932 8.63782 23.8265 6.38811ZM26.2762 14.8104C26.2762 17.7094 25.1387 20.435 23.0733 22.4849C21.0078 24.5349 18.2617 25.6638 15.3406 25.6638C12.4196 25.6638 9.67345 24.5349 7.60796 22.4849C5.54247 20.435 4.40511 17.7094 4.40511 14.8104C4.40511 11.9114 5.54261 9.18574 7.60796 7.1359C9.67345 5.08591 12.4196 3.95695 15.3406 3.95695C18.2617 3.95695 21.0078 5.08591 23.0733 7.1359C25.1387 9.18574 26.2762 11.9112 26.2762 14.8104Z"
+											fill="white" />
+									</svg>
+									<span>AirTime</span>
+								</a>
+							</div>
+							<div class="mbsc-col  footerElem">
+								<a href="/link_account.html" data-i18n="history" class="menuContent">
+									<svg width="28" height="28" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<path
+											d="M27.313 4.68611C24.6954 2.0688 21.2512 0.440076 17.5674 0.0774641C13.8835 -0.285148 10.1879 0.640824 7.11017 2.69752C4.03246 4.75422 1.76309 7.81444 0.688732 11.3568C-0.38563 14.8991 -0.198513 18.7043 1.2182 22.1242C2.63492 25.544 5.19358 28.3668 8.45822 30.1116C11.7229 31.8564 15.4915 32.4153 19.122 31.693C22.7525 30.9707 26.0203 29.012 28.3685 26.1505C30.7167 23.289 32.0001 19.7018 32 16.0001C32.0059 13.898 31.5947 11.8156 30.7902 9.87348C29.9856 7.9314 28.8038 6.16822 27.313 4.68611Z"
+											fill="#404040" />
+										<path
+											d="M25.363 6.83683C23.2199 4.69378 20.4001 3.36012 17.3839 3.06309C14.3677 2.76605 11.3419 3.52403 8.82191 5.20786C6.30195 6.89169 4.44378 9.3972 3.56404 12.2975C2.68429 15.1977 2.83739 18.3133 3.99725 21.1133C5.1571 23.9134 7.25195 26.2246 9.92486 27.6533C12.5978 29.0819 15.6834 29.5396 18.6559 28.9483C21.6284 28.357 24.3039 26.7533 26.2266 24.4104C28.1492 22.0676 29.2001 19.1306 29.2 16.0998C29.2048 14.3788 28.8681 12.6739 28.2095 11.0839C27.5509 9.49389 26.5834 8.05035 25.363 6.83683ZM24.541 24.5368C22.5874 26.4887 20.0175 27.7028 17.2691 27.9723C14.5207 28.2419 11.7639 27.5502 9.46836 26.0151C7.17279 24.4799 5.48049 22.1964 4.67979 19.5534C3.87908 16.9105 4.01951 14.0717 5.07714 11.5207C6.13478 8.96965 8.04418 6.86428 10.4801 5.56321C12.9159 4.26213 15.7275 3.84588 18.4359 4.38535C21.1443 4.92483 23.5818 6.38663 25.3332 8.52176C27.0846 10.6569 28.0416 13.3333 28.041 16.0948C28.0458 17.6645 27.7389 19.2196 27.1381 20.6698C26.5373 22.12 25.6545 23.4364 24.541 24.5428V24.5368Z"
+											fill="white" />
+										<path
+											d="M19.2738 8.0061C18.7822 7.97776 18.2899 8.04838 17.8261 8.2138C17.3623 8.37922 16.9365 8.63608 16.5738 8.96911L12.7348 12.4411C12.0685 13.0478 11.6436 13.8746 11.5383 14.7696C11.433 15.6645 11.6544 16.5674 12.1618 17.3121L11.2328 18.1541C10.8681 18.4839 10.5719 18.8823 10.3612 19.3266C10.1505 19.7709 10.0294 20.2523 10.0047 20.7434C9.98006 21.2345 10.0524 21.7256 10.2175 22.1887C10.3827 22.6519 10.6374 23.0779 10.9672 23.4426C11.2971 23.8073 11.6955 24.1034 12.1397 24.3141C12.584 24.5248 13.0654 24.646 13.5565 24.6706C14.0476 24.6953 14.5387 24.623 15.0019 24.4578C15.465 24.2927 15.8911 24.0379 16.2557 23.7081L20.0968 20.2331C20.7684 19.6298 21.1972 18.8024 21.3026 17.9058C21.4081 17.0091 21.1831 16.1048 20.6697 15.3621L21.5987 14.5221C22.1483 14.0254 22.5381 13.377 22.719 12.6587C22.8999 11.9404 22.8636 11.1846 22.6148 10.4869C22.366 9.78926 21.9159 9.18103 21.3213 8.73925C20.7268 8.29748 20.0145 8.042 19.2747 8.00512L19.2738 8.0061ZM20.3397 17.5971C20.3232 17.9588 20.2352 18.3137 20.0807 18.6412C19.9263 18.9687 19.7084 19.2623 19.4398 19.5051L15.6007 22.9791C15.0546 23.4481 14.3468 23.6852 13.6284 23.6397C12.9099 23.5943 12.2377 23.2699 11.755 22.7358C11.2723 22.2017 11.0174 21.5002 11.0446 20.7808C11.0718 20.0614 11.3791 19.3812 11.9008 18.8851L12.8267 18.0481C13.4508 18.5945 14.2404 18.9153 15.0688 18.9591C15.1328 18.9591 15.1967 18.9651 15.2597 18.9651C16.1874 18.9668 17.0822 18.6211 17.7678 17.9961L19.9477 16.0241C20.2348 16.4963 20.3718 17.0444 20.3408 17.5961L20.3397 17.5971ZM13.5487 17.3871L15.7317 15.4121C16.2135 14.9748 16.8349 14.7227 17.4852 14.7007C18.1355 14.6788 18.7725 14.8883 19.2828 15.2921L17.0968 17.2661C16.5534 17.7565 15.8378 18.0115 15.1067 17.9751C14.5387 17.9461 13.9939 17.7402 13.5487 17.3861V17.3871ZM20.9387 13.7931L20.0128 14.6301C19.3265 14.0301 18.4433 13.7038 17.5318 13.7134C16.6203 13.723 15.7442 14.0678 15.0707 14.6821L12.8928 16.6521C12.5586 16.1043 12.4257 15.4573 12.517 14.8222C12.6082 14.1871 12.9179 13.6036 13.3928 13.1721L17.2308 9.69909C17.7366 9.23914 18.3961 8.98489 19.0798 8.98614C19.1258 8.98614 19.1728 8.98614 19.2198 8.98614C19.7643 9.01382 20.2885 9.20216 20.7261 9.52746C21.1638 9.85276 21.4953 10.3004 21.6787 10.8139C21.8622 11.3274 21.8894 11.8837 21.757 12.4127C21.6246 12.9417 21.3385 13.4196 20.9347 13.7861L20.9387 13.7931Z"
+											fill="white" />
+									</svg>
+
+
+									<span class="translate" data-i18n="footerLinks"></span>
+								</a>
+							</div>
+							<div class="mbsc-col  footerElem">
+								<a href="/ublock.html" data-i18n="adblock" class="menuContent">
+									<svg width="28" height="28" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<path
+											d="M27.313 4.68611C24.6954 2.0688 21.2512 0.440076 17.5674 0.0774641C13.8835 -0.285148 10.1879 0.640824 7.11017 2.69752C4.03246 4.75422 1.76309 7.81444 0.688732 11.3568C-0.38563 14.8991 -0.198513 18.7043 1.2182 22.1242C2.63492 25.544 5.19358 28.3668 8.45822 30.1116C11.7229 31.8564 15.4915 32.4153 19.122 31.693C22.7525 30.9707 26.0203 29.012 28.3685 26.1505C30.7167 23.289 32.0001 19.7018 32 16.0001C32.0059 13.898 31.5947 11.8156 30.7902 9.87348C29.9856 7.9314 28.8038 6.16822 27.313 4.68611V4.68611Z"
+											fill="#404040" />
+										<path
+											d="M25.363 6.83683C23.2199 4.69378 20.4001 3.36012 17.3839 3.06309C14.3677 2.76605 11.3419 3.52403 8.82191 5.20786C6.30195 6.89169 4.44378 9.3972 3.56404 12.2975C2.68429 15.1977 2.83739 18.3133 3.99725 21.1133C5.15711 23.9134 7.25195 26.2246 9.92486 27.6533C12.5978 29.0819 15.6834 29.5396 18.6559 28.9483C21.6284 28.357 24.3039 26.7533 26.2266 24.4104C28.1492 22.0676 29.2001 19.1306 29.2 16.0998C29.2048 14.3788 28.8681 12.6739 28.2095 11.0839C27.5509 9.49389 26.5834 8.05035 25.363 6.83683V6.83683ZM24.541 24.5368C22.5874 26.4887 20.0175 27.7028 17.2691 27.9723C14.5207 28.2419 11.7639 27.5502 9.46836 26.0151C7.17279 24.4799 5.48049 22.1964 4.67979 19.5534C3.87908 16.9105 4.01951 14.0717 5.07714 11.5207C6.13478 8.96965 8.04418 6.86428 10.4801 5.56321C12.9159 4.26213 15.7275 3.84588 18.4359 4.38535C21.1443 4.92483 23.5818 6.38663 25.3332 8.52176C27.0846 10.6569 28.0416 13.3333 28.041 16.0948C28.0458 17.6645 27.7389 19.2196 27.1381 20.6698C26.5373 22.12 25.6545 23.4364 24.541 24.5428V24.5368Z"
+											fill="white" />
+										<path
+											d="M19.2738 8.0061C18.7822 7.97776 18.2899 8.04838 17.8261 8.2138C17.3623 8.37922 16.9365 8.63608 16.5738 8.96911L12.7348 12.4411C12.0685 13.0478 11.6436 13.8746 11.5383 14.7696C11.433 15.6645 11.6544 16.5674 12.1618 17.3121L11.2328 18.1541C10.8681 18.4839 10.5719 18.8823 10.3612 19.3266C10.1505 19.7709 10.0294 20.2523 10.0047 20.7434C9.98006 21.2345 10.0524 21.7256 10.2175 22.1887C10.3827 22.6519 10.6374 23.0779 10.9672 23.4426C11.2971 23.8073 11.6955 24.1034 12.1397 24.3141C12.584 24.5248 13.0654 24.646 13.5565 24.6706C14.0476 24.6953 14.5387 24.623 15.0019 24.4578C15.465 24.2927 15.8911 24.0379 16.2557 23.7081L20.0968 20.2331C20.7684 19.6298 21.1972 18.8024 21.3026 17.9058C21.4081 17.0091 21.1831 16.1048 20.6697 15.3621L21.5987 14.5221C22.1483 14.0254 22.5381 13.377 22.719 12.6587C22.8999 11.9404 22.8636 11.1846 22.6148 10.4869C22.366 9.78926 21.9159 9.18102 21.3213 8.73925C20.7268 8.29748 20.0145 8.042 19.2747 8.00512L19.2738 8.0061ZM20.3397 17.5971C20.3232 17.9588 20.2352 18.3137 20.0807 18.6412C19.9263 18.9687 19.7084 19.2623 19.4398 19.5051L15.6007 22.9791C15.0546 23.4481 14.3468 23.6852 13.6284 23.6397C12.9099 23.5943 12.2377 23.2699 11.755 22.7358C11.2723 22.2017 11.0174 21.5002 11.0446 20.7808C11.0718 20.0614 11.3791 19.3812 11.9008 18.8851L12.8267 18.0481C13.4508 18.5945 14.2404 18.9153 15.0688 18.9591C15.1328 18.9591 15.1967 18.9651 15.2597 18.9651C16.1874 18.9668 17.0822 18.6211 17.7678 17.9961L19.9477 16.0241C20.2348 16.4963 20.3718 17.0444 20.3408 17.5961L20.3397 17.5971ZM13.5487 17.3871L15.7317 15.4121C16.2135 14.9748 16.8349 14.7227 17.4852 14.7007C18.1355 14.6788 18.7725 14.8883 19.2828 15.2921L17.0968 17.2661C16.5534 17.7565 15.8378 18.0115 15.1067 17.9751C14.5387 17.9461 13.9939 17.7402 13.5487 17.3861V17.3871ZM20.9387 13.7931L20.0128 14.6301C19.3265 14.0301 18.4433 13.7038 17.5318 13.7134C16.6203 13.723 15.7442 14.0678 15.0707 14.6821L12.8928 16.6521C12.5586 16.1043 12.4257 15.4573 12.517 14.8222C12.6082 14.1871 12.9179 13.6036 13.3928 13.1721L17.2308 9.69909C17.7366 9.23914 18.3961 8.98489 19.0798 8.98614C19.1258 8.98614 19.1728 8.98614 19.2198 8.98614C19.7643 9.01382 20.2885 9.20216 20.7261 9.52746C21.1638 9.85276 21.4953 10.3004 21.6787 10.8139C21.8622 11.3274 21.8894 11.8837 21.757 12.4127C21.6246 12.9417 21.3385 13.4196 20.9347 13.7861L20.9387 13.7931Z"
+											fill="white" />
+										<path
+											d="M27.313 4.68611C24.6954 2.0688 21.2512 0.440076 17.5674 0.0774641C13.8835 -0.285148 10.1879 0.640824 7.11017 2.69752C4.03246 4.75422 1.76309 7.81444 0.688732 11.3568C-0.38563 14.8991 -0.198513 18.7043 1.2182 22.1242C2.63492 25.544 5.19358 28.3668 8.45822 30.1116C11.7229 31.8564 15.4915 32.4153 19.122 31.693C22.7525 30.9707 26.0203 29.012 28.3685 26.1505C30.7167 23.289 32.0001 19.7018 32 16.0001C32.0059 13.898 31.5947 11.8156 30.7902 9.87348C29.9856 7.9314 28.8038 6.16822 27.313 4.68611V4.68611Z"
+											fill="#404040" />
+										<path
+											d="M25.3637 6.83722C24.1473 5.62072 22.7031 4.6557 21.1138 3.99731C19.5244 3.33892 17.8209 3.00005 16.1006 3C14.3802 2.99995 12.6767 3.33877 11.0873 3.99707C9.49789 4.65537 8.0537 5.6203 6.8372 6.83673C5.6207 8.05317 4.65572 9.4973 3.99733 11.0867C3.33894 12.676 3.00005 14.3795 3 16.0999C2.99995 17.8202 3.33875 19.5237 3.99706 21.1131C4.65536 22.7025 5.62028 24.1467 6.83672 25.3632C7.18023 25.7037 7.54211 26.0252 7.92072 26.3262C7.93615 26.3479 7.95285 26.3685 7.97072 26.3882C8.01299 26.4192 8.05902 26.4448 8.10771 26.4642C10.7424 28.4964 14.0519 29.4493 17.3638 29.1294C20.6757 28.8095 23.7416 27.2407 25.9386 24.7418C28.1356 22.243 29.2989 19.0015 29.1921 15.6758C29.0853 12.3502 27.7165 9.19 25.3637 6.83722V6.83722ZM4.16371 16.0992C4.16161 13.8694 4.78472 11.6837 5.96228 9.79028C7.13984 7.89682 8.82469 6.37145 10.8255 5.38733C12.8264 4.40321 15.063 3.99972 17.2816 4.22278C19.5002 4.44584 21.6118 5.2865 23.3767 6.64923L8.21671 25.0492C8.02871 24.8832 7.83771 24.7232 7.65871 24.5442C6.54652 23.4381 5.66484 22.1222 5.06474 20.673C4.46464 19.2237 4.15804 17.6698 4.1627 16.1012L4.16371 16.0992ZM24.5417 24.5412C22.5583 26.5273 19.9375 27.7497 17.1412 27.993C14.3449 28.2363 11.5524 27.4849 9.25571 25.8712L24.3827 7.51422C24.4347 7.56522 24.4907 7.60818 24.5417 7.65918C25.6503 8.76764 26.5296 10.0836 27.1295 11.5319C27.7295 12.9802 28.0382 14.5326 28.0382 16.1002C28.0382 17.6679 27.7295 19.2201 27.1295 20.6685C26.5296 22.1168 25.6503 23.4327 24.5417 24.5412V24.5412Z"
+											fill="white" />
+									</svg>
+									<span class="translate" data-i18n="footerAdblock"></span>
+								</a>
+							</div>
+							<div class="mbsc-col  footerElem">
+								<a href="/vpn.html" data-i18n="adblock" class="menuContent">
+									<svg width="28" height="28" viewBox="0 0 36 35" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<path
+											d="M30.2227 5.53976C26.9877 2.32891 22.6862 0.560547 18.1109 0.560547C13.5356 0.560547 9.23442 2.32874 5.99929 5.53958C2.76416 8.7506 0.982422 13.0196 0.982422 17.5605C0.982422 22.1013 2.76416 26.3703 5.99929 29.5813C9.23424 32.7922 13.5357 34.5605 18.1111 34.5605C22.6864 34.5605 26.9877 32.7922 30.2229 29.5813C33.458 26.3705 35.2397 22.1014 35.2397 17.5605C35.2397 13.0195 33.458 8.7506 30.2227 5.53976Z"
+											fill="#343434" />
+										<path
+											d="M27.541 7.86911C25.0647 5.39292 21.7061 4.00186 18.2042 4.00195C14.7022 4.00205 11.3437 5.39329 8.86752 7.86961C6.39133 10.3459 5.00027 13.7045 5.00037 17.2065C5.00046 20.7084 6.3917 24.0669 8.86802 26.5431C11.3444 29.0193 14.7029 30.4104 18.2049 30.4103C21.7068 30.4102 25.0653 29.0189 27.5415 26.5426C30.0177 24.0663 31.4088 20.7077 31.4087 17.2058C31.4086 13.7038 30.0174 10.3453 27.541 7.86911ZM26.711 25.7121C24.7428 27.6802 22.1531 28.905 19.3831 29.1778C16.6131 29.4506 13.8342 28.7545 11.5199 27.2081C9.2056 25.6617 7.49908 23.3607 6.69109 20.6972C5.8831 18.0336 6.02364 15.1723 7.08877 12.6008C8.1539 10.0293 10.0777 7.90658 12.5324 6.59444C14.9871 5.2823 17.8209 4.86188 20.5508 5.40481C23.2807 5.94774 25.7379 7.42042 27.5038 9.57195C29.2697 11.7235 30.2349 14.4207 30.235 17.2041C30.2398 18.7852 29.9307 20.3515 29.3258 21.8122C28.7209 23.273 27.8321 24.5993 26.711 25.7141V25.7121ZM20.067 15.7611L16.567 19.5461L15.981 18.6651C15.9437 18.6011 15.8936 18.5454 15.834 18.5014C15.7744 18.4574 15.7064 18.426 15.6342 18.4092C15.562 18.3924 15.4872 18.3904 15.4142 18.4035C15.3413 18.4166 15.2718 18.4444 15.2099 18.4853C15.1481 18.5261 15.0953 18.5792 15.0546 18.6411C15.014 18.7031 14.9864 18.7727 14.9736 18.8457C14.9608 18.9187 14.963 18.9935 14.9801 19.0657C14.9972 19.1378 15.0288 19.2056 15.073 19.2651L16.042 20.7241C16.0877 20.793 16.1484 20.8505 16.2196 20.8925C16.2908 20.9344 16.3707 20.9596 16.453 20.9661H16.497C16.5722 20.9662 16.6465 20.9506 16.7154 20.9205C16.7842 20.8904 16.8461 20.8463 16.897 20.7911L20.864 16.4911C20.9181 16.4397 20.9611 16.3777 20.9902 16.309C21.0194 16.2403 21.0342 16.1663 21.0337 16.0917C21.0332 16.0171 21.0174 15.9433 20.9872 15.875C20.9571 15.8068 20.9133 15.7454 20.8585 15.6947C20.8037 15.644 20.7391 15.6051 20.6686 15.5804C20.5982 15.5556 20.5235 15.5456 20.449 15.5509C20.3746 15.5562 20.302 15.5767 20.2358 15.6111C20.1696 15.6455 20.1111 15.6932 20.064 15.7511L20.067 15.7611ZM23.042 13.1941H22.189C21.807 10.8111 20.089 9.06611 17.989 9.06611C15.889 9.06611 14.17 10.8111 13.789 13.1941H12.961C12.517 13.1946 12.0912 13.3713 11.7772 13.6853C11.4632 13.9993 11.2866 14.425 11.286 14.8691V21.9491C11.2868 22.3931 11.4635 22.8187 11.7775 23.1326C12.0914 23.4466 12.517 23.6233 12.961 23.6241H23.042C23.4862 23.6236 23.912 23.447 24.2262 23.133C24.5404 22.819 24.7172 22.3933 24.718 21.9491V14.8691C24.7175 14.4249 24.5407 13.999 24.2265 13.6849C23.9123 13.3709 23.4863 13.1944 23.042 13.1941ZM17.987 10.2671C18.7445 10.3417 19.4539 10.6724 19.998 11.2045C20.5422 11.7367 20.8886 12.4385 20.98 13.1941H14.994C15.0855 12.4385 15.4319 11.7367 15.976 11.2045C16.5202 10.6724 17.2296 10.3417 17.987 10.2671ZM23.557 21.9491C23.5568 22.0856 23.5024 22.2165 23.4059 22.313C23.3094 22.4095 23.1785 22.4638 23.042 22.4641H12.958C12.8213 22.4641 12.6903 22.4099 12.5935 22.3133C12.4968 22.2168 12.4423 22.0858 12.442 21.9491V14.8691C12.4423 14.7323 12.4967 14.6012 12.5934 14.5045C12.6902 14.4078 12.8213 14.3534 12.958 14.3531H23.042C23.1787 14.3534 23.3097 14.4079 23.4062 14.5046C23.5028 14.6013 23.557 14.7324 23.557 14.8691V21.9491Z"
+											fill="#FAFAFA" />
+									</svg>
+									<span class="translate" data-i18n="footerVPN"></span>
+								</a>
+							</div>
+							<div class="mbsc-col  footerElem">
+								<a href="/account.html" data-i18n="options" class="menuContent">
+									<svg width="28" height="28" viewBox="0 0 35 34" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<path id="bg"
+											d="M29.2403 4.97921C26.0053 1.76836 21.7038 0 17.1285 0C12.5532 0 8.252 1.76819 5.01687 4.97904C1.78174 8.19006 0 12.4591 0 16.9999C0 21.5407 1.78174 25.8098 5.01687 29.0208C8.25182 32.2316 12.5533 34 17.1287 34C21.704 34 26.0053 32.2316 29.2404 29.0208C32.4756 25.8099 34.2573 21.5409 34.2573 16.9999C34.2573 12.4589 32.4756 8.19006 29.2403 4.97921Z"
+											fill="#343434" />
+										<path
+											d="M26.541 7.86911C24.0647 5.39292 20.7061 4.00186 17.2042 4.00195C13.7022 4.00205 10.3437 5.39329 7.86752 7.86961C5.39133 10.3459 4.00027 13.7045 4.00037 17.2065C4.00046 20.7084 5.3917 24.0669 7.86802 26.5431C10.3444 29.0193 13.7029 30.4104 17.2049 30.4103C20.7068 30.4102 24.0653 29.0189 26.5415 26.5426C29.0177 24.0663 30.4088 20.7077 30.4087 17.2058C30.4086 13.7038 29.0174 10.3453 26.541 7.86911V7.86911ZM25.711 25.7121C23.7428 27.6802 21.1531 28.905 18.3831 29.1778C15.6131 29.4506 12.8342 28.7545 10.5199 27.2081C8.2056 25.6617 6.49908 23.3607 5.69109 20.6972C4.8831 18.0336 5.02364 15.1723 6.08877 12.6008C7.1539 10.0293 9.07771 7.90658 11.5324 6.59444C13.9871 5.2823 16.8209 4.86188 19.5508 5.40481C22.2807 5.94774 24.7379 7.42042 26.5038 9.57195C28.2697 11.7235 29.2349 14.4207 29.235 17.2041C29.2398 18.7852 28.9307 20.3515 28.3258 21.8122C27.7209 23.273 26.8321 24.5993 25.711 25.7141V25.7121ZM17.038 15.7171C17.682 15.7171 18.3115 15.5262 18.847 15.1684C19.3824 14.8106 19.7997 14.3021 20.0462 13.7071C20.2926 13.1122 20.3571 12.4575 20.2315 11.8259C20.1058 11.1943 19.7957 10.6141 19.3404 10.1588C18.885 9.70341 18.3048 9.39331 17.6732 9.26767C17.0416 9.14204 16.387 9.20652 15.792 9.45296C15.1971 9.6994 14.6885 10.1167 14.3308 10.6522C13.973 11.1876 13.782 11.8171 13.782 12.4611C13.7828 13.3244 14.1261 14.1521 14.7366 14.7626C15.347 15.373 16.1747 15.7163 17.038 15.7171V15.7171ZM17.038 10.4051C17.4446 10.4053 17.842 10.5261 18.18 10.7521C18.518 10.9781 18.7813 11.2993 18.9368 11.675C19.0923 12.0507 19.1328 12.4641 19.0534 12.8628C18.974 13.2616 18.7781 13.6278 18.4905 13.9153C18.2029 14.2027 17.8366 14.3984 17.4378 14.4777C17.039 14.5569 16.6256 14.5162 16.25 14.3605C15.8744 14.2049 15.5533 13.9413 15.3275 13.6033C15.1016 13.2652 14.981 12.8677 14.981 12.4611C14.9808 12.1907 15.0338 11.9229 15.137 11.673C15.2402 11.4231 15.3917 11.196 15.5827 11.0046C15.7737 10.8132 16.0005 10.6613 16.2502 10.5576C16.4999 10.4539 16.7676 10.4004 17.038 10.4001V10.4051ZM19.581 17.1831H14.56C13.6493 17.1842 12.7762 17.5464 12.1323 18.1904C11.4883 18.8343 11.1261 19.7074 11.125 20.6181V23.6181C11.125 23.7772 11.1882 23.9299 11.3008 24.0424C11.4133 24.1549 11.5659 24.2181 11.725 24.2181C11.8842 24.2181 12.0368 24.1549 12.1493 24.0424C12.2618 23.9299 12.325 23.7772 12.325 23.6181V20.6181C12.3258 20.0256 12.5615 19.4576 12.9805 19.0386C13.3995 18.6196 13.9675 18.3839 14.56 18.3831H19.581C20.1734 18.3842 20.7411 18.62 21.1599 19.039C21.5786 19.4579 21.8142 20.0258 21.815 20.6181V23.6181C21.815 23.7772 21.8782 23.9299 21.9908 24.0424C22.1033 24.1549 22.2559 24.2181 22.415 24.2181C22.5742 24.2181 22.7268 24.1549 22.8393 24.0424C22.9518 23.9299 23.015 23.7772 23.015 23.6181V20.6181C23.014 19.7076 22.6519 18.8347 22.0081 18.1907C21.3644 17.5468 20.4915 17.1844 19.581 17.1831V17.1831Z"
+											fill="#FAFAFA" />
+									</svg>
+									<span class="defaultColor translate" data-i18n="footerAccount"></span>
+								</a>
+							</div>
+							<div class="mbsc-col  footerElem">
+								<a href="/notifications.html" data-i18n="history" class="menuContent">
+									<svg width="28" height="28" viewBox="0 0 35 34" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<path
+											d="M29.2403 4.97921C26.0053 1.76836 21.7038 0 17.1285 0C12.5532 0 8.252 1.76819 5.01687 4.97904C1.78174 8.19006 0 12.4591 0 16.9999C0 21.5407 1.78174 25.8098 5.01687 29.0208C8.25182 32.2316 12.5533 34 17.1287 34C21.704 34 26.0053 32.2316 29.2404 29.0208C32.4756 25.8099 34.2573 21.5409 34.2573 16.9999C34.2573 12.4589 32.4756 8.19006 29.2403 4.97921Z"
+											fill="#343434" />
+										<path
+											d="M26.541 7.86911C24.0647 5.39292 20.7061 4.00186 17.2042 4.00195C13.7022 4.00205 10.3437 5.39329 7.86752 7.86961C5.39133 10.3459 4.00027 13.7045 4.00037 17.2065C4.00046 20.7084 5.3917 24.0669 7.86802 26.5431C10.3444 29.0193 13.7029 30.4104 17.2049 30.4103C20.7068 30.4102 24.0653 29.0189 26.5415 26.5426C29.0177 24.0663 30.4088 20.7077 30.4087 17.2058C30.4086 13.7038 29.0174 10.3453 26.541 7.86911V7.86911ZM25.711 25.7121C23.7428 27.6802 21.1531 28.905 18.3831 29.1778C15.6131 29.4506 12.8342 28.7545 10.5199 27.2081C8.2056 25.6617 6.49908 23.3607 5.69109 20.6972C4.8831 18.0336 5.02364 15.1723 6.08877 12.6008C7.1539 10.0293 9.07771 7.90658 11.5324 6.59444C13.9871 5.2823 16.8209 4.86188 19.5508 5.40481C22.2807 5.94774 24.7379 7.42042 26.5038 9.57195C28.2697 11.7235 29.2349 14.4207 29.235 17.2041C29.2398 18.7852 28.9307 20.3515 28.3258 21.8122C27.7209 23.273 26.8321 24.5993 25.711 25.7141V25.7121ZM18.33 22.4891H15.67C15.6143 22.489 15.5594 22.502 15.5097 22.5271C15.46 22.5523 15.417 22.5888 15.3841 22.6338C15.3513 22.6787 15.3295 22.7308 15.3206 22.7858C15.3117 22.8408 15.316 22.8971 15.333 22.9501C15.4506 23.2991 15.6747 23.6024 15.9737 23.8173C16.2728 24.0321 16.6318 24.1477 17 24.1477C17.3683 24.1477 17.7272 24.0321 18.0263 23.8173C18.3254 23.6024 18.5495 23.2991 18.667 22.9501C18.6841 22.8971 18.6883 22.8408 18.6794 22.7858C18.6706 22.7308 18.6488 22.6787 18.6159 22.6338C18.5831 22.5888 18.54 22.5523 18.4903 22.5271C18.4406 22.502 18.3857 22.489 18.33 22.4891V22.4891ZM23.412 19.3461L21.972 18.1691V14.5331C21.9705 13.3885 21.5811 12.2782 20.8673 11.3834C20.1536 10.4886 19.1576 9.86208 18.042 9.60611C17.3238 9.50645 16.5955 9.50174 15.876 9.59211C15.855 9.59211 15.763 9.60811 15.742 9.61311C14.6339 9.87384 13.6466 10.5018 12.9406 11.3949C12.2347 12.288 11.8518 13.3937 11.854 14.5321L11.846 18.1781L10.534 19.4001C10.5063 19.4272 10.4805 19.4563 10.457 19.4871C10.3226 19.6682 10.242 19.8834 10.2243 20.1082C10.2066 20.333 10.2526 20.5583 10.357 20.7581C10.4726 20.9782 10.647 21.1619 10.8608 21.2887C11.0746 21.4154 11.3195 21.4803 11.568 21.4761H22.432C22.687 21.4812 22.9382 21.4132 23.1558 21.2801C23.3734 21.1471 23.5484 20.9545 23.66 20.7251C23.7603 20.5156 23.7982 20.2817 23.7693 20.0512C23.7404 19.8207 23.6459 19.6034 23.497 19.4251C23.4717 19.3957 23.4432 19.3692 23.412 19.3461V19.3461ZM22.432 20.2801H11.567C11.48 20.2801 11.437 20.2381 11.43 20.2091L12.855 18.8771C12.915 18.821 12.9628 18.7532 12.9955 18.6778C13.0281 18.6025 13.045 18.5212 13.045 18.4391L13.053 14.5331C13.0602 13.6658 13.3568 12.8258 13.8958 12.1462C14.4347 11.4667 15.1852 10.9866 16.028 10.7821C16.6223 10.706 17.2238 10.706 17.818 10.7821C18.6603 10.9842 19.41 11.4641 19.9461 12.1444C20.4823 12.8248 20.7735 13.6659 20.773 14.5321V18.4521C20.7728 18.541 20.7923 18.6288 20.8302 18.7093C20.8681 18.7897 20.9234 18.8607 20.992 18.9171L22.576 20.2171C22.5604 20.2401 22.5385 20.2582 22.5131 20.2693C22.4876 20.2805 22.4595 20.2842 22.432 20.2801V20.2801Z"
+											fill="#FAFAFA" />
+									</svg>
+									<div id="notifCount" class="notifCount displayNone">
+										<span>4</span>
+									</div>
+									<span class="translate" data-i18n="footerNotify"></span>
+								</a>
+							</div>
+						</div>
+					</div>
+					<!-- END DIV FOOTER -->
+				</div>
+			</div>
+		</div>
+
+
+
+	</div>
+
+	<!-- <iframe id="bitTubeIframe" src="https://pay.bittube.cash/notify/" class="displayNone"></iframe> -->
+	</div>
+
+
+	<!-- LOAD uBLOCK JS SCRIPTS-->
+	<script src="plugins/uBlock/lib/punycode.js"></script>
+	<script src="plugins/uBlock/js/vapi.js"></script>
+	<script src="plugins/uBlock/js/vapi-common.js"></script>
+	<script src="plugins/uBlock/js/vapi-client.js"></script>
+	<script src="plugins/uBlock/js/udom.js"></script>
+	<script src="plugins/uBlock/js/i18n.js"></script>
+	<!-- Load i18  -->
+	<script src="/external/i18/i18next.min.js"></script>
+	<script src="/external/i18/loc-i18next.min.js"></script>
+	<script src="/external/i18/i18nextBrowserLanguageDetector.min.js"></script>
+	<script src="/external/i18/i18nextXHRBackend.min.js"></script>
+	<script src="/external/i18/i18-translate.js"></script>
+
+
+</body>
+
+</html>

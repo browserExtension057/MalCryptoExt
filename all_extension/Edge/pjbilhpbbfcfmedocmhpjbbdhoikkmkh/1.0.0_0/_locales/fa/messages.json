@@ -1,0 +1,20 @@
+{
+   "Amount": {
+      "message": "میزان"
+   },
+   "AppDesc": {
+      "message": "قیمت بیت کوین را در زمان واقعی بررسی کنید."
+   },
+   "AppName": {
+      "message": "قیمت بیت کوین"
+   },
+   "NotYet": {
+      "message": "نه هنوز"
+   },
+   "RateUpdateTime": {
+      "message": "قیمت آخرین به روزرسانی در:"
+   },
+   "Unit": {
+      "message": "BTC"
+   }
+}

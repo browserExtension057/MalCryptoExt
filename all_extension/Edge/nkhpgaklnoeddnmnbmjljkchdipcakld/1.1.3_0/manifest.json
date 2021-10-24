@@ -1,0 +1,19 @@
+{
+   "browser_action": {
+      "default_popup": "popup.html",
+      "default_title": "Crypto Prices"
+   },
+   "description": "Real-time cryptocurrency price, market cap and rankings.",
+   "icons": {
+      "128": "icons/icon128.png",
+      "16": "icons/icon16.png",
+      "32": "icons/icon32.png",
+      "48": "icons/icon48.png",
+      "64": "icons/icon64.png"
+   },
+   "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA4fbzRg0TYjlgDfkzstMW1NsFDTEL0Hhcw0M78xXgzQvo0tTAADM89QXXNbOKRCfIZXxBx9I9akGWg7cEMxkSjntdtOrP7QcszYpu+ny238NtG6PGbq8rTG3iYmYPLIYgaBHJEelJe7I8eYvBRIb7dJg2M+jCcf7aM4AseyHJpUM/2h1Rh17sqFSXB5ckiFLx7WLJvCfSdjuULu8y/20hG6b2lP7gzac4SNtW6Z3l5TUzaYHD0SPJw8fwIaUPk6Iw+0murSuciJSS4HL7Z/gr5cgFhl3tgL/1HL1GudeGKJ61yLoEXPqkItevoW+gNiJZrmO0e2GM9NDxC1HQ1Z7EGwIDAQAB",
+   "manifest_version": 2,
+   "name": "Crypto Prices",
+   "update_url": "https://edge.microsoft.com/extensionwebstorebase/v1/crx",
+   "version": "1.1.3"
+}

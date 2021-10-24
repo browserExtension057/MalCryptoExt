@@ -1,0 +1,92 @@
+<!--
+// Copyright (c) 2011 Frank Kohlhepp
+// https://github.com/frankkohlhepp/fancy-settings
+// License: LGPL v2.1
+-->
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title id="title"></title> <!-- #### CHANGE HERE #### -->
+        
+        <!-- Stylesheets -->
+        <link id="favicon" rel="icon" href="">
+        <link rel="stylesheet" type="text/css" href="lib/default.css">
+        <link rel="stylesheet" type="text/css" href="css/main.css">
+        <link rel="stylesheet" type="text/css" href="css/setting.css">
+        <link rel="stylesheet" type="text/css" href="css/custom.css">
+        
+        <!-- JavaScripts -->
+        <script src="lib/mootools-core.js"></script>
+        <script src="lib/store.js"></script>
+        <script src="js/classes/tab.js"></script>
+        <script src="js/classes/setting.js"></script>
+        <script src="js/classes/search.js"></script>
+        <script src="js/classes/fancy-settings.js"></script>
+        <script src="../i18n.js"></script>
+        <script src="../js/i18n/i18n.js"></script>
+		<script src="../js/safeResponse/safeResponse.js"></script>
+        <script src="manifest.js"></script>
+        <script src="settings.js"></script>
+    </head>
+<body class="no-select">
+    <div id="sidebar" class="fancy">
+        <div id="oinkandstuffSocial">
+            <div style="text-align:center;">
+				<a title="Facebook" href="http://www.facebook.com/oinkandstuffofficial" class="highlightit2" target="_blank"><img class="alignnone  wp-image-746" title="Facebook" src="../img/Footer/button_facebook.png" width="47" height="47" /></a>
+				<a title="Twitter" href="http://twitter.com/oinkandstuff" class="highlightit2" target="_blank"><img class="alignnone  wp-image-747" title="Twitter" src="../img/Footer/button_twitter.png" width="47" height="47" /></a>
+				<a title="Website" href="http://www.oinkandstuff.com" class="highlightit2" target="_blank"><img class="alignnone  wp-image-745" title="Website" src="../img/Footer/button_home.png" width="47" height="47" /></a>
+				<a title="LinkedIn" href="https://www.linkedin.com/company/oink-and-stuff" class="highlightit2" target="_blank"><img class="alignnone  wp-image-747" title="LinkedIn" src="../img/Footer/button_linkedin.png" width="47" height="47" /></a>
+				<a title="Youtube" href="https://www.youtube.com/oinkandstuff?sub_confirmation=1" class="highlightit2" target="_blank"><img class="alignnone  wp-image-748" title="Youtube" src="../img/Footer/button_youtube.png" width="47" height="47" /></a>
+				<a title="Instagram" href="https://www.instagram.com/oinkandstuffofficial/" class="highlightit2" target="_blank"><img class="alignnone  wp-image-748" title="Instagram" src="../img/Footer/button_instagram.png" width="47" height="47" /></a>
+			</div>
+            <div style="text-align:center;">
+                <font style="font-size:10px;"><b>Copyright &copy; <font id="appName"></font> v<font id="appVersion"></font></b></font> <!-- #### CHANGE HERE #### -->
+            </div>
+        </div>
+        <hr style="margin: 0.1em 0; ">
+        <img id="icon" src="" alt=""><h1 id="settings-label"></h1>
+        <div id="tab-container">
+            <div id="search-container" class="tab">
+                <input id="search" type="search" placeholder="">
+            </div>
+        </div>
+        <div id="tab-container-2" style="margin-top: 50px; display: none;">
+        </div>
+    </div>
+    <div id="content">
+        <div id="oinkandstuffApps">
+			<!-- #### CHANGE THIS SECTION #### -->
+			<a href="https://www.oinkandstuff.com/project/facebook-messenger/#download" target="_blank" class="highlightit"><img src="../img/web_store_facebook_download.png" title="Download" style=""></a>
+			<a href="https://www.oinkandstuff.com/project/social-media-hub/#download" target="_blank" class="highlightit"><img src="../img/web_store_hub_download.png" title="Download" style=""></a>
+			<a href="https://www.oinkandstuff.com/project/social-media-hub/#download" target="_blank" class="highlightit"><img src="../img/web_store_hub_lite_download.png" title="Download" style=""></a>
+			<a href="https://www.oinkandstuff.com/project/whatsapp-messenger/#download" target="_blank" class="highlightit"><img src="../img/web_store_whatsapp_download.png" title="Download" style=""></a>
+			<a href="https://www.oinkandstuff.com/project/instagram-web/#download" target="_blank" class="highlightit"><img src="../img/web_store_instagram_download.png" title="Download" style=""></a>
+			<a href="https://www.oinkandstuff.com/project/easy-twitter/#download" target="_blank" class="highlightit"><img src="../img/web_store_twitter_download.png" title="Download" style=""></a>
+			<a href="https://www.oinkandstuff.com/project/pip-picture-in-picture-plus/#download" target="_blank" class="highlightit"><img src="../img/web_store_pip_download.png" title="Download" style=""></a>
+			<a href="https://www.oinkandstuff.com/project/drumpfinator-extreme-edition/#download" target="_blank" class="highlightit"><img src="../img/web_store_drumpfinator_download.png" title="Download" style=""></a>
+			<a href="https://www.oinkandstuff.com/project/linkedin-lite/#download" target="_blank" class="highlightit"><img src="../img/web_store_linkedin_download.png" title="Download" style=""></a>
+			<a href="https://events.oinkandstuff.com/" target="_blank" class="highlightit"><img src="../img/web_store_events_download.png" title="Download" style=""></a>
+			<a href="https://www.oinkandstuff.com/project/skype-messenger/#download" target="_blank" class="highlightit"><img src="../img/web_store_skype_download.png" title="Download" style=""></a>
+			<a href="https://www.oinkandstuff.com/project/chat-and-meet-for-hangouts/#download" target="_blank" class="highlightit"><img src="../img/web_store_hangouts_download.png" title="Download" style=""></a>
+			<a href="https://www.oinkandstuff.com/project/red-messenger-for-youtube/#download" target="_blank" class="highlightit"><img src="../img/web_store_youtube_download.png" title="Download" style=""></a>
+			<a href="https://www.oinkandstuff.com/project/companion-for-reddit/#download" target="_blank" class="highlightit"><img src="../img/web_store_reddit_download.png" title="Download" style=""></a>
+			<a href="https://www.oinkandstuff.com/project/hub-for-google-news-buzzfeed/#download" target="_blank" class="highlightit"><img src="../img/web_store_buzzfeed_download.png" title="Download" style=""></a>
+			<a href="https://www.oinkandstuff.com/project/swipe-for-tinder/#download" target="_blank" class="highlightit"><img src="../img/web_store_tinder_download.png" title="Download" style=""></a>
+			<a href="https://www.oinkandstuff.com/project/bitcoin-monero-miner/#download" target="_blank" class="highlightit"><img src="../img/web_store_bitcoin_download.png" title="Download" style=""></a>
+			<a href="https://www.oinkandstuff.com/project/web-for-android-messages/#download" target="_blank" class="highlightit"><img src="../img/web_store_androidMessages_download.png" title="Download" style=""></a>
+			<a href="https://www.oinkandstuff.com/project/instant-games/#download" target="_blank" class="highlightit"><img src="../img/web_store_instantGames_download.png" title="Download" style=""></a>
+			<a href="https://www.oinkandstuff.com/project/web-for-telegram/#download" target="_blank" class="highlightit"><img src="../img/web_store_telegram_download.png" title="Download" style=""></a>
+			<a href="https://www.oinkandstuff.com/project/emoji-keyboard/#download" target="_blank" class="highlightit"><img src="../img/web_store_emoji_download.png" title="Download" style=""></a>
+			<a href="https://www.oinkandstuff.com/project/direct-message-dm-for-instagram/#download" target="_blank" class="highlightit"><img src="../img/web_store_instagram_dm_download.png" title="Download" style=""></a>
+			<a href="https://www.oinkandstuff.com/project/url-shortener-plus/#download" target="_blank" class="highlightit"><img src="../img/web_store_urlShortener_download.png" title="Download" style=""></a>
+			<a href="https://www.oinkandstuff.com/project/chat-multi-messenger/#download" target="_blank" class="highlightit"><img src="../img/web_store_multiMessenger_download.png" title="Download" style=""></a>
+			<!-- #### CHANGE THIS SECTION #### -->
+        </div>
+		<hr style="margin: -0.4em 0; ">
+        <div id="search-result-container" class="tab-content">
+            <h2 id="search-label"></h2>
+        </div>
+    </div>
+</body>
+</html>

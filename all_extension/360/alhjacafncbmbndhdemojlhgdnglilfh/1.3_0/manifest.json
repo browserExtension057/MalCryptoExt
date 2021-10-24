@@ -1,0 +1,22 @@
+{
+   "background": {
+      "page": "src/background.html",
+      "persistent": false
+   },
+   "browser_action": {
+      "default_icon": "static/icon.png",
+      "default_popup": "src/popup.html",
+      "default_title": "以太坊交易费时时查"
+   },
+   "description": "Displays the current gas price provided by EthGasStation",
+   "icons": {
+      "128": "static/icon128.png",
+      "16": "static/icon16.png"
+   },
+   "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAhxlZCB/ChyxnS3st3sPXZwyJ3zSr7G+8Bfjzz0BIQEhZgChPtCSyMS6hC+E5/HWF6BzywzzNiyHmIz4Rd4T5SzKSXzGZssdM2PSt5mRHkfVPiiAW4jdWg1TdWy07BNkQp46bC6p71txmoQqLtdYa/VSOoDSlBjd45DdzRHKcArAgCjjGVPHY68bkzqPbgmTQf3MPZxF0tQDnjn9cemPCk6WbnIkyn1I0y89wf+WvqE1jSXgKvX/Ahi77JkFuVrXdLqV+Ch7R7VK5WNhpNsUUeaobYHZ/EEFc6ZzikTwrP0rarymmuQQcLzIuQcUB6I/3S1n9XHfS7xx4YV3eetQ+fQIDAQAB",
+   "manifest_version": 2,
+   "name": "以太坊交易费时时查",
+   "permissions": [ "alarms", "storage" ],
+   "update_url": "https://clients2.google.com/service/update2/crx",
+   "version": "1.3"
+}

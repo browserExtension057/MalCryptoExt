@@ -1,0 +1,20 @@
+{
+   "Amount": {
+      "message": "jumlah"
+   },
+   "AppDesc": {
+      "message": "Periksa Harga Bitcoin masa nyata."
+   },
+   "AppName": {
+      "message": "Harga Bitcoin"
+   },
+   "NotYet": {
+      "message": "Belum lagi"
+   },
+   "RateUpdateTime": {
+      "message": "Harga terakhir dikemas kini pada:"
+   },
+   "Unit": {
+      "message": "BTC"
+   }
+}

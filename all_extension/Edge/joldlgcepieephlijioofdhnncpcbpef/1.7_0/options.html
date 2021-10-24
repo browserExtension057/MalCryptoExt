@@ -1,0 +1,234 @@
+﻿<!DOCTYPE html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Options</title>
+
+<!-- css -->
+<link rel="stylesheet" href="assets/css/animate.css">
+
+<!-- default theme -->
+<link rel="stylesheet" href="assets/css/light.css">
+
+<!-- js -->
+<script src="assets/js/jquery.min.js"></script>
+<script src="assets/js/var-lang.js"></script>
+
+</head>
+<body id="body">
+
+<!-- Start pop up dimension -->
+<div class="pop_up_dimension"></div>
+
+<!-- Start Resize window message -->
+<div class="resize-window-message">
+<div class="box animated fadeIn delay-02s">
+<div class="resize-ico"></div>
+ <p>Resize this window</p>
+ </div>
+ <a class="bt_fullscreen animated fadeInUp delay-02s" id="fullscreen" title="open fullscreen"></a>
+</div>
+
+<!-- Start Languages -->
+<div class="modal_box animated fadeInRight delay-02s" id="languagemodal">
+   <a class="resetsearch"></a>
+   <input type="text" id="languagesearch" name="languagesearch" class="languagesearch" placeholder="Buscar idioma" data-live-search-normalize="true" autocomplete="off" value="">
+   <ul class="listlanguages" id="list">   
+     <div id="notfound" class="notfound animated fadeIn delay-02s">No language found</div>   
+     <li id="li_bg"><a id="bt_bg"><img src="assets/languages/bg.svg"><span id="bg">Bulgarian</span><i>bulgaro</i></a></li>   
+     <li id="li_bn"><a id="bt_bn"><img src="assets/languages/bn.svg"><span id="bn">Bengali</span></a></li> 
+     <li id="li_ca"><a id="bt_ca"><img src="assets/languages/ca.svg" class="ca"><span id="ca">Catalan</span><i>catalan</i></a></li> 
+     <li id="li_cs"><a id="bt_cs"><img src="assets/languages/cs.svg"><span id="cs">Czech</span></a></li> 
+     <li id="li_da"><a id="bt_da"><img src="assets/languages/da.svg"><span id="da">Danish</span><i>danes</i></a></li> 
+     <li id="li_de"><a id="bt_de"><img src="assets/languages/de.svg"><span id="de">German</span><i>aleman</i></a></li>                      
+     <li id="li_el"><a id="bt_el"><img src="assets/languages/el.svg"><span id="el">Greek</span></a></li>
+     <li id="li_en_US"><a id="bt_en_US"><img src="assets/languages/en_US.svg"><span id="en_US">English (USA)</span><i>ingles</i></a></li>
+     <li id="li_en_GB"><a id="bt_en_GB"><img src="assets/languages/en_GB.svg"><span id="en_GB">English</span><i>ingles</i></a></li> 
+     <li id="li_es"><a id="bt_es"><img src="assets/languages/es.svg"><span id="es">Spanish</span></a></li>    
+     <li id="li_et"><a id="bt_et"><img src="assets/languages/et.svg"><span id="et">Estonian</span></a></li>  
+     <!--<li id="li_fa"><a id="bt_fa"><img src="assets/languages/fa.svg"><span id="fa">Persian</span></a></li>-->
+     <li id="li_fi"><a id="bt_fi"><img src="assets/languages/fi.svg"><span id="fi">Finnish</span><i>finlandes</i></a></li>
+     <li id="li_fil"><a id="bt_fil"><img src="assets/languages/fil.svg"><span id="fil">Filipino</span></a></li>
+     <li id="li_fr"><a id="bt_fr"><img src="assets/languages/fr.svg"><span id="fr">French</span><i>frances</i></a></li>
+     <li id="li_gu"><a id="bt_gu"><img src="assets/languages/gu.svg"><span id="gu">Gujarati</span></a></li>
+     <!--<li id="li_he"><a id="bt_he"><img src="assets/languages/he.svg"><span id="he">Hebrew</span></a></li>-->
+     <li id="li_hi"><a id="bt_hi"><img src="assets/languages/hi.svg"><span id="hi">Hindi</span></a></li> 
+     <li id="li_hr"><a id="bt_hr"><img src="assets/languages/hr.svg"><span id="hr">Croatian</span></a></li>
+     <li id="li_hu"><a id="bt_hu"><img src="assets/languages/hu.svg"><span id="hu">Hungarian</span><i>hungarian, hungaro</i></a></li>
+     <li id="li_id"><a id="bt_id"><img src="assets/languages/id.svg"><span id="id">Indonesian</span></a></li>
+     <li id="li_it"><a id="bt_it"><img src="assets/languages/it.svg"><span id="it">Italian</span></a></li>
+     <li id="li_ja"><a id="bt_ja"><img src="assets/languages/ja.svg"><span id="ja">Japanese</span><i>japones</i></a></li>
+     <li id="li_ko"><a id="bt_ko"><img src="assets/languages/ko.svg"><span id="ko">Korean</span></a></li>
+     <li id="li_lt"><a id="bt_lt"><img src="assets/languages/lt.svg"><span id="lt">Lithuanian</span></a></li>
+     <li id="li_lv"><a id="bt_lv"><img src="assets/languages/lv.svg"><span id="lv">Latvian</span><i>leton</i></a></li>
+     <li id="li_mr"><a id="bt_mr"><img src="assets/languages/mr.svg"><span id="mr">Marathi</span></a></li>
+     <li id="li_ms"><a id="bt_ms"><img src="assets/languages/ms.svg"><span id="ms">Malay</span></a></li>
+     <li id="li_nl"><a id="bt_nl"><img src="assets/languages/nl.svg"><span id="nl">Dutch</span><i>holandes</i></a></li>
+     <li id="li_no"><a id="bt_no"><img src="assets/languages/no.svg"><span id="no">Norwegian</span></a></li>
+     <li id="li_pl"><a id="bt_pl"><img src="assets/languages/pl.svg"><span id="pl">Polish</span></a></li>
+     <li id="li_pt_BR"><a id="bt_pt_BR"><img src="assets/languages/pt_BR.svg"><span id="pt_BR">Portuguese (Brazil)</span><i>portugues</i></a></li>
+     <li id="li_pt_PT"><a id="bt_pt_PT"><img src="assets/languages/pt_PT.svg"><span id="pt_PT">Portuguese (Portugal)</span><i>portugues</i></a></li>
+     <li id="li_ro"><a id="bt_ro"><img src="assets/languages/ro.svg"><span id="ro">Romanian</span></a></li>
+     <li id="li_ru"><a id="bt_ru"><img src="assets/languages/ru.svg"><span id="ru">Russian</span></a></li>
+     <li id="li_sk"><a id="bt_sk"><img src="assets/languages/sk.svg"><span id="sk">Slovak</span></a></li>
+     <li id="li_sl"><a id="bt_sl"><img src="assets/languages/sl.svg"><span id="sl">Slovenian</span></a></li>
+     <li id="li_sr"><a id="bt_sr"><img src="assets/languages/sr.svg"><span id="sr">Serbian</span></a></li>
+     <li id="li_sv"><a id="bt_sv"><img src="assets/languages/sv.svg"><span id="sv">Swedish</span></a></li>
+     <li id="li_ta"><a id="bt_ta"><img src="assets/languages/ta.svg"><span id="ta">Tamil</span></a></li>
+     <li id="li_te"><a id="bt_te"><img src="assets/languages/te.svg"><span id="te">Telugu</span></a></li> 
+     <li id="li_th"><a id="bt_th"><img src="assets/languages/th.svg"><span id="th">Thai</span><i>tailandes</i></a></li> 
+     <li id="li_tr"><a id="bt_tr"><img src="assets/languages/tr.svg"><span id="tr">Turkish</span></a></li> 
+     <li id="li_uk"><a id="bt_uk"><img src="assets/languages/uk.svg"><span id="uk">Ukrainian</span></a></li>   
+     <li id="li_vi"><a id="bt_vi"><img src="assets/languages/vi.svg"><span id="vi">Vietnamese</span></a></li>
+     <li id="li_zh_CN"><a id="bt_zh_CN"><img src="assets/languages/zh_CN.svg"><span id="zh_CN">Chinese (China)</span></a></li>  
+     <li id="li_zh_TW"><a id="bt_zh_TW"><img src="assets/languages/zh_TW.svg"><span id="zh_TW">Chinese (Taiwan)</span></a></li>                
+   </ul>
+   <a id="languageclose" class="close_modal animated fadeInUp delay-03s"></a>
+</div>
+<!-- End Languages -->
+
+<!-- Start Decimals -->
+<div class="modal_box animated fadeInRight delay-02s" id="decimalmodal">
+   <h2 id="decimal_h2">Decimals</h2>
+    <p id="decimal_p">Number visible decimals</p>
+   <div class="digits_point" id="digits_point">0.00</div>
+   <div class="digits_comma" id="digits_comma">0,00</div>
+   <a class="point" id="point">.</a>
+   <a class="comma" id="comma">,</a>
+   <ul>
+     <li><a id="d_0">0</a></li>
+     <li><a id="d_1">1</a></li>
+     <li><a id="d_2" class="active">2</a></li>
+     <li><a id="d_3">3</a></li>
+     <li><a id="d_4">4</a></li>
+     <li><a id="d_5">5</a></li>
+     <li><a id="d_6">6</a></li>
+     <li><a id="d_7">7</a></li>
+   </ul>
+   <a id="decimalclose" class="close_modal animated fadeInUp delay-03s"></a>
+   <div class="ticksave animated fadeInUp delay-03s"></div>
+</div>
+<!-- End Decimals -->
+
+<!-- Start buttons -->
+<div class="buttons">
+ <ul>
+   <li><a class="popup tooltip" id="popuptitle" title="open in iframe"></a></li>
+   <li><a class="light tooltip" title="Light mode" id="light" style="display:none;"></a><a id="dark" class="dark tooltip" title="Dark mode"></a></li>
+   <li><a class="configuration tooltip" id="configurationtitle" title="configuration"></a></li>
+   <li><a class="list tooltip" id="listtitle" title="multiple converter"></a></li>
+   <li><a class="donate tooltip" id="donatetitle" title="Donate"></a></li>
+    </ul>
+</div>
+<!--End buttons-->
+
+<!-- Start 1. Currency conversor -->
+<div class="currency-conversor">
+<div class="form__group">
+<div class="bt_swap"><a href="" id="swap" title="press spacebar key"></a></div>
+  <input type="number" id="amount" name="importe" class="importe" placeholder="Importe" autocomplete="off" value="">
+  <label for="amount" class="label" id="amount">Amount</label>
+</div>
+
+<!-- fromDropdown search -->
+<div class="active_fromDropdown"></div>
+<a class="resetcurrencysearch2"></a> 
+<input type="text" id="currencysearch2" class="currencysearch2 animated fadeIn delay-01s" placeholder="Buscar moneda" data-live-search-normalize="true" autocomplete="off" value="">
+<div id="notcurrencyfound2" class="notcurrencyfound2">No currency found</div> 
+
+<!-- toDropdown search -->
+<div class="active_toDropdown"></div>
+<a class="resetcurrencysearch3"></a> 
+<input type="text" id="currencysearch3" class="currencysearch3 animated fadeIn delay-01s" placeholder="Buscar moneda" data-live-search-normalize="true" autocomplete="off" value="">
+<div id="notcurrencyfound3" class="notcurrencyfound3">No currency found</div>
+
+<div id="fromDropdown"></div>
+<div id="toDropdown"></div>
+
+<a class="bt_convert" id="convert" title="press enter key">convert</a>
+<p id="result"></p>
+</div>
+<!-- End 1. Currency conversor -->
+
+<!-- Start 2. Multiple currency converter -->
+<div class="currencies-list">
+<div class="help_message">
+<div class="img"><div class="currencies_ico"></div></div>
+<h2 id="selectcurrencies">Select currencies</h2>
+<p id="helpnote">Press + to add currencies</p>
+</div>
+<a class="back" id="back">Back</a>
+<div class="container">
+ <ul class="currencies" id="currencies"></ul>
+ <button class="add-currency-btn" id="add-currency-btn"></button>
+ <ul class="add-currency-list">
+  <div id="notcurrencyfound" class="notcurrencyfound animated fadeIn delay-02s">No currency found</div> 
+ </ul>
+ <a class="resetcurrencysearch"></a> 
+ <input type="text" id="currencysearch" class="currencysearch animated fadeIn delay-01s" placeholder="Buscar moneda" data-live-search-normalize="true" autocomplete="off" value="">
+</div>
+</div>
+<!--End 2. Multiple currency converter-->
+
+<!-- Start 3. Connfiguration -->
+<div class="configuration-settings">
+<a class="back2" id="back2">Back</a>
+<div class="margin">
+
+<h2 id="configuration">Configuration</h2>
+
+<!-- 3.1 Language -->
+<div class="box">
+<h3 id="language">Language</h3>
+<div class="left"><p id="selectedlanguage">English</p></div>
+<div class="right"><a id="language_bt" class="edit_bt"></a></div>
+</div>
+
+<!-- 3.2 Decimal Digits -->
+<div class="box">
+<h3 id="decimal">Decimals</h3>
+<div class="left"><p id="decimalselected">2</p></div>
+<div class="right"><a id="decimal_bt" class="edit_bt"></a></div>
+</div>
+
+<!-- 3.3 Open extension -->
+<div class="box">
+<h3 id="openextension">Open extension</h3>
+<div class="left"><p><a id="hotkeys_bt" class="hotkeys_bt"><span id="hotkeys" class="hotkeys_bt"></span></a></p></div>
+<div class="right"><a id="edit_bt" class="edit_bt"></a></div>
+</div>
+
+<!-- 3.4 Theme -->
+<div class="box">
+<h3 id="theme">Theme</h3>
+<div class="left">
+ <p class="on_light" id="lighttheme">Light</p>
+ <p class="on_dark" id="darktheme">Dark</p>
+</div>
+<div class="right">
+<a id="dark_config" class="bt_dark"></a>
+<a id="light_config" class="bt_light" style="display:none;"></a>
+</div>
+</div>
+
+</div>
+</div>
+<!-- End 3. Configuration -->
+
+<!-- js -->
+<script defer src="assets/js/ui-labels.js"></script>
+<script defer src="assets/js/currencies-select.js"></script>
+<script defer src="assets/js/exchange-currencies-1.js"></script>
+<script defer src="assets/js/exchange-currencies-2.js"></script>
+<script defer src="assets/js/convert.js"></script>
+<script defer src="assets/js/multiple-converter.js"></script>
+<script defer src="assets/js/languages.js"></script>
+<script defer src="assets/js/decimals.js"></script>
+<script defer src="assets/js/options.js"></script>
+<script defer src="assets/js/theme.js"></script>
+
+<!-- Languages -->
+<script async type="text/javascript" src="assets/js/lang.js"></script> 
+
+</body>
+</html>

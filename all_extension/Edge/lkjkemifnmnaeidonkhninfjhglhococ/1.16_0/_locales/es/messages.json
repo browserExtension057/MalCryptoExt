@@ -1,0 +1,32 @@
+{
+   "aaac": {
+      "message": ""
+   },
+   "appDesc": {
+      "message": "Muestra precios y gráficas en tiempo real de diferentes criptomonedas a 1 clic, incluso desde la barra del navegador."
+   },
+   "appName": {
+      "message": "Precios de Criptomonedas - BitDuck"
+   },
+   "duckSound": {
+      "message": "¡BITCUA! ¡Hazme clic para darte 10USD GRATIS en Coinbase! ¡BITCUA!"
+   },
+   "goToCoinbase": {
+      "message": "¡10USD GRATIS en Coinbase!"
+   },
+   "labelCrypto": {
+      "message": "Ver toda la información en formato:"
+   },
+   "labelCurrency": {
+      "message": "Precio en la barra del navegador:"
+   },
+   "labelCurrencyTo": {
+      "message": "a"
+   },
+   "selectCryptoGraph": {
+      "message": "Detallado"
+   },
+   "selectCryptoList": {
+      "message": "Lista"
+   }
+}

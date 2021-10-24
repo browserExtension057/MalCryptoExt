@@ -1,0 +1,25 @@
+{
+   "browser_action": {
+      "default_icon": "icons/icon16.png",
+      "default_popup": "index.html",
+      "default_title": "Hanzisize"
+   },
+   "browser_specific_settings": {
+      "gecko": {
+         "id": "hanzisizeextension@gmail.com"
+      }
+   },
+   "description": "A browser extension for changing font-size based on user-selected language",
+   "icons": {
+      "128": "icons/icon128.png",
+      "16": "icons/icon16.png",
+      "48": "icons/icon48.png"
+   },
+   "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA2hObFbaQpvMmNgEC0Zz20wRapNfaaWVgyrwmHXRGv1BB72s9xbChrKNPE5xdgUIgqEh4et5yiC0PSg2kVe4WCXzcRQtt3E8NeMFQfAdxwlNgfYf3OTMSBDzD6MuvcUlpeEJ1KZx3hUeUV8ZTjd0IWZZ97wuwoZ5bKyMnSczSrKLsFuF/+jMjjtfjMs8k6uBptBzsP9It8eYV1bSUGrimiTfG3V41u3OoFvC9PlnxpgH8NE+OHQ5qa3ZWIPKfZDYTAzFYs4ACMThYCXKdDjFVRmK4CD0Vp0nDcothBBItlzDRBolw53vH0dgAbztUn+eH124PSAP3UQWoWlx9H8h0ewIDAQAB",
+   "manifest_version": 2,
+   "name": "Hanzisize",
+   "offline_enabled": true,
+   "permissions": [ "activeTab", "storage" ],
+   "update_url": "https://edge.microsoft.com/extensionwebstorebase/v1/crx",
+   "version": "0.2.0"
+}

@@ -1,0 +1,20 @@
+{
+   "Amount": {
+      "message": "Beløb"
+   },
+   "AppDesc": {
+      "message": "Tjek realpris Bitcoin-pris."
+   },
+   "AppName": {
+      "message": "Bitcoin-priser"
+   },
+   "NotYet": {
+      "message": "Ikke endnu"
+   },
+   "RateUpdateTime": {
+      "message": "Pris sidst opdateret til:"
+   },
+   "Unit": {
+      "message": "BTC"
+   }
+}

@@ -1,0 +1,51 @@
+{
+   "background": {
+      "scripts": [ "background.js" ]
+   },
+   "incognito": "spanning",
+   "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAswzWMoRgmpcbVXPrVWQe+qo8SCTXftnaaV9RgnmLvwXzJ91H4GOU2r5I3MjG7ERDiWvAhRJxD+8ytut5vUBYRJ+5KwNTv3sw/4NAj6tg4SiBjOJypDJpSvXoHCamMglJIR9P4/Y6kT7Wl5XwqUSeepBf2ovrRx/SlZ4j3twYuKm8FZbbPUrEYSVmFm4hURxYMsuz1QqvF/56/wgEn3tsqvhB7grmdgisXWRjBgP6LQn+A63QIQvcXqq4aaICgf03ofXYG+kLb/YevAeYM38i4RIfWmP1GWNrHU8EuGtrbwPgycJBbXvtT4ZaOLFVx+mFyGjD/UfcslwqKqDbmSbmgwIDAQAB",
+   "manifest_version": 2,
+   "name": "TTS engine",
+   "permissions": [ "ttsEngine", "utility", "*://apis.naver.com/*" ],
+   "tts_engine": {
+      "voices": [ {
+         "event_types": [ "start", "end", "error" ],
+         "lang": "ko-KR",
+         "remote": true,
+         "voice_name": "Kyuri"
+      }, {
+         "event_types": [ "start", "end", "error" ],
+         "lang": "ko-KR",
+         "remote": true,
+         "voice_name": "Jinho"
+      }, {
+         "event_types": [ "start", "end", "error" ],
+         "lang": "en-US",
+         "remote": true,
+         "voice_name": "Clara"
+      }, {
+         "event_types": [ "start", "end", "error" ],
+         "lang": "en-US",
+         "remote": true,
+         "voice_name": "Matt"
+      }, {
+         "event_types": [ "start", "end", "error" ],
+         "lang": "ja-JP",
+         "remote": true,
+         "voice_name": "Yuri"
+      }, {
+         "event_types": [ "start", "end", "error" ],
+         "lang": "ja-JP",
+         "remote": true,
+         "voice_name": "Shinji"
+      }, {
+         "event_types": [ "start", "end", "error" ],
+         "lang": "zh-CN",
+         "remote": true,
+         "voice_name": "Meimei"
+      } ]
+   },
+   "update_url": "https://store.whale.naver.com/update/whx",
+   "version": "1.0.0",
+   "whale_extension": true
+}

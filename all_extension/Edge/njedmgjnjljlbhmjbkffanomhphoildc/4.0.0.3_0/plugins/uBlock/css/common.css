@@ -1,0 +1,213 @@
+@font-face {
+    font-family: 'FontAwesome';
+    font-weight: normal;
+    font-style: normal;
+    src: url('/external/fontawesome/fonts/fontawesome-webfont.ttf') format('truetype');
+    }
+.fa {
+    display: inline-block;
+    font-family: FontAwesome;
+    font-style: normal;
+    font-weight: normal;
+    line-height: 1;
+    user-select: none;
+      -moz-user-select: none;
+      -webkit-user-select: none;
+    }
+body {
+    background-color: white;
+    color: black;
+    font-size: 14px;
+    font-family: 'Open Sans',sans-serif !important;
+    }
+code {
+    background-color: #eee;
+    padding: 0 0.25em;
+    }
+textarea {
+    font-size: 90%;
+    }
+/* I designed the button with: http://charliepark.org/bootstrap_buttons/ */
+button.custom {
+    padding:.6785em;
+    text-transform: uppercase;
+    border: 1px solid transparent;
+    border-color: #ccc #ccc #bbb #bbb;
+    border-radius: 3px;
+    background-color: hsl(216, 0%, 75%);
+    /* background-image: linear-gradient(#f2f2f2, #dddddd); */
+    /* background-repeat: repeat-x; */
+    color: #ffffff;
+    opacity: 0.8;
+    }
+button.custom:hover {
+    opacity: 1.0;
+    }
+button.custom.important {
+    border-color: #00abff #00abff hsl(200, 100%, 73%);
+    background-color: hsl(200, 100%, 75%);
+    /* background-image: linear-gradient(#ffdca8, #ffcc7f); */
+    }
+button.custom.disabled,
+button.custom[disabled],
+button.custom.important.disabled,
+button.custom.important[disabled] {
+    border-color: #ddd #ddd hsl(36, 0%, 85%);
+    background-color: hsl(36, 0%, 72%);
+    background-image: linear-gradient(#f2f2f2, #dddddd);
+    color: #666;
+    opacity: 0.6;
+    pointer-events: none;
+    }
+button.custom.iconifiable > .fa {
+    padding-right: 0.5em;
+    }
+body[dir="rtl"] button.custom.iconifiable > .fa {
+    padding-left: 0.5em;
+    }
+.hidden {
+    display: none;
+    height: 0;
+    visibility: hidden;
+    width: 0;
+    }
+
+.buttonsBittube{
+    background-color: #00abff !important;
+    color: #ffffff !important;
+    padding: .6785em !important;
+    border: 1px solid #00abff !important;
+    outline: 0 !important;
+    background-image: unset !important;
+    font-size: 13px !important;
+    text-transform: uppercase;
+    border-radius: 4px;
+    cursor: pointer;
+    }
+    
+    .buttonsBittube:hover{
+    opacity: .8;
+    }
+
+    .cm-search-widget{
+        background: #fff !important;
+        margin-bottom: 15px;
+    }
+
+    .CodeMirror{
+        border: 1px solid #dfdfdf;
+        margin-left: 10px;
+    }
+
+    #userFilters{
+        /* border: 1px solid #dfdfdf; */
+    }
+
+    .CodeMirror-wrap{
+        border-right: 1px solid #dfdfdf !important;
+    }
+
+    .CodeMirror-gutter{
+        background: #ffffff !important;
+        border-top: 1px solid #dfdfdf !important;
+    }
+
+    .cm-staticnetBlock{
+        font-size: 14px !important;
+        color: #343434 !important;
+        font-family: 'Open Sans',sans-serif;
+    }
+
+    .mbsc-ic{
+        font-size: 22px;
+    }
+
+    .labelSearchCodeMirror{
+        position: absolute;
+        background: white;
+        top: -10px;
+        left: 10px;
+        color: #454545;
+        z-index: 1;
+        font-size: .75em;
+        padding: 0 .333334em;
+    }
+
+    .inputSearchCodeMirror{
+        border: 1px solid #dfdfdf;
+        border-radius: 4px;
+        outline: 0;
+        line-height: 20px;
+        font-size: 13px;
+        padding-left: 12px;
+    }
+
+    .CodeMirror-merge{
+        border: none !important;
+    }
+
+    .labelSearchRuleFilters{
+        position: absolute;
+        background: white;
+        top: 1px;
+        left: 17px;
+        color: #454545;
+        z-index: 1;
+        font-size: .75em;
+        padding: 0 .333334em;
+    }
+
+    .CodeMirror-merge-scrolllock{
+        position: relative;
+        left: -50%;
+        cursor: pointer;
+        color: #343434;
+        line-height: 1;
+        font-size: 25px;
+        font-weight: 100;
+        opacity: 0.6;
+    }
+@media (max-width: 640px) {
+    button.custom.iconifiable > .fa {
+        font-size: 150%;
+        padding: 0;
+        }
+    /* button.custom.iconifiable > [data-i18n] {
+        display: none;
+        } */
+
+
+
+        .headerButtons{
+            display: grid !important;
+            width: 100% !important;
+        }
+        .headerButtons > button{
+            margin-left: 0px;
+            margin-bottom: 10px;
+        }
+    #iframe{
+        padding: 0px !important;
+    }
+
+    }
+
+
+
+    .bodyAdvancedSettings{
+        background-color: white;
+        color: black;
+        background-color: #ffffff;
+        font-family: 'Open Sans',sans-serif !important;
+        font-size: 14px;
+        color: #333333;
+        line-height: 20px;
+        background-image: url(..//assets/images/background.png);
+        background-position: center;
+        background-size: cover;
+    }
+    .containerNavAdvancedSettings{
+        text-align: center;
+        font-size: 20px;
+        padding-top: 40px !important;
+      }

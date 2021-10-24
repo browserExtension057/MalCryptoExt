@@ -1,0 +1,86 @@
+body, html{
+  height: 100vh;
+  max-height: 100vh;
+}
+
+.maxWidth360{
+  max-width: 100vw;
+}
+.container, #mainContentAirtime, .width360, .md-apps-tab, .chart-container{
+  width: 100vw !important;
+}
+.histoTab{
+  width: calc(100vw - 36px) !important;
+}
+#mainContentAirtime{
+  min-height: 100vh;
+  max-height: 100vh;
+}
+
+.notificationsContainer{
+  min-height: calc(100vh - 200px);
+  max-height: calc(100vh - 200px);  
+}
+.maxHeight430{
+  min-height: calc(100vh - 240px) !important;
+  max-height: calc(100vh - 240px) !important;
+}
+.panel-body{
+  /* height: calc(100vh - 195px); */
+}
+
+.mainDivHistory.mbsc-ms-top.mbsc-ms-c{
+  z-index: 1;
+}
+#divRegisterPhoneNumber .labelPhoneNumber{
+  width: 42% !important;
+}
+
+.subPhone button{
+  width: calc(83% / 2) !important;
+}
+
+#countriesDiv{
+  top: 100% !important;
+}
+.divButtonsVerifiy > .mbsc-btn-block{
+  width: calc(100% - 60px);
+}
+
+.divIntroTabsGetVerified{
+  width: calc(100% - 60px);
+}
+/* #divLinkedAccounts{
+  width: calc(100% - 96px);
+} */
+.chart-container{
+  min-height: calc(100vh / 2.8);
+}
+
+#divLoaderChart{
+  width: 100vw;
+  height: calc(100vh / 1.8);
+}
+
+.md-donation-cont, .coinmarketStats{
+  height: calc( (100vh / 2.5) - 122px);
+}
+
+.popUpResendEmail .mbsc-fr-popup{
+  /* left: unset !important; */
+}
+
+#userSuggestions, .airtimeMessage{
+  width: 100vw;
+}
+
+.historyContainer{
+  height: calc(100vh - 180px);
+  max-height: calc(100vh - 180px);
+}
+
+.footerLogin{
+  position: relative;
+  width: 100%;
+  margin-top: 40px;
+}

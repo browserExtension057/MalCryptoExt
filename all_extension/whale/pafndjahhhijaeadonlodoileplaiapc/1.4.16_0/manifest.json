@@ -1,0 +1,57 @@
+{
+   "author": "https://metacoin.network",
+   "background": {
+      "persistent": true,
+      "scripts": [ "js/background.js" ]
+   },
+   "browser_action": {
+      "default_icon": {
+         "19": "icons/19.png",
+         "38": "icons/38.png"
+      },
+      "default_popup": "index.html",
+      "default_title": "__MSG_appName__"
+   },
+   "commands": {
+      "_execute_browser_action": {
+         "description": "Open popup metawallet",
+         "suggested_key": {
+            "chromeos": "Alt+W",
+            "linux": "Alt+W",
+            "mac": "Ctrl+W",
+            "windows": "Alt+W"
+         }
+      },
+      "open-window": {
+         "description": "Open window metawallet",
+         "suggested_key": {
+            "chromeos": "Alt+Shift+W",
+            "linux": "Alt+Shift+W",
+            "mac": "Ctrl+Shift+W",
+            "windows": "Alt+Shift+W"
+         }
+      }
+   },
+   "content_security_policy": "script-src 'self' ; object-src 'self'",
+   "default_locale": "en",
+   "description": "__MSG_appDescription__",
+   "externally_connectable": {
+      "ids": [ "*" ],
+      "matches": [ "https://t.me/MetacoinWalletBot/*", "https://dapp.metacoin.network/*" ]
+   },
+   "homepage_url": "http://localhost:8080/",
+   "icons": {
+      "128": "icons/128.png",
+      "16": "icons/16.png",
+      "48": "icons/48.png"
+   },
+   "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAwICo7KttFg0W6K3ZKhLsvixqNPSLKWY21sywH7IfhpMdqfSGGPZfHW+Njiv2NWUCvcdFyAeGDHypHTdWSSJKv12iOM1jXAJ4srEKfInXbkdxXnXBfmVV4Y4QvEWYirHs26hI4ES/Fd8OL+svGY20d/dIV9XB+Z6SwW1dYZISR1V2213cEVkYgCJJH6w2dqY7zs8ChcDEIquUB6i9UwnpkjmCkf7m70Imws1RVEQxVKc3cdiygki5WNiT9t88GsgfWG1SGwSW4eLGlQiE0C6AiWJNHi1a9+nSaLEVtyn2RT6i3BspC/XtYEAph4qChq3NdS+i7iOKxDek4KFVfw3yUQIDAQAB",
+   "manifest_version": 2,
+   "name": "__MSG_appName__",
+   "permissions": [ "storage", "alarms", "contextMenus", "https://dapp.metacoin.network/*", "https://*.metascan.io/*", "activeTab" ],
+   "short_name": "__MSG_appName__",
+   "update_url": "https://store.whale.naver.com/update/whx",
+   "version": "1.4.16",
+   "web_accessible_resources": [ "/popup/*" ],
+   "whale_extension": true
+}

@@ -1,0 +1,20 @@
+{
+   "Amount": {
+      "message": "Tutar"
+   },
+   "AppDesc": {
+      "message": "Gerçek zamanlı Bitcoin Fiyatı kontrol edin."
+   },
+   "AppName": {
+      "message": "Bitcoin Fiyatları"
+   },
+   "NotYet": {
+      "message": "Henüz değil"
+   },
+   "RateUpdateTime": {
+      "message": "Son güncelleme tarihi:"
+   },
+   "Unit": {
+      "message": "BTC"
+   }
+}

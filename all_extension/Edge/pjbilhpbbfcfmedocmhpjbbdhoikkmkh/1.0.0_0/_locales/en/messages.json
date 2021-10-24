@@ -1,0 +1,20 @@
+{
+   "Amount": {
+      "message": "Amount"
+   },
+   "AppDesc": {
+      "message": "Check real time Bitcoin Price."
+   },
+   "AppName": {
+      "message": "Bitcoin Price"
+   },
+   "NotYet": {
+      "message": "Not Yet"
+   },
+   "RateUpdateTime": {
+      "message": "Price last updated at:"
+   },
+   "Unit": {
+      "message": "BTC"
+   }
+}

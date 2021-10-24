@@ -1,0 +1,20 @@
+{
+   "Amount": {
+      "message": "suma"
+   },
+   "AppDesc": {
+      "message": "Patikrinkite realiojo laiko „Bitcoin“ kainą."
+   },
+   "AppName": {
+      "message": "Bitcoin kainos"
+   },
+   "NotYet": {
+      "message": "Dar ne"
+   },
+   "RateUpdateTime": {
+      "message": "Kaina paskutinį kartą atnaujinta:"
+   },
+   "Unit": {
+      "message": "BTC"
+   }
+}

@@ -1,0 +1,26 @@
+<div class="w-row">
+    <div class="w-row" show-modal="transaction-details?tx_hash={{ tx.hash }}">
+        <div class="w-col w-col-2 responsive-column">
+
+            <div class="transaction-detail value-bold" style="color: #e65a5a;" ng-show="tx_is_mempool(tx)">
+                {{tx.amount | money}} {{'unconfirmed' | i18next}}
+            </div>
+
+            <div class="transaction-detail value-bold" ng-show="!tx_is_mempool(tx)">
+                {{tx.amount | money}} <span ng-show="!tx_is_unlocked(tx)"><i class="fa fa-lock"></i></span>
+            </div>
+        </div>
+        <div class="w-col w-col-3 responsive-column">
+            <div class="transaction-detail">{{tx.timestamp | time}}</div>
+        </div>
+        <div class="w-col w-col-7 responsive-column">
+            <div class="move-text-div">
+                <div class="transaction-address">{{tx.hash}}</div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+

@@ -1,0 +1,238 @@
+.uppward-flag-container {
+  position: fixed;
+  z-index: 2147483647;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  width: 100%;
+  max-width: 100%; }
+  .uppward-flag-container * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Nunito', sans-serif;
+    font-weight: 400;
+    font-size: 13px;
+    clear: both; }
+    .uppward-flag-container * a:link, .uppward-flag-container * a:active, .uppward-flag-container * a:visited, .uppward-flag-container * a:hover {
+      text-decoration: none;
+      color: inherit; }
+  .uppward-flag-container.uppward-type-banner {
+    max-width: 100%;
+    width: 100%; }
+  .uppward-flag-container.top {
+    top: 0;
+    right: 0; }
+  .uppward-flag-container.bottom {
+    right: 0;
+    bottom: 0; }
+  .uppward-flag-container .uppward-resource-flag {
+    width: 100%;
+    max-width: 626px;
+    line-height: 1.3;
+    letter-spacing: .01em;
+    color: #fff; }
+    .uppward-flag-container .uppward-resource-flag.uppward-type-banner {
+      max-width: 100%; }
+    .uppward-flag-container .uppward-resource-flag.top {
+      top: 0;
+      right: 0; }
+    .uppward-flag-container .uppward-resource-flag.bottom {
+      right: 0;
+      bottom: 0; }
+    .uppward-flag-container .uppward-resource-flag .uppward-resource-flag-main {
+      position: relative;
+      width: 100%;
+      padding: 12px 150px 12px 40px;
+      border-radius: 3px;
+      overflow: hidden;
+      text-align: left;
+      background-color: #F03E3E; }
+      .uppward-flag-container .uppward-resource-flag .uppward-resource-flag-main .uppward-resource-flag-title {
+        display: inline-block;
+        padding-right: 8px;
+        font-size: 13px;
+        font-weight: bold;
+        line-height: 15px; }
+      .uppward-flag-container .uppward-resource-flag .uppward-resource-flag-main .uppward-resource-flag-details {
+        display: inline-block;
+        font-size: 12px;
+        line-height: 14px;
+        text-decoration: underline;
+        font-family: 'Work Sans', sans-serif;
+        color: #fff; }
+      .uppward-flag-container .uppward-resource-flag .uppward-resource-flag-main .uppward-resource-flag-back {
+        display: inline-block;
+        font-size: 12px;
+        line-height: 14px;
+        text-decoration: underline;
+        font-family: 'Work Sans', sans-serif;
+        color: #fff; }
+      .uppward-flag-container .uppward-resource-flag .uppward-resource-flag-main .warning-icon {
+        position: absolute;
+        top: 50%;
+        left: 12px;
+        width: 1.34em;
+        height: 1.34em;
+        margin-top: -0.67em;
+        background: url(images/update/ic_blacklist_noti.svg) no-repeat;
+        background-size: 1.34em;
+        background-position: center center;
+        line-height: 1.34em; }
+      .uppward-flag-container .uppward-resource-flag .uppward-resource-flag-main .pull-right {
+        position: absolute;
+        top: 50%;
+        right: 40px;
+        margin-top: -8px;
+        font-size: 12px;
+        text-decoration: underline !important; }
+      .uppward-flag-container .uppward-resource-flag .uppward-resource-flag-main .uppward-resource-flag-close {
+        position: absolute;
+        top: 50%;
+        right: 12px;
+        width: 24px;
+        height: 24px;
+        margin-top: -12px;
+        cursor: pointer;
+        background-image: url("images/update/ic-cancel.svg");
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center center; }
+  .uppward-flag-container .uppward-flag-whitelist {
+    width: 100%;
+    max-width: 440px;
+    font-size: 15px;
+    line-height: 1.3;
+    letter-spacing: .01em;
+    color: #fff; }
+    .uppward-flag-container .uppward-flag-whitelist.uppward-type-banner {
+      max-width: 100%; }
+    .uppward-flag-container .uppward-flag-whitelist.top {
+      top: 0;
+      right: 0; }
+    .uppward-flag-container .uppward-flag-whitelist.bottom {
+      right: 0;
+      bottom: 0; }
+    .uppward-flag-container .uppward-flag-whitelist .uppward-flag-wrap {
+      position: relative;
+      width: 100%;
+      padding: 12px 150px 12px 40px;
+      border-radius: 3px;
+      overflow: hidden;
+      text-align: left;
+      background-color: #12B886; }
+      .uppward-flag-container .uppward-flag-whitelist .uppward-flag-wrap .uppward-icon-check {
+        position: absolute;
+        display: inline-block;
+        top: 50%;
+        left: 12px;
+        width: 1.34em;
+        height: 1.34em;
+        margin-top: -0.67em;
+        background: url(images/update/ic-safecheck.svg) no-repeat;
+        background-size: 1.34em;
+        background-position: center center;
+        line-height: 1.34em; }
+      .uppward-flag-container .uppward-flag-whitelist .uppward-flag-wrap .pull-right {
+        position: absolute;
+        top: 50%;
+        right: 40px;
+        margin-top: -8px;
+        font-size: 12px;
+        text-decoration: underline !important; }
+      .uppward-flag-container .uppward-flag-whitelist .uppward-flag-wrap .uppward-flag-whitelist-close {
+        position: absolute;
+        top: 50%;
+        right: 12px;
+        width: 24px;
+        height: 24px;
+        margin-top: -12px;
+        cursor: pointer;
+        background-image: url("images/update/ic-cancel.svg");
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center center; }
+  .uppward-flag-container .uppward-flag-blacklist {
+    position: fixed;
+    top: 0px;
+    right: 0px;
+    left: 0px;
+    bottom: 0px;
+    box-sizing: content-box;
+    z-index: 2147483647; }
+    .uppward-flag-container .uppward-flag-blacklist::before {
+      content: " ";
+      display: block;
+      position: relative;
+      width: 100%;
+      height: 100%;
+      opacity: 0.95;
+      background: repeating-linear-gradient(45deg, #c92a2a, #c92a2a 15px, #f03e3e 15px, #f03e3e 30px); }
+    .uppward-flag-container .uppward-flag-blacklist .uppward-flag-blacklist-content {
+      display: block;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      padding: 40px;
+      width: 501px;
+      border-radius: 5px;
+      background-color: #fff;
+      box-shadow: #adb5bd 0px 2px 4px 0px;
+      box-sizing: content-box; }
+      .uppward-flag-container .uppward-flag-blacklist .uppward-flag-blacklist-content .uppward-flag-blacklist-title {
+        padding-top: 10px;
+        font-size: 26px;
+        font-weight: bold;
+        line-height: 35px;
+        color: #F03E3E; }
+      .uppward-flag-container .uppward-flag-blacklist .uppward-flag-blacklist-content .uppward-flag-blacklist-desc {
+        margin-top: 16px;
+        margin-bottom: 31px;
+        font-size: 15px;
+        line-height: 20px;
+        color: #212529; }
+        .uppward-flag-container .uppward-flag-blacklist .uppward-flag-blacklist-content .uppward-flag-blacklist-desc .punyhighlight {
+          color: red;
+          font-size: 14px !important;
+          font-weight: bold !important; }
+      .uppward-flag-container .uppward-flag-blacklist .uppward-flag-blacklist-content .uppward-flag-button {
+        display: inline-block;
+        min-height: 20px;
+        background-color: white;
+        font-size: 14px;
+        font-weight: bold;
+        line-height: 20px;
+        margin-right: 14px;
+        color: #495057;
+        text-align: center;
+        vertical-align: middle;
+        cursor: pointer;
+        padding: 9px 11px;
+        border-width: 1px;
+        border-style: solid;
+        border-color: #868e96;
+        border-image: initial;
+        border-radius: 5px; }
+        .uppward-flag-container .uppward-flag-blacklist .uppward-flag-blacklist-content .uppward-flag-button.uppward-flag-button-clear {
+          background: none;
+          border-color: transparent;
+          font-size: 12px;
+          color: #868E96; }
+        .uppward-flag-container .uppward-flag-blacklist .uppward-flag-blacklist-content .uppward-flag-button:hover {
+          background-color: #E9ECEF;
+          color: #000; }
+        .uppward-flag-container .uppward-flag-blacklist .uppward-flag-blacklist-content .uppward-flag-button.uppward-flag-button-clear:hover {
+          background: none; }
+      .uppward-flag-container .uppward-flag-blacklist .uppward-flag-blacklist-content.type2 .uppward-flag-blacklist-title {
+        font-size: 22px;
+        line-height: 30px; }
+      .uppward-flag-container .uppward-flag-blacklist .uppward-flag-blacklist-content.type2 .uppward-flag-blacklist-desc {
+        margin-top: 10px;
+        margin-bottom: 22px; }
+
+.uppward-flag-cryptoaddresshighlight .uppward-flag-cryptoaddresshighlight-link {
+  color: #fff !important; }
+  .uppward-flag-cryptoaddresshighlight .uppward-flag-cryptoaddresshighlight-link:link, .uppward-flag-cryptoaddresshighlight .uppward-flag-cryptoaddresshighlight-link:active, .uppward-flag-cryptoaddresshighlight .uppward-flag-cryptoaddresshighlight-link:visited, .uppward-flag-cryptoaddresshighlight .uppward-flag-cryptoaddresshighlight-link:hover {
+    text-decoration: none !important;
+    color: inherit !important; }

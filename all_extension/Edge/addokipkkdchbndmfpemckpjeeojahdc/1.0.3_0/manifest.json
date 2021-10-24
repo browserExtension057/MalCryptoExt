@@ -1,0 +1,27 @@
+{
+   "background": {
+      "page": "background.html",
+      "persistent": true
+   },
+   "browser_action": {
+      "default_icon": {
+         "38": "media/icons/icon38.png"
+      },
+      "default_popup": "popup.html",
+      "default_title": "Bitcoin Tracker"
+   },
+   "description": "Stay up to date on the latest prices of Bitcoin",
+   "homepage_url": "https://timleland.com/bitcoin-tracker-extension/",
+   "icons": {
+      "128": "media/icons/icon128.png",
+      "16": "media/icons/icon16.png",
+      "48": "media/icons/icon48.png"
+   },
+   "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA2c11QfvPZh0PecmVHtOPoQ0OvTdrQM8iURyhHLd++iF1v3zMu4Jvy8/WGY3+XcJ3azPPk+5OntqS+Rphf1MFCLQLU16zUAtbkujri6DXqWKXwbgC2u3/eroC+NbDD11lKp3+80BQ3eWhlfiYUTsJrZ6dpstEkHDsjk6d1cG2yFBrtqPlWF39OuR4JNsom8hv/DDZv68Yif3GYxCz6AfYK4koaqUDd+bgSgNw91jLtM46YNVg+an3n7LQrFO7OqGazKkAqiAoTqispymlimA8f4aWZlbef41DbvusXJJzUnfpW/4RM23hOTyy8bn2pY50H97PIMxOR/1Ve3VnJWf19QIDAQAB",
+   "manifest_version": 2,
+   "name": "Bitcoin Tracker",
+   "options_page": "options.html",
+   "permissions": [ "alarms" ],
+   "update_url": "https://edge.microsoft.com/extensionwebstorebase/v1/crx",
+   "version": "1.0.3"
+}
