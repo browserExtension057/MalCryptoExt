@@ -11,7 +11,7 @@ There are 124 malicious extensions in total located in the directory:
 Five subdirectories divide those extensions into five categories: phishing, mining, scam, adware and gambling.
 
 ## Whole dataset
-There are 2939 cryptocurrency-themed browser extensions in 6 official web stores(chrome, firefox, opera, edge, 360, whale) and 4 third-party extension stores(crx4chrome, guge, huajia, haoyong), located in the directory:
+There are 2939 cryptocurrency-themed browser extensions in 6 official web stores(chrome, firefox, opera, edge, 360, whale) and 3 third-party extension stores(crx4chrome, guge, haoyong), located in the directory:
 
 ```shell
 ./all_extensions/[store name]
