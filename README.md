@@ -23,7 +23,7 @@ Besides, we maintain a set of extensions which are all removed by official audit
 ./all_extensions/[store_name]_removed_by_store
 ```
 ## Source code
-We open the source code for the detection of malicious extensions including crawlers, preliminary analysis, static analysis and dynamic analysis.
+We open the source code for the detection of malicious extensions including crawlers, preliminary analysis, suspicious extension detection and malicious extension confirmation.
 
 ### Crawlers
 There are 6 crawlers running in the server while 3 in official extension stores (chrome, firefox, opera) and 3 in third-party extension stores (guge, crx4chrome, haoyong), located in the directory:
@@ -36,14 +36,14 @@ Preliminary analysis includes VirousTotal scanning, and filtering by download nu
 ./source_code/preliminary_analysis
 ```
 
-### Static analysis
-Static analysis includes permission and AST feature extraction, located in the directory:
+### Suspicious extension detection
+Suspicious extension detection includes permission and AST feature extraction, located in the directory:
 ```shell
 ./source_code/static_analysis
 ```
 
-### Dynamic analysis
-Dynamic analysis includes automatical collection of runtime behavior features (system-level behaviors and network-level behaviors), located in the directory:
+### Malicious extension confirmation
+Malicious extension confirmation includes automatical collection of runtime behavior features (system-level behaviors and network-level behaviors), located in the directory:
 ```shell
 ./source_code/dynamic_analysis
 ```
