@@ -1,0 +1,67 @@
+[
+    {
+        "platform": "chrome",
+        "id": "bgddejjmhilkdllbakkgddjodommlimc",
+        "key": "bitcoin-price-ticker",
+        "name": "Bitcoin price ticker",
+        "rating": 4,
+        "user_numbers": "10,000",
+        "creator": "Extpose",
+        "last_updated": "2020-10-13 00:00:00",
+        "record_time": "2021-07-27 22:26:01.232563",
+        "introduction": "Shows bitcoin price provided by CoinDesk Bitcoin Price Index in a browser toolbar.",
+        "missed_date": "2021-07-27 22:37:42"
+    },
+    {
+        "platform": "chrome",
+        "id": "olpfnfcoflgpbbfhedielmmdacikbfhk",
+        "key": "bitcoin-hoje",
+        "name": "Bitcoin Hoje",
+        "rating": 4.393939393939394,
+        "user_numbers": "9,000",
+        "creator": "Pedro Menezes",
+        "last_updated": "2021-02-28 00:00:00",
+        "record_time": "2021-07-27 22:26:01.564553",
+        "introduction": "Veja a cota\u00e7\u00e3o do Bitcoin atrav\u00e9s do DolarHoje.com",
+        "missed_date": "2021-07-27 22:37:42"
+    },
+    {
+        "platform": "chrome",
+        "id": "onebfemgnhgpkdcmijbpjakhhidonjfl",
+        "key": "coincorner-earn-bitcoin",
+        "name": "CoinCorner - Earn Bitcoin",
+        "rating": 5,
+        "user_numbers": "749",
+        "creator": "CoinCorner",
+        "last_updated": "2021-04-23 00:00:00",
+        "record_time": "2021-07-27 22:26:01.855667",
+        "introduction": "Earn Bitcoin cashback when you shop online with thousands of top brands with CoinCorner!",
+        "missed_date": "2021-07-27 22:37:42"
+    },
+    {
+        "platform": "chrome",
+        "id": "amdginnpaflghjbbdkfenpekaeifnpee",
+        "key": "purse-shop-with-bitcoin-b",
+        "name": "Purse: Shop with Bitcoin (Beta)",
+        "rating": 4.052631578947368,
+        "user_numbers": "6,000",
+        "creator": "purse-chrome-extension",
+        "last_updated": "2019-11-04 00:00:00",
+        "record_time": "2021-07-27 22:26:02.567814",
+        "introduction": "Get 5-33% off anything on Amazon with Bitcoin and Bitcoin Cash",
+        "missed_date": "2021-07-27 22:37:42"
+    },
+    {
+        "platform": "chrome",
+        "id": "kjjlmgehohdbclcmfmphmifnppmcmeio",
+        "key": "bitcoin-price",
+        "name": "Bitcoin Price",
+        "rating": 4.166666666666667,
+        "user_numbers": "728",
+        "creator": "shaomxing",
+        "last_updated": "2020-02-05 00:00:00",
+        "record_time": "2021-07-27 22:26:03.224135",
+        "introduction": "A tool to show Bitcoin price, desktop notifications, and Bitcoin news",
+        "missed_date": "2021-07-27 22:37:42"
+    }
+]
