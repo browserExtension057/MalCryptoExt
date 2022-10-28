@@ -1,11 +1,5 @@
 # Cryptocurrency-extensions
-This repository contains data and code for SIGMETRICS 2023 submission: Characterizing Cryptocurrency-themed Malicious Browser Extensions
-
-## Highlighted version
-The revised contents are highlighted in blue, located in the file:
-```shell
-./SIGMETRICS ’22 Winter, Paper#242.pdf
-```
+This repository contains data and code for SIGMETRICS 2023 accepted paper: Characterizing Cryptocurrency-themed Malicious Browser Extensions
 
 ## Malicious extensions
 There are 186 malicious extensions in total located in the directory:
