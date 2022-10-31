@@ -1,4 +1,4 @@
-# Characterizing Cryptocurrency-themed Malicious Browser Extensions
+# MalCryptoExt: Characterizing Cryptocurrency-themed Malicious Browser Extensions
 This repository contains data and code for SIGMETRICS 2023 accepted paper: Characterizing Cryptocurrency-themed Malicious Browser Extensions
 
 ## Malicious extensions
