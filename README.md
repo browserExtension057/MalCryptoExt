@@ -1,6 +1,9 @@
 # MalCryptoExt: Characterizing Cryptocurrency-themed Malicious Browser Extensions
 This repository contains data and code for SIGMETRICS 2023 accepted paper: Characterizing Cryptocurrency-themed Malicious Browser Extensions
 
+# Project Website
+https://browserextension057.github.io/browserExtension057/
+
 ## Malicious extensions
 There are 186 malicious extensions in total located in the directory:
 
